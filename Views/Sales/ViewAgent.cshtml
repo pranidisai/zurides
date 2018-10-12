@@ -1,0 +1,280 @@
+﻿@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "ViewAgent";
+    Layout = "~/Views/Shared/_SalesLayout.cshtml";
+}
+
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("ViewAgent", "Sales", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+        <div class="row">
+            <span style="color:red;font-weight:bold;float:right;margin-right:100px;">@ViewBag.Error</span>
+        </div>
+        <div class="row">
+            <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Create Employee</p>
+            <div class="col-lg-6">
+                <div class="panel">
+
+                    <fieldset>
+                        <div class="panel-body">
+                            <div class="form-group" hidden>
+                                <label class="col-lg-3 control-label">ID</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.ID, new { @class = "form-control", placeholder = "Enter Id", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Name</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.TravelName, new { @class = "form-control", placeholder = "Enter Name", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Vat No</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.VatNo, new { @class = "form-control", placeholder = "Enter Vat Number", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Email</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.TavelEmail, new { @class = "form-control", placeholder = "Enter Email", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Agency Number</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.TravelPhone, new { @class = "form-control", placeholder = "Enter Agency Contactno.", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Service Name</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.TravelName, new { @class = "form-control", placeholder = "Enter Travel Service Name", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label"> Service Address</label>
+                                <div class="col-lg-7">
+                                    @Html.TextAreaFor(model => model.Agents.Address, new { @class = "form-control", placeholder = "Enter Travel Service Address", @required = "true" })
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel">
+
+                    <fieldset>
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Enter userName</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.TravelUserName, new { @class = "form-control", placeholder = "Enter User Name", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Number of Vehicles</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.vehiclesCount, new { @class = "form-control", placeholder = "Enter vehicle count", @required = "true" })
+
+                                </div>
+                            </div>
+                            @*<div class="form-group">
+                                <label class="col-lg-3 control-label">Commission in % </label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.CommisionPercentage, new { @class = "form-control", placeholder = "Enter number Like 1 or 10", @required = "true" })
+
+                                </div>
+                            </div>*@
+
+
+                            @{
+                            List<SelectListItem> listItems1 = new List<SelectListItem>
+                                    ();
+                            listItems1.Add(new SelectListItem
+                            {
+                                Text = "Select Type",
+                                Value = "0",
+                                Selected = true
+                            });
+                            listItems1.Add(new SelectListItem
+                            {
+                                Text = "Own",
+                                Value = "Own"
+                            });
+                            listItems1.Add(new SelectListItem
+                            {
+                                Text = "Travelr",
+                                Value = "Travelr"
+                            });
+
+
+
+
+                            }
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Select Travel Type</label>
+                                <div class="col-lg-7">
+                                    @Html.DropDownListFor(model => model.Agents.Travelartype, listItems1, new { @class = "form-control", placeholder = "Travel Type" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Logo </label>
+                                <div class="col-lg-7">
+                                    <input type="file" class="form-control" name="ImageData" id="ImageData" required="true" />
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </fieldset>
+                </div>
+            </div>
+
+        </div>
+        <center><span> Agent Infrmation</span></center>
+        <hr />
+        <div class="row">
+
+            <div class="col-lg-6">
+                <div class="panel">
+
+                    <fieldset>
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">State</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.State, new { @class = "form-control", placeholder = "Enter State", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">City</label>
+                                <div class="col-lg-7">
+                                    @Html.DropDownListFor(model => model.Agents.City, new SelectList(Model.CityDDL, "Key", "Value"), "--- Select City ---", new { @class = "form-control" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Area</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.Area, new { @class = "form-control", placeholder = "Enter Area", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Contact Person Number</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.ConContactnumber, new { @class = "form-control", placeholder = "Enter Contact Number", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Alternate Number</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.SecondaryContact, new { @class = "form-control", placeholder = "Enter Alternate Contactno.", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Address Line 1</label>
+                                <div class="col-lg-7">
+                                    @Html.TextAreaFor(model => model.Agents.Address1, new { @class = "form-control", placeholder = "Enter  Address Line 1", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Address Line 2</label>
+                                <div class="col-lg-7">
+                                    @Html.TextAreaFor(model => model.Agents.Address2, new { @class = "form-control", placeholder = "Enter Address Line 2", @required = "true" })
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="panel">
+
+                    <fieldset>
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Land Line1</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.Landline1, new { @class = "form-control", placeholder = "Enter Landline Number ", @required = "true" })
+
+                                </div>
+                            </div>
+                            @*<div class="form-group">
+                                <label class="col-lg-3 control-label">LandLine 2</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.Landline2, new { @class = "form-control", placeholder = "Enter Landline Number", @required = "true" })
+
+                                </div>
+                            </div>*@
+
+                           
+                            @*<div class="form-group">
+                                <label class="col-lg-3 control-label">Contact Person name</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.ContactPersonName, new { @class = "form-control", placeholder = "Enter Agent Name", @required = "true" })
+
+                                </div>
+                            </div>*@
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Person designation</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBoxFor(model => model.Agents.Designation, new { @class = "form-control", placeholder = "Agent Designation", @required = "true" })
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-3 control-label">Status</label>
+                                <div class="col-lg-7">
+                                    @Html.CheckBoxFor(model => model.Agents.AgentStatus, new { @class = "form-control", @required = "true" })
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-7 col-sm-offset-3">
+                                    <button class="btn btn-mint" type="submit">Update Info</button>
+                                    <a href="@Url.Action("AgentsList","Sales")"><label class="btn btn-danger">Back To List</label></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+            </div>
+
+        </div>
+}
+    </div>
+
+</div>

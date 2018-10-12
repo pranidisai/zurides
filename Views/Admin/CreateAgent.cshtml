@@ -1,0 +1,286 @@
+﻿@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "CreateAgent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.min.js"></script>
+
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("CreateAgent", "Admin", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+
+            <div class="row" style="text-align:center;padding-top:50px;">
+                <span style="color:red;font-weight:bold;">@ViewBag.Error</span>
+            </div>
+            <div class="row">
+                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Create Agent</p>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                @{
+                                    List<SelectListItem> listItems1 = new List<SelectListItem>
+                                            ();
+                                    listItems1.Add(new SelectListItem
+                                    {
+                                        Text = "Select Type",
+                                        Value = "0",
+                                        Selected = true
+                                    });
+                                    // listItems1.Add(new SelectListItem
+                                    // {
+                                    // Text = "Owner",
+                                    //  Value = "Owner"
+                                    // });
+                                    listItems1.Add(new SelectListItem
+                                    {
+                                        Text = "Agent",
+                                        Value = "Agent"
+                                    });
+
+
+
+
+                                }
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Select Travel Type</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.Agents.Travelartype, listItems1, new { @class = "form-control", placeholder = "", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.Travelartype, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Enter userName</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.TravelUserName, new { @class = "form-control", placeholder = "Enter User Name", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.TravelUserName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Vat No</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.VatNo, new { @class = "form-control", placeholder = "Enter Vat Number", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.VatNo, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Email</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.TavelEmail, new { @class = "form-control", placeholder = "Enter Email", @required = "true", @type = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.TavelEmail, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Agency Number</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.TravelPhone, new { @class = "form-control", placeholder = "Enter Contact number", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.TravelPhone, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Service Name</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.TravelName, new { @class = "form-control", placeholder = "Enter Service Name", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.TravelName, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label"> Service Address</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextAreaFor(model => model.Agents.Address, new { @class = "form-control", placeholder = "Enter Service Address", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.Address, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Number of Vehicles</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.vehiclesCount, new { @class = "form-control", placeholder = "Enter vehicle Number", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.vehiclesCount, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Commission in % </label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.CommisionPercentage, new { @class = "form-control", placeholder = "Enter number Like 1 or 10", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.CommisionPercentage, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Logo </label>
+                                    <div class="col-lg-7">
+                                        <input type="file" class="form-control" name="ImageData" id="ImageData" required="true" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+            <center><span class="bord-btm pad-ver text-main text-bold"> Agent Information</span></center>
+            <hr />
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">State</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.State, new { @class = "form-control", placeholder = "Enter State", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.State, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">City</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.Agents.City, new SelectList(Model.CityDDL, "Key", "Value"), "--- Select City ---", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Agents.City, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Area</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.Area, new { @class = "form-control", placeholder = "Enter Area", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.Area, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Secondary Number</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.SecondaryContact, new { @class = "form-control", placeholder = "Enter Alternate contactNo.", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.SecondaryContact, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Address Line 1</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextAreaFor(model => model.Agents.Address1, new { @class = "form-control", placeholder = "Enter  Address Line 1", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.Address1, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                @*<div class="form-group">
+                                    <label class="col-lg-3 control-label">Address Line 2</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextAreaFor(model => model.Agents.Address2, new { @class = "form-control", placeholder = "Enter Address Line 2", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.Address2, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>*@
+
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Land Line1</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.Landline1, new { @class = "form-control", placeholder = "Enter Landline Number ", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.Landline1, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                @*<div class="form-group">
+                                    <label class="col-lg-3 control-label">LandLine 2</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.Landline2, new { @class = "form-control", placeholder = "Enter Landline Number", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.Landline2, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>*@
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Contact Person Number</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.ConContactnumber, new { @class = "form-control", placeholder = "Enter Contact Number", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.ConContactnumber, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Contact Person name</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.ContactPersonName, new { @class = "form-control", placeholder = "Enter Agent Name", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.ContactPersonName, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Person designation</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Agents.Designation, new { @class = "form-control", placeholder = "Agent Designation", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Agents.Designation, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-7 col-sm-offset-3">
+                                        <button class="btn btn-mint" type="submit">Save Info</button>
+                                        @*<button class="btn btn-danger">Back To List</button>*@
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div> 
+        }
+    </div>
+
+</div>

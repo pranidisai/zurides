@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "CreateVehicleinfo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model Zur.VM.AdminVM
+
+
+
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("CreateVehicleinfo", "Admin", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <span style=" color:red;font-weight:bold;text-align:center; margin-left:100px;">@ViewBag.Error</span>
+            </div>
+            <div class="row">
+                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Add Specifications for Car</p>
+                <div class="col-lg-6">
+                    <div class="panel">
+                        @*<p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Agency Info</p>*@
+                        <fieldset>
+                            <div class="panel-body">
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Eminities</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.vehEminities.Eminity, new { @class = "form-control", placeholder = "Enter Eminities", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.vehEminities.Eminity, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Car Color</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.vehcolor.Color, new { @class = "form-control", placeholder = "Enter Car Color", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.vehcolor.Color, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Car BrandName</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.vehbrand.BrandName, new { @class = "form-control", placeholder = "Enter BrandName", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.vehbrand.BrandName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Vehicle Type</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.veh.vehicleType, new { @class = "form-control", placeholder = "Enter Vehicle Type", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.veh.vehicleType, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Seats</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.veh.Seats, new { @class = "form-control", placeholder = "Enter Seats", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.veh.Seats, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            
+
+
+
+            <div class="row" style="text-align:center;">
+                <div class="col-sm-7 col-sm-offset-3">
+                    <button class="btn btn-mint" type="submit">Save Info</button>
+                    @*<a href="@Url.Action("VehiclesDetailsList","Admin")"><label class="btn btn-danger">Back To List</label></a>*@
+                </div>
+            </div>
+
+        }
+    </div>
+
+</div>
+
+

@@ -1,0 +1,494 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_carLayout.cshtml";
+}
+
+<div id=" listar-homebannervthree" class=" listar-homebannervfour">
+    <figure><img src="~/car/images/parallax/bgparallax-11.jpg" alt="image description"></figure>
+    <div id="listar-homebanner" class="listar-homebanner">
+        <div class="container">
+            <div class="row">
+                <div class="listar-bannercontent">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left">
+                        <h1>Find the Best<span>Cab To Travel</span></h1>
+                        <div class="listar-description">
+                            <p>Find the best trip in the city, Safe and relaxation</p>
+                        </div>
+
+                    </div>
+                     
+                    <div class="row">
+                        <form action="@Url.Action("S","Search")" class="listar-formtheme listar-formsearchlisting">
+
+                            <div class="form-group listar-inputwithicon col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                <i class="icon-layers"></i>
+                                <div class="">
+                                    <input type="text" id="soruceLocation" class="form-control" placeholder="From City" name="sourcePlace" required>
+
+                                </div>
+                            </div>
+                            <div class="form-group listar-inputwithicon col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                <i class="icon-global"></i>
+                                <div class="">
+                                    <input type="text" id="DestinationLocation" class="form-control" placeholder="To City" name="Destination" required>
+                                </div>
+                            </div>
+                            <div class="form-group listar-inputwithicon col-xs-12 col-sm-12 col-md-3 col-lg-3">
+
+                                <div class="">
+                                    <input type="text" name="JourneyDate" class="form-control" id="mytarget" placeholder="select date" value="Select Date" required>
+                                </div>
+                            </div>
+                            <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+                            <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+                            <script language="javascript">
+                                $(document).ready(function () {
+                                    $("#mytarget").datepicker({
+                                        minDate: 0
+                                    });
+                                });
+                                </script>
+                            <div class="form-group listar-inputwithicon col-xs-12 col-sm-12col-md-3 col-lg-3">
+
+
+                                <button type="submit" class="listar-btn listar-btngreen form-control">Find Cab</button>
+</div>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--************************************
+        Home Slider End
+*************************************-->
+<!--************************************
+        Main Start
+*************************************-->
+<main id="listar-main" class="listar-main listar-haslayout">
+    <!--************************************
+            Latest Cagegories Start
+    *************************************-->
+    <section class="listar-sectionspace listar-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="listar-sectionhead">
+                        <div class="listar-sectiontitle">
+                            <h2>Our Serviced Cities</h2>
+                        </div>
+                        <div class="listar-description">
+                            <p>We provide all over India<a class="listar-bluethemecolor" href="javascript:void(0);">See All Categories</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="listar-categoriespostslider" class="listar-themeposts listar-categoryposts listar-gridslider owl-carousel">
+                        <div class="item">
+                            <div class="listar-themepost listar-categorypost">
+                                <figure class="listar-featuredimg">
+                                    <a href="javascript:void(0);">
+                                        <img src="~/theme/images/hyd.jpg" alt="image description">
+                                        <div class="listar-contentbox">
+                                            <div class="listar-postcontent">
+                                                <span class="listar-categoryicon listar-flip"><i class="icon-map3"></i></span>
+                                                <h3>Hyderabad</h3>
+                                                <h4>120 Listings</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="listar-themepost listar-categorypost">
+                                <figure class="listar-featuredimg">
+                                    <a href="javascript:void(0);">
+                                        <img src="~/theme/images/che.jpg" alt="image description">
+                                        <div class="listar-contentbox">
+                                            <div class="listar-postcontent">
+                                                <span class="listar-categoryicon listar-flip"><i class="icon-map3"></i></span>
+                                                <h3>Chennai</h3>
+                                                <h4>03 Listings</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </figure>
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <div class="listar-themepost listar-categorypost">
+                                <figure class="listar-featuredimg">
+                                    <a href="javascript:void(0);">
+                                        <img src="~/theme/images/viz.jpg" alt="image description">
+                                        <div class="listar-contentbox">
+                                            <div class="listar-postcontent">
+                                                 <span class="listar-categoryicon listar-flip"><i class="icon-healthfitness"></i></span>
+                                                <h3>Vijayawada</h3>
+                                                <h4>11 Listing</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="listar-themepost listar-categorypost">
+                                <figure class="listar-featuredimg">
+                                    <a href="javascript:void(0);">
+                                        <img src="~/theme/images/viz.jpg" alt="image description">
+                                        <div class="listar-contentbox">
+                                            <div class="listar-postcontent">
+                                                <span class="listar-categoryicon listar-flip"><i class="icon-entertainment"></i></span>
+                                                <h3>Vizag</h3>
+                                                <h4>03 Listing</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </figure>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+            Latest Cagegories End
+    *************************************-->
+    <!--************************************
+            I'm a Business Start
+    *************************************-->
+
+    <!--************************************
+            I'm a Business End
+    *************************************-->
+    <!--************************************
+            Theme Features Start
+    *************************************-->
+    <section class="listar-sectionspace listar-featuresarea">
+        <div class="container">
+            <div class="row">
+                <div class="listar-features">
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="listar-feature">
+                            <span class="listar-featureicon"><i class="icon-layers"></i></span>
+                            <h2>01 Choose a Pickup</h2>
+                            <div class="listar-description">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="listar-feature">
+                            <span class="listar-featureicon"><i class="icon-map3"></i></span>
+                            <h2>02 Find Location</h2>
+                            <div class="listar-description">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="listar-feature">
+                            <span class="listar-featureicon"><i class="icon-hotairballoon"></i></span>
+                            <h2>03 Go have Fun</h2>
+                            <div class="listar-description">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh tempor cum soluta nobis consectetuer nihil imperdiet doming...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="listar-businesstypesarea">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="listar-businesstype listar-business">
+                    <div class="listar-sectionhead">
+                        <div class="listar-sectiontitle">
+                            <h2>I’m a Business</h2>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Lorem ipsum gravida nibh vel velit</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Aliqunean Sollicitudinlorem Quis Bibendum Auci Elit.</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Nullam acurna eu felis dapibus condimentum sit amet a augue.</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Unlimited Support</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Aliqunean Sollicitudinlorem Accept Reviews</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Aliqunean Sollicitudinlorem Quis Bibendum Auci Elit.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="listar-businesstype listar-user">
+                    <div class="listar-sectionhead">
+                        <div class="listar-sectiontitle">
+                            <h2>I’m a User</h2>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Lorem ipsum gravida nibh vel velit</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Aliqunean Sollicitudinlorem Quis Bibendum Auci Elit.</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Nullam acurna eu felis dapibus condimentum sit amet a augue.</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Unlimited Support</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Aliqunean Sollicitudinlorem Accept Reviews</span>
+                        </li>
+                        <li>
+                            <i class="icon-checkmark"></i>
+                            <span>Aliqunean Sollicitudinlorem Quis Bibendum Auci Elit.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="listar-sectionspace listar-bglight listar-haslayout"data-appear-top-offset="600" data-parallax="scroll" data-image-src="/theme/images/cloud.png" >
+        <div class="foot-mob-sec tb-space">
+            <div class="rows container">
+                <!-- FAMILY IMAGE(YOU CAN USE ANY PNG IMAGE) -->
+
+                <div class="col-md-4 col-md-offset-1 col-sm-6 col-xs-12 family "> <img src="~/theme/images/phne.png" alt="" /> </div>
+                <!-- REQUEST A QUOTE -->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <!-- THANK YOU MESSAGE -->
+                    <div class="foot-mob-app">
+                        <h2>Have you tried our mobile app?</h2>
+                        <ul>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Easy Cab Booking</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Tour and Travel Packages</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Package Reviews and Ratings</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Manage your Bookings, Enquiry and Reviews</li>
+                        </ul>
+                        <a href="#"><img src="~/theme/images/android.png" alt=""> </a>
+                        <a href="#"><img src="~/theme/images/apple.png" alt=""> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--************************************
+            Discover New Places End
+    *************************************-->
+    <!--************************************
+            Add Listing Start
+    *************************************-->
+    <section class="listar-themeparallax" data-appear-top-offset="600" data-parallax="scroll" data-image-src="../car/images/parallax/bgparallax-10.jpg">
+        <div class="listar-parallaxcolor listar-parallaxaddlisting">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-push-2 col-md-8 col-lg-push-2 col-lg-8">
+                        <div class="listar-addlisting">
+                            <h2>Run and Grow Your Business With Adding your vehicle today, Star from Anywhere</h2>
+                            <a class="listar-btn listar-btngreen" href="@Url.Action("Agent","Lead")">
+                                <i class="icon-plus"></i>
+                                <span>Be a Member</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+            Add Listing End
+    *************************************-->
+    <!--************************************
+            Testimonials Start
+    *************************************-->
+    <section class="listar-sectionspace listar-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="listar-sectionhead">
+                        <div class="listar-sectiontitle">
+                            <h2>People Feedback</h2>
+                        </div>
+                        <div class="listar-description">
+                            <p>What our Clients Says <a class="listar-bluethemecolor" href="javascript:void(0);">View All</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="listar-testimonialslidervthree" class="listar-threecolumnsslider listar-testimonials listar-testimonialsvthree owl-carousel">
+                    <div class="item listar-testimonial">
+                        <blockquote>
+                            <h5>Good Trip</h5>
+                            <q>safe Drive and enjoyed a lot.</q>
+                        </blockquote>
+                        <figure>
+                            <img src="~/car/images/author/img-04.jpg" alt="image description">
+                            <figcaption>
+                                <h3>John Doe</h3>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="item listar-testimonial">
+                        <blockquote>
+                            <h5>Excellent Service</h5>
+                            <q>safe Drive and enjoyed a lot.</q>
+                        </blockquote>
+                        <figure>
+                            <img src="~/car/images/author/img-04.jpg" alt="image description">
+                            <figcaption>
+                                <h3>John Doe</h3>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="item listar-testimonial">
+                        <blockquote>
+                            <h5>Good Timeings</h5>
+                            <q>safe Drive and enjoyed a lot.</q>
+                        </blockquote>
+                        <figure>
+                            <img src="~/car/images/author/img-04.jpg" alt="image description">
+                            <figcaption>
+                                <h3>John Doe</h3>
+
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+            Testimonials End
+    *************************************-->
+    <!--************************************
+            Newsletter Start
+    *************************************-->
+    <section class="listar-newsletterarea listar-newsletterareavtwo" style="background-image:url(../../car/images/parallax/bgparallax-01.jpg)">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="listar-formarea" style="margin-top:50px;">
+                        <form class="listar-formtheme listar-formnewsletter">
+                            <fieldset>
+                                <input type="email" name="email" class="form-control" placeholder="Your email address">
+                                <button class="listar-btn listar-btngreen" type="button">Submit</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+            Newsletter End
+    *************************************-->
+</main>
+<!--************************************
+        Main End
+*************************************-->
+<!--************************************
+        Footer Start
+*************************************-->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyBOQMDDOsJA0uHTqXTDHUogDJfaTST7hNQ&amp;callback"></script>
+
+                            <script>
+                                    // This example displays an address form, using the autocomplete feature
+                                    // of the Google Places API to help users fill in the information.
+
+                                    // This example requires the Places library. Include the libraries=places
+                                    // parameter when you first load the API. For example:
+                                    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+                                    var placeSearch, autocomplete;
+                                    //var componentForm = {
+                                    //  street_number: 'short_name',
+                                    //  route: 'long_name',
+                                    //  locality: 'long_name',
+                                    //  administrative_area_level_1: 'short_name',
+                                    //  country: 'long_name',
+                                    //  postal_code: 'short_name'
+                                    //  };
+
+
+
+                                    function initAutocomplete() {
+                                        // Create the autocomplete object, restricting the search to geographical
+                                        // location types.
+
+                                        autocomplete = new google.maps.places.Autocomplete(
+                                            (document.getElementById('DestinationLocation')),
+                                            { types: ['geocode'] });
+
+                                        // When the user selects an address from the dropdown, populate the address
+                                        // fields in the form.
+                                        autocomplete = new google.maps.places.Autocomplete(
+                                            (document.getElementById('soruceLocation')),
+                                            { types: ['geocode'] });
+
+                                        // When the user selects an address from the dropdown, populate the address
+                                        // fields in the form.
+                                        autocomplete.addListener('place_changed', fillInAddress);
+
+                                    }
+
+
+
+
+                                    // Bias the autocomplete object to the user's geographical location,
+                                    // as supplied by the browser's 'navigator.geolocation' object.
+                                    function geolocate() {
+                                        if (navigator.geolocation) {
+                                            navigator.geolocation.getCurrentPosition(function (position) {
+                                                var geolocation = {
+                                                    lat: position.coords.latitude,
+                                                    lng: position.coords.longitude
+                                                };
+                                                var circle = new google.maps.Circle({
+                                                    center: geolocation,
+                                                    radius: position.coords.accuracy
+                                                });
+                                                autocomplete.setBounds(circle.getBounds());
+                                            });
+                                        }
+                                    }
+                            </script>
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBErlHBCoAszSr4uBzk1JDh_0uSJIE6mVo&libraries=places&callback=initAutocomplete"
+                                    async defer></script>

@@ -1,0 +1,362 @@
+﻿@model Zur.VM.UserVM
+@{
+    ViewBag.Title = "ConfirmBooking";
+    Layout = "~/Views/Shared/_HLayout.cshtml";
+}
+
+<section>
+    <div class="rows banner_book" id="inner-page-title">
+        <div class="container1">
+            <div class="banner_book_1">
+                <ul>
+                    <li class="dl1">Hyderabad -> Tenali</li>
+                    <li class="dl2">19-03-2018</li>
+
+                    <li class="dl5"><input type="radio" name="radio">One Way |&#160;<input type="radio" name="radio"> Round Trip |&#160;<input type="radio" name="radio">Pooling </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#show").click(function () {
+            $("#modify").toggle();
+        });
+    });
+</script>
+
+<section id="modify" style="display:none;">
+    <div class="rows banner_book_m" id="inner-page-title">
+        <div class="container wow fadeInLeft animated">
+            <div class="banner_book_1">
+                <form class="v2-search-form_m">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <input type="text" id="select-city" class="autocomplete">
+                            <label for="select-city">Pick up location</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="text" id="select-city-1" class="autocomplete">
+                            <label for="select-city">Dropping off location</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="text" id="from" name="from">
+                            <label for="from">Pick up date</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--HEADER SECTION-->
+<section>
+    <div class="db">
+        <!--LEFT SECTION-->
+        <div class="db-3">
+            <h4 style="text-align:center;">Other Passengers Info</h4>
+            <ul>
+
+                <li>
+                    <a href="#!">
+                        <img src="images/steering.png" alt="" />
+                        <h5 style="padding-top:20px;">Driver</h5>
+                        <br>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#!">
+                        <img src="images/male-circle-512.png" alt="" />
+                        <h5 style="padding-top:20px;">Raghu Ram</h5>
+                        <br>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <img src="images/male-circle-512.png" alt="" />
+                        <h5 style="padding-top:20px;">Rajesh</h5>
+                        <br>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <img src="images/male-circle-512.png" alt="" />
+                        <h5 style="padding-top:20px;">Mahesh</h5>
+                        <br>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <img src="images/male-circle-512.png" alt="" />
+                        <h5 style="padding-top:20px;">Mahesh</h5>
+                        <br>
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--CENTER SECTION-->
+        <div class="db-2">
+            <div class="">
+
+                <div class="db-2-main-com db2-form-pay db2-form-com">
+
+                    @using (Html.BeginForm("Index", "Book", FormMethod.Post, new { enctype = "multipart/form-data", @class = "col s12" }))
+    {
+        if (Session["login_user_Session"] != null)
+        {
+
+        }
+        else
+        {
+                <div class="row">
+                    <center>@ViewBag.Error</center>
+                    <h4 style="background:none;">Login (Optional) </h4>
+                    <div class="input-field col s4">
+                        <input type="text" name="UserName" class="form-control" placeholder="Phone Number">
+                        <label for="pay-ca">User Name</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input type="password" name="exampleInputPassword1" class="form-control" placeholder="Password">
+                        <label for="pay-ca">Password</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <button class="waves-effect waves-light full-btn" onclick="loginpopup()">Login</button>
+
+                    </div>
+                </div>
+}
+
+                <br>
+                <div class="row">
+                    <h4 style="background:none;">Enter Contact details</h4>
+                    <div class="input-field col s6">
+                        @Html.TextBoxFor(model => model.CabBooking.ContactEmail, new { @required = "true" })
+                        <label for="pay-ca">Email Id</label>
+                    </div>
+                    <div class="input-field col s6">
+                        @Html.TextBoxFor(model => model.CabBooking.ContactNumber, new { @required = "true" })
+                        <label for="pay-ca">Contact No</label>
+                    </div>
+
+                </div>
+                <br>
+                <div class="row">
+                    <h4 style="background:none;">Passenger Details</h4>
+                    <div class="input-field col s6">
+                        @Html.TextBoxFor(model => model.CabBooking.ContactName, new { @required = "true" })
+                        <label for="pay-ca">Name</label>
+                    </div>
+                    <div class="input-field col s2">
+                        @Html.TextBoxFor(model => model.CabBooking.Age, new { @required = "true" })
+                        <label for="pay-ca">Age</label>
+                    </div>
+
+                    @{
+        List<SelectListItem> listItems1 = new List<SelectListItem>
+                ();
+        listItems1.Add(new SelectListItem
+        {
+            Text = "Select Gender",
+            Value = "",
+            Selected = true
+        });
+        listItems1.Add(new SelectListItem
+        {
+            Text = "Male",
+            Value = "Male"
+        });
+        listItems1.Add(new SelectListItem
+        {
+            Text = "Female",
+            Value = "Female"
+        });
+
+        //List<SelectListItem> listItem2 = new List<SelectListItem>
+        //       ();
+        //listItem2.Add(new SelectListItem
+        //{
+        //    Text = "Select PaymentMode",
+        //    Value = "",
+        //    Selected = true
+        //});
+        //listItem2.Add(new SelectListItem
+        //{
+        //    Text = "Online",
+        //    Value = "Online"
+        //});
+        //listItem2.Add(new SelectListItem
+        //{
+        //    Text = "Cash",
+        //    Value = "Cash"
+        //});
+
+
+                    }
+                    <div class="input-field col s3">
+                        @Html.DropDownListFor(model => model.CabBooking.Gender, listItems1, new { @required = "true" })
+
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:30px;">
+                    @*<div class="input-field col s6">
+                           @Html.DropDownListFor(model => model.CabBooking.Gender, listItems1, new { @required = "true" })
+
+                    </div>*@
+                    @*<div class="input-field col s6">
+                        @Html.DropDownListFor(model => model.CabBooking.PaymentMode, listItem2, new { @required = "true" })
+
+                    </div>*@
+                    <div class="clearfix"></div>
+                </div>
+                <div class="row" style="margin-top:20px;">
+                    <div class="input-field col s6">
+                        @Html.DropDownListFor(model => model.CabBooking.Boardingpoint, new SelectList(Model.SourceBoardingPoints, "Key", "Value"), "--- Select Pickup Location ---", new { @required = "true" })
+
+                    </div>
+                    <div class="input-field col s6">
+                        @Html.DropDownListFor(model => model.CabBooking.DropPoint, new SelectList(Model.DestinationBoardingPoints, "Key", "Value"), "--- Select Drop Location ---", new { @required = "true" })
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div hidden>
+                    @Html.TextBoxFor(model => model.CabBooking.vehicleid, new { @required = "true" })
+                </div>
+                
+                <div class="row">
+                    <div class="input-field col s4" style="float:right">
+                        <input type="submit" value="Proceed To Payment" class="waves-effect waves-light full-btn">
+                    </div>
+                </div>
+}
+                </div>
+            </div>
+        </div>
+        <!--RIGHT SECTION-->
+        <div class="db-3 ">
+            <h4 style="text-align:center;">Price Summary</h4>
+            <ul>
+                <li>
+                    <div class="col s12 db-2-main-com">
+                        <div class="row">
+
+                            <div class="input-field col s8" >
+                                <input id="pay-ca" type="text" class="validate" style="padding-bottom:20px;">
+                                <label for="pay-ca">Coupon Code</label>
+                            </div>
+
+                            <div class="input-field col s4">
+                                <input type="submit" value="Apply" class="waves-effect waves-light full-btn">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    @{
+                        var basefair = Model.CabBooking.NetPay - Model.CabBooking.Tax;
+                    }
+                    <h5>Base Price <span style="margin-right:45px;"></span>:@basefair Rs</h5>
+                    <h5>Tax <span style="margin-right:95px;"></span>:@Model.CabBooking.Tax</h5>
+                  
+                    <h5>Promo Discount <span style="margin-right:15px;"></span>: 0 Rs</h5>
+                </li>
+                <li>
+
+                    <h5>Total Price: @Model.CabBooking.NetPay Rs</h5>
+
+
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</section>
+<script>
+    function loginpopup() {
+
+        var UserName1 = $('input[name=UserName]').val()
+        var Pwd = $('input[name=exampleInputPassword1]').val()
+
+        $.ajax({
+            type: "POST",
+            url: "/Login/LoginPopup",
+            dataType: "JSON",
+            data: { UserName: UserName1, Password: Pwd },
+            success: function (Data) {
+                if (Data == "1") {
+                    window.location.reload();
+
+                }
+                else {
+                    document.getElementById("ErrorMessage1").innerHTML = "Invalid Details please try again";
+
+                    alert("Invalid Details please try again");
+                    //alert(Data);
+                }
+                //window.location.reload();
+                //alert(Data);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                window.location.reload();
+            }
+
+            //alert("Please login to add cart");
+        });
+    }
+    function Regpopup() {
+
+        var Name = $('input[name=regusername]').val()
+        var Password = $('input[name=password]').val()
+        var Email = $('input[name=emailaddress]').val()
+        var Phone = $('input[name=PhoneNumber]').val()
+
+
+        $.ajax({
+            type: "POST",
+            url: "/Login/Registration",
+            dataType: "JSON",
+            data: { Name: Name, Password: Password, Email: Email, Phone: Phone },
+            success: function (Data) {
+                if (Data == "Success") {
+                    document.getElementById("ErrorMessage").innerHTML = "Your registration completed Successfully !";
+
+                }
+                else if (Data == "Fail") {
+                    document.getElementById("ErrorMessage2").innerHTML = "Invalid Details Please try again";
+                    //alert("Please check Phone Number/ Email Address");
+                    //alert(Data);
+                }
+                else {
+                    document.getElementById("ErrorMessage2").innerHTML = Data;
+                    // alert(Data);
+                }
+                //window.location.reload();
+                //alert(Data);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                window.location.reload();
+            }
+
+            //alert("Please login to add cart");
+        });
+    }
+</script>

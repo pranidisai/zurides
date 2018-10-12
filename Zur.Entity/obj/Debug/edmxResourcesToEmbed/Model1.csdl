@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ZREntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Admin" EntityType="ZRModel.tbl_Admin" />
+    <EntitySet Name="tbl_AvalialeVehicles" EntityType="ZRModel.tbl_AvalialeVehicles" />
+    <EntitySet Name="tbl_BoardingPoints" EntityType="ZRModel.tbl_BoardingPoints" />
+    <EntitySet Name="tbl_Bookings" EntityType="ZRModel.tbl_Bookings" />
+    <EntitySet Name="tbl_Cities" EntityType="ZRModel.tbl_Cities" />
+    <EntitySet Name="tbl_Drivers" EntityType="ZRModel.tbl_Drivers" />
+    <EntitySet Name="tbl_Employee" EntityType="ZRModel.tbl_Employee" />
+    <EntitySet Name="tbl_kmcharges" EntityType="ZRModel.tbl_kmcharges" />
+    <EntitySet Name="tbl_login" EntityType="ZRModel.tbl_login" />
+    <EntitySet Name="tbl_Ratings" EntityType="ZRModel.tbl_Ratings" />
+    <EntitySet Name="tbl_RootMaps" EntityType="ZRModel.tbl_RootMaps" />
+    <EntitySet Name="tbl_Roots" EntityType="ZRModel.tbl_Roots" />
+    <EntitySet Name="tbl_Statesinfo" EntityType="ZRModel.tbl_Statesinfo" />
+    <EntitySet Name="tbl_Travelers" EntityType="ZRModel.tbl_Travelers" />
+    <EntitySet Name="tbl_Users" EntityType="ZRModel.tbl_Users" />
+    <EntitySet Name="tbl_VehiclesInfo" EntityType="ZRModel.tbl_VehiclesInfo" />
+    <EntitySet Name="tbl_Color" EntityType="ZRModel.tbl_Color" />
+    <EntitySet Name="tbl_VehicleBrands" EntityType="ZRModel.tbl_VehicleBrands" />
+    <EntitySet Name="tbl_VehicleType" EntityType="ZRModel.tbl_VehicleType" />
+    <EntitySet Name="tbl_Eminities" EntityType="ZRModel.tbl_Eminities" />
+    <EntitySet Name="tbl_Registration" EntityType="ZRModel.tbl_Registration" />
+    <EntitySet Name="tbl_Orders" EntityType="ZRModel.tbl_Orders" />
+    <EntitySet Name="tbl_Availabulity" EntityType="ZRModel.tbl_Availabulity" />
+    <EntitySet Name="tbl_Contact" EntityType="ZRModel.tbl_Contact" />
+  </EntityContainer>
+  <EntityType Name="tbl_Admin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Admin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_AvalialeVehicles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleId" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RootId" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RootValue" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_BoardingPoints">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CityId" Type="Int64" />
+    <Property Name="BoardingPoint" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DestinationPoint" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Bookings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RootNo" Type="Int64" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TravelId" Type="Int64" />
+    <Property Name="VehicleId" Type="Int64" />
+    <Property Name="DriverId" Type="Int64" />
+    <Property Name="Startdate" Type="DateTime" Precision="3" />
+    <Property Name="Enddate" Type="DateTime" Precision="3" />
+    <Property Name="Duration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Distance" Type="Int32" />
+    <Property Name="Fair" Type="Double" />
+    <Property Name="Offerdiscount" Type="Double" />
+    <Property Name="NoOfseats" Type="Int32" />
+    <Property Name="ConfirmStatus" Type="Int32" />
+    <Property Name="PaymentMode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PayStatus" Type="Int32" />
+    <Property Name="TransactionID" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="JouneyStatus" Type="Int32" />
+    <Property Name="Source" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Destination" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BoardingPoint" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DroppingPoint" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Cities">
+    <Key>
+      <PropertyRef Name="CityName" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="CityCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="State" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Stopps" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Drivers">
+    <Key>
+      <PropertyRef Name="DriverUserName" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DriverName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DriverUserName" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AdharCard" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PanNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleId" Type="Int64" />
+    <Property Name="RootNumber" Type="Int64" />
+    <Property Name="TravelId" Type="Int64" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DrivingLicensecopy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="License" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="DriverPic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="MaritalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BatchNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DrivingLicenseExpiredDate" Type="DateTime" Precision="3" />
+    <Property Name="LicenseIssuedDate" Type="DateTime" Precision="3" />
+    <Property Name="Driversmoke" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DriverDrink" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Role" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Designation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_kmcharges">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Chargeperkm" Type="Double" />
+    <Property Name="Chargeper100km" Type="Double" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Createddate" Type="DateTime" Precision="3" />
+    <Property Name="Createdby" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_login">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ContNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pwd" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Createddate" Type="DateTime" Precision="3" />
+    <Property Name="Role" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Ratings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleId" Type="Int64" />
+    <Property Name="DriverID" Type="Int64" />
+    <Property Name="DriverName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Review" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Rating" Type="Double" />
+  </EntityType>
+  <EntityType Name="tbl_RootMaps">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RootId" Type="Int64" />
+    <Property Name="Via" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Createddate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Roots">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoomNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RootSource" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RootDEstination" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Createdate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="distance" Type="Double" />
+  </EntityType>
+  <EntityType Name="tbl_Statesinfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="State" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StateCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Travelers">
+    <Key>
+      <PropertyRef Name="TravelUserName" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TravelName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TavelEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TravelPhone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TravelUserName" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="latitude" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Long" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="vehiclesCount" Type="Int32" />
+    <Property Name="Travelartype" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CommisionPercentage" Type="Double" />
+    <Property Name="Logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VatNo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Landline1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Landline2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryContact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CommisionPerUser" Type="Double" />
+    <Property Name="ContactPersonName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Designation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ConContactnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Users">
+    <Key>
+      <PropertyRef Name="Phone" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_VehiclesInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TravelerUserName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="travelId" Type="Int64" />
+    <Property Name="VehicleNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleOwnerCont" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RootNumber" Type="Int64" />
+    <Property Name="Via" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DriverId" Type="Int64" />
+    <Property Name="DriverUserName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DriverNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="VehicleModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BrandName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SeatsCount" Type="Int32" />
+    <Property Name="ModelYear" Type="Int32" />
+    <Property Name="Color" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VechileImages" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SoruceStartime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Destination" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TimeDuration" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Source" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SourceBoardingPoints" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DestinationBoardingPoints" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleType" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="vehicleName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SeatType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Eminities" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TermsandConditions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AvailableRootNumber" Type="Int64" />
+    <Property Name="ServiceAvailable" Type="Boolean" />
+    <Property Name="SingleWayPrice" Type="Double" />
+    <Property Name="TwoWayPrice" Type="Double" />
+    <Property Name="RentPerday" Type="Double" />
+    <Property Name="TaxPercentage" Type="Int32" />
+    <Property Name="TravelAgencyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="GST" Type="Int32" />
+    <Property Name="DropTime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="totalDistance" Type="Int32" />
+    <Property Name="Journeytype" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RentPerHour" Type="Double" />
+    <Property Name="SelfDriveprice" Type="Double" />
+    <Property Name="FuelType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TransmissionType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_Color">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Color" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ColorCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_VehicleBrands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_VehicleType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vehicleType" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Seats" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Eminities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Eminity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Registration">
+    <Key>
+      <PropertyRef Name="Phone" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Registerdate" Type="DateTime" Precision="3" />
+    <Property Name="CurrentLocation" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_Orders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleId" Type="Int64" />
+    <Property Name="UserName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="ContactName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BoardingPoint" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="JouneyType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SeatsSelected" Type="Int32" />
+    <Property Name="DropPoint" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UnitPrice" Type="Double" />
+    <Property Name="Tax" Type="Double" />
+    <Property Name="CouponApplied" Type="Double" />
+    <Property Name="NetPay" Type="Double" />
+    <Property Name="PaymentMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentStatus" Type="Int32" />
+    <Property Name="PaymentStatusinfo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentThrough" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="CheckSum" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Transactionid" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserAdhar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OTP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TravelStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Availabulity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleId" Type="Int64" />
+    <Property Name="TravelId" Type="Int64" />
+    <Property Name="AvailableDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Month" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="RootId" Type="Int64" />
+  </EntityType>
+  <EntityType Name="tbl_Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="EmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Mobileno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

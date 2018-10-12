@@ -1,0 +1,211 @@
+﻿@model Zur.VM.UserVM
+@{
+    ViewBag.Title = "ConfirmBooking";
+    Layout = "~/Views/Shared/_HLayout.cshtml";
+}
+
+<section>
+    <div class="rows banner_book" id="inner-page-title">
+        <div class="container1">
+            <div class="banner_book_1">
+                <ul>
+                    <li class="dl1">Hyderabad -> Tenali</li>
+                    <li class="dl2">19-03-2018</li>
+                     
+                    <li class="dl5"><input type="radio" name="radio">One Way |&#160;<input type="radio" name="radio"> Round Trip |&#160;<input type="radio" name="radio">Pooling </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    $("#show").click(function(){
+        $("#modify").toggle();
+    });
+});
+</script>
+
+<section id="modify" style="display:none;">
+    <div class="rows banner_book_m" id="inner-page-title">
+        <div class="container wow fadeInLeft animated">
+            <div class="banner_book_1">
+                <form class="v2-search-form_m">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <input type="text" id="select-city" class="autocomplete">
+                            <label for="select-city">Pick up location</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="text" id="select-city-1" class="autocomplete">
+                            <label for="select-city">Dropping off location</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="text" id="from" name="from">
+                            <label for="from">Pick up date</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--HEADER SECTION-->
+<section>
+    <div class="db">
+        <!--LEFT SECTION-->
+        <div class="db-3">
+            <h4 style="text-align:center;">Other Passigners Infor</h4>
+            <ul>
+
+                <li>
+                    <a href="#!">
+                        <img src="images/steering.png" alt="" />
+                        <h5 style="padding-top:20px;">Driver</h5>
+                        <br>
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#!">
+                        <img src="images/male-circle-512.png" alt="" />
+                        <h5 style="padding-top:20px;">Raghu Ram</h5>
+                        <br>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <img src="images/male-circle-512.png" alt="" />
+                        <h5 style="padding-top:20px;">Rajesh</h5>
+                        <br>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <img src="images/male-circle-512.png" alt="" />
+                        <h5 style="padding-top:20px;">Mahesh</h5>
+                        <br>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#!">
+                        <img src="images/male-circle-512.png" alt="" />
+                        <h5 style="padding-top:20px;">Mahesh</h5>
+                        <br>
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--CENTER SECTION-->
+        <div class="db-2">
+            <div class="">
+
+                <div class="db-2-main-com db2-form-pay db2-form-com">
+                    <form class="col s12">
+                        <div class="row">
+                            <h4 style="background:none:">Login (optional but useful )</h4>
+                            <div class="input-field col s4">
+                                <input id="pay-ca" type="text" class="validate">
+                                <label for="pay-ca">User Name</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input id="pay-ca" type="text" class="validate">
+                                <label for="pay-ca">Password</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input type="submit" value="Sign Up" class="waves-effect waves-light full-btn">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <h4 style="background:none:">Enter Contact details</h4>
+                            <div class="input-field col s6">
+                                <input id="pay-ca" type="text" class="validate">
+                                <label for="pay-ca">Email Id</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="pay-ca" type="text" class="validate">
+                                <label for="pay-ca">Contact No</label>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <h4 style="background:none:">Passinger Details</h4>
+                            <div class="input-field col s4">
+                                <input id="pay-ca" type="text" class="validate">
+                                <label for="pay-ca">Name</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input id="pay-ca" type="text" class="validate">
+                                <label for="pay-ca">Age</label>
+                            </div>
+                            <div class="input-field col s4">
+                                <input id="pay-ca" type="text" class="validate">
+                                <label for="pay-ca">Gender</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input type="submit" value="Proced To Payment" class="waves-effect waves-light full-btn">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--RIGHT SECTION-->
+        <div class="db-3 ">
+            <h4 style="text-align:center;">Price Summary</h4>
+            <ul>
+                <li>
+                    <div class="col s12 db-2-main-com">
+                        <div class="row">
+
+                            <div class="input-field col s8">
+                                <input id="pay-ca" type="text" class="validate">
+                                <label for="pay-ca">Cupan Code</label>
+                            </div>
+
+                            <div class="input-field col s4">
+                                <input type="submit" value="Apply" class="waves-effect waves-light full-btn">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+
+                    <h5>Base Price <span style="margin-right:45px;"></span>: 800 Rs</h5>
+                    <h5>Tax <span style="margin-right:95px;"></span>: 50 Rs</h5>
+                    <h5>GST <span style="margin-right:95px;"></span>: 50 Rs</h5>
+                    <h5>Promo Discount <span style="margin-right:15px;"></span>: 10 Rs</h5>
+                </li>
+                <li>
+
+                    <h5>Total Price: 890 Rs</h5>
+
+
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</section>

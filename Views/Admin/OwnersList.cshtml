@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "OwnersList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model Zur.VM.AdminVM
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">Owners List</h3>
+    </div>
+    <div class="panel-body">
+        <table id="demo-dt-selection" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Owners Id</th>
+                    <th>Owners Name</th>
+                    <th class="min-tablet">ContactNo. </th>
+                    <th>Email</th>
+                    <th>Total Cars</th>
+                    <th class="min-desktop">Travel Type</th>
+                    <th class="min-desktop">Cab Status</th>
+                    @*<th class="min-desktop">Action</th>*@
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.AgentsList)
+                {
+                    <tr>
+                        <td>@user.ID</td>
+                        <td>@user.TravelUserName</td>
+                        <td>@user.TravelPhone</td>
+                        <td>@user.TavelEmail</td>
+                        <td>@user.vehiclesCount</td>
+                        <td>@user.Travelartype</td>
+                        <td>
+                            @if (user.Status == 1)
+                            {
+                                <span style="color:green;font:bold">
+                                    Active
+                                </span>
+                            }
+                            else
+                            {
+                                <span style="color:red;font-weight:bold">
+                                    In Active
+                                </span>
+                            }
+
+
+                        </td>
+                        @*<td>@Html.ActionLink("Edit / View", "ViewCabwithDriver", new { @id = user.Id })</td>*@
+                    </tr>
+                }
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

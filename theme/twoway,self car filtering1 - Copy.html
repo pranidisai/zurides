@@ -1,0 +1,2287 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Booking</title>
+    <!--== META TAGS ==-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="images/fav.ico">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+    <!-- FONT-AWESOME ICON CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--== ALL CSS FILES ==-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mob.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-------------------------------------------------------------------------->
+	<style>
+	@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+body {
+  background-color: ;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Roboto", sans-serif; 
+}
+	</style>
+<!--------------------------------------------------------------------------->	
+        <!-------------------------------radiobutton------------------------------------------->	   
+       
+    <style>
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+.switch {
+  background-color: #1bbc9b;
+  width: 100%;
+  display: inline-block;
+  border-radius: 8px;
+  height: 40px;
+  padding:;
+  position: relative;
+  zoom: 1;
+}
+.switch:before, .switch:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.switch:after {
+  clear: both;
+}
+.switch label {
+  float: left;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  line-height: 40px;
+  cursor: pointer;
+  color: #117964;
+}
+.switch input[type="radio"] {
+  display: none;
+}
+.switch input[type="radio"]:checked + label {
+  color: #141241;
+  font-weight: bold;
+}
+.switch span {
+  position:relative;
+  z-index: 1;
+  top: ;
+  left:-2px;
+  width: 50%;
+  height: 100%;
+  display: block;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #ffffff;
+  transition: all 200ms ease;
+}
+.switch span.right {
+  top:-45px;
+  width:50%;
+  left: 5%;
+  border-radius: 5px 5px 5px 5px;
+  transition: all 200ms ease;
+}
+    </style>
+<!---------------------------------endradiobytton------------------------------------------>      
+         <style>
+/* html {
+  /* for demo purposes only */
+ /* margin: 2em;
+}*/
+input[type="text"],
+input[type="password"],             
+select.form-control1 {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #A4A4A4;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,             
+select.form-control1:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+</style>
+  <style>
+    #myDiv {
+    border: 1px solid #D8D8D8;
+}
+      #myDiv1 {
+    border: 1px solid #D8D8D8;
+}
+      .cursor{
+          cursor: pointer;
+      }
+    </style>
+
+    <style>
+    #myDiv21 {
+    border: 1px solid #D8D8D8;
+}
+      #myDiv22 {
+    border: 1px solid #D8D8D8;
+}
+    </style>
+    <style>
+        .active{
+            background-color: #ffff;
+        }
+    </style>
+    
+    
+</head>
+
+<body style="overflow-x: hidden;">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!-- MOBILE MENU -->
+   
+<section>
+        <div class="ed-mob-menu">
+            <div class="ed-mob-menu-con">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="index.html"><img src="images/logo.png" alt="" />
+						</a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-menu">
+                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                        <div class="ed-mm-inn">
+                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+								<li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section>
+        <!-- LOGO AND MENU SECTION -->
+        <div class="top-logo affix" data-spy="affix" data-offset-top="250" style="" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" >
+                        <div class="wed-logo">
+                            <a href="index.html"><img src="images/logo.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="main-menu" >
+                            <ul>
+                                <li><a href="index.html">Home</a>
+                                </li>
+                               
+                                <li><a href="about.html">About</a>
+                                </li>
+                                 <li><a href="blog.html">Blog</a>
+                                </li>
+                                <li><a href="contact.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--END HEADER SECTION-->
+<section>
+		<div class="rows banner_book" id="inner-page-title">
+			<div class="container">
+				<div class="banner_book_1">
+					<ul>
+						<li class="dl1">Hyderabad -> Vijayawada</li>
+						<li class="dl2">26-06-2018</li>
+						
+						<li class="dl3"><a href="#" id="show"><span style="border:1px solid #fff;padding:0 10px 0 10px; border-radius: 25px;">Modify</span></a></li>
+                        
+                        <li style="margin-top:10px;">
+                            <div class="switch">
+                              <input name="radio" type="radio" value="optionone" id="" checked>
+                              <label for="optionone" style="font-size:15px;" id="k1">Rental</label>
+
+                              <input name="radio" type="radio" value="optiontwo" id="">
+                              <label for="optiontwo" class="right" style="font-size:15px;" id="k2">SelfDrive</label>
+
+                              <span aria-hidden="true"></span>
+                            </div>
+                        </li>
+					</ul>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $("#show").click(function(){
+        $("#modify").toggle();
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    
+    $("#book").click(function(){
+        $("#list").toggle();
+    });
+});
+</script>
+ 
+    
+  <div class="clearfix"></div>
+    <!--====== FOOTER 1 ==========-->
+    <section>
+        <div class="row" id="venu1">
+            
+            <section>
+    <div class="row" style="-webkit-box-shadow: inset 0px 0px 4px 3px rgba(209,194,209,1);
+-moz-box-shadow: inset 0px 0px 4px 3px rgba(209,194,209,1);
+box-shadow: inset 0px 0px 4px 3px rgba(209,194,209,1);display: flex;">
+        
+     <div class="col-md-2" style="margin-top:10px;">      
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon1.png" style="height:30px;width:30px;">Car Categories
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Innova</a></li>
+      <li><a href="#">Swift</a></li>
+      <li><a href="#">BMW</a></li>
+    </ul>
+     </div>
+  </div>
+        <div class="col-md-1" style="margin-left:-22px;margin-top:10px;" >
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon4.png" style="height:30px;width:30px;">Fuel Type
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Diesel</a></li>
+      <li><a href="#">Petrol</a></li>
+    </ul>
+     </div>
+  </div>
+        <div class="col-md-1" style="margin-left:50px;margin-top:10px;">
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon1.png" style="height:30px;width:30px;">Seats
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">04</a></li>
+      <li><a href="#">05</a></li>
+      <li><a href="#">07</a></li>
+    </ul>
+     </div>
+  </div>
+        <div class="col-md-2" style="margin-top:10px;">
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon1.png" style="height:30px;width:30px;">Pickuping Point
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Madhapur</a></li>
+      <li><a href="#">Ameerpet</a></li>
+      <li><a href="#">kukatpalli</a></li>
+    </ul>
+     </div>
+  </div>
+        <!--<div class="col-md-2" style="margin-top:10px;">
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon1.png" style="height:30px;width:30px;">Arraival Time
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+     </div>
+  </div>-->
+        <div class="col-md-6" style="margin-top:10px;">
+        <div class="col-md-3">
+        <label style="display: flex;">
+  <input type="radio" checked="checked" name="radio" style="height:25px;width:25px;"><p style="color: black;line-height: 5px;">One Way</p>
+  <span class="checkmark"></span>
+</label></div>
+            <div class="col-md-3">
+<label class="" style="display: flex;">
+  <input type="radio" name="radio" style="height:25px;width:25px;"><p style="color: black;line-height: 5px;">Two Way</p>
+  <span class="checkmark"></span>
+                </label></div>
+            <div class="col-md-3">
+<label class="" style="display: flex;">
+  <input type="radio" name="radio" style="height:25px;width:25px;"><p style="color: black;line-height: 5px;">Self Driving</p>
+  <span class="checkmark"></span>
+                </label></div>
+            <div class="col-md-3">
+<label class="" style="display: flex;">
+  <input type="radio" name="radio" style="height:25px;width:25px;"><p style="color: black;line-height: 5px;">Car Pooling</p>
+  <span class="checkmark"></span>
+                </label></div>
+
+        </div>
+        
+</div>  
+    </section>
+
+            
+            
+          <div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:40px;margin-left:-40px;margin-top:30px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="~/theme/images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="~/theme/images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="~/theme/images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="~/theme/images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>
+                      </div>
+                        <div class="col-md-12 input-field" >
+                                <div  style="margin-top:10px;">
+                            <select class="form-control1" >
+                              <option>Choose Nearest Car Site Location</option>
+                              <option>Pooh Cars,Hitech city</option>
+                              <option>Driven By You,Roadno.7 jubliHills</option>
+                              <option>Omega Hospital,ameerpet</option>
+                              <option>BavachiREstarent,RTC croos Roads</option>
+                            </select>
+                        </div>             
+                     </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;" id="book1">BOOK NOW</button>
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;display: none;" id="book101">BOOK NOW</button>
+                            </div>                     
+             </div> 
+
+        	          <div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>
+                      </div>
+                        <div class="col-md-12 input-field" >
+                                <div  style="margin-top:10px;">
+                            <select class="form-control1" >
+                              <option>Choose Nearest Car Site Location</option>
+                              <option>Pooh Cars,Hitech city</option>
+                              <option>Driven By You,Roadno.7 jubliHills</option>
+                              <option>Omega Hospital,ameerpet</option>
+                              <option>BavachiREstarent,RTC croos Roads</option>
+                            </select>
+                        </div>             
+                     </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;">BOOK NOW</button>
+                            </div>                     
+             </div>
+            	          <div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>
+                      </div>
+                        <div class="col-md-12 input-field" >
+                                <div  style="margin-top:10px;">
+                            <select class="form-control1" >
+                              <option>Choose Nearest Car Site Location</option>
+                              <option>Pooh Cars,Hitech city</option>
+                              <option>Driven By You,Roadno.7 jubliHills</option>
+                              <option>Omega Hospital,ameerpet</option>
+                              <option>BavachiREstarent,RTC croos Roads</option>
+                            </select>
+                        </div>             
+                     </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;">BOOK NOW</button>
+                            </div>                     
+             </div>
+            
+                   <!-------bookingdetails------->
+     <div class="" id="list1" style="display:none;">
+    <div class="row" style="margin:20px;">
+        <div class="col-md-1"></div>
+        <div class="col-md-1" style="border: 2px solid #F2F2F2;background-color:#F2F2F2; ">
+        <img src="images/icon-1.png" style="height:50px;width:80px; margin-top:160px;" class="img-responsive active" id="image1" >
+        <img src="images/icon-2.png" style="height:50px;width:70px;margin-bottom:180px;margin-top: 50px;"class="img-responsive" id="image2">
+        </div>
+        <div class="col-md-7" id="middlediv1">
+        <h4 style="text-align: center;">SELECT YOUR SEATS</h4>
+            <div class="row" style="border-top:2px solid #A4A4A4; ">            
+                <div class="col-md-6" style="">
+                    <div class="col-md-2">
+                <img src="images/car1.png" style="width:50px;">
+                <img src="images/icon12.png" style="width:50px;">
+                </div>
+                    <div class="col-md-9" style="">
+                    <h6 style="color:#FF8000;text-align: center;">CAB DETAILS</h6>
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                        <p style="font-size:12px;margin-top:-10px;">Name:Indiaca</p>
+                        <p style="font-size:12px;margin-top:-13px;">Total Seats:04</p>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-md-6" style="border-left:2px solid #A4A4A4;">
+                    <div class="col-md-12" style="padding: 5px;">
+                    <div class="col-md-6"><label style="font-size:15px;color:#FF8000;margin-top:5px;">Enter PickUP Time</label></div>
+                    <div class="col-md-6"><input type="time" name="usr_time" class="form-control" id="name" ></div>
+                   <div class="col-md-6"><label style="font-size:15px;color:#FF8000;margin-top:15px;">Enter Droping Time</label></div>
+                    <div class="col-md-6" style="margin-top:10px;"><input type="time" name="usr_time" class="form-control" id="name" ></div>
+                          </div>
+                        <!--<h4>Driver Details</h4>
+                    <img src="images/icon-2.png" style="height:20px;width:20px;display: flex;">
+                    <p style="color:black;margin-top:-20px;">DriverName:Madhusudhan</p>
+                    <p style="color:black;margin-top:-15px;">DriverContactNo.:9876543355</p>
+                    <p style="color:black;margin-top:-15px;">DrivingLicenseNo.:98765433</p>-->
+                </div>
+            </div>
+            <div class="row" style="border-top:2px solid #A4A4A4;border-bottom:2px solid #A4A4A4; " >
+                
+                    <div class="col-md-6" style="border-right:2px solid #A4A4A4;padding: 10px;">
+                    <h4 style="text-decoration: underline;color:#FF8000;margin-top:20px;">ENTER KILOMETERS(KM)</h4>
+                    <div class="col-md-6 col-md-offset-6 form-group" style="margin-left:80px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter KiloMeters" >
+                     </div>
+                    </div>
+                
+                    <div class="col-md-6" style="">
+                        <h4 style="text-decoration: underline;color:#FF8000;margin-top:20px;">SELECT YOUR ID PROOF</h4>                
+                        <div class="col-md-9 col-md-offset-2" style="margin-top:20px;">
+                            <select class="form-control1" >
+                              <option>Select Your Id Proof</option>
+                              <option>AadharCard</option>
+                              <option>PanCard</option>
+                              <option>VoterID</option>
+                            </select>
+                        </div>          
+                    </div>
+         </div>
+           
+            <div class="col-md-12">
+                
+                <div  style="float:right;">
+                    <!--<h3 style="color:#FF8000;">VIA CITIES</h3>-->
+                </div>
+        </div>
+        <div class="col-md-6 col-md-offset-3" style="margin-top:20px;padding: 10px;">  
+            <select class="form-control1" >
+                              <option>Select Your Boarding Point</option>
+                              <option>kukatpalli</option>
+                              <option>yarragadda</option>
+                              <option>sr nagar</option>
+                              <option>ameerpet</option>
+                            </select>
+        </div>         
+        <!--<div class="col-md-6">
+                    <select class="form-control1" >
+                              <option>Select Droping Point</option>
+                              <option>Madhapur</option>
+                              <option>Hitech City</option>
+                              <option>Kondapur</option>
+                              <option>Bharathnagar</option>
+                    </select>
+                    
+        </div>-->
+            <input type="button" value="Proceed TO Confirm" style="border-radius:20px;width:150px;margin:40px;height:40px;color:white;background-color:#ED4545;border:none;" id="button1">
+        </div>
+        <!---middlediv2-->
+        <div class="col-md-7" id="middlediv2" style="display:none;">
+        
+            <div class="row">
+                <h5 style="text-align:left;margin-left:30px;color:#A4A4A4 ">LOGIN DETAILS :</h5>
+               <div class="col-md-3 form-group" style="margin-left:10px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="User Id" >
+                </div>
+                <div class="col-md-3 form-group">
+                <input type="password" name="name" class="form-control" id="name" placeholder="Password" >
+                </div>
+                <div class="col-md-1" >
+                <input type="button" value="SignIn" style="border-radius:20px;width:70px;color:white;background-color:#ED4545;" class="form-control">
+                </div>
+                <div class="col-md-3 form-group" style="margin-left:10px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Coupon" >
+                  <label>*Offers&Coupons</label>                    
+                </div>
+                <div class="col-md-1">
+                <input type="button" value="Apply" style="border-radius:20px;width:70px;color:white;background-color:#ED4545;" class="form-control">
+                </div>
+            </div>
+        
+                <!--    <div col-md-3>
+                    <input type="tex" placeholder="EnterCoupon">
+                    </div>
+                    <div col-md-3>
+                     <input type="button" value="Apply" style="border-radius:20px;width:70px;">
+                    </div>-->
+                <h4>OR</h4>
+            <div class="col-md-12" style="">
+                <h5 style="text-align: left;color:#A4A4A4">Contact Details :</h5>
+                    <div class="col-md-5" style="margin-bottom: 10px;display:flex;">
+                      91+<input type="text" name="name" class="form-control" id="name" placeholder=" Mobile Number" >
+                    </div>
+                    <div class="col-md-6" style="display:flex;font-size:20px;">
+                        <i class="fa fa-envelope"></i>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter email" >
+                    </div>
+                
+                </div>
+            
+            <div class="col-md-12" style="margin-top:10px;">
+                
+                <h5 style="text-align:left;color:#A4A4A4" >Personal Details :</h5>
+            <div class="row">
+                <div class="col-md-4">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" >
+               </div>
+                <div class="col-md-4" >
+                <input type="text" name="name" class="form-control" id="name" placeholder="Age" >
+               </div>
+                <div class="col-md-4">
+                    <label></label>
+                  <select class="form-control1" name="dropdown-test">
+                      <label></label>
+                      <option>Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+                </select>
+                </div>
+                <div class="col-md-12">
+                     <h5 style="text-align:left;color:#A4A4A4;margin-top:10px;" >Documentation :</h5>
+                <div class="col-md-6">
+                   <label></label>
+                  <select class="form-control1" name="dropdown-test">
+                      <option>Select Id Proof</option>
+                  <option>AadherNumber</option>
+                  <option>PanCardNumber</option>
+                  <option>VoterId</option>
+                </select>
+                </div>
+                    <div class="col-md-6">
+                        
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Enter Id Number" >
+                    </div>
+               </div>
+                </div>
+                
+               <a href="#"><input type="button" value="Proceed TO Pay" style="border-radius:20px;width:150px;margin:40px;height:40px;color:white;background-color:#ED4545;border: none;"></a> 
+                </div>
+        
+        </div>
+        <!------endmidddlediv2-->
+        
+        
+        <div class="col-md-2" style="background-color:#ff7200;">
+        <h4 style="margin-top:20px;">No of Kilometers Entered:</h4>
+        <label style="border:1px solid black;border-radius:10px;height:50px;width: 50px;color:white;font-size:20px;">01</label>
+        <h5 style="text-decoration: underline;">FARE SUMMARY</h5>
+            <p style="text-align: left;">BaseFee : <span style="color:white;float:right;">INR 970</span></p>
+            <p style="text-align: left;">LevyFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <p style="text-align: left;">TollFee : <span style="color:white;float:right;">INR 970</span></p>
+            <p style="text-align: left;">ReservationFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <p style="text-align: left;">ServiceFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <hr style="border-top: 1px solid black;">
+            <p style="text-align: left;">TOTALFARE:<span style="color:white;float:right;">INR 4000</span></p>
+            <hr style="border-top: 1px solid black;">
+            <p style="margin-bottom:30px;text-align: left;">TOTAL PAYABLE:<span style="color:white;float:right;">INR 4000</span></p>       
+        </div>
+        
+    
+    </div>
+   
+</div>
+        <!-------end bookingdetals----->
+     
+                         <!-------bookingdetails------->
+     <div class="" id="list101" style="display:none;">
+    <div class="row" style="margin:20px;">
+        <div class="col-md-1"></div>
+        <div class="col-md-1" style="border: 2px solid #F2F2F2;background-color:#F2F2F2; ">
+        <img src="images/icon-1.png" style="height:50px;width:80px; margin-top:160px;" class="img-responsive active" id="image111" >
+        <img src="images/icon-2.png" style="height:50px;width:70px;margin-bottom:180px;margin-top: 50px;"class="img-responsive" id="image22">
+        </div>
+        <div class="col-md-7" id="middlediv111">
+        <h4 style="text-align: center;">SELECT YOUR SEATS</h4>
+            <div class="row" style="border-top:2px solid #A4A4A4; ">            
+                <div class="col-md-6" style="">
+                    <div class="col-md-2">
+                <img src="images/car1.png" style="width:50px;">
+                <img src="images/icon12.png" style="width:50px;">
+                </div>
+                    <div class="col-md-9" style="">
+                    <h6 style="color:#FF8000;text-align: center;">CAB DETAILS</h6>
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                        <p style="font-size:12px;margin-top:-10px;">Name:Indiaca</p>
+                        <p style="font-size:12px;margin-top:-13px;">Total Seats:04</p>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-md-6" style="color:#FF8000;border-left:2px solid #A4A4A4;">
+                    <div class="col-md-12" style="padding: 5px;">
+                    <div class="col-md-6"><label style="font-size:15px;color:#FF8000;margin-top:5px;">Enter PickUP Time</label></div>
+                    <div class="col-md-6"><input type="time" name="name" class="form-control" id="name" ></div>
+                   <div class="col-md-6"><label style="font-size:15px;color:#FF8000;margin-top:15px;">Enter Droping Time</label></div>
+                    <div class="col-md-6" style="margin-top:10px;"><input type="time" name="name" class="form-control" id="name" ></div>
+                          </div>
+                    
+                        <!-- <h4>Driver Details</h4>
+                   <img src="images/icon-2.png" style="height:20px;width:20px;display: flex;">
+                    <p style="color:black;margin-top:-20px;">DriverName:Madhusudhan</p>
+                    <p style="color:black;margin-top:-15px;">DriverContactNo.:9876543355</p>
+                    <p style="color:black;margin-top:-15px;">DrivingLicenseNo.:98765433</p>-->
+                </div>
+            </div>
+            <div class="row" style="border-top:2px solid #A4A4A4;border-bottom:2px solid #A4A4A4; " >
+                
+                    <div class="col-md-6" style="border-right:2px solid #A4A4A4;padding:40px;">
+                    <h4 style="text-decoration: underline;color:#FF8000;margin-top:0px;">ENTER KILOMETERS(KM)</h4>
+                        <label style="font-size:15px;text-decoration:underline;">Unlimited KiloMeters</label>
+                    <!--<div class="col-md-6 col-md-offset-6 form-group" style="margin-left:80px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter KiloMeters" >
+                     </div>-->
+                    </div>
+                
+                    <div class="col-md-6" style="">
+                        <h4 style="text-decoration: underline;color:#FF8000;margin-top:20px;">SELECT YOUR ID PROOF</h4>                
+                        <div class="col-md-9 col-md-offset-2" style="margin-top:10px;">
+                            <select class="form-control1" >
+                              <option>Select Your Id Proof</option>
+                              <option>AadharCard</option>
+                              <option>PanCard</option>
+                              <option>VoterID</option>
+                            </select>
+                        </div>          
+                    </div>
+         </div>
+           
+            <div class="col-md-12">
+                
+                <div  style="float:right;">
+                    <!--<h3 style="color:#FF8000;">VIA CITIES</h3>-->
+                </div>
+        </div>
+        <div class="col-md-6 col-md-offset-3" style="margin-top:20px;padding: 10px;">  
+            <select class="form-control1" >
+                              <option>Select Your Boarding Point</option>
+                              <option>kukatpalli</option>
+                              <option>yarragadda</option>
+                              <option>sr nagar</option>
+                              <option>ameerpet</option>
+                            </select>
+        </div>         
+        <!--<div class="col-md-6">
+                    <select class="form-control1" >
+                              <option>Select Droping Point</option>
+                              <option>Madhapur</option>
+                              <option>Hitech City</option>
+                              <option>Kondapur</option>
+                              <option>Bharathnagar</option>
+                    </select>
+                    
+        </div>-->
+            <input type="button" value="Proceed TO Confirm" style="border-radius:20px;width:150px;margin:40px;height:40px;color:white;background-color:#ED4545;border:none;" id="button11">
+        </div>
+        <!---middlediv2-->
+        <div class="col-md-7" id="middlediv22" style="display:none;">
+        
+            <div class="row">
+                <h5 style="text-align:left;margin-left:30px;color:#A4A4A4 ">LOGIN DETAILS :</h5>
+               <div class="col-md-3 form-group" style="margin-left:10px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="User Id" >
+                </div>
+                <div class="col-md-3 form-group">
+                <input type="password" name="name" class="form-control" id="name" placeholder="Password" >
+                </div>
+                <div class="col-md-1" >
+                <input type="button" value="SignIn" style="border-radius:20px;width:70px;color:white;background-color:#ED4545;" class="form-control">
+                </div>
+                <div class="col-md-3 form-group" style="margin-left:10px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Coupon" >
+                  <label>*Offers&Coupons</label>            
+                </div>
+                <div class="col-md-1">
+                <input type="button" value="Apply" style="border-radius:20px;width:70px;color:white;background-color:#ED4545;" class="form-control">
+                </div>
+            </div>
+        
+                <!--    <div col-md-3>
+                    <input type="tex" placeholder="EnterCoupon">
+                    </div>
+                    <div col-md-3>
+                     <input type="button" value="Apply" style="border-radius:20px;width:70px;">
+                    </div>-->
+                <h4>OR</h4>
+            <div class="col-md-12" style="">
+                <h5 style="text-align: left;color:#A4A4A4">Contact Details :</h5>
+                    <div class="col-md-5" style="margin-bottom: 10px;display:flex;">
+                      91+<input type="text" name="name" class="form-control" id="name" placeholder=" Mobile Number" >
+                    </div>
+                    <div class="col-md-6" style="display:flex;font-size:20px;">
+                        <i class="fa fa-envelope"></i>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter email" >
+                    </div>
+                
+                </div>
+            
+            <div class="col-md-12" style="margin-top:10px;">
+                
+                <h5 style="text-align:left;color:#A4A4A4" >Personal Details :</h5>
+            <div class="row">
+                <div class="col-md-4">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" >
+               </div>
+                <div class="col-md-4" >
+                <input type="text" name="name" class="form-control" id="name" placeholder="Age" >
+               </div>
+                <div class="col-md-4">
+                    <label></label>
+                  <select class="form-control1" name="dropdown-test">
+                      <label></label>
+                      <option>Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+                </select>
+                </div>
+                <div class="col-md-12">
+                     <h5 style="text-align:left;color:#A4A4A4;margin-top:10px;" >Documentation :</h5>
+                <div class="col-md-6">
+                   <label></label>
+                  <select class="form-control1" name="dropdown-test">
+                      <option>Select Id Proof</option>
+                  <option>AadherNumber</option>
+                  <option>PanCardNumber</option>
+                  <option>VoterId</option>
+                </select>
+                </div>
+                    <div class="col-md-6">
+                        
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Enter Id Number" >
+                    </div>
+               </div>
+                </div>
+                
+               <a href="#"><input type="button" value="Proceed TO Pay" style="border-radius:20px;width:150px;margin:40px;height:40px;color:white;background-color:#ED4545;border: none;"></a> 
+                </div>
+        
+        </div>
+        <!------endmidddlediv2-->
+        
+        
+        <div class="col-md-2" style="background-color:#ff7200;">
+        <!--<h4 style="margin-top:20px;">No of Kilometers Entered:</h4>
+        <label style="border:1px solid black;border-radius:10px;height:50px;width: 50px;color:white;font-size:20px;">01</label>-->
+        <h5 style="text-decoration: underline;margin-top:80px;">FARE SUMMARY</h5>
+            <p style="text-align: left;">BaseFee : <span style="color:white;float:right;">INR 970</span></p>
+            <p style="text-align: left;">LevyFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <p style="text-align: left;">TollFee : <span style="color:white;float:right;">INR 970</span></p>
+            <p style="text-align: left;">ReservationFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <p style="text-align: left;">ServiceFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <hr style="border-top: 1px solid black;">
+            <p style="text-align: left;">TOTALFARE:<span style="color:white;float:right;">INR 4000</span></p>
+            <hr style="border-top: 1px solid black;">
+            <p style="margin-bottom:30px;text-align: left;">TOTAL PAYABLE:<span style="color:white;float:right;margin-bottom: 77px;">INR 4000</span></p>       
+        </div>
+        
+    
+    </div>
+   
+</div>
+        <!-------end bookingdetals----->
+
+            
+            
+            
+            	          <div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>                      </div>
+                        <div class="col-md-12 input-field" >
+                                <div  style="margin-top:10px;">
+                            <select class="form-control1" >
+                              <option>Choose Nearest Car Site Location</option>
+                              <option>Pooh Cars,Hitech city</option>
+                              <option>Driven By You,Roadno.7 jubliHills</option>
+                              <option>Omega Hospital,ameerpet</option>
+                              <option>BavachiREstarent,RTC croos Roads</option>
+                            </select>
+                        </div>             
+                     </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;" >BOOK NOW</button>
+                            </div>                     
+             </div>
+            	          <div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>
+                              </div>
+                        <div class="col-md-12 input-field" >
+                                <div  style="margin-top:10px;">
+                            <select class="form-control1" >
+                              <option>Choose Nearest Car Site Location</option>
+                              <option>Pooh Cars,Hitech city</option>
+                              <option>Driven By You,Roadno.7 jubliHills</option>
+                              <option>Omega Hospital,ameerpet</option>
+                              <option>BavachiREstarent,RTC croos Roads</option>
+                            </select>
+                        </div>             
+                     </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;">BOOK NOW</button>
+                            </div>                     
+             </div>  
+                      <div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function1()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction1()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>                      </div>
+                        <div class="col-md-12 input-field" >
+                                <div  style="margin-top:10px;">
+                            <select class="form-control1" >
+                              <option>Choose Nearest Car Site Location</option>
+                              <option>Pooh Cars,Hitech city</option>
+                              <option>Driven By You,Roadno.7 jubliHills</option>
+                              <option>Omega Hospital,ameerpet</option>
+                              <option>BavachiREstarent,RTC croos Roads</option>
+                            </select>
+                        </div>             
+                     </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;">BOOK NOW</button>
+                            </div>                     
+             </div>
+        </div>
+    </section>
+  <section>
+    <div class="row" id="venu2" style="display: none;">
+        
+          <section>
+    <div class="row" style="-webkit-box-shadow: inset 0px 0px 4px 3px rgba(209,194,209,1);
+-moz-box-shadow: inset 0px 0px 4px 3px rgba(209,194,209,1);
+box-shadow: inset 0px 0px 4px 3px rgba(209,194,209,1);display: flex;">
+        
+     <div class="col-md-2" style="margin-top:10px;">      
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon1.png" style="height:30px;width:30px;">Car Categories
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Innova</a></li>
+      <li><a href="#">Swift</a></li>
+      <li><a href="#">BMW</a></li>
+    </ul>
+     </div>
+  </div>
+        <div class="col-md-2" style="margin-top:10px;" >
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon4.png" style="height:30px;width:30px;">Fuel Type
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Diesel</a></li>
+      <li><a href="#">Petrol</a></li>
+    </ul>
+     </div>
+  </div>
+        <div class="col-md-2" style="margin-top:10px;">
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon1.png" style="height:30px;width:30px;">Seats
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">04</a></li>
+      <li><a href="#">05</a></li>
+      <li><a href="#">06</a></li>
+    </ul>
+     </div>
+  </div>
+        <!--<div class="col-md-2" style="margin-top:10px;">
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon1.png" style="height:30px;width:30px;">Pickuping Point
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+     </div>
+  </div>-->
+        <!--<div class="col-md-2" style="margin-top:10px;">
+            <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+        <img src="images/futures/icon1.png" style="height:30px;width:30px;">Arraival Time
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+     </div>
+  </div>-->
+        <div class="col-md-6" style="margin-top:10px;">
+        <div class="col-md-3">
+        <label style="display: flex;">
+  <input type="radio" checked="checked" name="radio" style="height:25px;width:25px;"><p style="color: black;line-height:5px;">One Way</p>
+  <span class="checkmark"></span>
+</label></div>
+            <div class="col-md-3">
+<label class="" style="display: flex;">
+  <input type="radio" name="radio" style="height:25px;width:25px;"><p style="color: black;line-height:5px;">Two Way</p>
+  <span class="checkmark"></span>
+                </label></div>
+            <div class="col-md-3">
+<label class="" style="display: flex;">
+  <input type="radio" name="radio" style="height:25px;width:25px;"><p style="color: black;line-height:5px;">Self Driving</p>
+  <span class="checkmark"></span>
+                </label></div>
+            <div class="col-md-3">
+<label class="" style="display: flex;">
+  <input type="radio" name="radio" style="height:25px;width:25px;"><p style="color: black;line-height:5px;">Car Pooling</p>
+  <span class="checkmark"></span>
+                </label></div>
+
+        </div>
+        
+</div>  
+    </section>
+  
+             <div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv21" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv22" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>
+                      </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;" id="book11">BOOK NOW</button>
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;display:none;" id="book111">BOOK NOW</button>
+
+                            </div>                     
+             </div>
+        <div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>                      </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;">BOOK NOW</button>
+                            </div>                     
+             </div>
+        					<div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>
+                                </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;">BOOK NOW</button>
+                            </div>                     
+             </div>
+           <!-------bookingdetails------->
+
+     <div class="" id="list4" style="display:none;">
+         
+    <div class="row" style="margin:20px;">
+        <div class="col-md-1"></div>
+        <div class="col-md-1" style="border: 2px solid #F2F2F2;background-color:#F2F2F2; ">
+        
+                <img src="images/icon-1.png" style="height:50px;width:80px; margin-top:160px;padding:3px;" class="img-responsive active" id="image11">
+    
+        <img src="images/icon-2.png" style="height:50px;width:70px;margin-bottom:180px;margin-top: 50px;"class="img-responsive" id="image21">
+        </div>
+        
+       <div class="col-md-7" id="middlediv11">
+        <h4 style="text-align: center;">SELECT YOUR SEATS</h4>
+            <div class="row" style="border-top:2px solid #A4A4A4; ">            
+                <div class="col-md-6" style="border-right:2px solid #A4A4A4;">
+                <div class="col-md-1" style="margin-left:-10px;">
+                <img src="images/car1.png" style="width:40px;">
+                <img src="images/icon12.png" style="width:40px;">
+                </div>
+                    <div class="col-md-11" style="">
+                    <div class="col-md-12">
+                        <div class="col-md-6" style="border-right:2px solid #F2F2F2;">
+                        <h6 style="color:#FF8000;font-size:13px;line-height:0px;">Cab Details</h6>
+                        <p style="font-size:11px;line-height:15px;">Name:Indiaca</p>
+                        <p style="font-size:11px;line-height:15px;">Total Seats:04</p>
+                        <p style="font-size:11px;line-height:15px;">Name:Indiaca</p>    
+                        </div>
+                        <div class="col-md-6">
+                        <h6 style="color:#FF8000;font-size:13px;line-height:0px;">Driver Details</h6>
+                      <p style="font-size:11px;line-height:15px;">Name:Madhu</p>
+                    <p style="font-size:11px;line-height:15px;">ContactNo.:9876543355</p>
+                    <p style="font-size:11px;line-height:15px;">LicenseNo.:98765433</p>   
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="color:#FF8000;">
+                    
+                    <div class="col-md-12" style="padding: 5px;">
+                    <div class="col-md-6"><label style="font-size:15px;color:#FF8000;margin-top:5px;">Enter PickUP Time</label></div>
+                    <div class="col-md-6"><input type="time" name="name" class="form-control" id="name" ></div>
+                   <div class="col-md-6"><label style="font-size:15px;color:#FF8000;margin-top:15px;">Enter Droping Time</label></div>
+                    <div class="col-md-6" style="margin-top:10px;"><input type="time" name="name" class="form-control" id="name" ></div>
+                          </div>
+                        <!--<h4>Driver Details</h4>
+                    <img src="images/icon-2.png" style="height:20px;width:20px;display: flex;">
+                    <p style="color:black;margin-top:-20px;">DriverName:Madhu</p>
+                    <p style="color:black;margin-top:-15px;">DriverContactNo.:9876543355</p>
+                    <p style="color:black;margin-top:-15px;">DrivingLicenseNo.:98765433</p>-->
+                </div>
+            </div>
+            <div class="row" style="border-top:2px solid #A4A4A4;border-bottom:2px solid #A4A4A4;" >
+                    <div class="col-md-6" style="border-right:2px solid #A4A4A4;padding: 10px;">
+                    <h4 style="text-decoration: underline;color:#FF8000;margin-top:20px;">ENTER KILOMETERS(KM)</h4>
+                    <div class="col-md-6 col-md-offset-6 form-group" style="margin-left:80px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter KiloMeters" >
+                     </div>
+                    </div>
+                    <div class="col-md-6" style="padding: 10px;">
+                        <h4 style="text-decoration: underline;color:#FF8000;margin-top:10px;">SELECT YOUR ID PROOF</h4>                
+                        <div class="col-md-9 col-md-offset-2" style="margin-top:20px;">
+                            <select class="form-control1" >
+                              <option>Select Your Id Proof</option>
+                              <option>AadharCard</option>
+                              <option>PanCard</option>
+                              <option>VoterID</option>
+                            </select>
+                        </div>          
+                    </div>
+         </div>
+           
+            <div class="col-md-12">
+                
+                <div  style="float:right;">
+                    <!--<h3 style="color:#FF8000;">VIA CITIES</h3>-->
+                </div>
+        </div>
+        <div class="col-md-6 col-md-offset-3" style="margin-top:20px;padding: 10px;">  
+            <select class="form-control1" >
+                              <option>Select Your Boarding Point</option>
+                              <option>kukatpalli</option>
+                              <option>yarragadda</option>
+                              <option>sr nagar</option>
+                              <option>ameerpet</option>
+                            </select>
+        </div>         
+        <!--<div class="col-md-6">
+                    <select class="form-control1" >
+                              <option>Select Droping Point</option>
+                              <option>Madhapur</option>
+                              <option>Hitech City</option>
+                              <option>Kondapur</option>
+                              <option>Bharathnagar</option>
+                    </select>
+                    
+        </div>-->
+            <input type="button" value="Proceed TO Confirm" style="border-radius:20px;width:150px;margin:40px;height:40px;color:white;background-color:#ED4545;border:none;" id="button111">
+        </div>
+        <!---middlediv2-->
+        <div class="col-md-7" id="middlediv21" style="display:none;">
+        
+            <div class="row">
+                <h5 style="text-align:left;margin-left:30px;color:#A4A4A4 ">LOGIN DETAILS :</h5>
+                <div class="col-md-3 form-group" style="margin-left:10px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="User Id" >
+                </div>
+                <div class="col-md-3 form-group">
+                <input type="password" name="name" class="form-control" id="name" placeholder="Password" >
+                </div>
+                <div class="col-md-1" >
+                <input type="button" value="SignIn" style="border-radius:20px;width:70px;color:white;background-color:#ED4545;" class="form-control">
+                </div>
+                <div class="col-md-3 form-group" style="margin-left:12px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Coupon" >
+                  <label>*Offers&Coupons</label>
+                    
+                </div>
+                <div class="col-md-1">
+                <input type="button" value="Apply" style="border-radius:20px;width:70px;color:white;background-color:#ED4545;" class="form-control">
+                </div>
+            </div>
+        
+                <!--    <div col-md-3>
+                    <input type="tex" placeholder="EnterCoupon">
+                    </div>
+                    <div col-md-3>
+                     <input type="button" value="Apply" style="border-radius:20px;width:70px;">
+                    </div>-->
+                <h4>OR</h4>
+            <div class="col-md-12" style="">
+                <h5 style="text-align: left;color:#A4A4A4">Contact Details :</h5>
+                    <div class="col-md-5" style="margin-bottom: 10px;display:flex;">
+                      91+<input type="text" name="name" class="form-control" id="name" placeholder=" Mobile Number" >
+                    </div>
+                    <div class="col-md-6" style="display:flex;font-size:20px;">
+                        <i class="fa fa-envelope"></i>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter email" >
+                    </div>
+                
+                </div>
+            
+            <div class="col-md-12" style="margin-top:10px;">
+                
+                <h5 style="text-align:left;color:#A4A4A4" >Personal Details :</h5>
+            <div class="row">
+                <div class="col-md-4">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" >
+               </div>
+                <div class="col-md-4" >
+                <input type="text" name="name" class="form-control" id="name" placeholder="Age" >
+               </div>
+                <div class="col-md-4">
+                    <label></label>
+                  <select class="form-control1" name="dropdown-test">
+                      <label></label>
+                      <option>Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+                </select>
+                </div>
+                <div class="col-md-12">
+                     <h5 style="text-align:left;color:#A4A4A4;margin-top:10px;" >Documentation :</h5>
+                <div class="col-md-6">
+                  <!-- <label></label>
+                  <select class="form-control1" name="dropdown-test">
+                      <option>UPload IDproof</option>
+                  <option>AadherNumber</option>
+                  <option>PanCardNumber</option>
+                  <option>VoterId</option>
+                </select>-->
+                    <input type="file" class="form-control" placeholder="Upload Your Documentation">
+                </div>
+                    <div class="col-md-6">
+                        
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Enter Id Number" >
+                    </div>
+               </div>
+                </div>
+                
+               <a href="#"><input type="button" value="Proceed TO Pay" style="border-radius:20px;width:150px;margin:40px;height:40px;color:white;background-color:#ED4545;border: none;"></a> 
+                </div>
+        
+        </div>
+        <!------endmidddlediv2-->
+             
+        <div class="col-md-2" style="background-color:#ff7200;">
+        <h4 style="margin-top:20px;">No of Kilometers Enterd:</h4>
+        <label style="border:1px solid black;border-radius:10px;height:50px;width: 50px;color:white;font-size:20px;">01</label>
+        <h5 style="text-decoration: underline;">FARE SUMMARY</h5>
+            <p style="text-align: left;">BaseFee : <span style="color:white;float:right;">INR 970</span></p>
+            <p style="text-align: left;">LevyFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <p style="text-align: left;">TollFee : <span style="color:white;float:right;">INR 970</span></p>
+            <p style="text-align: left;">ReservationFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <p style="text-align: left;">ServiceFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <hr style="border-top: 1px solid black;">
+            <p style="text-align: left;">TOTALFARE:<span style="color:white;float:right;">INR 4000</span></p>
+            <hr style="border-top: 1px solid black;">
+            <p style="margin-bottom:30px;text-align: left;">TOTAL PAYABLE:<span style="color:white;float:right;">INR 4000</span></p>       
+        </div>
+         </div>
+</div>
+        <!-------end bookingdetals----->
+        
+         <!-------bookingdetails------->
+
+     <div class="" id="list44" style="display:none;">
+         
+    <div class="row" style="margin:20px;">
+        <div class="col-md-1"></div>
+        <div class="col-md-1" style="border: 2px solid #F2F2F2;background-color:#F2F2F2; ">
+        <img src="images/icon-1.png" style="height:50px;width:80px; margin-top:160px;" class="img-responsive active" id="image33">
+        <img src="images/icon-2.png" style="height:50px;width:70px;margin-bottom:180px;margin-top: 50px;"class="img-responsive" id="image44">
+        </div>
+        
+       <div class="col-md-7" id="middlediv33">
+        <h4 style="text-align: center;">SELECT YOUR SEATS</h4>
+            <div class="row" style="border-top:2px solid #A4A4A4; ">            
+                <div class="col-md-6" style="border-right:2px solid #A4A4A4;">
+                    <div class="col-md-1" style="margin-left:-10px;">
+                <img src="images/car1.png" style="width:40px;">
+                <img src="images/icon12.png" style="width:40px;">
+                </div>
+                    <div class="col-md-11">
+                    <div class="col-md-12">
+                        <div class="col-md-6" style="border-right:2px solid #F2F2F2;">
+                        <h6 style="color:#FF8000;font-size:13px;line-height:0px;">Cab Details</h6>
+                        <p style="font-size:11px;line-height:15px;">Name:Indiaca</p>
+                        <p style="font-size:11px;line-height:15px;">Total Seats:04</p>
+                        <p style="font-size:11px;line-height:15px;">Name:Indiaca</p>    
+                        </div>
+                        <div class="col-md-6">
+                        <h6 style="color:#FF8000;font-size:13px;line-height:0px;">Driver Details</h6>
+                      <p style="font-size:11px;line-height:15px;">Name:Madhu</p>
+                    <p style="font-size:11px;line-height:15px;">ContactNo.:9876543355</p>
+                    <p style="font-size:11px;line-height:15px;">LicenseNo.:98765433</p>   
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6" style="color:#FF8000;">
+                    <div class="col-md-12" style="padding: 5px;">
+                    <div class="col-md-6"><label style="font-size:15px;color:#FF8000;margin-top:5px;">Enter PickUP Time</label></div>
+                    <div class="col-md-6"><input type="time" name="name" class="form-control" id="name" ></div>
+                   <div class="col-md-6"><label style="font-size:15px;color:#FF8000;margin-top:15px;">Enter Droping Time</label></div>
+                    <div class="col-md-6" style="margin-top:10px;"><input type="time" name="name" class="form-control" id="name" ></div>
+                          </div>
+                    
+                       <!-- <h4>Driver Details</h4>
+                    <img src="images/icon-2.png" style="height:20px;width:20px;display: flex;">
+                    <p style="color:black;margin-top:-20px;">DriverName:Madhusudhan</p>
+                    <p style="color:black;margin-top:-15px;">DriverContactNo.:987654335</p>
+                    <p style="color:black;margin-top:-15px;">DrivingLicenseNo.:98765433</p>-->
+                </div>
+            </div>
+            <div class="row" style="border-top:2px solid #A4A4A4;border-bottom:2px solid #A4A4A4;" >
+                    <div class="col-md-6" style="border-right:2px solid #A4A4A4;padding: 10px;">
+                    <h4 style="text-decoration: underline;color:#FF8000;margin-top:20px;">ENTER KILOMETERS(KM)</h4>
+                    
+                        <label style="text-decoration: underline;font-size:15px;">Unlimited KiloMeters </label> 
+                     
+                    </div>
+                    <div class="col-md-6" style="padding: 10px;">
+                        <h4 style="text-decoration: underline;color:#FF8000;margin-top:10px;">SELECT YOUR ID PROOF</h4>                
+                        <div class="col-md-9 col-md-offset-2" style="margin-top:20px;">
+                            <select class="form-control1" >
+                              <option>Select Your Id Proof</option>
+                              <option>AadharCard</option>
+                              <option>PanCard</option>
+                              <option>VoterID</option>
+                            </select>
+                        </div>          
+                    </div>
+         </div>
+           
+            <div class="col-md-12">
+                
+                <div  style="float:right;">
+                    <!--<h3 style="color:#FF8000;">VIA CITIES</h3>-->
+                </div>
+        </div>
+        <div class="col-md-6 col-md-offset-3" style="margin-top:20px;padding: 10px;">  
+            <select class="form-control1" >
+                              <option>Select Your Boarding Point</option>
+                              <option>kukatpalli</option>
+                              <option>yarragadda</option>
+                              <option>sr nagar</option>
+                              <option>ameerpet</option>
+                            </select>
+        </div>         
+        <!--<div class="col-md-6">
+                    <select class="form-control1" >
+                              <option>Select Droping Point</option>
+                              <option>Madhapur</option>
+                              <option>Hitech City</option>
+                              <option>Kondapur</option>
+                              <option>Bharathnagar</option>
+                    </select>
+                    
+        </div>-->
+            <input type="button" value="Proceed TO Confirm" style="border-radius:20px;width:150px;margin:40px;height:40px;color:white;background-color:#ED4545;border:none;" id="button1111">
+        </div>
+        <!---middlediv2-->
+        <div class="col-md-7" id="middlediv44" style="display:none;">
+        
+            <div class="row">
+                <h5 style="text-align:left;margin-left:30px;color:#A4A4A4 ">LOGIN DETAILS :</h5>
+                <div class="col-md-3 form-group" style="margin-left:10px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="User Id" >
+                </div>
+                <div class="col-md-3 form-group">
+                <input type="password" name="name" class="form-control" id="name" placeholder="Password" >
+                </div>
+                <div class="col-md-1" >
+                <input type="button" value="SignIn" style="border-radius:20px;width:70px;color:white;background-color:#ED4545;" class="form-control">
+                </div>
+                <div class="col-md-3 form-group" style="margin-left:10px;">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter Coupon" >
+                  <label>*Offers&Coupons</label>
+                </div>
+                <div class="col-md-1">
+                <input type="button" value="Apply" style="border-radius:20px;width:70px;color:white;background-color:#ED4545;" class="form-control">
+                </div>
+
+            </div>
+        
+                <!--    <div col-md-3>
+                    <input type="tex" placeholder="EnterCoupon">
+                    </div>
+                    <div col-md-3>
+                     <input type="button" value="Apply" style="border-radius:20px;width:70px;">
+                    </div>-->
+                <h4>OR</h4>
+            <div class="col-md-12" style="">
+                <h5 style="text-align: left;color:#A4A4A4">Contact Details :</h5>
+                    <div class="col-md-5" style="margin-bottom: 10px;display:flex;">
+                      91+<input type="text" name="name" class="form-control" id="name" placeholder=" Mobile Number" >
+                    </div>
+                    <div class="col-md-6" style="display:flex;font-size:20px;">
+                        <i class="fa fa-envelope"></i>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter email" >
+                    </div>
+                
+                </div>
+            
+            <div class="col-md-12" style="margin-top:10px;">
+                
+                <h5 style="text-align:left;color:#A4A4A4" >Personal Details :</h5>
+            <div class="row">
+                <div class="col-md-4">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" >
+               </div>
+                <div class="col-md-4" >
+                <input type="text" name="name" class="form-control" id="name" placeholder="Age" >
+               </div>
+                <div class="col-md-4">
+                    <label></label>
+                  <select class="form-control1" name="dropdown-test">
+                      <label></label>
+                      <option>Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+                </select>
+                </div>
+                <div class="col-md-12">
+                     <h5 style="text-align:left;color:#A4A4A4;margin-top:10px;" >Documentation :</h5>
+                <div class="col-md-6">
+                  <!-- <label></label>
+                  <select class="form-control1" name="dropdown-test">
+                      <option>UPload IDproof</option>
+                  <option>AadherNumber</option>
+                  <option>PanCardNumber</option>
+                  <option>VoterId</option>
+                </select>-->
+                    <input type="file" class="form-control" placeholder="Upload Your Documentation">
+                </div>
+                    <div class="col-md-6">
+                        
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Enter Id Number" >
+                    </div>
+               </div>
+                </div>
+                
+               <a href="#"><input type="button" value="Proceed TO Pay" style="border-radius:20px;width:150px;margin:40px;height:40px;color:white;background-color:#ED4545;border: none;"></a> 
+                </div>
+        
+        </div>
+        <!------endmidddlediv2-->
+             
+        <div class="col-md-2" style="background-color:#ff7200;">
+        <!--<h4 style="margin-top:20px;">No of Kilometers Enterd:</h4>
+        <label style="border:1px solid black;border-radius:10px;height:50px;width: 50px;color:white;font-size:20px;">01</label>-->
+        <h5 style="text-decoration: underline;margin-top:30px;margin-top: 80px;">FARE SUMMARY</h5>
+            <p style="text-align: left;">BaseFee : <span style="color:white;float:right;">INR 970</span></p>
+            <p style="text-align: left;">LevyFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <p style="text-align: left;">TollFee : <span style="color:white;float:right;">INR 970</span></p>
+            <p style="text-align: left;">ReservationFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <p style="text-align: left;">ServiceFee :<span style="color:white;float:right;"> INR 970</span></p>
+            <hr style="border-top: 1px solid black;">
+            <p style="text-align: left;">TOTALFARE:<span style="color:white;float:right;">INR 4000</span></p>
+            <hr style="border-top: 1px solid black;">
+            <p style="margin-bottom:30px;text-align: left;">TOTAL PAYABLE:<span style="color:white;float:right;margin-bottom:79px;">INR 4000</span></p>       
+        </div>
+         </div>
+</div>
+        <!-------end bookingdetals----->
+
+        
+        
+        					<div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>                      </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;">BOOK NOW</button>
+                            </div>                     
+             </div>
+        
+    					<div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>                      </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;">BOOK NOW</button>
+                            </div>                     
+             </div>
+        					<div class="col-md-3" style="background:#fff;-webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);-moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);margin-left:0px;color: #000;padding: 15px;margin:54px;">
+				<div class="col-md-12" > 
+							<div class="col-md-2">
+							    <img src="images/car.png" style="width:60px;height:60px;margin-left:-40px;">
+                                <img src="images/icon12.png" style="width:60px;height:20px;margin:5px;margin-left:-40px;">
+                            </div>
+                             <div class="col-md-5" style="border-right:2px solid #F2F2F2;">
+                                 <p style="color:orange;font-size:14px;line-height: 0px;">Car Details </p>
+                                 <p style="font-size:11px;line-height:15px;">Tata Vista</p>
+                                 <p style="font-size:11px;line-height:15px;">RoomLamp</p>
+                                 <p style="font-size:11px;line-height:15px;">Seat Belts</p>
+                                 <p style="font-size:11px;line-height:15px;">Air Bags</p>
+                              </div>
+                    <div class="col-md-5"style="">
+                        <p style="color:orange;font-size:14px;line-height:0px;">Car Futures </p>
+                     <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon4.png" style="width:15px;height:15px;">&nbsp;FullTank</p>
+               <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon2.png" style="width:15px;height:15px;">&nbsp;Manual</p>
+            <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon3.png" style="width:15px;height:15px;">&nbsp;2 Laguage</p>
+        <p style="font-size:11px;line-height:15px;"><img src="images/futures/icon1.png" style="width:15px;height:15px;">&nbsp;4 Seater</p>
+                </div>                     
+                    </div>
+				     <div class="col-md-12" style="border-top:2px solid darkgray;margin-left:;" >		
+                         <div class="col-md-6" >
+                             <div id="myDiv" onclick="Function()" style="width:120px;margin-top:10px; height:50px;" class="cursor">
+                                <P style="padding-bottom:12px;">Limited KMS</P>
+                             </div>                            
+                             </div>
+                            <div class="col-md-6">
+                                <div id="myDiv1" onclick="myFunction()" style="width:120px;margin-top:10px; height:50px;padding:3px;" class="cursor">
+                                    4000/RS<P style="font-size:11px;line-height:0px;">Unlimited KMS</P></div>
+                             </div>
+                                </div>
+                             <div class="col-md-12" style="margin-top:5px">
+                                 <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;">BOOK NOW</button>
+                         </div>                     
+             </div>  					
+      </div>   
+    </section>
+    <!--====== FOOTER 2 ==========-->
+   <section>
+        <div class="rows">
+            <div class="footer" style="padding-top:20px;">
+                <div class="container">
+                    <div class="foot-sec2">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4>Zurides</h4>
+                                    <p>Zurides operators brings all the car owners to a
+common platform providing quality and safe services along with making the owners relish the success
+.</p>
+                                </div>
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4><span>Address</span> & Contact Info</h4>
+                                    <p>60 feet road, Madhapur, Hyderabad-500081</p>
+                                    <p> <span class="strong">Phone: </span> <span class="highlighted">+040-48528570</span> </p>
+                                </div>
+                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
+                                    <h4><span>SUPPORT</span> & HELP</h4>
+                                    <ul class="two-columns">
+                                        <li> <a href="#">About Us</a> </li>
+                                        <li> <a href="#">FAQ</a> </li>
+                                       
+                                        <li> <a href="#">Blog </a> </li>
+                                        
+                                        <li> <a href="#">Advertise us</a> </li>
+                                        <li> <a href="#">Discount</a> </li>
+                                        <li> <a href="#">Vacations</a> </li>
+                                        <li> <a href="#">Branding Offers </a> </li>
+                                        <li> <a href="#">Contact Us</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 foot-social foot-spec foot-com">
+                                    <h4><span>Follow</span> with us</h4>
+                                    <p>Join the thousands of other There are many variations of passages </p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>	
+    <!--====== FOOTER - COPYRIGHT ==========-->
+    <section>
+        <div class="rows copy">
+            <div class="container">
+                <p>Copyrights © 2018 ZuRides. All Rights Reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <!--========= Scripts ===========-->
+    <script src="js/jquery-latest.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+	
+<!------------------------------------------------------------------------>
+    <!--------radiobuttonscript--------->
+     <script>
+   $('.switch label').on('click', function(){
+  var indicator = $(this).parent('.switch').find('span');
+  if ( $(this).hasClass('right') ){
+		$(indicator).addClass('right');
+  } else {
+    $(indicator).removeClass('right');
+  }
+});
+    </script>
+    <!--endofradobutton-->
+    <!--goolemaps-->
+ <script>
+        // This example displays an address form, using the autocomplete feature
+        // of the Google Places API to help users fill in the information.
+
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+        var placeSearch, autocomplete;
+        //var componentForm = {
+        //  street_number: 'short_name',
+        //  route: 'long_name',
+        //  locality: 'long_name',
+        //  administrative_area_level_1: 'short_name',
+        //  country: 'long_name',
+        //  postal_code: 'short_name'
+        //  };
+
+
+
+        function initAutocomplete() {
+            // Create the autocomplete object, restricting the search to geographical
+            // location types.
+
+            autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('txt_DestinationLocation')),
+                { types: ['geocode'] });
+
+            // When the user selects an address from the dropdown, populate the address
+            // fields in the form.
+            autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('txt_soruceLocation')),
+                { types: ['geocode'] });
+
+            // When the user selects an address from the dropdown, populate the address
+            // fields in the form.
+            autocomplete.addListener('place_changed', fillInAddress);
+
+        }
+
+
+
+
+        // Bias the autocomplete object to the user's geographical location,
+        // as supplied by the browser's 'navigator.geolocation' object.
+        function geolocate() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var geolocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var circle = new google.maps.Circle({
+                        center: geolocation,
+                        radius: position.coords.accuracy
+                    });
+                    autocomplete.setBounds(circle.getBounds());
+                });
+            }
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBErlHBCoAszSr4uBzk1JDh_0uSJIE6mVo&libraries=places&callback=initAutocomplete"
+            async defer>
+    </script>
+
+    <!--endofgoolemaps-->
+    
+        
+     <script>
+    $(document).ready(function(){
+    $("#k1").click(function(){
+        $("#venu2").hide();
+        $("#venu1").show();
+    });
+}); 
+
+        $(document).ready(function(){
+    $("#k2").click(function(){
+        $("#venu1").hide();
+        $("#venu2").show();
+    });
+});
+    </script>
+
+    <!-------selfdrivingimage hide and show-------->
+     <script>
+    $(document).ready(function(){
+    $("#image2").click(function(){
+        $("#middlediv2").show();
+        $("#image2").css("background-color", "#ffff")
+        $("#image1").css("background-color", "transparent")
+        $("#middlediv1").hide();
+    });
+});
+    $(document).ready(function(){
+    $("#image1").click(function(){
+        $("#middlediv1").show();
+        $("#image1").css("background-color", "#ffff")
+        $("#image2").css("background-color", "transparent")
+        $("#middlediv2").hide();
+    });
+});       
+</script>
+    <script>
+    $(document).ready(function(){
+    $("#image22").click(function(){
+        $("#middlediv22").show();
+        $("#image22").css("background-color", "#ffff")
+        $("#image111").css("background-color", "transparent")
+        $("#middlediv111").hide();
+    });
+});
+    $(document).ready(function(){
+    $("#image111").click(function(){
+        $("#middlediv111").show();
+        $("#image111").css("background-color", "#ffff")
+        $("#image22").css("background-color", "transparent")
+        $("#middlediv22").hide();
+    });
+});       
+</script>
+         <!-------buttons-------->
+    <script>
+    $(document).ready(function(){
+    $("#button1111").click(function(){
+        $("#middlediv44").show();
+        $("#middlediv33").hide();
+        $("#image33").css("background-color", "transparent")
+        $("#image44").css("background-color", "#fffff")
+    });
+});
+    </script>
+    
+    <script>
+    $(document).ready(function(){
+    $("#button111").click(function(){
+        $("#middlediv21").show();
+        $("#middlediv11").hide();
+        $("#image11").css("background-color", "transparent")
+        $("#image21").css("background-color", "#fffff")
+    });
+});
+    </script>
+    
+<script>
+    $(document).ready(function(){
+    $("#button11").click(function(){
+        $("#middlediv22").show();
+        $("#middlediv111").hide();
+        $("#image111").css("background-color", "transparent")
+        $("#image22").css("background-color", "#fffff")
+    });
+});
+    </script>
+    <script>
+    $(document).ready(function(){
+    $("#button1").click(function(){
+        $("#middlediv2").show();
+        $("#middlediv1").hide();
+        $("#image1").css("background-color", "transparent")
+        $("#image2").css("background-color", "#fffff")
+    });
+});
+    </script>
+
+    
+    
+  
+ <script>
+    $(document).ready(function(){
+    $("#image21").click(function(){
+        $("#middlediv21").show();
+        $("#image21").css("background-color", "#ffff")
+        $("#image11").css("background-color", "transparent")
+        $("#middlediv11").hide();
+    });
+});
+    $(document).ready(function(){
+    $("#image11").click(function(){
+        $("#middlediv11").show();
+        $("#image11").css("background-color", "#ffff")
+        $("#image21").css("background-color", "transparent")
+        $("#middlediv21").hide();
+    });
+});       
+</script>
+    
+    <script>
+    $(document).ready(function(){
+    $("#image33").click(function(){
+        $("#middlediv33").show();
+        $("#image33").css("background-color", "#ffff")
+        $("#image44").css("background-color", "transparent")
+        $("#middlediv44").hide();
+    });
+});
+    $(document).ready(function(){
+    $("#image44").click(function(){
+        $("#middlediv44").show();
+        $("#image44").css("background-color", "#ffff")
+        $("#image33").css("background-color", "transparent")
+        $("#middlediv33").hide();
+    });
+});       
+</script>
+
+ 
+    
+    
+<script>
+class Particle {
+	constructor(context, x, y, d = 2, color = '#9294AE', movement = 10, lerp = 0.05) {
+		this.context = context;
+
+		this.x = this.currentX = this.targetX = x;
+		this.y = this.currentY = this.targetY = y;
+		this.d = d;
+		this.lerp = lerp;
+		this.color = color;
+		this.movement = movement;
+	}
+
+	draw() {
+		var context = this.context,
+			r = this.d / 2;
+		context.fillStyle = this.color;
+		context.beginPath();
+
+		var x = this.x - r,
+			y = this.y - r;
+		
+		if (Math.abs(this.targetX - this.currentX) < this.movement * 0.1) {
+			this.targetX = x + Math.random() * this.movement * (Math.random() < 0.5 ? -1 : 1);
+		}
+		if (Math.abs(this.targetY - this.currentY) < this.movement * 0.1) {
+			this.targetY = y + Math.random() * this.movement * (Math.random() < 0.5 ? -1 : 1);
+		}
+		
+		this.currentX += (this.targetX - this.currentX) * this.lerp;
+		this.currentY += (this.targetY - this.currentY) * this.lerp;
+		
+		context.arc(this.currentX, this.currentY, r, 0, Math.PI * 2, false);
+
+		context.closePath();
+		context.fill();
+	}
+	
+	setTarget(x, y) {
+		
+	}
+}
+
+class Canvas {
+	constructor(element, particleSpacing = 50) {
+		this.canvas = element;
+		this.context = element.getContext('2d');
+
+		this.particleSpacing = particleSpacing;
+		
+		window.addEventListener('resize', () => this.init());
+		this.init();
+	}
+
+	init () {
+		this.stop();
+		this.clear();
+		
+		this.resize();
+
+		this.createParticles();
+		this.animate();
+	}
+	
+	resize() {
+		this.canvas.width = window.innerWidth;
+		this.canvas.height = window.innerHeight;
+	}
+
+	clear() {
+		this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+	}
+
+	createParticles() {
+		var cols = Math.floor(this.canvas.width / this.particleSpacing),
+			rows = Math.floor(this.canvas.height / this.particleSpacing),
+			colGutter = (this.particleSpacing + (this.canvas.width - cols * this.particleSpacing)) / 2,
+			rowGutter = (this.particleSpacing + (this.canvas.height - rows * this.particleSpacing)) / 2;
+
+		this.particles = [];
+		for (let col = 0; col < cols; col++) {
+			for (let row = 0; row < rows; row++) {
+				let x = col * this.particleSpacing + colGutter, 
+						y = row * this.particleSpacing + rowGutter, 
+						particle = new Particle(this.context, x, y);
+				this.particles.push(particle);
+			}
+		}
+	}
+
+	draw() {
+		this.clear();
+		if (this.particles) {
+			for (let i = 0; i < this.particles.length; i++) {
+				this.particles[i].draw();
+			}
+		}
+	}
+
+	animate() {
+		this.draw();
+		this.animationFrame = window.requestAnimationFrame(() => this.animate());
+	}
+
+	stop() {
+		window.cancelAnimationFrame(this.animationFrame);
+	}
+}
+var cnvs = new Canvas(document.getElementById('canvas'));
+
+$('body').mousemove(function(e) {
+    var x = (e.pageX * -1 / 10);
+    $("#canvas").animate({
+      left: x + 'px'
+    }, 10);
+});
+</script>
+<!--------------------------hide and show---------------------------------------------->
+  
+
+    <!----twoway hide and show------>
+    <script>
+    $(document).ready(function(){
+    $("#myDiv21").click(function(){
+        $("#book11").show();
+        $("#list4").hide();
+        $("#list44").hide();
+        $("#book111").hide();
+        $("#myDiv22").show();
+        $("#myDiv21").css("border-color", "red");
+        $("#myDiv22").css("border-color", "#D8D8D8");
+        
+
+    });
+});
+    </script>
+   <script>
+    $(document).ready(function(){
+    $("#book11").click(function(){
+        $("#list4").show();
+        $("#myDiv21").show();
+        $("#list44").hide();
+        $("#book111").hide();
+        $("#myDiv22").show();
+    });
+});
+    </script>
+      <script>
+    $(document).ready(function(){
+    $("#book111").click(function(){
+        $("#list44").show();
+        $("#myDiv22").show();
+        $("#list4").hide();
+        $("#book11").hide();
+        $("#myDiv21").show();
+    });
+});
+    </script>
+    <script>
+    $(document).ready(function(){
+    $("#myDiv22").click(function(){
+        $("#book111").show();
+        $("#myDiv21").show();
+        $("#list4").hide();
+        $("#book11").hide();
+        $("#list44").hide();
+        $("#myDiv22").css("border-color", "red");
+        $("#myDiv21").css("border-color", "#D8D8D8");
+    });
+});
+    </script>   
+        <!-----hide and show  slefdriving----->
+        
+    <script>
+    $(document).ready(function(){
+    $("#myDiv").click(function(){
+        $("#book1").show();
+        $("#list1").hide();
+        $("#list101").hide();
+        $("#book101").hide();
+        $("#myDiv1").show();
+        $("#myDiv").css("border-color", "red");
+        $("#myDiv1").css("border-color", "#D8D8D8");
+    });
+});
+    </script>
+   <script>
+    $(document).ready(function(){
+    $("#book1").click(function(){
+        $("#list1").show();
+        $("#myDiv").show();
+        $("#list101").hide();
+        $("#book101").hide();
+        $("#myDiv1").show();
+    });
+});
+    </script>
+      <script>
+    $(document).ready(function(){
+    $("#book101").click(function(){
+        $("#list101").show();
+        $("#myDiv").show();
+        $("#list1").hide();
+        $("#book1").hide();
+        $("#myDiv1").show();
+    });
+});
+    </script>
+    <script>
+    $(document).ready(function(){
+    $("#myDiv1").click(function(){
+        $("#book101").show();
+        $("#myDiv").show();
+        $("#list1").hide();
+        $("#book1").hide();
+        $("#list101").hide();
+        $("#myDiv1").css("border-color", "red");
+        $("#myDiv").css("border-color", "#D8D8D8");
+    });
+});
+    </script>   
+    
+</body>
+
+</html>

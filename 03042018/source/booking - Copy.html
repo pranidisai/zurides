@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zurides- Search</title>
+    <!--== META TAGS ==-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="images/fav.ico">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+    <!-- FONT-AWESOME ICON CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--== ALL CSS FILES ==-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mob.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+ z-index: 10;
+    background-color: #ffffff;
+    padding: 0 !important;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    /* border: 1px solid #ddd; */
+    margin-top-: 20px;
+    /* margin-left: 50px; */
+    /* -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+    /* box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+    -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+    opacity: 0.97;
+    filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #5A55A3;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: #5A55A3;
+  background-image: #5A55A3;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #5A55A3;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+</script>
+
+
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<style>
+/* Outer */
+.popup {
+width:100%;
+height:100%;
+display:none;
+position:fixed;
+top:0px;
+left:0px;
+background:rgba(0,0,0,0.75);
+}
+/* Inner */
+.popup-inner {
+max-width:700px;
+width:90%;
+padding:0px;
+position:absolute;
+top:50%;
+left:40%;
+-webkit-transform:translate(-50%, -50%);
+transform:translate(-50%, -50%);
+box-shadow:0px 2px 6px rgba(0,0,0,1);
+border-radius-:3px;
+background-:#fff;
+}
+/* Close Button */
+.popup-close {
+width:30px;
+height:30px;
+padding-top:4px;
+display:inline-block;
+position:absolute;
+top:0px;
+right:-280px;
+transition:ease 0.25s all;
+-webkit-transform:translate(50%, -50%);
+transform:translate(50%, -50%);
+border-radius:1000px;
+background:rgba(0,0,0,0.8);
+font-family:Arial, Sans-Serif;
+font-size:20px;
+text-align:center;
+line-height:100%;
+color:#fff;
+}
+.popup-close:hover {
+-webkit-transform:translate(50%, -50%) rotate(180deg);
+transform:translate(50%, -50%) rotate(180deg);
+background:rgba(0,0,0,1);
+text-decoration:none;
+}
+</style>
+<script>
+$(function() {
+//----- OPEN
+$('[data-popup-open]').on('click', function(e)  {
+var targeted_popup_class = jQuery(this).attr('data-popup-open');
+$('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+e.preventDefault();
+});
+//----- CLOSE
+$('[data-popup-close]').on('click', function(e)  {
+var targeted_popup_class = jQuery(this).attr('data-popup-close');
+$('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+e.preventDefault();
+});
+});
+</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body {margin:0}
+
+.icon-bar {
+    width: 90px;
+    background-color: #fff;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: skyblue;
+}
+
+.active {
+    background-color: skyblue !important;
+    width: 100px;
+}
+</style>
+<script>
+    $("#example-vertical").steps({
+    headerTag: "h3",
+    bodyTag: "section",
+    transitionEffect: "slideLeft",
+    stepsOrientation: "vertical"
+});
+</script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!-- MOBILE MENU -->
+   
+<section>
+        <div class="ed-mob-menu">
+            <div class="ed-mob-menu-con">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="main.html"><img src="images/logo.png" alt="" />
+						</a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-menu">
+                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                        <div class="ed-mm-inn">
+                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                            <h4>Home </h4>
+                           
+                            <h4>Package</h4>
+                            
+                            <h4>About</h4>
+                            
+                            <h4>User Dashboard</h4>
+                            
+                            <h4>Other pages:1</h4>
+                           
+                            <h4 >Contact us</h4>
+                          
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- LOGO AND MENU SECTION -->
+        <div class="top-logo affix" data-spy="affix" data-offset-top="250" style="" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" >
+                        <div class="wed-logo">
+                            <a href="main.html"><img src="images/logo.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="main-menu" >
+                            <ul>
+                                <li><a href="main.html">Home</a>
+                                </li>
+                               <li><a href="main.html">Package</a>
+                                </li>
+                                <li><a href="events.html">About</a>
+                                </li>
+                                
+                                <li><a href="contact.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--END HEADER SECTION-->
+<section>
+		<div class="rows banner_book" id="inner-page-title">
+			<div class="container1">
+				<div class="banner_book_1">
+					<ul>
+						<li class="dl1">Hyderabad -> Tenali</li>
+						<li class="dl2">19-03-2018</li>
+						
+						<li class="dl3"><a href="#" id="show"><span style="border:1px solid #fff;padding:0 10px 0 10px; border-radius: 25px;">Modify</span></a></li>
+						<li class="dl5"><input type="radio">One Way | Round Trip | Pooling </li>
+					</ul>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $("#show").click(function(){
+        $("#modify").toggle();
+    });
+});
+</script>
+	
+	<section id="modify" style="display:none;">
+		<div class="rows banner_book_m" id="inner-page-title">
+			<div class="container wow fadeInLeft animated">
+				<div class="banner_book_1">
+					<form class="v2-search-form_m">
+							<div class="row">
+								<div class="input-field col s3">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Pick up location</label>
+								</div>
+								<div class="input-field col s3">
+									<input type="text" id="select-city-1" class="autocomplete">
+									<label for="select-city">Dropping off location</label>
+								</div>
+<div class="input-field col s3">
+									<input type="text" id="from" name="from">
+									<label for="from">Pick up date</label>
+								</div>	
+<div class="input-field col s3">
+									<input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
+								</div>								
+							</div>
+							
+						</form>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+    <!--HEADER SECTION-->
+   <section>
+        <div class="rows ">
+            <div class=" events events-1" id="inner-page-title">
+              
+                
+                
+                <table id="myTable">
+                    <tbody>
+                        <tr>
+                            <th>#</th>
+                            <th>Car Type</th>
+							<th class="e_h1">Car Information</th>
+							<th class="e_h1">Timings</th>
+                            <th class="e_h1">No Seat Avilable</th>
+                            <th class="e_h1">Price Per Seat</th>
+                            
+                            <th>Book</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="images/car2.png" alt=""><a href="#" class="events-title">Tata Indica</a></td>
+							<td class="e_h1"> No Of Seats: 4 <br>Car Number:2222</td>
+							<td class="e_h1">Bording Time <br>10:30 Am</td>
+                           <td class="e_h1"><span style="color:#ff7200">3</span></td>
+                            <td class="e_h1"><span style="color:#ff7200">Rs.510</span></td>
+                            
+                            <td><a href="booking.html" class="link-btn_y "  data-popup-open="popup-1">Book Now</a> </td>
+                        </tr>
+						<tr>
+                            <td>1</td>
+                            <td><img src="images/car1.png" alt=""><a href="#" class="events-title">Tata Indica</a></td>
+							<td class="e_h1"> No Of Seats: 4 <br>Car Number:2222</td>
+							<td class="e_h1">Bording Time <br>10:30 Am</td>
+                            <td class="e_h1"><span style="color:#dc2039;">3</span></td>
+                            <td class="e_h1"><span style="color:#dc2039;">Rs.510</span></td>
+                            
+                            <td><a href="booking.html" class="link-btn">Book Now</a> </td>
+                        </tr>
+						<tr>
+                            <td>1</td>
+                            <td><img src="images/car3.png" alt=""><a href="#" class="events-title">Tata Indica</a></td>
+							<td class="e_h1"> No Of Seats: 4 <br>Car Number:2222</td>
+							<td class="e_h1">Bording Time <br>10:30 Am</td>
+                            <td class="e_h1"><span style="color:#00a2ff;">3</span></td>
+                            <td class="e_h1"><span style="color:#00a2ff;">Rs.510</span></td>
+                            
+                            <td><a href="booking.html" class="link-btn_b">Book Now</a> </td>
+                        </tr>
+						<tr>
+                            <td>1</td>
+                            <td><img src="images/car2.png" alt=""><a href="#" class="events-title">Tata Indica</a></td>
+							<td class="e_h1"> No Of Seats: 4 <br>Car Number:2222</td>
+							<td class="e_h1">Bording Time <br>10:30 Am</td>
+                           <td class="e_h1"><span style="color:#ff7200">3</span></td>
+                            <td class="e_h1"><span style="color:#ff7200">Rs.510</span></td>
+                            
+                            <td><a href="booking.html" class="link-btn_y">Book Now</a> </td>
+                        </tr>
+						<tr>
+                            <td>1</td>
+                            <td><img src="images/car1.png" alt=""><a href="#" class="events-title">Tata Indica</a></td>
+							<td class="e_h1"> No Of Seats: 4 <br>Car Number:2222</td>
+							<td class="e_h1">Bording Time <br>10:30 Am</td>
+                            <td class="e_h1"><span style="color:#dc2039;">3</span></td>
+                            <td class="e_h1"><span style="color:#dc2039;">Rs.510</span></td>
+                            
+                            <td><a href="booking.html" class="link-btn">Book Now</a> </td>
+                        </tr>
+						<tr>
+                            <td>1</td>
+                            <td><img src="images/car3.png" alt=""><a href="#" class="events-title">Tata Indica</a></td>
+							<td class="e_h1"> No Of Seats: 4 <br>Car Number:2222</td>
+							<td class="e_h1">Bording Time <br>10:30 Am</td>
+                            <td class="e_h1"><span style="color:#00a2ff;">3</span></td>
+                            <td class="e_h1"><span style="color:#00a2ff;">Rs.510</span></td>
+                            
+                            <td><a href="booking.html" class="link-btn_b">Book Now</a> </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+ 
+    <!--====== FOOTER 1 ==========-->
+    <section>
+        
+    </section>
+    <!--====== FOOTER 2 ==========-->
+    <section>
+        <div class="rows">
+            <div class="footer" style="padding-top:20px;">
+                <div class="container">
+                    <div class="foot-sec2">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4><span>Holiday</span> Tour & Travels</h4>
+                                    <p>World's leading tour and travels Booking website,Over 30,000 packages worldwide.</p>
+                                </div>
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4><span>Address</span> & Contact Info</h4>
+                                    <p>Plot No 305,ayyappa nilayam, 60 feet road, Madhapur, Hyderabad-500081</p>
+                                    <p> <span class="strong">Phone: </span> <span class="highlighted">+101-1231-1231</span> </p>
+                                </div>
+                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
+                                    <h4><span>SUPPORT</span> & HELP</h4>
+                                    <ul class="two-columns">
+                                        <li> <a href="#">About Us</a> </li>
+                                        <li> <a href="#">FAQ</a> </li>
+                                        <li> <a href="#">Feedbacks</a> </li>
+                                        <li> <a href="#">Blog </a> </li>
+                                        <li> <a href="#">Use Cases</a> </li>
+                                        <li> <a href="#">Advertise us</a> </li>
+                                        <li> <a href="#">Discount</a> </li>
+                                        <li> <a href="#">Vacations</a> </li>
+                                        <li> <a href="#">Branding Offers </a> </li>
+                                        <li> <a href="#">Contact Us</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 foot-social foot-spec foot-com">
+                                    <h4><span>Follow</span> with us</h4>
+                                    <p>Join the thousands of other There are many variations of passages of Lorem Ipsum available</p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+	
+	
+	<div class="popup" data-popup="popup-1">
+<div class="popup-inner">
+<div class="container">
+	<div class="row">
+        <div class="col-lg-10 col-md-7 col-sm-7 col-xs-9 bhoechie-tab-container">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 bhoechie-tab-menu">
+              <div class="list-group">
+                <a href="#" class="list-group-item active text-center">
+                  
+				  <img src="images/cab.png" style="padding:30px;" width="150px;"/>
+				  <br/>
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <img src="images/personal.png" style="padding:20px;" width="150px;"/><br/>
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <img src="images/payment.png" style="padding:20px;" width="150px;"/><br/>
+                </a>
+              
+                <a href="#" class="list-group-item text-center">
+                  <img src="images/confirm.png" style="padding:20px;" width="150px;"/><br/>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 bhoechie-tab">
+                <!-- flight section -->
+                <div class="bhoechie-tab-content active">
+								<div class="col-sm-3 col-md-5 ">
+                                   
+                                    <img src="images/car.jpg" width="180px;"/>
+                                    <p>No Seats Avilable: 4 </p>
+                                    <p><b>Safty mesures:</b> </p>
+									<p>1. Privacy<br>2. Privacy<br>3. Privacy<br>4. Privacy</p>
+									
+									<p><b>Price Summary:</b> </p>
+									<p>Ticket Price&#160;&#160;&#160;:&#160;800 RS<br>Services Tax&#160;:&#160;50 Rs<br>Total Price&#160;&#160;&#160;&#160;&#160;:&#160;850 Rs </p>
+									
+                                
+
+                                </div>
+								<div class="col-sm-3 col-md-4 ">
+                                   
+                                    <h4>Car Information:</h4>
+                                   <p><b>Tata India</b><br>
+								   No of Seats    :4 <br>
+								   <b>Bording Point</b>  : Ameerpet<br>
+								   <b>Droping Point</b>  : Ameerpet<br>
+								   <b>Distance Travel</b>: 350Km</p>
+                               <p><b> Required Seats</b>: <br><input type="text"  style="height:50px;width:25%;"/></p><br><br><br>
+<a href="booking.html" class="link-btn_b" style="text-align:right;">Book Now</a>
+                                </div>
+								<div class="col-sm-3 col-md-3 ">
+                                   
+                                    <h4><b>Travel Via</b></h4>
+                                    <p>Hyderabad</p><br>
+                                    <p>Hyderabad</p><br>
+									<p>Hyderabad</p><br>
+									<p>Hyderabad</p>
+                                
+
+                                </div>
+                </div>
+                <!-- train section -->
+                <div class="bhoechie-tab-content">
+                    <center>
+					<p >Pasinger Information</p>
+                      <div class="col-md-offset-1">
+                      <div class="row">
+								<div class="input-field col s4">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Name</label>
+								</div>
+								<div class="input-field col s3">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Age</label>
+								</div>
+								<div class="input-field col s3">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Gender</label>
+								</div>
+								
+					</div>
+					<div class="row">
+								<div class="input-field col s4">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Name</label>
+								</div>
+								<div class="input-field col s3">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Age</label>
+								</div>
+								<div class="input-field col s3">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Gender</label>
+								</div>
+								
+					</div>
+					<div class="row">
+								<div class="input-field col s10">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Address</label>
+								</div>
+								
+								
+					</div>
+					<div class="row">
+								<div class="input-field col s5">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Area</label>
+								</div>
+								<div class="input-field col s5">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">City</label>
+								</div>
+								
+					</div>
+					<div class="row">
+								<div class="input-field col s5">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Pin Code</label>
+								</div>
+								<div class="input-field col s5">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Droping City</label>
+								</div>
+								
+					</div>
+ <div class="row">
+<div class="input-field col s10">
+									<input type="submit" value="Save" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
+								</div>								
+							</div>
+							</div>
+                    </center>
+                </div>
+    
+                <!-- hotel search -->
+                <div class="bhoechie-tab-content">
+                    <center>
+                      <h1 class="glyphicon glyphicon-home" style="font-size:12em;color:#55518a"></h1>
+                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                      
+                    </center>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <center>
+                      <h1 class="glyphicon glyphicon-home" style="font-size:12em;color:#55518a"></h1>
+                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                      
+                    </center>
+                </div>
+               
+            </div>
+        </div>
+  </div>
+</div>
+
+<a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+</div>
+</div>
+
+	
+	
+	
+	
+	
+    <!--====== FOOTER - COPYRIGHT ==========-->
+    <section>
+        <div class="rows copy">
+            <div class="container">
+                <p>Copyrights © 2018 ZuRides. All Rights Reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <!--========= Scripts ===========-->
+    <script src="js/jquery-latest.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

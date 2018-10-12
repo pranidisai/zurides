@@ -1,0 +1,108 @@
+﻿ @model Zur.Common.AdminModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CMP NAME</title>
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+    <!--Open Sans Font [ OPTIONAL ]-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="~/v2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="~/v2/css/nifty.min.css" rel="stylesheet">
+
+    <!--Nifty Premium Icon [ DEMONSTRATION ]-->
+    <link href="~/v2/css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+
+    <!--=================================================-->
+    <!--Pace - Page Load Progress Par [OPTIONAL]-->
+    <link href="~/v2/plugins/pace/pace.min.css" rel="stylesheet">
+    <script src="~/v2/plugins/pace/pace.min.js"></script>
+
+
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="~/v2/css/demo/nifty-demo.min.css" rel="stylesheet">
+ 
+
+</head>
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+    <div id="container" class="cls-container">
+
+        <!-- BACKGROUND IMAGE -->
+        <!--===================================================-->
+        <div id="bg-overlay"></div>
+
+
+        <!-- LOGIN FORM -->
+        <!--===================================================-->
+        <div class="cls-content">
+            <div class="cls-content-sm panel">
+                <div class="panel-body">
+                    <div class="mar-ver pad-btm">
+                        <h1 class="h3">Admin Login</h1>
+                        <p>Sign In to your account</p>
+                    </div>
+                    @using (Html.BeginForm("Index", "Admin", FormMethod.Post, new { @class = "form", enctype = "multipart/form-data" }))
+                    {
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "Enter UserName",@required="true" })
+
+                    </div>
+                    <div class="form-group">
+                        @Html.PasswordFor(model => model.pwd, new { @class = "form-control", placeholder = "Enter Password", @required ="true" })
+
+                    </div>
+                <div class="checkbox pad-btm text-left">
+                    <input id="demo-form-checkbox" class="magic-checkbox" type="checkbox">
+                    <label for="demo-form-checkbox">Remember me</label>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Sign In</button>
+                <br />
+                <span style="font-weight:bold;color:red">@ViewBag.Error</span>
+                    }
+                </div>
+
+                 
+            </div>
+        </div>
+        <!--===================================================-->
+        <!-- DEMO PURPOSE ONLY -->
+        <!--===================================================-->
+        
+        <!--===================================================-->
+
+
+
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+    <!--jQuery [ REQUIRED ]-->
+    <script src="~/v2/js/jquery.min.js"></script>
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="~/v2/js/bootstrap.min.js"></script>
+
+    <!--NiftyJS [ RECOMMENDED ]-->
+    <script src="~/v2/js/nifty.min.js"></script>
+
+
+    <!--=================================================-->
+    <!--Background Image [ DEMONSTRATION ]-->
+    <script src="~/v2/js/demo/bg-images.js"></script>
+</body>
+</html>

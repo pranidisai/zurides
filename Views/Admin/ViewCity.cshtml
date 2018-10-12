@@ -1,0 +1,87 @@
+﻿@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "ViewCity";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("ViewCity", "Admin", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            <div class="row" style="text-align:center;padding-top:20px;">
+                <span style="color:red;font-weight:bold; margin-top:10px;">@ViewBag.Error</span>
+            </div>
+            <div class="row">
+                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Update City 
+                &nbsp;&nbsp;&nbsp;&nbsp; <a style="color:red" href="@Url.Action("CityList","Admin")"> Go Back</a></p>  
+
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+
+
+
+                                <div class="form-group" hidden>
+                                    <label class="col-lg-3 control-label">Id</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.City.Id, new { @class = "form-control", placeholder = "Enter Name", @required = "true" })
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Enter City Name</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.City.CityName, new { @class = "form-control", placeholder = "Enter Name", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.City.CityName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Status of City</label>
+                                    <div class="col-lg-7">
+                                        @Html.CheckBoxFor(model => model.City.Citystatus, new { @class = "form-control", placeholder = "Select Status" })
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Enter City Code</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.City.CityCode, new { @class = "form-control", placeholder = "City Code", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.City.CityCode, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-sm-7 col-sm-offset-3">
+                                         <button class="btn btn-mint" type="submit">Update City</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>

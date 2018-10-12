@@ -1,0 +1,875 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zurides</title>
+    <!--== META TAGS ==-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="images/fav.ico">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+    <!-- FONT-AWESOME ICON CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--== ALL CSS FILES ==-->
+    <link rel="stylesheet" href="css/style.css">
+   
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mob.css">
+    <link rel="stylesheet" href="css/animate.css">
+   
+	
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="css/popstyle.css" />
+
+        
+
+        <!--carousel Bootstrap -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
+
+        <link href="assets/vendor/frame-carousel/jquery.frame-carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/vendor/highlight/styles/default.css">
+
+        <link rel="stylesheet" href="assets/css/main.css" />
+   <!--wowjs css link-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <!--wow js script-->
+     <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+  <style>
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+.switch {
+  background-color: #1bbc9b;
+  width: 100%;
+  display: inline-block;
+  border-radius: 8px;
+  height: 40px;
+  padding:1px;
+  position: relative;
+  zoom: 1;
+}
+.switch:before, .switch:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.switch:after {
+  clear: both;
+}
+.switch label {
+  float: left;
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  line-height: 40px;
+  cursor: pointer;
+  color: #117964;
+}
+.switch input[type="radio"] {
+  display: none;
+}
+.switch input[type="radio"]:checked + label {
+  color: #141241;
+  font-weight: bold;
+}
+.switch span {
+  position:relative;
+  z-index:1;
+  top: ;
+  left:0px;
+  width: 50%;
+  height: 100%;
+  display: block;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #ffffff;
+  transition: all 200ms ease;
+}
+.switch span.right {
+  top:-45px;
+  width:50%;
+  left: 0%;
+  border-radius: 5px 5px 5px 5px;
+  transition: all 200ms ease;
+}
+    </style>
+</head>
+
+<body>
+    <!-- MOBILE MENU -->
+   
+
+<section>
+        <div class="ed-mob-menu">
+            <div class="ed-mob-menu-con">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="index.html"><img src="images/logo.png" alt="" class="img-responsive"/>
+						</a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-menu">
+                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                        <div class="ed-mm-inn">
+                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                            <ul>
+                                <li><a href="#">HOME</a></li>
+                                <li><a href="#">ABOUT US</a></li>
+								<li><a href="#">MOBILE APP</a></li>
+                                <li><a href="#">CONTACT US</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section style="box-shadow: 0px 15px 10px -15px #111;">
+        <!-- LOGO AND MENU SECTION -->
+        <div class="top-logo affix" data-offset-top="" style="">
+            <div class="container" style="border-bottom: red">
+                <div class="row">
+                    <div class="col-md-12" >
+                        <div class="col-md-3 wed-logo">
+                            <a href="#"><img src="images/logo.png" alt="" class="img-responsive"/>
+                            </a>
+                        </div>
+                        <div class="col-md-6 main-menu" >
+                            <ul>
+                                <li><a href="index.html">HOME</a>
+                                </li>
+                               
+                                <li><a href="about.html">ABOUT</a>
+                                </li>
+                                 <li><a href="blog.html">MOBILE APP</a>
+                                </li>
+                                <li><a href="contact.html">CONTACT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                     <div class="col-md-3 text-right" style="color:black;padding-top: 35px;">
+                     <a id="modal_trigger" href="#modal" style="color:black;">SIGN IN/SIGN UP</a>
+                      
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--END HEADER SECTION--><div id="modal" class="popupContainer" style="display:none;">
+		<header class="popupHeader">
+			<span class="header_title">Login</span>
+			<span class="modal_close"><i class="fa fa-times"></i></span>
+		</header>
+		
+		<section class="popupBody">
+			<!-- Social Login -->
+			<div class="social_login">
+				<div class="">
+					<a href="#" class="social_box fb">
+						<span class="icon"><i class="fa fa-facebook"></i></span>
+						<span class="icon_title">Connect with Facebook</span>
+						
+					</a>
+
+					<a href="#" class="social_box google">
+						<span class="icon"><i class="fa fa-google-plus"></i></span>
+						<span class="icon_title">Connect with Google</span>
+					</a>
+				</div>
+
+				<div class="centeredText">
+					<span>Or use your Email address</span>
+				</div>
+
+				<div class="action_btns">
+					<div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+					<div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+				</div>
+			</div>
+
+			<!-- Username & Password Login form -->
+			<div class="user_login">
+				<form>
+					
+					<input type="text"  placeholder="Email / Username"/>
+					<br />
+
+					
+					<input type="password" placeholder="Password" />
+					<br />
+
+					<div class="checkbox">
+						<input id="remember" type="checkbox" />
+						<label for="remember">Remember me on this computer</label>
+					</div>
+
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+					</div>
+				</form>
+
+				<a href="#" class="forgot_password">Forgot password?</a>
+			</div>
+
+			<!-- Register Form -->
+			<div class="user_register">
+				<form>
+					
+					<input type="text" placeholder="Full Name" />
+					<br />
+
+					<label></label>
+					<input type="email" placeholder="Email Address"/>
+					<br />
+
+					
+					<input type="password" placeholder="Password" />
+					<br />
+
+					<div class="checkbox">
+						<input id="send_updates" type="checkbox" />
+						<label for="send_updates">Send me occasional email updates</label>
+					</div>
+
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+
+<script type="text/javascript">
+	$("#modal_trigger").leanModal({top : 140, overlay : 0.6, closeButton: ".modal_close" });
+
+	$(function(){
+		// Calling Login Form
+		$("#login_form").click(function(){
+			$(".social_login").hide();
+			$(".user_login").show();
+			return false;
+		});
+
+		// Calling Register Form
+		$("#register_form").click(function(){
+			$(".social_login").hide();
+			$(".user_register").show();
+			$(".header_title").text('Register');
+			return false;
+		});
+
+		// Going back to Social Forms
+		$(".back_btn").click(function(){
+			$(".user_login").hide();
+			$(".user_register").hide();
+			$(".social_login").show();
+			$(".header_title").text('Login');
+			return false;
+		});
+
+	})
+</script>
+<script type="text/javascript">
+	$("#modal_trigger1").leanModal({top : 140, overlay : 0.6, closeButton: ".modal_close" });
+
+	$(function(){
+		// Calling Login Form
+		$("#login_form").click(function(){
+			$(".social_login").hide();
+			$(".user_login").show();
+			return false;
+		});
+
+		// Calling Register Form
+		$("#register_form").click(function(){
+			$(".social_login").hide();
+			$(".user_register").show();
+			$(".header_title").text('Register');
+			return false;
+		});
+
+		// Going back to Social Forms
+		$(".back_btn").click(function(){
+			$(".user_login").hide();
+			$(".user_register").hide();
+			$(".social_login").show();
+			$(".header_title").text('Login');
+			return false;
+		});
+
+	})
+</script>
+
+    <!--HEADER SECTION-->
+    <section>
+        <div class="tourz-search">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="col-md-3" style="margin-top: 90px;"><img src="images/4.png" class="img-responsive" style="">
+                    </div>
+                    <div class="col-md-8 col-md-offset-1" style="margin-top: 100px;">
+                <img src="images/logo.png" class="img-responsive" style="height: 90px;width: 300px;">    
+                     <div class="switch" style="width:48%;">          
+      <input name="radio" type="radio" value="optionone" id="optionone" checked>
+       <label for="optionone" style="text-align: center;" >Self drive</label>
+  
+      <input  name="radio" type="radio" value="optiontwo" id="optiontwo">
+       <label for="optiontwo" class="right"  style="text-align: center;" > Rental</label>
+       <span aria-hidden="true"></span>                        
+                   </div>  
+                            <div id="div1">					
+							<div class="row" >
+								<div class="input-field col-md-6" >
+                                <input type="text" id="txt_soruceLocation" class="form-control"  placeholder="From City" name="soruceLocation" value="From City" required>                         
+                                </div>
+                           </div>
+                           <form class="v2-search-form">
+                                <div class="row">
+                             <div class="input-field col-md-3">
+									 <input id="txtdate" type="text" >
+            <label for="from"><i class="fa fa-calendar" aria-hidden="true" style="background-color: orange;"></i>&nbsp;&nbsp;Journey Date</label>
+ 								</div>	
+                      <div class="input-field col-md-3">
+									 <input id="txtdate" type="text" >
+            <label for="from"><i class="fa fa-calendar" aria-hidden="true" style="background-color: orange;"></i>&nbsp;&nbsp;Journey Date</label>
+ 								</div></div>	
+                            
+                          <div class="input-field col-md-offset-1" >
+									<input type="submit" value="Find Cab" style="background-color:#43A1DF;width:200px; ">
+								</div>								
+								
+						</form>      
+					</div>
+                      <div id="div2" style="display: none;">
+						<div class="row" >
+								<div class="input-field col-md-6" >
+                                <input type="text" id="txt_soruceLocation" class="form-control"  placeholder="From City" name="soruceLocation" value="From City" required>                         
+                                </div>
+                           </div>
+                           <form class="v2-search-form">
+                                <div class="row">
+                             <div class="input-field col-md-3">
+									 <input id="txtdate" type="text" >
+            <label for="from"><i class="fa fa-calendar" aria-hidden="true" style="background-color: orange;"></i>&nbsp;&nbsp;Journey Date</label>
+ 								</div>	
+                      <div class="input-field col-md-3">
+									 <input id="txtdate" type="text" >
+            <label for="from"><i class="fa fa-calendar" aria-hidden="true" style="background-color: orange;"></i>&nbsp;&nbsp;Journey Date</label>
+ 								</div></div>	
+                            
+                          <div class="input-field col-md-offset-1">
+									<input type="submit" value="Find Cab" style="background-color:#43A1DF;border: 0px;width:200px; ">
+								</div>								
+								
+						</form>
+                                    
+					</div>
+                        
+                     <div class="" style="margin-left:650px;margin-top:-285px;">
+                     <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="images/instagram.png" class="img-responsive"></a>
+                     <a href="https://www.facebook.com/" target="_blank"><img src="images/fb.png" class="img-responsive"></a>
+                     <a href="https://twitter.com/" target="_blank"><img src="images/twitteer.png" class="img-responsive"></a>
+                         </div>     
+                   </div>                    
+                </div>
+            </div>
+           
+        </div>
+    </section>
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+                                <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+                                <script language="javascript">
+                                    $(document).ready(function () {
+                                        $("#txtdate").datepicker({
+                                            minDate: 0
+                                        });
+                                    
+                                    });
+                                </script>
+  <script language="javascript">
+                                    $(document).ready(function () {
+                                        $("#txtdate1").datepicker({
+                                            minDate: 0
+                                        });
+                                    
+                                    });
+                                </script>
+    <!--END HEADER SECTION-->
+ 
+ <!--laptop-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+ 
+      <!--Ourservices-->
+     <div class="container-fluid" style="background-color: #fff;padding-top:80px;">
+        <h3 style="color: #000;text-align: center;">OUR SERVICES</h3><br>
+        
+        <div class="col-md-11 col-md-offset-1 wow zoomIn wHighlight">
+            <div class="col-md-5">
+                <div class="col-md-2"><img src="images/lp-icon.png" class="img-responsive" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h5><b>LOWEST PRICES</b></h5>
+                    <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">We always give you lowest price with the best partner offers.</h6>
+                    <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;"></h6>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-2"><img src="images/mc-icon.png" class="img-responsive" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h5><b>MAXIMUM CHOICE</b></h5>
+                    <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">We give you the widest number of travel options across the</h6>
+                    <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">thousands of routes.</h6>
+                </div>
+            </div>
+        </div><br /><br /><br /><br /><br />
+        <div class="col-md-11 col-md-offset-1 wow zoomIn wHighlight" style=" ">
+
+            <div class="col-md-5">
+                <div class="col-md-2"><img src="images/rp-icon.png" class="img-responsive" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h5><b>RATINGS AND PICTURE REVIEWS</b></h5>
+                    <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">Rely on ratings and actual photos from fellow </h6>
+                     <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">travellers to choose your bus!</h6>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-2"><img src="images/live-tracking.png" class="img-responsive" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h5><b>LIVE TRACKING</b></h5>
+                    <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">
+                        Track your bus with our 'Track My Bus' feature and know the 
+                    </h6>
+                    <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">
+                   exact location in real-time.Stay informed and keep your 
+                    </h6>
+                    <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">
+                    family informed!
+                    </h6>
+                </div>
+
+            </div>
+        </div><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br />
+  
+    
+<!--laptop2-->
+  <!--<div class="container-fluid" >
+ <div class="row" >
+  <div class="col-md-6" style="background-color: yellow;">
+   <label style="background-color: aqua;color: yellow;border:0px;border-radius:20px;margin-top: 80px;width: 100px;height: 80px; margin-left: 80px;"><h5>Coupon code</h5> <h3>ZU100</h3></label>
+	  <div style="margin-left: 80px;margin-top: 30px;">
+   <p style="color: aqua;font-size:30px; "><b>PAY USING</b></p>
+   <p style="color: aqua;font-size:30px;"><b>HDFC BANK DEBIT CARD AND</b></p>
+   <p style="color: aqua;font-size:30px;"><b>GET 5% CASH BACK UPTO RS</b></p>
+   <p style="color: aqua;font-size:30px;"><b>250 CREDITED TO YOUR HDFC</b></p>
+   <p style="color: aqua;font-size:30px;"><b>DEBIT CARD</b></p><br>
+       <p>
+                  <a href="#" style="color: aqua;"><i class="fa fa-facebook" aria-hidden="true"></i></a> &nbsp;&nbsp;
+                  <a href="#" style="color: aqua;"><i class="fa fa-google-plus" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                  <a href="#" style="color: aqua;"><i class="fa fa-twitter" aria-hidden="true"></i></a> &nbsp;&nbsp;
+                  <a href="#" style="color: aqua;"><i class="fa fa-linkedin" aria-hidden="true"></i></a> &nbsp;&nbsp;
+        <a href="#" style="color: aqua;"><i class="fa fa-youtube" aria-hidden="true"></i></a>&nbsp;&nbsp;</p>
+                                   
+	  </div>
+  </div>
+  <div class="col-md-6" style="background-color: silver;">
+	 <img src="images/laptop-2.png" style="margin-top: 134px" class="img-responsive">
+	 </div>
+ </div>
+ </div><br><br>-->
+    <!--kalyan--->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-4" style="margin-left: -30px;">
+          <img src="images/2.png" class="img-responsive">
+          </div>
+            <div class="col-md-4">
+         <!-- <div style="border:2px solid red;margin-top: 40px;">
+              <p style="padding: 50px;">550 Off On Spends Of RS.2500(FIRST RIDE)</p>
+              <p>USE CODE:ZURIDES550</p> 
+              <p>*T&C Apply</p>
+                </div>
+                <div style="border:2px solid red;margin-top: 30px;">
+              <p>550 Off On Spends Of RS.2500(FIRST RIDE)</p>
+              <p>USE CODE:ZURIDES550</p> 
+              <p>*T&C Apply</p>
+                </div>  -->
+                
+                <label style="text-align: center;border: 1px solid black;margin-left: 50px;margin-top: 60px; background-color: #eee;color: black;">
+                 <p style="padding-left: 20px;padding-right: 20px;padding-top: 15px;">550 Off On Spends Of RS.2500(FIRST RIDE)</p>
+                    <p>USE CODE:<span style="background-color: white;">  ZURIDES550&nbsp;&nbsp;</span></p> 
+              <p style="font-size: 12px;">*T&C Apply</p>
+                </label>
+              
+                  
+                <label style="text-align: center;border: 1px solid black;margin-left: 50px;margin-top: 40px; background-color: #eee;color: black;">
+                 <p style="padding-left: 20px;padding-right: 36px;padding-top: 15px;">550 Off On Spends Of RS.2500 & Above</p>
+                    <p>USE CODE:<span style="background-color: white;">  ZURIDES550&nbsp;&nbsp;</span></p> 
+              <p style="font-size: 12px;">*T&C Apply</p>
+                </label>
+          
+          </div>
+            <div class="col-md-4" >
+          <img src="images/3.png" class="img-responsive" style="margin-left: 73px;">
+          </div>
+        </div>
+      </div>
+    </div><br><br><br><br>
+		<div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+					<div class="stats row grid-space-10">
+						<div class="col-md-3 col-sm-6">
+							<div class="box-style-1" style="text-align: center;">
+							<i class="fa fa-briefcase" style="font-size: 50px;"></i>
+								 <br><br>
+								<span class="stat-num" data-to="2000" data-speed="3000" style="font-size: 40px;">0</span><span style="font-size: 30px;">+</span>
+                                 <h2 class="title">Operators</h2>
+                              
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="box-style-1" style="text-align: center">
+							<i class="fa fa-users" style="font-size: 50px;"></i><br><br>
+								
+								<span class="stat-num" data-to="2000000" data-speed="4000" style="font-size: 40px;">0</span><span style="font-size: 30px;">+</span>
+                                
+                                <h2 class="title">Happy Customers</h2>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="box-style-1" style="text-align: center">
+								<i class="fa fa-cloud-download" style="font-size: 50px;"></i>
+								<br><br>
+								<span class="stat-num" data-to="200000000" data-speed="5000" style="font-size: 40px;">0</span><span style="font-size: 30px;">+</span>
+                                <h2 class="title">Kms Driven Across India</h2>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<div class="box-style-1" style="text-align: center">
+							    <i class="fa fa-thumbs-o-up" style="font-size: 50px;"></i>
+								<br><br>
+								<span class="stat-num" data-to="2200" data-speed="3000" style="font-size: 40px;">0</span><span style="font-size: 30px;">+</span>
+                                <h2 class="title">Cars Per City</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+    </div>
+    <br><br>
+    <!--zuridesapp-->
+	  <div class="rows container">
+        <div class="row">
+            <h3 style="text-align: center"><b> Book <br>with<span style="color:darkgoldenrod;font-size:20px;"> ABUBUS APP</span></b></h3>
+            <p style="text-align:center">
+                offers details offers details offers details offers details<br>
+                offers details offers details offers details offers details offers details
+            </p>
+        </div>
+
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <img src="images/mobile-zurides.png" class="img-responsive" style="height:400px;width: 300px;">
+            </div>
+            <div class="col-md-8  wow zoomIn wHighlight" style="">
+                <div class="col-md-12" style="margin-top:50px;">
+                <div class="col-md-6">
+
+                    <div class="col-md-4" style="margin-left:-5px;">
+                        <img src="images/icon1.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-8">
+                        <h4><b>Greate Features</b></h4>
+
+                        <h5> Offers details offers details offers details  Offers details offers  </h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="col-md-4">
+                        <img src="images/icon2.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-8">
+                        <h4><b>Greate Features</b></h4>
+
+                        <h5> Offers details offers details offers details  Offers details offers  </h5>
+                    </div>
+                </div>
+                    </div>
+                <div class="col-md-6">
+
+                    <div class="col-md-4">
+                        <img src="images/icon3.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-8">
+                        <h4><b>Friendly Support</b></h4>
+
+                        <h5> Offers details offers details offers details  Offers details offers  </h5>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="col-md-4">
+                        <img src="images/icon4.png" class="img-responsive" style="height: 100px; width: 100px;">
+
+                    </div>
+                    <div class="col-md-8">
+                        <h4><b>Save Your Money</b></h4>
+
+                        <h5> Offers details offers details offers details  Offers details offers  </h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-md-4">
+                        <img src="images/icon5.png" class="img-responsive" style="height: 100px; width: 100px;">
+                    </div>
+                    <div class="col-md-8">
+                        <h4><b>Easy to Use</b></h4>
+
+                        <h5> Offers details offers details offers details  Offers details offers  </h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	
+	
+    <!--====== FOOTER 2 ==========-->
+    
+        <div class="">
+            <div class="footer" style="padding-top:px;background-color: #ffff;border-top:1px solid black">
+                <div class="container">
+                    <div class="foot-sec2">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-4 wow bounceInLeft foot-spec foot-com">
+                                    <h4  style="color:black;">RECENTLY BOOKED</h4>
+                                    <h6>HYDERABAD-VISHAKAPATNAM</h6>
+                                 <h6>HYDERABAD-CHENNAI</h6>
+                                 <h6>CHENNAI-BANGALORE</h6>
+                                 <h6>LUCKNOW-DELHI</h6>
+                                 <h6>MADHURAI-CHENNAI</h6>
+                                </div>
+                               
+                                <div class="col-sm-4 wow fadeInDown foot-social foot-spec foot-com">
+                                    <h4 ><span  style="color:black;">HOME</span> &nbsp;&nbsp;<span  style="color:black;">SERVICES</span> &nbsp;&nbsp;<span  style="color:black;">OFFERS</span> &nbsp;&nbsp;<span  style="color:black;">APP</span></h4>
+									<i class="fa fa-envelope-o" style="font-size:30px; color: orange;margin-left: 15px;">Info@zurides.com</i><br><br>
+                                    <a href="#" style="margin-left:75px;font-size:20px;"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;&nbsp; 
+                                        <a href="#" style="font-size:20px;"><i class="fa fa-google-plus" aria-hidden="true"></i></a> &nbsp;&nbsp;
+                                        <a href="#" style="font-size:20px;"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                                        <a href="#" style="font-size:20px;"><i class="fa fa-linkedin" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                                        
+                                    
+                                </div>
+								 <div class="col-sm-4 wow bounceInRight foot-spec foot-com text-right" >
+                                    <h4 style="color:black;">POPULAR ROUTES</h4>
+                                    <h6>HYDERABAD-BANGALORE</h6>
+                                 <h6>PUNE-SHIRDI</h6>
+                                 <h6>CHENNAI-COIMBATORE</h6>
+                               
+                                 <h6>BANGALORE-HYDERABAD</h6>
+                                <h6>HYDERABAD-VIJAYAWADA</h6>
+                                 <h6>HYDERABAD-CHENNAI</h6>
+                                
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    <!--====== FOOTER - COPYRIGHT ==========-->
+    <section>
+        <div class="rows copy " style="background-color: dodgerblue;">
+            <div class="container">
+                <p>All contents © 2018 ZuRides. All Rights Reserved</p>
+            </div>
+        </div>
+    </section>       
+ 
+ 
+ 
+ 
+  <script>
+   $('.switch label').on('click', function(){
+  var indicator = $(this).parent('.switch').find('span');
+  if ( $(this).hasClass('right') ){
+		$(indicator).addClass('right');
+  } else {
+    $(indicator).removeClass('right');
+  }
+});
+    </script>
+ <script>
+ $(document).ready(function() {
+   $('input[type="radio"]').click(function() {
+       if($(this).attr('id') == 'optionone') {
+            $('#div1').show(); 
+            $('#div2').hide();
+           
+
+       }
+
+       else {
+            $('#div2').hide();   
+       }
+   });
+});
+ 
+ 
+ </script>
+  <script>
+ $(document).ready(function() {
+   $('input[type="radio"]').click(function() {
+       if($(this).attr('id') == 'optiontwo') {
+            $('#div2').show(); 
+        $('#optiontwo').css("background-color","white"); 
+        $('#div1').hide();  
+       }
+
+       else {
+            $('#div1').show();   
+       }
+   });
+});
+ 
+ 
+ </script>
+  <!--========= Scripts ===========-->
+    <script src="js/jquery-latest.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+    	<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/modernizr.js"></script>
+		<script type="text/javascript" src="js/jquery.countTo.js"></script>
+		<script type="text/javascript" src="js/template.js"></script>
+
+  
+ 
+       
+<!--carousel-->
+      
+
+      
+
+        <!-- Production -->
+        <!--
+        <script src="assets/vendor/frame-carousel/jquery.frame-carousel.min.js"></script>
+        -->
+
+        <!-- Development -->
+        <script src="assets/vendor/frame-carousel/jquery.frame-carousel.js"></script>
+
+        <script src="assets/vendor/highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <script src="assets/js/main.js"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-61586811-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+ 
+ <!--carousel-->
+ <!--swap-->
+ <script>
+ function swapValues(txt_soruceLocation,txt_DestinationLocation){
+var sour = document.getElementById("txt_soruceLocation").value; 
+document.getElementById("txt_soruceLocation").value = document.getElementById("txt_DestinationLocation").value;
+document.getElementById("txt_DestinationLocation").value = sour;
+
+}
+ </script>
+ 
+ <script>
+        // This example displays an address form, using the autocomplete feature
+        // of the Google Places API to help users fill in the information.
+
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+        var placeSearch, autocomplete;
+        //var componentForm = {
+        //  street_number: 'short_name',
+        //  route: 'long_name',
+        //  locality: 'long_name',
+        //  administrative_area_level_1: 'short_name',
+        //  country: 'long_name',
+        //  postal_code: 'short_name'
+        //  };
+
+
+
+        function initAutocomplete() {
+            // Create the autocomplete object, restricting the search to geographical
+            // location types.
+
+            autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('txt_DestinationLocation')),
+                { types: ['geocode'] });
+
+            // When the user selects an address from the dropdown, populate the address
+            // fields in the form.
+            autocomplete = new google.maps.places.Autocomplete(
+                (document.getElementById('txt_soruceLocation')),
+                { types: ['geocode'] });
+
+            // When the user selects an address from the dropdown, populate the address
+            // fields in the form.
+            autocomplete.addListener('place_changed', fillInAddress);
+
+        }
+
+
+
+
+        // Bias the autocomplete object to the user's geographical location,
+        // as supplied by the browser's 'navigator.geolocation' object.
+        function geolocate() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var geolocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var circle = new google.maps.Circle({
+                        center: geolocation,
+                        radius: position.coords.accuracy
+                    });
+                    autocomplete.setBounds(circle.getBounds());
+                });
+            }
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBErlHBCoAszSr4uBzk1JDh_0uSJIE6mVo&libraries=places&callback=initAutocomplete"
+            async defer></script>
+    </body>
+</html>

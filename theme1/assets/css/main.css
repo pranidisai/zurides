@@ -1,0 +1,1065 @@
+/*-------------------------------------
+Template Name: Carspace- Car Rental Landing HTML Template.
+Template URI: https://ryetheme.com/
+Description: Carspace is suitable for all creative people, agency, creative business, company, individual or agencies portfolios etc.
+it is well organized, fully customizable and easy to use.
+Author: Ryetheme
+Author URI: https://ryetheme.com/
+Version: 1.0
+---------------------------------------
+CSS INDEX
+---------------------------------------
+1.Theme Default CSS (body, link color, overlay etc).
+2.Preloader Area
+3.Header Area Start Here
+4.image Section css
+5.slider Section css
+6.what-we-offer css
+7.car Section css
+8.About Section Css
+9.Service Section Css
+10.countdown-area Section Css
+11.faq section css
+12.Team Section Css
+13.Testimonial Section Css
+14.Blog Section Css
+15.Contact Section Css
+16.Widget-area Section Css
+17.Footer area Css
+18.Scroll Top Css
+19.carspace index.html Css Here
+---------------------------------------*/
+
+/*---------------------------------------
+    1.Theme Default CSS
+---------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,500,600,700');
+* {
+    margin:0;
+    padding:0
+}
+a {
+    text-decoration:none
+}
+a:hover,a:focus {
+    text-decoration:none
+}
+ul{
+    margin-bottom: 0;
+}
+li {
+    list-style:none
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+    line-height: 1.1
+}
+p{
+    font-size: 15px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #595555;
+}
+section {
+    overflow:hidden
+}
+option{
+    text-transform: uppercase;
+}
+label {
+    color: #222;
+}
+.section-padding{
+    padding: 60px 0px;
+}
+.overlay {
+    background: #000;
+    height: 100%;
+    opacity:.8;
+    overflow: hidden;
+    width: 100%;
+}
+.carspace-header {
+    margin-bottom: 60px;
+}
+.carspace-header h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+    .carspace-header h2 span {
+        color: #ff831f;
+    }
+.carspace-header p {
+    padding:0 25%;
+    color: #4d4747;
+    font-weight:500;
+}
+.carspace-btn {
+    font-family: 'Raleway', sans-serif;
+    padding: 15px 20px;
+    background: #ff8422;
+    color: #fff;
+    font-size: 16px;
+    transition: .5s;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border: none;
+}
+.carspace-btn:hover,.carspace-btn:focus {
+    background: #85C16E;
+    color: #fff;
+}
+.carspace-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #94949470;
+    opacity: 0.8;
+}
+.no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+/*---------------------------------------
+    Theme Default CSS
+---------------------------------------*/
+/*---------------------------------------
+    2.Start Preloader Area css
+---------------------------------------*/
+.preloader-area {
+    background: #fff;
+    height:100%;
+    overflow:hidden;
+    position:fixed;
+    width:100%;
+    z-index:11000;
+}
+.spinner {
+  margin: 25% auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #4CA84C;
+  border-radius: 100%;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+/*---------------------------------------
+    End Preloader Area css
+---------------------------------------*/
+/*---------------------------------------
+    3.Start Header Area css
+---------------------------------------*/
+header {
+    left:0;
+    position:absolute;
+    top:20px;
+    width:100%;
+    z-index:337;
+}
+header.sticky {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 0px 5px #ccc;
+}
+header.sticky .navbar-nav .nav-item .nav-link{
+    color:#333;
+}
+.sticky .navbar {
+    margin: 5px 0;
+    transition:.5s
+}
+.sticky .navbar-brand{
+    color: #000;
+}
+.navbar-brand{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.navbar-brand:hover,
+.navbar-brand:focus{
+    color: #fff;
+}
+.navbar-nav .nav-item .nav-link{
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+    color: #4CA84C;
+}
+.navbar-toggler{
+    background-color:transparent;
+    border:none;
+    border-radius:0
+}
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    background-color:transparent;
+}
+.navbar-toggler i{
+    color: #FBA500;
+}
+/*---------------------------------------
+    End Header Area css
+---------------------------------------*/
+/*---------------------------------------
+    4.Start image section css
+---------------------------------------*/
+.banner {
+    
+    background: url("../../../theme/images/consul-bg-3.png")no-repeat center fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    padding-top: 250px;
+    padding-bottom: 100px;
+}
+.banner2 {
+    background: url("../img/slider-1.jpg")no-repeat center fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.bannerhome {
+    background: url("../img/slider-1.jpg")no-repeat center fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+.hero-text {
+    position:absolute;
+    color: #fff;
+    top: 100px;
+}
+.hero-text h2{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.hero-text h2 span{
+    color: #4CA84C;
+}
+.hero-text h6{
+    color: #fff;
+    margin-bottom: 40px
+}
+.welcome-btn{
+    position: absolute;
+    bottom: 100px;
+}
+.pickup-form{
+    display: block;
+    position: relative;
+    background: #fff;
+    padding: 30px;
+}
+.pickup-form .form-control{
+    position: relative;
+    color: #333 !important;
+    border-radius: 0;
+    text-transform: capitalize;
+    transition: .5s;
+}
+.pickup-form .form-control:focus{
+    border-color: #4CA84C;
+}
+.input-group-text i{
+    font-size: 18px;
+    color: #4CA84C;
+}
+.pickup-form .form-group {
+    margin-bottom: 15px;
+}
+.picking-btn{
+    margin-top: 10px;
+}
+.picking-btn .carspace-btn{
+    cursor: pointer;
+}
+/*---------------------------------------
+    End image section css
+---------------------------------------*/
+/*---------------------------------------
+    5.Start slider Section css
+---------------------------------------*/
+.slider-area {
+    overflow:hidden;
+    transition: .5s;
+}
+.slider-1{
+    background:url(../img/slider-1.jpg)no-repeat center fixed;
+    background-size: cover;
+    overflow: hidden;
+    color:#fff;
+    position:relative;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+.slider-2 {
+    background:url(../img/slider-2.jpg)no-repeat center fixed;
+    background-size: cover;
+    overflow: hidden;
+    color:#fff;
+    position:relative;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+.single-slide .owl-prev {
+    top: 50%;
+    position: absolute;
+    left: 5%;
+    height: 40px;
+    width: 40px;
+    background: #4CA84C;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 26px;
+}
+.single-slide .owl-next {
+    top: 50%;
+    position: absolute;
+    right: 5%;
+    height: 40px;
+    width: 40px;
+    background: #4CA84C;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 26px;
+}
+/*---------------------------------------
+    End slider Section css
+---------------------------------------*/
+
+
+/*---------------------------------------
+    6.Start what-we-offer Section css
+---------------------------------------*/
+.offer-area{
+    transition: .5s;
+}
+.offer-area .single-offer {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms linear 0s;
+}
+.offer-area .single-offer::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+}
+.offer-area .single-offer-text{
+    position: absolute;
+    top: 48%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+    z-index: 2;
+    transition: all 300ms linear 0s;
+}
+.offer-area:hover .single-offer-text{
+    top: 0%;
+}
+.offer-area:hover .single-offer::after{
+    background: rgba(76, 168, 76, 0.8)
+}
+.single-offer-text .title{
+    margin-bottom: 30px;
+}
+.single-offer-text .title h4{
+    color: #fff;
+}
+.single-offer-text .title h5{
+    color: #fff;
+}
+.single-offer-text p{
+    color: #fff;
+}
+/*---------------------------------------
+    End what-we-offer Section css
+---------------------------------------*/
+
+/*---------------------------------------
+    7.Start car-area Section css
+---------------------------------------*/
+.car-slide .owl-item {
+    margin-bottom: -20px !important;
+}
+.single-car{
+    padding: 20px;
+}
+.car-title{
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+.car-title h4{
+    color: #4CA84C;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.car-price{
+    margin-bottom: 20px;
+}
+.car-price h1{
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #4CA84C;
+}
+.car-price h1 span{
+    font-size: 16px;
+    color: #222;
+}
+.car-info {
+    padding: 20px;
+    background: #07b0ff;
+}
+.car-info ul li{
+    line-height: 35px;
+    color: #fff;
+}
+.car-info ul li span{
+    float: right;
+}
+.car-slide .owl-prev {
+    position: absolute;
+    left: 45%;
+    font-size: 32px;
+    color: #4CA84C;
+}
+.car-slide .owl-next {
+    position: absolute;
+    right: 45%;
+    font-size: 32px;
+    color: #4CA84C;
+}
+/*---------------------------------------
+    End car-area Section css
+---------------------------------------*/
+
+/*--------------------------------
+    8.Start About-us Section css
+----------------------------------*/
+.about-btn{
+    margin-top: 30px;
+}
+
+.about-info ul li{
+    line-height: 28px;
+}
+.about-info ul li i{
+    margin-right: 10px;
+    font-size: 22px;
+    color: #4CA84C;
+}
+.about-info ul li span{
+    font-size: 16px;
+}
+/*--------------------------------
+    End About-us Section css
+----------------------------------*/
+
+
+/*--------------------------------
+    9.Start Service Section css
+----------------------------------*/
+.carspace-box{
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 40px;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.carspace-box:hover {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.09);
+    cursor: pointer;
+}
+.carspace-icon img{
+    width: auto;
+    height: 50px;
+}
+.carspace-details h5{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.carspace-box:hover .carspace-details h5{
+    color: #4CA84C;
+}
+/*--------------------------------
+    End Service Section css
+----------------------------------*/
+
+/*--------------------------------
+10.Start countdown-area Section css
+----------------------------------*/
+.countdown-area{
+    background: url(../img/project-bg.jpg)no-repeat center fixed;
+    background-size: cover;
+    position: relative
+}
+.countdown{
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.countdown i{
+    font-size: 32px;
+    color: #4CA84C;
+}
+.countdown h1, 
+.countdown h5{
+    color: #fff;
+}
+/*--------------------------------
+    End Project-area Section css
+----------------------------------*/
+
+/*--------------------------------
+    11.Start faq Section css
+----------------------------------*/
+.faq{
+    background: #f9f9f9;
+    position: relative;
+}
+.f-bottom {
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+.faq-img{
+    position: absolute;
+    top: 18px;
+    right: 0;
+}
+.faq-img img{
+    float: right;
+}
+.card-header:first-child {
+    border-radius: 0;
+}
+.card{
+    border:none;
+    background-color: transparent; 
+}
+.card-header {
+    padding: 5px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: none;
+}
+.card-header h5 .btn{
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 50px;
+}
+.card-header h5 .btn:hover{
+    color: #4CA84C!important;
+}
+.card-body{
+    border-left: 1px solid #4CA84C;
+    padding-left: 35px;
+    margin-left: 15px;
+}
+.faq-area .card .card-header h5 a {
+    display: block;
+    padding: 5px;
+}
+.faq-area .card .card-header h5 a i.fa {
+    float: right;
+    font-size: 150%;
+    line-height: 15px;
+    display: none;
+}
+.faq-area .card .card-header h5 a[aria-expanded="false"] i.fa.fa-angle-down {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: transparent;
+    color: #4CA84C;
+    text-align: center;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border: 1px solid #4CA84C;
+    border-radius: 30px;
+}
+.faq-area .card .card-header h5 a[aria-expanded="true"] i.fa.fa-angle-up {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 32px;
+    background: transparent;
+    color: #4CA84C;
+    text-align: center;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border: 1px solid #4CA84C;
+    border-radius: 30px;
+}
+/*--------------------------------
+    End faq Section css
+----------------------------------*/
+/*--------------------------------
+    12.Start Team Section css
+----------------------------------*/
+.team-img {
+    overflow:hidden;
+    position:relative;
+    text-align: center;
+    transition: .5s;
+}
+.team-img:hover .team-overlay{
+    bottom: 0;
+    opacity: .9;
+}
+.team-img img {
+    width: 100%;
+}
+.team-overlay {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: -100%;
+    background: #4CA84C;
+    transition: .5s;
+}
+.team-details{
+    padding: 30px;
+}
+.team-details h5{
+    font-weight: 600;
+}
+.team-info {
+    padding:10px;
+    color: #fff;
+}
+.team-info ul li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.team-info ul li i {
+    background: #333;
+    border-radius:30px;
+    color: #fff;
+    height:40px;
+    padding:13px;
+    width:40px
+}
+/*--------------------------------
+    End Team Section css
+----------------------------------*/
+
+/*--------------------------------
+    13.Start testimonial Section css
+----------------------------------*/
+.testimonial{
+    background: url(../img/project-bg.jpg)no-repeat center fixed;
+    background-size: cover;
+    position: relative
+}
+.overlay-text h2, .overlay-text p{
+    color: #fff;
+}
+.member{
+    margin-bottom: 30px;
+}
+.member img {
+    width: 130px !important;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.member h5{
+    margin-top: 20px;
+    color: #fff;
+}
+.member span{
+    color: #fff;
+    text-transform: uppercase;
+}
+.review-text p{
+    color: #fff;
+    padding: 0 17%;
+}
+.owl-carousel .owl-dots {
+    display:flex;
+    -ms-display:flex;
+    -webkit-display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    margin-top:1rem
+}
+.owl-carousel .owl-dot {
+    height:10px;
+    width:20px;
+    border:1px solid #4CA84C;
+    border-radius:10px;
+    margin:0 .2rem;
+    -webkit-transition:all .25s ease-in-out;
+    transition:all .25s ease-in-out
+}
+.owl-carousel .owl-dot.active {
+    height:10px;
+    width:10px;
+    background-color: #4CA84C;
+    border-radius:50%
+}
+/*--------------------------------
+    End testimonial Section css
+----------------------------------*/
+
+/*--------------------------------
+    14.Start Blog Section css
+----------------------------------*/
+.blog{
+    background: #f9f9f9;
+}
+.blog-content{
+    border: 1px solid #4CA84C;
+}
+.blog-img{
+    position: relative;
+}
+.blog-date{
+    position: absolute;
+    top: 44%;
+    left: 7%;
+    padding: 10px;
+    text-align: center;
+    background: #4CA84C;
+}
+.blog-date span{
+    color: #fff;
+}
+.blog-text{
+    padding: 10px;
+    margin-top: 30px;
+    border-top:none;
+}
+.blog-title{
+    color: #4CA84C;
+    font-weight: 600;
+    transition: .5s;
+}
+.blog-title:hover,
+.blog-title:focus{
+    color: #4CA84C;
+}
+.blog-text .blog-btn {
+    background: #4CA84C;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    transition: .5s;
+    width: 104px;
+    padding: 10px;
+    text-align: center;
+}
+.blog-text .blog-btn:hover{
+    background: #85C16E;
+    color: #fff;
+}
+/*--------------------------------
+    End Blog Section css
+----------------------------------*/
+
+/*--------------------------------
+    15.Start Contact Section css
+----------------------------------*/
+#map{
+    height: 500px;
+    width: 100%;
+}
+.contact-bg{
+    background: #fff;
+    margin-top: -120px;
+    position: relative;
+    padding: 70px;
+}
+.contact-head{
+    margin-top: 50px;
+}
+.contact-form {
+    overflow: hidden;
+    padding: 20px;
+}
+.form-group{
+    margin-bottom: 30px;
+}
+.form-control{
+    color: #fff !important;
+    border-radius: 0;
+    transition: .5s;
+}
+.form-control:focus{
+    border-color: #4CA84C;
+}
+.confirm{
+    text-align: center;
+}
+.confirm .carspace-btn{
+    background: #4CA84C;
+    color: #fff;
+    width: 15%;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+.carspace-btn i{
+    margin-right: 10px;
+}
+/*--------------------------------
+    End Contact Section css
+----------------------------------*/
+
+/*--------------------------------
+    16.Start widget-area Section css
+----------------------------------*/
+.widget-area{
+    background: #1B2021;
+}
+.f-widget-title h4{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-about h4{
+    color: #fff;
+}
+.footer-about p{
+    margin-top: 15px;
+    color: #fff;
+}
+.about-social h6{
+    text-transform: uppercase;
+    color: #8f8585;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.about-social ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.about-social ul li a{
+    display: block;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    background: #4CA84C;
+    text-align: center;
+    line-height: 40px;
+    transition: .5s;
+}
+.about-social ul li a:hover{
+    background: #85C16E;
+}
+.categories li {
+    list-style: none;
+    margin-bottom: 11px;
+}
+.categories li i{
+    margin-right: 10px;
+}
+.categories li a{
+    color: #fff;
+}
+.contact-info ul li{
+    line-height: 30px;
+}
+.contact-info ul li span{
+    color: #fff;
+}
+.contact-info ul li .span-1{
+    width: 20%;
+    float: left;
+}
+.contact-info ul li .span-2{
+    width: 80%;
+    float: left;
+}
+/*--------------------------------
+    End widget-area Section css
+----------------------------------*/
+
+/*--------------------------------
+    17.Start footer-area Section css
+----------------------------------*/
+.footer-area {
+    background: #000;
+}
+.footer-text {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.footer-text p {
+    color:#fff;
+    margin-bottom: 10px;
+}
+.footer-social-link {
+    float: right;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+.footer-social-link ul li {
+    display:inline-block;
+    margin-right: 10px;
+}
+.footer-social-link ul li a i {
+    background: #fff;
+    color: #4CA84C;
+    width:40px;
+    height:40px;
+    font-size: 16px;
+    border-radius:30px;
+    line-height: 40px;
+    text-align:center;
+}
+/*---------------------------------------
+    End Footer-area css
+---------------------------------------*/
+/*---------------------------------------
+    18.Start #scroll-up css
+---------------------------------------*/
+#scroll-up {
+    background:#333;
+    border-radius:50%;
+    bottom:10px;
+    color:#fff;
+    cursor:pointer;
+    display:none;
+    font-size:24px;
+    height:46px;
+    line-height:42px;
+    position:fixed;
+    right:10px;
+    text-align:center;
+    text-decoration:none;
+    transition:.3s;
+    width:46px;
+    z-index:337
+}
+#scroll-up:hover,#scroll-up:focus {
+    background: #85C16E none repeat scroll 0 0;
+    color:#fff
+}
+/*---------------------------------------
+    End #scroll-up css
+---------------------------------------*/
+/*---------------------------------------
+19.Start carspace index.html Section css
+---------------------------------------*/
+.index-banner{
+    background: url(../img/index-bg.jpg)no-repeat center fixed;
+    background-size: cover;
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 150px;
+}
+.carspace-header h2{
+    font-weight: 600;
+    font-size: 38px;
+}
+
+.select-category{
+    margin-bottom: 60px;
+}
+.select-item{
+    box-shadow: 0 0 20px #ccc;
+}
+.select-item-title{
+    margin-top: 20px;
+}
+.select-item-title h3{
+    font-weight: 600;
+    color: #333;
+}
+.select-item-title h3:hover{
+    color: #72BA0E;
+}
+/*---------------------------------------
+    End tamai index.html Section css
+---------------------------------------*/

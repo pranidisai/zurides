@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zurides- Search</title>
+    <!--== META TAGS ==-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="images/fav.ico">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+    <!-- FONT-AWESOME ICON CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--== ALL CSS FILES ==-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mob.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $("#example-vertical").steps({
+    headerTag: "h3",
+    bodyTag: "section",
+    transitionEffect: "slideLeft",
+    stepsOrientation: "vertical"
+});
+</script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!-- MOBILE MENU -->
+   
+<section>
+        <div class="ed-mob-menu">
+            <div class="ed-mob-menu-con">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="index.html"><img src="images/logo.png" alt="" />
+						</a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-menu">
+                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                        <div class="ed-mm-inn">
+                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+								<li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- LOGO AND MENU SECTION -->
+        <div class="top-logo affix" data-spy="affix" data-offset-top="250" style="" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" >
+                        <div class="wed-logo">
+                            <a href="index.html"><img src="images/logo.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="main-menu" >
+                           <ul>
+                                <li><a href="index.html">Home</a>
+                                </li>
+                               
+                                <li><a href="about.html">About</a>
+                                </li>
+                                 <li><a href="blog.html">Blog</a>
+                                </li>
+                                <li><a href="contact.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--END HEADER SECTION-->
+<section>
+		<div class="rows banner_book" id="inner-page-title">
+			<div class="container1">
+				<div class="banner_book_1">
+					<ul>
+						<li class="dl1">Hyderabad -> Tenali</li>
+						<li class="dl2">19-03-2018</li>
+						
+						<li class="dl3"><a href="#" id="show"><span style="border:1px solid #fff;padding:0 10px 0 10px; border-radius: 25px;">Modify</span></a></li>
+						<li class="dl5"><input type="radio" name="radio">One Way |&#160;<input type="radio" name="radio"> Round Trip |&#160;<input type="radio" name="radio">Pooling </li>
+					</ul>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $("#show").click(function(){
+        $("#modify").toggle();
+    });
+});
+</script>
+	
+	<section id="modify" style="display:none;">
+		<div class="rows banner_book_m" id="inner-page-title">
+			<div class="container wow fadeInLeft animated">
+				<div class="banner_book_1">
+					<form class="v2-search-form_m">
+							<div class="row">
+								<div class="input-field col s3">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Pick up location</label>
+								</div>
+								<div class="input-field col s3">
+									<input type="text" id="select-city-1" class="autocomplete">
+									<label for="select-city">Dropping off location</label>
+								</div>
+<div class="input-field col s3">
+									<input type="text" id="from" name="from">
+									<label for="from">Pick up date</label>
+								</div>	
+<div class="input-field col s3">
+									<input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
+								</div>								
+							</div>
+							
+						</form>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+    <!--HEADER SECTION-->
+  <section>
+		<div class="db">
+			<!--LEFT SECTION-->
+			<div class="db-3">
+				<h4 style="text-align:center;">Seates</h4>
+				<ul>
+					
+					<li>
+						<a href="#!"><img src="images/steering.png" alt="" />
+							<h5 style="padding-top:20px;">Driver</h5>
+							<br>
+							
+						</a>
+					</li>
+					
+					<li>
+						<a href="#!"> <img src="images/male-circle-512.png" alt="" />
+							<h5 style="padding-top:20px;">Raghu Ram</h5>
+							<br>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#!"> <img src="images/male-circle-512.png" alt=""/>
+							<h5 style="padding-top:20px;">Rajesh</h5>
+							<br>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#!"> <img src="images/male-circle-512.png" alt="" />
+							<h5 style="padding-top:20px;">Mahesh</h5>
+							<br>
+							
+						</a>
+					</li>
+					<li>
+						<a href="#!"> <img src="images/male-circle-512.png" alt="" />
+							<h5 style="padding-top:20px;">Mahesh</h5>
+							<br>
+							
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--CENTER SECTION-->
+			<div class="db-2">
+				<div class="">
+					
+					<div class="db-2-main-com db2-form-pay db2-form-com">
+					<form class="col s12">
+						<div class="row">
+						<h4 style="background:none:">Login (optional but useful )</h4>
+								<div class="input-field col s4">
+									<input id="pay-ca" type="text" class="validate">
+									<label for="pay-ca">User Name</label>
+								</div>
+								<div class="input-field col s4">
+									<input id="pay-ca" type="text" class="validate">
+									<label for="pay-ca">Password</label>
+								</div>
+								<div class="input-field col s4">
+									<input type="submit" value="Sign Up" class="waves-effect waves-light full-btn">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+						<h4 style="background:none:">Enter Contact details</h4>
+								<div class="input-field col s6">
+									<input id="pay-ca" type="text" class="validate">
+									<label for="pay-ca">Email Id</label>
+								</div>
+								<div class="input-field col s6">
+									<input id="pay-ca" type="text" class="validate">
+									<label for="pay-ca">Contact No</label>
+								</div>
+								
+							</div>
+							<br>
+							<div class="row">
+						<h4 style="background:none:">Passinger Details</h4>
+								<div class="input-field col s4">
+									<input id="pay-ca" type="text" class="validate">
+									<label for="pay-ca">Name</label>
+								</div>
+								<div class="input-field col s4">
+									<input id="pay-ca" type="text" class="validate">
+									<label for="pay-ca">Age</label>
+								</div>
+								<div class="input-field col s4">
+									<input id="pay-ca" type="text" class="validate">
+									<label for="pay-ca">Gender</label>
+								</div>
+								
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s12">
+									<input type="submit" value="Proced To Payment" class="waves-effect waves-light full-btn"> </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--RIGHT SECTION-->
+			<div class="db-3 ">
+				<h4 style="text-align:center;">Price Summary</h4>
+				<ul>
+				<li>
+						<div class="col s12 db-2-main-com">
+						<div class="row">
+						
+								<div class="input-field col s8">
+									<input id="pay-ca" type="text" class="validate">
+									<label for="pay-ca">Coupon Code</label>
+								</div>
+								
+								<div class="input-field col s4">
+									<input type="submit" value="Apply" class="waves-effect waves-light full-btn">
+								</div>
+							</div>
+							</div>
+					</li>
+					<li>
+						
+							<h5>Base Price <span style="margin-right:45px;"></span>: 800 Rs</h5>
+							<h5>Tax <span style="margin-right:95px;"></span>: 50 Rs</h5>
+							<h5>GST <span style="margin-right:95px;"></span>: 50 Rs</h5>
+							<h5>Promo Discount <span style="margin-right:15px;"></span>: 10 Rs</h5>
+						</li>
+						<li>
+						
+							<h5>Total Price: 890 Rs</h5>
+							
+						
+						</li>
+					
+					
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!--END DASHBOARD-->
+	
+    <!--====== FOOTER 1 ==========-->
+    <section>
+        
+    </section>
+    <!--====== FOOTER 2 ==========-->
+ <section>
+        <div class="rows">
+            <div class="footer" style="padding-top:20px;">
+                <div class="container">
+                    <div class="foot-sec2">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4>Zurides</h4>
+                                    <p>Zurides operators brings all the car owners to a
+common platform providing quality and safe services along with making the owners relish the success
+.</p>
+                                </div>
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4><span>Address</span> & Contact Info</h4>
+                                    <p>60 feet road, Madhapur, Hyderabad-500081</p>
+                                    <p> <span class="strong">Phone: </span> <span class="highlighted">+040-48528570</span> </p>
+                                </div>
+                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
+                                    <h4><span>SUPPORT</span> & HELP</h4>
+                                    <ul class="two-columns">
+                                        <li> <a href="#">About Us</a> </li>
+                                        <li> <a href="#">FAQ</a> </li>
+                                       
+                                        <li> <a href="#">Blog </a> </li>
+                                        
+                                        <li> <a href="#">Advertise us</a> </li>
+                                        <li> <a href="#">Discount</a> </li>
+                                        <li> <a href="#">Vacations</a> </li>
+                                        <li> <a href="#">Branding Offers </a> </li>
+                                        <li> <a href="#">Contact Us</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 foot-social foot-spec foot-com">
+                                    <h4><span>Follow</span> with us</h4>
+                                    <p>Join the thousands of other There are many variations of passages </p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	
+	
+	
+	
+	
+    <!--====== FOOTER - COPYRIGHT ==========-->
+    <section>
+        <div class="rows copy">
+            <div class="container">
+                <p>Copyrights © 2018 ZuRides. All Rights Reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <!--========= Scripts ===========-->
+    <script src="js/jquery-latest.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

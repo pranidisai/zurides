@@ -1,0 +1,75 @@
+﻿@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "CreateBoardingPoint";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.min.js"></script>
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("CreateBoardingPoint", "Admin", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <span style=" color:red;font-weight:bold;text-align:center; margin-right:100px;">@ViewBag.Error</span>
+            </div>
+            <div class="row">
+                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Create BoardingPoint Details</p>
+
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+
+
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Select City</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.BoardingPoints.City, new SelectList(Model.CityDDL, "Key", "Value"), "--- Select City ---", new { @onchange = "FillService()", @class = "form-control" })
+                                        @Html.ValidationMessageFor(model=>model.BoardingPoints.City,"", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Enter Boarding Point</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.BoardingPoints.BoardingPoint, new { @class = "form-control", placeholder = "Enter Name", @required = "true" })
+                                        @Html.ValidationMessageFor(model=>model.BoardingPoints.BoardingPoint,"", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-sm-7 col-sm-offset-3">
+                                        <button class="btn btn-mint" type="submit">Add BoardingPoint</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>

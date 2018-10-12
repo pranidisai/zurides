@@ -1,0 +1,247 @@
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\bin\Debug\Zur.Entity.pdb
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\bin\Debug\EntityFramework.dll
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\bin\Debug\EntityFramework.xml
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\obj\Debug\Zur.Entity.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\obj\Debug\Zur.Entity.dll
+C:\Users\lenovo\source\repos\Zur\Zur.Entity\obj\Debug\Zur.Entity.pdb
+C:\Mahesh\wwww\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+C:\Mahesh\wwww\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll
+C:\Mahesh\wwww\Zur\Zur.Entity\bin\Debug\Zur.Entity.pdb
+C:\Mahesh\wwww\Zur\Zur.Entity\bin\Debug\EntityFramework.dll
+C:\Mahesh\wwww\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Mahesh\wwww\Zur\Zur.Entity\bin\Debug\EntityFramework.xml
+C:\Mahesh\wwww\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Mahesh\wwww\Zur\Zur.Entity\obj\Debug\Zur.Entity.csprojResolveAssemblyReference.cache
+C:\Mahesh\wwww\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+C:\Mahesh\wwww\Zur\Zur.Entity\obj\Debug\Zur.Entity.dll
+C:\Mahesh\wwww\Zur\Zur.Entity\obj\Debug\Zur.Entity.pdb
+D:\Mahesh\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+D:\Mahesh\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll
+D:\Mahesh\Zur\Zur.Entity\bin\Debug\Zur.Entity.pdb
+D:\Mahesh\Zur\Zur.Entity\bin\Debug\EntityFramework.dll
+D:\Mahesh\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\Mahesh\Zur\Zur.Entity\bin\Debug\EntityFramework.xml
+D:\Mahesh\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\Mahesh\Zur\Zur.Entity\obj\Debug\Zur.Entity.csprojResolveAssemblyReference.cache
+D:\Mahesh\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+D:\Mahesh\Zur\Zur.Entity\obj\Debug\Zur.Entity.dll
+D:\Mahesh\Zur\Zur.Entity\obj\Debug\Zur.Entity.pdb
+D:\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+D:\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll
+D:\Zur\Zur.Entity\bin\Debug\Zur.Entity.pdb
+D:\Zur\Zur.Entity\bin\Debug\EntityFramework.dll
+D:\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\Zur\Zur.Entity\bin\Debug\EntityFramework.xml
+D:\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\Zur\Zur.Entity\obj\Debug\Zur.Entity.csprojResolveAssemblyReference.cache
+D:\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+D:\Zur\Zur.Entity\obj\Debug\Zur.Entity.dll
+D:\Zur\Zur.Entity\obj\Debug\Zur.Entity.pdb
+G:\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+G:\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll
+G:\Zur\Zur.Entity\bin\Debug\Zur.Entity.pdb
+G:\Zur\Zur.Entity\bin\Debug\EntityFramework.dll
+G:\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+G:\Zur\Zur.Entity\bin\Debug\EntityFramework.xml
+G:\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+G:\Zur\Zur.Entity\obj\Debug\Zur.Entity.csprojResolveAssemblyReference.cache
+G:\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+G:\Zur\Zur.Entity\obj\Debug\Zur.Entity.dll
+G:\Zur\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\New folder (4)\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\New folder (4)\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\New folder (4)\Zur\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\New folder (4)\Zur\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\New folder (4)\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\New folder (4)\Zur\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\New folder (4)\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\New folder (4)\Zur\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\New folder (4)\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\New folder (4)\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\New folder (4)\Zur\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\New folder (4)\Zur\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur\Zur.Entity\obj\Debug\Zur.Entity.pdb
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\bin\Debug\Zur.Entity.dll
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\bin\Debug\Zur.Entity.pdb
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\bin\Debug\EntityFramework.dll
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\bin\Debug\EntityFramework.xml
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\obj\Debug\Zur.Entity.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\obj\Debug\Zur.Entity.dll
+C:\Users\lenovo\Desktop\Zur\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\zurides\Zur 6-8-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 6-9-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 6-9-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 6-9-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 6-9-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 6-9-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 6-9-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 6-9-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 6-9-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 6-9-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-9-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 6-9-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 6-9-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 6-22-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 6-22-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 6-22-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 6-22-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 6-22-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 6-22-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 6-22-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 6-22-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 6-22-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-22-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 6-22-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 6-22-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 6-25-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 6-25-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 6-25-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 6-25-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 6-25-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 6-25-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 6-25-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 6-25-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 6-25-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-25-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 6-25-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 6-25-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 7-4-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 7-4-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 7-4-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 7-4-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 7-4-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 7-4-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 7-4-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 7-4-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 7-4-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 7-4-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 7-4-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 7-4-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 7-9-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 7-9-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 7-9-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 7-9-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 7-9-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 7-9-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 7-9-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 7-9-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 7-9-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 7-9-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 7-9-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 7-9-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 7-19-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 7-19-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 7-19-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 7-19-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 7-19-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 7-19-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 7-19-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 7-19-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 7-19-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 7-19-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 7-19-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 7-19-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 8-7-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 8-7-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 8-7-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 8-7-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 8-7-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 8-7-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 8-7-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 8-7-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 8-7-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 8-7-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 8-7-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 8-7-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 8-11-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 8-11-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 8-11-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 8-11-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 8-11-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 8-11-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 8-11-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 8-11-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 8-11-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 8-11-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 8-11-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 8-11-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 8-16-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 8-16-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 8-16-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 8-16-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 8-16-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 8-16-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 8-16-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 8-16-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 8-16-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 8-16-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 8-16-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 8-16-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 9-21-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 9-21-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 9-21-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 9-21-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 9-21-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 9-21-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 9-21-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 9-21-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 9-21-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 9-21-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 9-21-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 9-21-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 9-25-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 9-25-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 9-25-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 9-25-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 9-25-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 9-25-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 9-25-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 9-25-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 9-25-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 9-25-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 9-25-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 9-25-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb
+E:\project\Zur 10-4-2018\Zur.Entity\bin\Debug\Zur.Entity.dll.config
+E:\project\Zur 10-4-2018\Zur.Entity\bin\Debug\Zur.Entity.dll
+E:\project\Zur 10-4-2018\Zur.Entity\bin\Debug\Zur.Entity.pdb
+E:\project\Zur 10-4-2018\Zur.Entity\bin\Debug\EntityFramework.dll
+E:\project\Zur 10-4-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.dll
+E:\project\Zur 10-4-2018\Zur.Entity\bin\Debug\EntityFramework.xml
+E:\project\Zur 10-4-2018\Zur.Entity\bin\Debug\EntityFramework.SqlServer.xml
+E:\project\Zur 10-4-2018\Zur.Entity\obj\Debug\Zur.Entity.csprojAssemblyReference.cache
+E:\project\Zur 10-4-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CoreCompileInputs.cache
+E:\project\Zur 10-4-2018\Zur.Entity\obj\Debug\Zur.Entity.csproj.CopyComplete
+E:\project\Zur 10-4-2018\Zur.Entity\obj\Debug\Zur.Entity.dll
+E:\project\Zur 10-4-2018\Zur.Entity\obj\Debug\Zur.Entity.pdb

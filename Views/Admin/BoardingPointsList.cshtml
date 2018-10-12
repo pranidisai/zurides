@@ -1,0 +1,57 @@
+﻿@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "BoardingPointsList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">Cabs List</h3>
+    </div>
+    <div class="panel-body">
+        <table id="demo-dt-selection" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>City Name</th>
+                    <th>Boarding Point Name</th>
+                   <th>Created Date</th>
+                    <th>Status</th>
+
+                    <th class="min-desktop">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.BoardingPointsList)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.City</td>
+                        <td>@user.BoardingPoint</td>
+                        <th>@user.CreatedDate</th>
+                        <td>
+                            @if (user.Status == 1)
+                            {
+                                <span style="color:green;font:bold">
+                                    Active
+                                </span>
+                            }
+                            else
+                            {
+                                <span style="color:red;font-weight:bold">
+                                    In Active
+                                </span>
+                            }
+
+                        </td>
+                        <td>@Html.ActionLink("Edit / View", "ViewBoardingPoint", new { @id = user.Id })</td>
+                    </tr>
+                }
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZRModelStoreContainer" CdmEntityContainer="ZREntities">
+    <EntitySetMapping Name="tbl_Admin">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Admin">
+        <MappingFragment StoreEntitySet="tbl_Admin">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AvalialeVehicles">
+      <EntityTypeMapping TypeName="ZRModel.tbl_AvalialeVehicles">
+        <MappingFragment StoreEntitySet="tbl_AvalialeVehicles">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RootValue" ColumnName="RootValue" />
+          <ScalarProperty Name="RootId" ColumnName="RootId" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_BoardingPoints">
+      <EntityTypeMapping TypeName="ZRModel.tbl_BoardingPoints">
+        <MappingFragment StoreEntitySet="tbl_BoardingPoints">
+          <ScalarProperty Name="DestinationPoint" ColumnName="DestinationPoint" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BoardingPoint" ColumnName="BoardingPoint" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Bookings">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Bookings">
+        <MappingFragment StoreEntitySet="tbl_Bookings">
+          <ScalarProperty Name="DroppingPoint" ColumnName="DroppingPoint" />
+          <ScalarProperty Name="BoardingPoint" ColumnName="BoardingPoint" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="JouneyStatus" ColumnName="JouneyStatus" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="ConfirmStatus" ColumnName="ConfirmStatus" />
+          <ScalarProperty Name="NoOfseats" ColumnName="NoOfseats" />
+          <ScalarProperty Name="Offerdiscount" ColumnName="Offerdiscount" />
+          <ScalarProperty Name="Fair" ColumnName="Fair" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="TravelId" ColumnName="TravelId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="RootNo" ColumnName="RootNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Cities">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Cities">
+        <MappingFragment StoreEntitySet="tbl_Cities">
+          <ScalarProperty Name="Stopps" ColumnName="Stopps" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Drivers">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Drivers">
+        <MappingFragment StoreEntitySet="tbl_Drivers">
+          <ScalarProperty Name="DriverDrink" ColumnName="DriverDrink" />
+          <ScalarProperty Name="Driversmoke" ColumnName="Driversmoke" />
+          <ScalarProperty Name="LicenseIssuedDate" ColumnName="LicenseIssuedDate" />
+          <ScalarProperty Name="DrivingLicenseExpiredDate" ColumnName="DrivingLicenseExpiredDate" />
+          <ScalarProperty Name="BatchNumber" ColumnName="BatchNumber" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="DriverPic" ColumnName="DriverPic" />
+          <ScalarProperty Name="License" ColumnName="License" />
+          <ScalarProperty Name="DrivingLicensecopy" ColumnName="DrivingLicensecopy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TravelId" ColumnName="TravelId" />
+          <ScalarProperty Name="RootNumber" ColumnName="RootNumber" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="PanNumber" ColumnName="PanNumber" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="AdharCard" ColumnName="AdharCard" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="DriverUserName" ColumnName="DriverUserName" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Employee">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Employee">
+        <MappingFragment StoreEntitySet="tbl_Employee">
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_kmcharges">
+      <EntityTypeMapping TypeName="ZRModel.tbl_kmcharges">
+        <MappingFragment StoreEntitySet="tbl_kmcharges">
+          <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Chargeper100km" ColumnName="Chargeper100km" />
+          <ScalarProperty Name="Chargeperkm" ColumnName="Chargeperkm" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_login">
+      <EntityTypeMapping TypeName="ZRModel.tbl_login">
+        <MappingFragment StoreEntitySet="tbl_login">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+          <ScalarProperty Name="ContNumber" ColumnName="ContNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Ratings">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Ratings">
+        <MappingFragment StoreEntitySet="tbl_Ratings">
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Review" ColumnName="Review" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_RootMaps">
+      <EntityTypeMapping TypeName="ZRModel.tbl_RootMaps">
+        <MappingFragment StoreEntitySet="tbl_RootMaps">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Via" ColumnName="Via" />
+          <ScalarProperty Name="RootId" ColumnName="RootId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Roots">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Roots">
+        <MappingFragment StoreEntitySet="tbl_Roots">
+          <ScalarProperty Name="distance" ColumnName="distance" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+          <ScalarProperty Name="RootDEstination" ColumnName="RootDEstination" />
+          <ScalarProperty Name="RootSource" ColumnName="RootSource" />
+          <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Statesinfo">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Statesinfo">
+        <MappingFragment StoreEntitySet="tbl_Statesinfo">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Travelers">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Travelers">
+        <MappingFragment StoreEntitySet="tbl_Travelers">
+          <ScalarProperty Name="ConContactnumber" ColumnName="ConContactnumber" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="ContactPersonName" ColumnName="ContactPersonName" />
+          <ScalarProperty Name="CommisionPerUser" ColumnName="CommisionPerUser" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="SecondaryContact" ColumnName="SecondaryContact" />
+          <ScalarProperty Name="Landline2" ColumnName="Landline2" />
+          <ScalarProperty Name="Landline1" ColumnName="Landline1" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="VatNo" ColumnName="VatNo" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="CommisionPercentage" ColumnName="CommisionPercentage" />
+          <ScalarProperty Name="Travelartype" ColumnName="Travelartype" />
+          <ScalarProperty Name="vehiclesCount" ColumnName="vehiclesCount" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Long" ColumnName="Long" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TravelUserName" ColumnName="TravelUserName" />
+          <ScalarProperty Name="TravelPhone" ColumnName="TravelPhone" />
+          <ScalarProperty Name="TavelEmail" ColumnName="TavelEmail" />
+          <ScalarProperty Name="TravelName" ColumnName="TravelName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Users">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Users">
+        <MappingFragment StoreEntitySet="tbl_Users">
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_VehiclesInfo">
+      <EntityTypeMapping TypeName="ZRModel.tbl_VehiclesInfo">
+        <MappingFragment StoreEntitySet="tbl_VehiclesInfo">
+          <ScalarProperty Name="TransmissionType" ColumnName="TransmissionType" />
+          <ScalarProperty Name="FuelType" ColumnName="FuelType" />
+          <ScalarProperty Name="SelfDriveprice" ColumnName="SelfDriveprice" />
+          <ScalarProperty Name="RentPerHour" ColumnName="RentPerHour" />
+          <ScalarProperty Name="Journeytype" ColumnName="Journeytype" />
+          <ScalarProperty Name="totalDistance" ColumnName="totalDistance" />
+          <ScalarProperty Name="DropTime" ColumnName="DropTime" />
+          <ScalarProperty Name="GST" ColumnName="GST" />
+          <ScalarProperty Name="TravelAgencyName" ColumnName="TravelAgencyName" />
+          <ScalarProperty Name="TaxPercentage" ColumnName="TaxPercentage" />
+          <ScalarProperty Name="RentPerday" ColumnName="RentPerday" />
+          <ScalarProperty Name="TwoWayPrice" ColumnName="TwoWayPrice" />
+          <ScalarProperty Name="SingleWayPrice" ColumnName="SingleWayPrice" />
+          <ScalarProperty Name="ServiceAvailable" ColumnName="ServiceAvailable" />
+          <ScalarProperty Name="AvailableRootNumber" ColumnName="AvailableRootNumber" />
+          <ScalarProperty Name="TermsandConditions" ColumnName="TermsandConditions" />
+          <ScalarProperty Name="Eminities" ColumnName="Eminities" />
+          <ScalarProperty Name="SeatType" ColumnName="SeatType" />
+          <ScalarProperty Name="vehicleName" ColumnName="vehicleName" />
+          <ScalarProperty Name="VehicleType" ColumnName="VehicleType" />
+          <ScalarProperty Name="DestinationBoardingPoints" ColumnName="DestinationBoardingPoints" />
+          <ScalarProperty Name="SourceBoardingPoints" ColumnName="SourceBoardingPoints" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="TimeDuration" ColumnName="TimeDuration" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="SoruceStartime" ColumnName="SoruceStartime" />
+          <ScalarProperty Name="VechileImages" ColumnName="VechileImages" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ModelYear" ColumnName="ModelYear" />
+          <ScalarProperty Name="SeatsCount" ColumnName="SeatsCount" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="VehicleModel" ColumnName="VehicleModel" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="DriverNumber" ColumnName="DriverNumber" />
+          <ScalarProperty Name="DriverUserName" ColumnName="DriverUserName" />
+          <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+          <ScalarProperty Name="Via" ColumnName="Via" />
+          <ScalarProperty Name="RootNumber" ColumnName="RootNumber" />
+          <ScalarProperty Name="VehicleOwnerCont" ColumnName="VehicleOwnerCont" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="VehicleNumber" ColumnName="VehicleNumber" />
+          <ScalarProperty Name="travelId" ColumnName="travelId" />
+          <ScalarProperty Name="TravelerUserName" ColumnName="TravelerUserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Color">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Color">
+        <MappingFragment StoreEntitySet="tbl_Color">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_VehicleBrands">
+      <EntityTypeMapping TypeName="ZRModel.tbl_VehicleBrands">
+        <MappingFragment StoreEntitySet="tbl_VehicleBrands">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_VehicleType">
+      <EntityTypeMapping TypeName="ZRModel.tbl_VehicleType">
+        <MappingFragment StoreEntitySet="tbl_VehicleType">
+          <ScalarProperty Name="Seats" ColumnName="Seats" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="vehicleType" ColumnName="vehicleType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Eminities">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Eminities">
+        <MappingFragment StoreEntitySet="tbl_Eminities">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Eminity" ColumnName="Eminity" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Registration">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Registration">
+        <MappingFragment StoreEntitySet="tbl_Registration">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+          <ScalarProperty Name="Registerdate" ColumnName="Registerdate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Orders">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Orders">
+        <MappingFragment StoreEntitySet="tbl_Orders">
+          <ScalarProperty Name="TravelStatus" ColumnName="TravelStatus" />
+          <ScalarProperty Name="OTP" ColumnName="OTP" />
+          <ScalarProperty Name="UserAdhar" ColumnName="UserAdhar" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Transactionid" ColumnName="Transactionid" />
+          <ScalarProperty Name="CheckSum" ColumnName="CheckSum" />
+          <ScalarProperty Name="PaymentThrough" ColumnName="PaymentThrough" />
+          <ScalarProperty Name="PaymentStatusinfo" ColumnName="PaymentStatusinfo" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+          <ScalarProperty Name="NetPay" ColumnName="NetPay" />
+          <ScalarProperty Name="CouponApplied" ColumnName="CouponApplied" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="DropPoint" ColumnName="DropPoint" />
+          <ScalarProperty Name="SeatsSelected" ColumnName="SeatsSelected" />
+          <ScalarProperty Name="JouneyType" ColumnName="JouneyType" />
+          <ScalarProperty Name="BoardingPoint" ColumnName="BoardingPoint" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Availabulity">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Availabulity">
+        <MappingFragment StoreEntitySet="tbl_Availabulity">
+          <ScalarProperty Name="RootId" ColumnName="RootId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AvailableDate" ColumnName="AvailableDate" />
+          <ScalarProperty Name="TravelId" ColumnName="TravelId" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Contact">
+      <EntityTypeMapping TypeName="ZRModel.tbl_Contact">
+        <MappingFragment StoreEntitySet="tbl_Contact">
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

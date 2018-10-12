@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zurides</title>
+    <!--== META TAGS ==-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="images/fav.ico">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+    <!-- FONT-AWESOME ICON CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--== ALL CSS FILES ==-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mob.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	
+	
+	<![endif]-->
+	
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="css/popstyle.css" />
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!-- MOBILE MENU -->
+   
+<section>
+        <div class="ed-mob-menu">
+            <div class="ed-mob-menu-con">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="index.html"><img src="images/logo.png" alt="" />
+						</a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-menu">
+					
+                                   
+                           <a id="modal_trigger1"  href="#modal" ><img src="images/male-circle-512.png" alt="" width="30px;"style="margin-top:10px;"></a>
+                                
+                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                        <div class="ed-mm-inn">
+                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                            <h4> </h4>
+                           <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+								<li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- LOGO AND MENU SECTION -->
+ <section>
+        <div class="top-logo " data-spy="affix" data-offset-top="250" style="" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" >
+                        <div class="wed-logo">
+                            <a href="index.html"><img src="images/logo.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="main-menu" >
+                            <ul>
+                                <li><a href="index.html">Home</a>
+                                </li>
+                               
+                                <li><a href="about.html">About</a>
+                                </li>
+                                 <li><a href="blog.html">Blog</a>
+                                </li>
+                                <li><a href="contact.html">Contact us</a>
+                                </li>
+								<li>
+								
+								
+                                </li>
+								<li class="about-menu1">
+                                   
+                                    <a id="modal_trigger" href="#modal" ><img src="images/male-circle-512.png" alt="" width="30px;"></a>
+                                </li>
+								<li class="about-menu1">
+                                   
+                                    <a id="modal_trigger" href="#modal" >Agent Login <img src="images/agent.png" alt="" width="30px;"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--END HEADER SECTION-->
+
+
+	<div id="modal" class="popupContainer" style="display:none;">
+		<header class="popupHeader">
+			<span class="header_title">Login</span>
+			<span class="modal_close"><i class="fa fa-times"></i></span>
+		</header>
+		
+		<section class="popupBody">
+			<!-- Social Login -->
+			<div class="social_login">
+				<div class="">
+					<a href="#" class="social_box fb">
+						<span class="icon"><i class="fa fa-facebook"></i></span>
+						<span class="icon_title">Connect with Facebook</span>
+						
+					</a>
+
+					<a href="#" class="social_box google">
+						<span class="icon"><i class="fa fa-google-plus"></i></span>
+						<span class="icon_title">Connect with Google</span>
+					</a>
+				</div>
+
+				<div class="centeredText">
+					<span>Or use your Email address</span>
+				</div>
+
+				<div class="action_btns">
+					<div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+					<div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+				</div>
+			</div>
+
+			<!-- Username & Password Login form -->
+			<div class="user_login">
+				<form>
+					
+					<input type="text"  placeholder="Email / Username"/>
+					<br />
+
+					
+					<input type="password" placeholder="Password" />
+					<br />
+
+					<div class="checkbox">
+						<input id="remember" type="checkbox" />
+						<label for="remember">Remember me on this computer</label>
+					</div>
+
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+					</div>
+				</form>
+
+				<a href="#" class="forgot_password">Forgot password?</a>
+			</div>
+
+			<!-- Register Form -->
+			<div class="user_register">
+				<form>
+					
+					<input type="text" placeholder="Full Name" />
+					<br />
+
+					<label></label>
+					<input type="email" placeholder="Email Address"/>
+					<br />
+
+					
+					<input type="password" placeholder="Password" />
+					<br />
+
+					<div class="checkbox">
+						<input id="send_updates" type="checkbox" />
+						<label for="send_updates">Send me occasional email updates</label>
+					</div>
+
+					<div class="action_btns">
+						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+						<div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+
+<script type="text/javascript">
+	$("#modal_trigger").leanModal({top : 140, overlay : 0.6, closeButton: ".modal_close" });
+
+	$(function(){
+		// Calling Login Form
+		$("#login_form").click(function(){
+			$(".social_login").hide();
+			$(".user_login").show();
+			return false;
+		});
+
+		// Calling Register Form
+		$("#register_form").click(function(){
+			$(".social_login").hide();
+			$(".user_register").show();
+			$(".header_title").text('Register');
+			return false;
+		});
+
+		// Going back to Social Forms
+		$(".back_btn").click(function(){
+			$(".user_login").hide();
+			$(".user_register").hide();
+			$(".social_login").show();
+			$(".header_title").text('Login');
+			return false;
+		});
+
+	})
+</script>
+<script type="text/javascript">
+	$("#modal_trigger1").leanModal({top : 140, overlay : 0.6, closeButton: ".modal_close" });
+
+	$(function(){
+		// Calling Login Form
+		$("#login_form").click(function(){
+			$(".social_login").hide();
+			$(".user_login").show();
+			return false;
+		});
+
+		// Calling Register Form
+		$("#register_form").click(function(){
+			$(".social_login").hide();
+			$(".user_register").show();
+			$(".header_title").text('Register');
+			return false;
+		});
+
+		// Going back to Social Forms
+		$(".back_btn").click(function(){
+			$(".user_login").hide();
+			$(".user_register").hide();
+			$(".social_login").show();
+			$(".header_title").text('Login');
+			return false;
+		});
+
+	})
+</script>
+
+    <!--HEADER SECTION-->
+    <section>
+        <div class="tourz-search">
+            <div class="container">
+                <div class="row">
+                    <div class="tourz-search-1">
+                        <h1 style="color:#000;">Plan Your Travel Now!</h1>
+                        
+                       <div class="">
+						<form class="v2-search-form" action="search.html">
+							<div class="row">
+								<div class="input-field col-md-3">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Hyderabad</label>
+								</div>
+								<div class="input-field col-md-3">
+									<input type="text" id="select-city-1" class="autocomplete">
+									<label for="select-city">Tenali</label>
+								</div>
+<div class="input-field col-md-3">
+									<input type="text" id="from" name="from">
+									<label for="from">Pick up date</label>
+ 								</div>	
+<div class="input-field col-md-3">
+									<input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
+								</div>								
+							</div>
+							<div class="row">
+								
+								
+								 <div class="checkbox checkbox-info checkbox-circle">
+												<input id="chp42" class="styled" name="radio" type="checkbox">
+												<label for="chp42" style="font-size:23px;"><b>One Way</b></label>
+												<input id="chp43" class="styled"  name="radio"  type="checkbox">
+												<label for="chp43" style="font-size:23px;" ><b>Round Trip</b></label>
+												<input id="chp44" class="styled"  name="radio"  type="checkbox">
+												<label for="chp44" style="font-size:23px;"><b>Pooling</b></label>
+												
+											</div>
+							</div>
+														
+						
+													
+
+													
+							<div class="row">
+								
+							</div>
+						</form>
+					</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END HEADER SECTION-->
+
+    <section>
+        <div class="top-logo" data-spy="affix" data-offset-top="250" style="" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" >
+                        <div class="wed-logo">
+                            <a href="index.html"><img src="images/logo.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="main-menu" >
+                            <ul>
+                                <li><a href="index.html">Home</a>
+                                </li>
+                               
+                                <li><a href="about.html">About</a>
+                                </li>
+                                 <li><a href="blog.html">Blog</a>
+                                </li>
+                                <li><a href="contact.html">Contact us</a>
+                                </li>
+                                <li>
+                                
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div style="text-align: center;">
+                   <!--- <video width="80%"hight="30%" controls>
+                      <source src="video/mov_bbb.mp4" type="video/mp4">
+                      <source src="mov_bbb.ogg" type="video/ogg">
+                    </video>-->
+                    <img src="images/home.png">
+                </div>
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-3" >
+                        <p><b>FARE</b></p>
+                        <label>Our fares are approxmate same value as the bus bookins.our can compare our prices</label>
+                    </div>
+
+                    <div class="col-md-3" >
+                        <p><b>CUSTOMER HAPPINESS</b></p>
+                        <label>Our service head to make our customer happy in every aspect.</label>
+                    </div>
+                    <div class="col-md-3" >
+                        <p><b>OFFERS</b></p>
+                        <label>for offers go to our offers pagefor offers go to our offers pages</label>
+                    </div>
+                    <div class="col-md-3" >
+                        <p><b>ROUTES</b></p>
+                        <label>we server accross the india, but for now are launching only in <b>AP</b>and <b>Telangana</b></label>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <!--END HEADER SECTION-->
+
+    <!--====== HOME HOTELS ==========-->
+    <!----<section>
+        <div class="rows tb-space pad-top-o pad-bot-redu">
+            <div class="container">
+                <!-- TITLE & DESCRIPTION -->
+               <!---- <div class="spe-title">
+                    <h2>Our Servied <span>Cities</span> </h2>
+                    <div class="title-line">
+                        <div class="tl-1"></div>
+                        <div class="tl-2"></div>
+                        <div class="tl-3"></div>
+                    </div>
+                    
+                </div>
+                <!-- CITY -->
+                <!---<div class="col-md-6">
+                    <a href="tour-details.html">
+                        <div class="tour-mig-like-com">
+                            <div class="tour-mig-lc-img"> <img src="images/hyd.jpg" alt=""> </div>
+                            <div class="tour-mig-lc-con">
+                                <h5>Hyderabad</h5>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-3">
+                    <a href="tour-details.html">
+                        <div class="tour-mig-like-com">
+                            <div class="tour-mig-lc-img"> <img src="images/che.jpg" alt=""> </div>
+                            <div class="tour-mig-lc-con tour-mig-lc-con2">
+                                <h5>Chennai</h5>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="tour-details.html">
+                        <div class="tour-mig-like-com">
+                            <div class="tour-mig-lc-img"> <img src="images/viz.jpg" alt=""> </div>
+                            <div class="tour-mig-lc-con tour-mig-lc-con2">
+                                <h5>Vizag</h5>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="tour-details.html">
+                        <div class="tour-mig-like-com">
+                            <div class="tour-mig-lc-img"> <img src="images/ban.jpg" alt=""> </div>
+                            <div class="tour-mig-lc-con tour-mig-lc-con2">
+                                <h5>Bangalore</h5>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+				<div class="col-md-3">
+                    <a href="tour-details.html">
+                        <div class="tour-mig-like-com">
+                            <div class="tour-mig-lc-img"> <img src="images/vij.jpg" alt=""> </div>
+                            <div class="tour-mig-lc-con tour-mig-lc-con2">
+                                <h5>Vijayawada</h5>
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== SECTION: FREE CONSULTANT ==========-->
+
+    <section>
+        <div class="offer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="offer-l"> <span class="ol-1"></span> <span class="ol-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> <span class="ol-4">Standardized Budget Cab services</span>                           
+                            <ul>
+                                <li class="wow fadeInUp" data-wow-duration="0.5s">
+                                    <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="images/icon/dis1.png" alt="">
+									</a><span>Free WiFi</span>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-duration="0.7s">
+                                    <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="images/icon/dis2.png" alt=""> </a><span>Breakfast</span>
+                                </li>
+                                
+                                <li class="wow fadeInUp" data-wow-duration="1.1s">
+                                    <a href="#!" class="waves-effect waves-light btn-large offer-btn"><img src="images/icon/dis4.png" alt=""> </a><span>Television</span>
+                                </li>
+                                <br><br>
+<br>                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="offer-r">
+                            <div class="or-1"> <span class="or-11">Start</span> <span class="or-12">Travel</span> </div>
+                            <div class="or-2"> <span class="or-21">Get</span> <span class="or-22">Best</span> <span class="or-23">Offers</span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!--====== REQUEST A QUOTE ==========-->
+    <section>
+        <div class="foot-mob-sec tb-space">
+            <div class="rows container">
+                <!-- FAMILY IMAGE(YOU CAN USE ANY PNG IMAGE) -->
+                <div class="col-md-6 col-sm-6 col-xs-12 family"> <img src="images/phne.png" alt="" /> </div>
+                <!-- REQUEST A QUOTE -->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <!-- THANK YOU MESSAGE -->
+                    <div class="foot-mob-app">
+                        <h2>Have you tried our mobile app?</h2>
+                                                <ul>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Easy Cab Booking</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Tour and Travel Packages</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Package Reviews and Ratings</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i> Manage your Bookings, Enquiry and Reviews</li>
+                        </ul>
+                        <a href="#"><img src="images/android.png" alt=""> </a>
+                        <a href="#"><img src="images/apple.png" alt=""> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== TIPS BEFORE TRAVEL ==========-->
+    <
+    <!--====== FOOTER 1 ==========-->
+    <section>
+        
+    </section>
+    <!--====== FOOTER 2 ==========-->
+    <section>
+        <div class="rows">
+            <div class="footer" style="padding-top:20px;">
+                <div class="container">
+                    <div class="foot-sec2">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4>Zurides</h4>
+                                    <p>Zurides operators brings all the car owners to a
+common platform providing quality and safe services along with making the owners relish the success
+.</p>
+                                </div>
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4><span>Address</span> & Contact Info</h4>
+                                    <p>60 feet road, Madhapur, Hyderabad-500081</p>
+                                    <p> <span class="strong">Phone: </span> <span class="highlighted">+040-48528570</span> </p>
+                                </div>
+                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
+                                    <h4><span>SUPPORT</span> & HELP</h4>
+                                    <ul class="two-columns">
+                                        <li> <a href="#">About Us</a> </li>
+                                        <li> <a href="#">FAQ</a> </li>
+                                       
+                                        <li> <a href="#">Blog </a> </li>
+                                        
+                                        <li> <a href="#">Advertise us</a> </li>
+                                        <li> <a href="#">Discount</a> </li>
+                                        <li> <a href="#">Vacations</a> </li>
+                                        <li> <a href="#">Branding Offers </a> </li>
+                                        <li> <a href="#">Contact Us</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 foot-social foot-spec foot-com">
+                                    <h4><span>Follow</span> with us</h4>
+                                    <p>Join the thousands of other There are many variations of passages </p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== FOOTER - COPYRIGHT ==========-->
+    <section>
+        <div class="rows copy">
+            <div class="container">
+                <p>Copyrights © 2018 ZuRides. All Rights Reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <!--========= Scripts ===========-->
+    <script src="js/jquery-latest.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

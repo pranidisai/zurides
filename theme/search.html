@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Zurides- Search</title>
+    <!--== META TAGS ==-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="images/fav.ico">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+    <!-- FONT-AWESOME ICON CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--== ALL CSS FILES ==-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mob.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+ z-index: 10;
+    background-color: #ffffff;
+    padding: 0 !important;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    /* border: 1px solid #ddd; */
+    margin-top-: 20px;
+    /* margin-left: 50px; */
+    /* -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+    /* box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+    -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+    opacity: 0.97;
+    filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #5A55A3;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: #5A55A3;
+  background-image: #5A55A3;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #5A55A3;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+</style>
+
+
+	
+	
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!-- MOBILE MENU -->
+   
+<section>
+        <div class="ed-mob-menu">
+            <div class="ed-mob-menu-con">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="index.html"><img src="images/logo.png" alt="" />
+						</a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-menu">
+                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                        <div class="ed-mm-inn">
+                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+								<li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- LOGO AND MENU SECTION -->
+        <div class="top-logo affix" data-spy="affix" data-offset-top="250" style="" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" >
+                        <div class="wed-logo">
+                            <a href="index.html"><img src="images/logo.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="main-menu" >
+                            <ul>
+                                <li><a href="index.html">Home</a>
+                                </li>
+                               
+                                <li><a href="about.html">About</a>
+                                </li>
+                                 <li><a href="blog.html">Blog</a>
+                                </li>
+                                <li><a href="contact.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--END HEADER SECTION-->
+<section>
+		<div class="rows banner_book" id="inner-page-title">
+			<div class="container1">
+				<div class="banner_book_1">
+					<ul>
+						<li class="dl1">Hyderabad -> Tenali</li>
+						<li class="dl2">19-03-2018</li>
+						
+						<li class="dl3"><a href="#" id="show"><span style="border:1px solid #fff;padding:0 10px 0 10px; border-radius: 25px;">Modify</span></a></li>
+						<li class="dl5"><input type="radio" name="radio">One Way |&#160;<input type="radio" name="radio"> Round Trip |&#160;<input type="radio" name="radio">Pooling </li>
+					</ul>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $("#show").click(function(){
+        $("#modify").toggle();
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    
+    $("#book").click(function(){
+        $("#list").toggle();
+    });
+});
+</script>
+	
+	<section id="modify" style="display:none;">
+		<div class="rows banner_book_m" id="inner-page-title">
+			<div class="container wow fadeInLeft animated">
+				<div class="banner_book_1">
+					<form class="v2-search-form_m">
+							<div class="row">
+								<div class="input-field col s3">
+									<input type="text" id="select-city" class="autocomplete">
+									<label for="select-city">Pick up location</label>
+								</div>
+								<div class="input-field col s3">
+									<input type="text" id="select-city-1" class="autocomplete">
+									<label for="select-city">Dropping off location</label>
+								</div>
+<div class="input-field col s3">
+									<input type="text" id="from" name="from">
+									<label for="from">Pick up date</label>
+								</div>	
+<div class="input-field col s3">
+									<input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
+								</div>								
+							</div>
+							
+						</form>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+    <!--HEADER SECTION-->
+   <section>
+        <div class="rows ">
+            <div class=" events events-1" id="inner-page-title">
+              
+              
+                <table id="myTable">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th style="margin-left:-20px;"> Car Infomation</th>
+							
+							<th class="e_h1">Timings</th>
+                            <th class="e_h1">Avilable Seats</th>
+                            <th class="e_h1">Price Per Seat</th>
+							<th class="e_h1">Rating</th>
+                            
+                            <th>Book</th>
+                        </tr>
+                        
+						  <tr>
+                            <td></td>
+                            <td><span class="col-md-3"><img src="images/car3.png" alt=""></span><span class="col-md-5"><a href="#" class="events-title" style="margin-left:0px;font-size:17px;margin-top:25px;">Tata Indica<br><p>Model:2015</p></a><span></td>
+							
+							<td class="e_h1"><b>10:30 Am</b></td>
+                           <td class="e_h1"><span style="color:#ff7200;font-size:18px;margin-left:50px;"><b>3</b></span></td>
+                            <td class="e_h1"><span style="color:#ff7200;font-size:18px;margin-left:30px;"><b>Rs.510</b></span></td>
+                            <td class="e_h1"><span style="color:#ff7200;font-size:18px;"><b>4.5/5</b></span></td>
+                            <td><a href="#" id="book" class="link-btn_b ">Book Now</a> </td>
+                        </tr>
+						</tbody>
+                </table>
+				
+				<!-- Drop down start -->
+				
+				<div  id="list" class=" col-md-12  bhoechie-tab-container " style="background:rgb(248, 244, 244) none repeat scroll 0% 0%; display:none;">
+            
+           
+                <!-- flight section -->
+               <div style="padding:0 30px 0 30px;">
+								<div class="col-sm-3 col-md-3 " style="margin-left:70px;">
+                                   <div style="margin-top:20px; border-right:2px solid #ccc;">
+                                    <img src="images/car.jpg" width="220px;"/>
+                                    <p>Driver Details:Rajesh<br>
+									Age:27<br>
+									Expirence:5 yr<br>
+									Gvt Id:Verified</p>
+                                    <p><b>Safty mesures:</b> </p>
+									<p>1. Air Bags<br>2.Trust Driving</p>
+									 <p><b>Rating: 3.7/5</b> </p>
+									</div>
+								</diV>
+								
+								<div class="col-sm-3 col-md-3 ">
+								<div style="margin-top:20px; border-right:2px solid #ccc;padding-right:10px;">
+                                  
+								  <div class="checkbox checkbox-info checkbox-circle">
+												<input id="chp42" class="styled" name="radio" type="radio">
+												<label for="chp42" style="font-size:12px;">One Way</label>
+												<input id="chp43" class="styled"  name="radio"  type="radio">
+												<label for="chp43" style="font-size:12px;" >Round Trip</label>
+												<input id="chp44" class="styled"  name="radio"  type="radio">
+												<label for="chp44" style="font-size:12px;">Pooling </label>
+												
+											</div>
+								  
+								  <br>
+                            <p><b>No Of Seats Required</b>: <br><input type="text"  style="height:50px;width:25%;margin-left:60px;padding-left:30px;"/></p>
+								   <b>Bording Point</b>  :<br>
+                                    <select>
+          <option value="American">Ameerpet</option>
+          <option value="Andean">Panjagutta</option>
+          <option value="Chilean">Lakikapool</option>
+          <option value="Greater">lakdikapool</option>
+          
+</select>
+<br>
+
+								   <b>Droping Point</b>  : <br><select>
+          <option value="American">Sai baba Temple</option>
+          <option value="Andean">Bus Stand</option>
+          
+</select><br>
+								   <b>Distance Travel</b>: 350Km</p>
+                               
+</div>
+                                </div>
+								<div class="col-sm-3 col-md-3 ">
+								<div style="margin-top:20px; border-right:2px solid #ccc;">
+                                  <h4>Price Summary:</h4>
+									<p>Base Price&#160;&#160;&#160;:&#160;800 RS<br>Services Tax&#160;:&#160;50 Rs<br>GST<span style="margin-right:65px;"></span>:&#160;50 Rs<br>Total Price&#160;&#160;&#160;&#160;&#160;:&#160;900 Rs </p>
+									<br><br><br><br>
+									<a href="booking.html" class="link-btn_b" style="text-align:right;"> Proceed To Book</a>
+									<br><br><br>
+                                </div>
+								</div>
+								<div class="col-sm-3 col-md-2 ">
+                                   <br>
+                                    <h4><b>Travel Via</b></h4>
+                                    <p>Hyderabad</p>
+                                    <p>Suryapet</p>
+									<p>Vijayawada</p>
+									<p>Tenali</p>
+                                
+
+                                </div>
+               
+                <!-- train section -->
+                
+   
+                <!-- hotel search -->
+                </div>
+               
+        </div>
+		
+            </div>
+			
+        </div>
+    </section>
+	
+	
+	
+	
+  <div class="clearfix"></div>
+    <!--====== FOOTER 1 ==========-->
+    <section>
+        
+    </section>
+    <!--====== FOOTER 2 ==========-->
+   <section>
+        <div class="rows">
+            <div class="footer" style="padding-top:20px;">
+                <div class="container">
+                    <div class="foot-sec2">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4>Zurides</h4>
+                                    <p>Zurides operators brings all the car owners to a
+common platform providing quality and safe services along with making the owners relish the success
+.</p>
+                                </div>
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4><span>Address</span> & Contact Info</h4>
+                                    <p>60 feet road, Madhapur, Hyderabad-500081</p>
+                                    <p> <span class="strong">Phone: </span> <span class="highlighted">+040-48528570</span> </p>
+                                </div>
+                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
+                                    <h4><span>SUPPORT</span> & HELP</h4>
+                                    <ul class="two-columns">
+                                        <li> <a href="#">About Us</a> </li>
+                                        <li> <a href="#">FAQ</a> </li>
+                                       
+                                        <li> <a href="#">Blog </a> </li>
+                                        
+                                        <li> <a href="#">Advertise us</a> </li>
+                                        <li> <a href="#">Discount</a> </li>
+                                        <li> <a href="#">Vacations</a> </li>
+                                        <li> <a href="#">Branding Offers </a> </li>
+                                        <li> <a href="#">Contact Us</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 foot-social foot-spec foot-com">
+                                    <h4><span>Follow</span> with us</h4>
+                                    <p>Join the thousands of other There are many variations of passages </p>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+                                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    <!--====== FOOTER - COPYRIGHT ==========-->
+    <section>
+        <div class="rows copy">
+            <div class="container">
+                <p>Copyrights © 2018 ZuRides. All Rights Reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <!--========= Scripts ===========-->
+    <script src="js/jquery-latest.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

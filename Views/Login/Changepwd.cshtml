@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Changepwd";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+@model Zur.Common.Saleschangepwd
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("Changepwd", "Login", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+
+
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <span style=" color:red;font-weight:bold;text-align:center; margin-right:70px;">@ViewBag.Error</span>
+                                </div>
+                                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Change Password</p>
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Current Password </label>
+                                    <div class="col-lg-7">
+                                        @Html.PasswordFor(model => Model.pwd, new { @class = "form-control", placeholder = "Enter current password", @required = "true" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">New Password</label>
+                                    <div class="col-lg-7">
+                                        @Html.PasswordFor(model => Model.newpwd, new { @class = "form-control", placeholder = "Enter New Password", @required = "true" })
+                                        @*@Html.ValidationMessageFor(model => model.DriversInfo.DriverUserName, "", new { @class = "text-danger" })*@
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Confirm Password </label>
+                                    <div class="col-lg-7">
+                                        @Html.PasswordFor(model => Model.cnfrmpwd, new { @class = "form-control", placeholder = "Confirm Password", @required = "true" })
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="form-group">
+
+
+                                <div class="row">
+                                    <div class="col-sm-7 col-sm-offset-3">
+                                        <button class="btn btn-mint" type="submit">Save Info</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

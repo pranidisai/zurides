@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body {margin:0}
+
+.icon-bar {
+    width: 90px;
+    background-color: #fff;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: skyblue;
+}
+
+.active {
+    background-color: skyblue !important;
+    width: 100px;
+}
+</style>
+<script>
+    $("#example-vertical").steps({
+    headerTag: "h3",
+    bodyTag: "section",
+    transitionEffect: "slideLeft",
+    stepsOrientation: "vertical"
+});
+</script>
+<body>
+    <div class="container-fluid" style="padding: 50px;"> 
+        <div class="col-lg-11 col-md-offset-1" style="height: 440px;background-color: #F39C12;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;border-top-left-radius: 20px;-webkit-box-shadow: -2px 1px 21px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 1px 21px 0px rgba(0,0,0,0.75);
+box-shadow: -2px 1px 21px 0px rgba(0,0,0,0.75);">
+            <div class="col-lg-1" style="background-color: white;margin-left: -25px;border-bottom-left-radius: 20px;border-top-left-radius: 20px;">
+                <div class="icon-bar" style="height: 440px;">
+                  <a class="active" href="cab.html"><img class="img-responsive" src="images/cab.png" style="width: 90px;height: 40px;"></a> 
+                  <a href="personal.html"><img class="img-responsive" src="images/personal.png" style="width: 90px;height: 70px;"></a> 
+                  <a href="payment.html"><img class="img-responsive" src="images/payment.png" style="width: 90px;height: 70px;"></a> 
+                  <a href="confirm.html"><img class="img-responsive" src="images/confirm.png" style="width: 90px;height: 70px;"></a>
+                </div>
+            </div>  
+            
+                <div class="col-lg-11">
+                <div class="col-lg-3 col-md-offset-1" style="color: #fff;">
+                    <img class="img-responsive" src="images/cab.png" style="width: 90px;height: 70px;"><br><br>
+                    <h4>No.of seats Available:04<br>Safety Measures:</h4>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <p style="color:lightgray;">Ticket Price:<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      Tax:00<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Tax:00<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       Tax:00<br>
+                        &nbsp;&nbsp;  Total Price:876
+                    </p><br>
+                    <p style="color:lightgray;">Terms and Conditions</p>
+                </div>
+                <div class="col-lg-3 col-md-offset-1" style="text-align: center;color: #fff;">
+                    <h5>Car Name:xxxxxxxxxxxx</h5>
+                    <h5>Total Seats:xx</h5>
+                    <h5>Boarding Point:xxxxxxxxxx</h5>
+                    <h5>Droping Point:xxxxxxxxxx</h5>
+                    <h5>User Rating:3.5</h5>
+                    <h5>Our Rating:4.0</h5>
+                    <h5>Distance Travelled:xxxxx</h5>
+                    <h2 style="text-decoration: underline;">Seats Required</h2>
+                    <input type="text" value="2" style="border: 3px solid white;width: 80px;padding: 20px;border-radius: 5px;color:#000;background-color: #F39C12;text-align: center;"><br><br>
+                    <a href="personal.html" class="btn btn-info" role="button" style="background-color: orange;border: 1px solid #000;border-radius: 50px;color: #000;font-size: 25px;">Book Now</a>
+                </div>
+                <div class="col-lg-3 col-md-offset-1" style="text-align: center;">
+                    <h4>Travells Via Cites</h4><br><br>
+                    <h4>xxxxxxx</h4><br><br>
+                    <h4>xxxxxxxxxx</h4><br><br>
+                    <h4>xxxxxxxxxxxxxx</h4><br><br>
+                    <h4>xxxxxxxxxxxxxx</h4><br>
+                    <h4>xxxxxxxxx</h4>
+                </div>
+            </div>
+        </div>      
+    </div>
+     
+</body>
+</html> 

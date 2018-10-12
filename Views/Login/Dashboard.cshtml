@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<link rel="stylesheet" href="~/theme/css/style.css">
+<div class="db-2" style="width:95%;">
+    <div class="db-2-com db-2-main">
+        <h4>Manage Booking</h4>
+        <div class="db-2-main-com">
+            <div class="db-2-main-1">
+                <div class="db-2-main-2">
+                    <img src="~/theme/images/icon/db2.png" alt=""><span>New Rides</span>
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("UpcomingRides","login")" style="margin-left:10px;">Upcoming Rides</a>
+                        </li>
+                        @*<li>
+                                <a href="#">Two way booking</a>
+                            </li>
+                            <li>
+                                <a href="#">Pooling booking</a>
+                            </li>*@
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="db-2-main-1">
+                <div class="db-2-main-2">
+                    <img src="~/theme/images/icon/db3.png" alt=""><span>My Rides</span>
+                    <ul>
+                        <li>
+                            <a href="@Url.Action("CompletedRides","login")">Completed Rides</a>
+                        </li>
+                        @*<li>
+                                <a href="urides.html">Upcomming Rides</a>
+                            </li>*@
+                        <li>
+                            <a href="@Url.Action("CancelledRides","login")"> cancelled rides</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @*<div class="db-2-main-1">
+                    <div class="db-2-main-2">
+                        <img src="images/icon/db1.png" alt=""><span>Payments</span>
+                        <ul>
+                            <li>
+                                <a href="crides.html">Completed Rides</a>
+                            </li>
+                            <li>
+                                <a href="urides.html">Upcomming Rides</a>
+                            </li>
+                            <li>
+                                <a href="carides.html"> canciled Rides</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>*@
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,961 @@
+﻿
+@{
+    ViewBag.Title = "Unlimitedkms";
+    Layout = "~/Views/Shared/_UnlimitSelfLayout.cshtml";
+}
+
+@model Zur.VM.AdminVM
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+<link href="~/timepicker/css/timepicki.css" rel="stylesheet">
+<link href="~/theme/css/jquery-ui.css" rel="stylesheet">
+
+<!---------------------------------endradiobytton------------------------------------------>
+
+<style>
+    #myDiv_ {
+        border: 1px solid #D8D8D8;
+    }
+
+    #myDiv1 {
+        border: 1px solid #D8D8D8;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+</style>
+
+<style>
+    #myDiv21 {
+        border: 1px solid #D8D8D8;
+    }
+
+    #myDiv22 {
+        border: 1px solid #D8D8D8;
+    }
+</style>
+<style>
+    .active {
+        background-color: #ffff;
+    }
+</style>
+
+<style>
+
+    .hvr-glow {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: box-shadow;
+        transition-property: box-shadow;
+    }
+
+        .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+            box-shadow: background:#fff;
+            -webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);
+            box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);
+        }
+</style>
+<style>
+    .togg:hover {
+        text-decoration: underline;
+        color: #ff7200;
+    }
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#show").click(function () {
+            $("#modify").toggle();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
+        $("#book").click(function () {
+            $("#list").toggle();
+        });
+    });
+</script>
+
+@*<style>
+        #dialog-modal {
+            background-color: rgba(0,0,0,.0001) !important;
+        }
+    </style>*@
+<script>
+    $(document).ready(function () {
+
+        $("#imgclose").click(function () {
+            $("#dialog-modal").hide();
+            //$("#togg").show();
+            // $("#srcdiv").show();
+        });
+    });
+</script>
+
+<div id="dialog-modal" title=" Verify Mobile">
+    @*<img src="~/theme/images/53804.png" id="imgclose" height="13" width="16" />*@
+    <h4 style="color:#ff7200;">Mobile Number</h4>
+
+    <input type="number" name="mobile" id="mob" placeholder="Mobile Number" style="text-align:center;width:250px;margin-left:10px;"><br />
+    <h4 style="color:#ff7200;margin-top:10px;">Enter OTP</h4>
+    <input type="text" placeholder="OTP" name="OTP" class="form-control" maxlength="6" style="width:250px;text-align:center;margin-left:10px;" />
+</div>
+<div class="clearfix"></div>
+<!--====== FOOTER 1 ==========-->
+<div class="col-md-12" id="parentdiv">
+
+    <table class="" style="border-collapse:collapse;">
+        <tbody>
+
+            @*@using (Html.BeginForm("", "", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+                {*@
+
+            <tr>
+                <td>
+
+
+            <tr style="background-color:#fff">
+                <td class="col-md-7">
+                    <div class="col-md-12">
+                        <form id='registerForm' name='registerForm' method='' action=''>
+                            <div id="middlediv1" style="border:2px solid #ccc;background-color:#F3F4F9;">
+                                <div class="row">
+                                    <span style="color:red;text-align:center;margin-bottom:8px;">@ViewBag.Error</span>
+                                </div>
+                                <div style="">
+                                    <h5 style="text-align:left;margin-left:15px;color:#FF8000;">Ride Details</h5>
+                                </div><br />
+
+                                <div class="row ">
+                                    <div class="col-md-5 form-group">
+                                        <div class="site-wrapper">
+                                            <div>
+                                                <div class="inner indexpicker" style="margin-left:5px;">
+                                                    <h5 style="font-size:14px;margin-left:5px;">PickUp Time : </h5>
+                                                    <input id="timepicker1" type="text" placeholder="Pickup time" name="timepicker1" class="form-control" style="border:1px solid #ccc;margin-left:5px;" />
+                                                    @*@Html.TextBoxFor(model => model.Result.pickuptime, new { data_format = "HH:mm:ss PP", @type = "number", @id = "timepicker1", @class = "form-control", placeholder = "PickUp time", @Required = "required" })
+                                                        @Html.ValidationMessageFor(model => model.Result.pickuptime, "", new { @class = "text-danger" })*@
+                                                    <p style="font-size:12px;">*&nbsp;&nbsp;Please book before 2 hrs from pickuptime</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group"></div>
+                                    <div class="col-md-5 form-group">
+                                        <div class="site-wrapper">
+                                            <div>
+                                                <div class="inner indexpicker">
+                                                    <h5 style="font-size:14px;">Drop Time :</h5>
+                                                    <input id="timepicker2" type="text" name="timepicker2" placeholder="Drop time" class="form-control" style="border:1px solid #ccc;" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <!---middlediv2-->
+
+
+                            <div id="middlediv2">
+
+                                <div class="col-md-12" style="margin-top:30px;border:2px solid #ccc;background-color:#F3F4F9;">
+                                    @*<div style="">
+                                            <h5 style="text-align:left;">Person Details & Documentation</h5>
+                                        </div><br />*@
+                                    <h5 style="text-align:left;color:#FF8000;">Driver Details :</h5>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-4" style="margin-left:0px;">
+                                                <h5 style="font-size:14px;">FirstName</h5>
+                                                <input type="text" name="Name" placeholder="FirstName" onblur="Watermark(this, event);" onfocus="Watermark(this, event);" class="form-control" style="border:1px solid #ccc;" required />
+                                            </div>
+                                            <div class="col-md-4" style="margin-left:0px;">
+                                                <h5 style="font-size:14px;">Last Name</h5>
+                                                <input type="text" name="LastName" placeholder="LastName" onblur="Watermark(this, event);" onfocus="Watermark(this, event);" class="form-control" style="border:1px solid #ccc;" required />
+                                            </div>
+                                            <div class="col-md-4 text-center" style="margin-left:0px;">
+                                                <h5 style="font-size:14px;">Gender</h5>
+                                                <select class="form-control" name="dropdown-test" required>
+                                                    <option>Select Gender</option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                            </div>
+                                        </div><br />
+                                              <div class="col-md-12" style="margin-top:10px;">
+                                                  <div class="col-md-4" style="margin-left:0px;">
+                                                      <h5 style="font-size:14px;">Mobile Number</h5>
+                                                      <input type="tel" maxlength="10" class="js-input-mobile form-control" value="@Session["User_contno"]" onblur="Watermark(this, event);" onfocus="Watermark(this, event); return false;" name="mobile" placeholder="Mobile Number" style="background-color:#fff;border:none;border:1px solid #ccc;text-align:center;" required>
+                                                  </div>
+                                                  <div class="col-md-4" style="margin-left:0px;">
+                                                      <h5 style="font-size:14px;">EmailId</h5>
+                                                      <input type="text" id="modal-opener" name="userEmail" class="form-control" placeholder="EmailID" value="@Session["User_Email"]" onblur="Watermark(this, event);" onfocus="Watermark(this, event);" style="background:transparent;border:1px solid #ccc;text-align:center;background-color:#fff;" required>
+                                                  </div>
+                                                  <div class="col-md-4" style="margin-left:0px;">
+                                                      <h5 style="font-size:14px;">Age</h5>
+                                                      <input type="text" name="birthAge" class="form-control" onchange="calculateAge()" placeholder="Age" onblur="Watermark(this, event);" onfocus="Watermark(this, event);" style="background:transparent;text-align:center;border:1px solid #ccc;background-color:#fff;" />
+                                                  </div>
+                                              </div>
+                                        <div class="col-md-12" style="margin-top:10px;">
+                                            <div class"col-md-2"></div>
+                                            <div class="col-md-6" style="margin-left:0px;">
+                                                <h5 style="font-size:14px;">Address</h5>
+                                                <textarea name="name" class="form-control" placeholder="FullAddress" onblur="Watermark(this, event);" onfocus="Watermark(this, event);" style="background:transparent;border:1px solid #ccc;background-color:#fff;" required></textarea>
+
+                                            </div>
+                                            <div class="col-md-2"></div>
+
+                                        </div>
+                                    </div><br /><br />
+                                </div>
+                                <div class="col-md-12" style="border:2px solid #ccc;margin-top:20px;background-color:#F3F4F9;">
+                                    <div class="col-md-12" style="margin-top:20px;">
+                                        <h5 style="text-align:left;color:#FF8000;">Documentation :</h5>
+                                        <div class="col-md-6" style="margin-top:10px;margin-left:0px;">
+
+                                            <select class="form-control" name="dropdown-test">
+                                                <option>Select Id Proof</option>
+                                                <option>AadharNumber</option>
+                                                <option>PassportNumber</option>
+                                                <option>VoterId</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6" style="margin-top:8px;">
+
+                                            <input type="text" name="name" class="form-control" id="txtAadhar" onblur="AadharValidate();" placeholder="Enter valid Aadhar No.">
+                                            @*@Html.TextBoxFor(model => model.Result.Adharproof, new { @class = "form-control", placeholder = "Enter ID No.", @Required = "required" })
+        @Html.ValidationMessageFor(model => model.Result.Adharproof, "", new { @class = "text-danger" })*@
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12" style="margin-bottom:15px;">
+                                        <div class="col-md-6" style="margin-top:8px;margin-left:0px;color:black;">
+                                            <input type="text" name="name" class="form-control" Value="DrivingLicense" Readonly="readonly" style="color:black;">
+
+                                        </div>
+                                        <div class="col-md-6" style="margin-top:8px;">
+
+                                            <input type="text" name="name" class="form-control" id="txtLicense" onblur="LicenseValidate();" placeholder="Enter valid License No.">
+                                            @*@Html.TextBoxFor(model => model.Result.Adharproof, new { @class = "form-control onblur='Watermark(this, event);' onfocus='Watermark(this, event);'", placeholder = "Enter License Number", @Required = "required" })
+        @Html.ValidationMessageFor(model => model.Result.Adharproof, "", new { @class = "text-danger" })*@
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <a href="#"><input type="submit" name="submit" value="Proceed To Pay" style="border-radius:20px;width:150px;margin:40px;height:40px;color:white;background-color:#09b1ff;border: none;margin-left:280px;"></a>
+
+
+                                <!--dialog-->
+                                <!-- Modal data-toggle="modal" data-target="#myModal" -->
+                                @*<div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog">
+
+
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Verify Mobile</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h4 style="color:#ff7200;">Mobile Number</h4>
+
+                                                    <input type="number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" class="form-control" onkeypress="check();return false;" name="mobile" id="mob" placeholder="Mobile Number" style="text-align:center;width:450px;"><br />
+                                                    <h4 style="color:#ff7200;margin-top:10px;">Enter OTP</h4>
+                                                    <input type="text" placeholder="OTP" name="OTP" class="form-control" maxlength="6" style="width:450px;text-align:center;" />
+                                                </div>
+                                                <div class="modal-footer text-center">
+                                                    <button type="button" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;width:120px;">Proceed</button>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>*@
+
+                            </div>
+
+                            <!------endmidddlediv2-->
+                        </form>
+                    </div>
+                    @*<td class="col-md-1"></td>*@
+
+
+                <td class="col-md-3" style="background-color:#F3F4F9;">
+                    <div style="margin-top:-270px;">
+                        <h4 style="text-decoration: underline;text-align:center;">Cab Details/Unlimited Kms</h4>
+                        <p style="text-align: left;">Car Name / Seater : <span style="color:black;float:right;">@Session["car_BrandName"].ToString()/@Session["car_Seats"].ToString()</span></p>
+                        <p style="text-align: left;">Journey  Date : <span style="color:black;float:right;">@Session["journey_date"].ToString()</span></p>
+                        <p style="text-align: left;">Return Date : <span style="color:black;float:right;">@Session["return_date"].ToString()</span></p>
+                        @*<h4 style="margin-top:15px;">PickUp Time :</h4>
+                            <label id="lblpickup" style="border:1px solid black;border-radius:10px;height:30px;width: 45px;color:black;font-size:20px;margin-left:45px;text-align:center;">01</label>*@
+
+                        <h4 id="togg">
+                            Fare Summary
+                            <i class="fa fa-angle-down" style="font-size:25px;margin-top:6px;color:#ff7200;"></i>
+                        </h4>
+                        <div id="flip" style="display:none;">
+                            <p style="text-align: left;">Rent per Day : <span style="color:black;float:right;">INR 800</span></p>
+                            @*<hr style="border-top: 1px solid black;">
+        <p style="text-align: left;">TOTALFARE:<span style="color:black;float:right;">INR 4000</span></p>
+        <hr style="border-top: 1px solid black;">*@
+                        </div>
+                        <hr style="border-top: 1px solid black;">
+                        <p style="text-align: left;">TOTALFARE:<span style="color:black;float:right;">INR 4000</span></p>
+                        <hr style="border-top: 1px solid black;">
+                        <h4 id="eligi" style="font-weight:300;font-size:16px;">
+                            <i class="fa fa-plus" style="font-size:16px;margin-top:6px;color:#ff7200;"></i>
+                            &nbsp;&nbsp; Eligibility
+
+                        </h4>
+                        <div id="term1" style="display:none;">
+                            <p style="text-align: left;"><span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;The minimum age required to rent a Zurides Car is 21 years old.</p>
+
+                        </div>
+                        <h4 id="manda" style="font-weight:300;font-size:16px;">
+                            <i class="fa fa-plus" style="font-size:16px;margin-top:6px;color:#ff7200;"></i>
+                            &nbsp;&nbsp; Mandatory Documents(in original)
+
+                        </h4>
+                        <div id="term2" style="display:none;">
+                            <p style="text-align: left;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                Driving Licence
+                            </p>
+                            <p style="text-align: left;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                Passport / Aadhaar card
+                            </p>
+                            <p style="text-align: justify;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                The identification documents need to be in the name of the person who is booking the car and he should be present with the original documents at the time of pick up.
+                            </p>
+                        </div>
+                        <h4 id="cancel" style="font-weight:300;font-size:16px;">
+                            <i class="fa fa-plus" style="font-size:16px;margin-top:6px;color:#ff7200;"></i>
+                            &nbsp;&nbsp; Cancellation Policy
+
+                        </h4>
+                        <div id="term3" style="display:none;">
+                            <h5>For Daily Rentals :</h5>
+                            <p style="text-align: left;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                If booking is cancelled within 24 hours of pickup time : ₹ 200 or 50 % of Total Booking Amount (whichever is greater) will be deducted and 3 % processing fee will be charged on rest of the refund amount.
+                            </p>
+                            <p style="text-align: left;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                If booking is cancelled at least 24 hours prior to pick up time, no rental will be deducted, only Rs. 200+ 3% processing fee will be charged on the refund amount.
+                            </p>
+                            <p style="text-align: justify;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                If booking is cancelled at or after pick up time, it’ll be treated as no-show and no refund will be provided.
+                            </p>
+                            <h5>For Hourly Rentals :</h5>
+                            <p style="text-align: justify;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                No refund will be provided in case of hourly rental booking.
+                            </p>
+                        </div>
+                        <h4 id="rest" style="font-weight:300;font-size:16px;">
+                            <i class="fa fa-plus" style="font-size:16px;margin-top:6px;color:#ff7200;"></i>
+                            &nbsp;&nbsp; Restrictions
+
+                        </h4>
+                        <div id="term4" style="display:none;">
+                            <p style="text-align: left;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                For Hourly booking, extra per Km. charges will be applicable after free Kms. (10 km free for each hour of booking).
+                            </p>
+                            <p style="text-align: left;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                Over speeding (Speed limit 120km/hr) will attract penalty. This is for your own safety.
+                            </p>
+                            <p style="text-align: justify;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                All Govt. taxes and charges would be in addition to Zuride charges.
+                            </p>
+                            <p style="text-align: left;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                Pets and liquor is not allowed. Violation will attract penalty.
+                            </p>
+                            <p style="text-align: left;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                For Home pick up / drop off, the given address should be within 10 kms of the selected Zuride location else the booking will be cancelled as per the cancellation policy
+                            </p>
+                            <p style="text-align: justify;">
+                                <span style="color:#ff7200;font-weight:700;">-</span>&nbsp;&nbsp;
+                                This car is not allowed to be taken to Ladakh.
+                            </p>
+                        </div>
+                    </div>
+                </td>
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+
+</div>
+<script type="text/javascript">
+    function AadharValidate() {
+        var aadhar = document.getElementById("txtAadhar").value;
+        var adharcardTwelveDigit = /^\d{12}$/;
+        var adharSixteenDigit = /^\d{16}$/;
+        if (aadhar != '') {
+            if (aadhar.match(adharcardTwelveDigit)) {
+                return true;
+            }
+            else if (aadhar.match(adharSixteenDigit)) {
+                return true;
+            }
+            else {
+                alert("Enter valid Aadhar Number");
+                return false;
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    function LicenseValidate() {
+        var aadhar = document.getElementById("txtLicense").value;
+        var adharcardTwelveDigit = /^\d{12}$/;
+        var adharSixteenDigit = /^\d{16}$/;
+        if (aadhar != '') {
+            if (aadhar.match(adharcardTwelveDigit)) {
+                return true;
+            }
+            else if (aadhar.match(adharSixteenDigit)) {
+                return true;
+            }
+            else {
+                alert("Enter valid License Number");
+                return false;
+            }
+        }
+    }
+</script>
+<script>
+    function calculateAge() { // birthday is a date
+
+        var birthday = $('input[name=birthAge]').val();
+        if (birthday < 21) {
+            alert("Age should be greater than 21.");
+        }
+    }
+</script>
+<script>
+    $(function () {
+        $("#dialog-modal").dialog({
+            autoOpen: false,
+            height: 300,
+            width: 400,
+            modal: true,
+            show: {
+                duration: 300
+            },
+            hide: {
+                duration: 1000
+            }
+        });
+        $("#modal-opener").click(function () {
+            var val = $("input[name='mobile']").val();
+            $("#dialog-modal").find("input[name='mobile']").val(val);
+            $("#dialog-modal").dialog("open");
+        });
+    });
+</script>
+<script src="~/timepicker/js/timepicki.js"></script>
+<script>
+    $('#timepicker1').timepicki();
+</script>
+<script>
+    $('#timepicker2').timepicki();
+</script>
+<!---book cab script-->
+<script type="text/javascript">
+    function Watermark(input, event) {
+        if (event.type == "focus") {
+            input.setAttribute("rel", input.getAttribute("placeholder"));
+            input.removeAttribute("placeholder");
+        }
+        if (event.type == "blur") {
+            input.setAttribute("placeholder", input.getAttribute("rel"));
+            input.removeAttribute("rel");
+        }
+    }
+</script>
+<!--end book script-->
+<script>
+    function onlyAlphabets(e, t) {
+
+        try {
+
+            if (window.event) {
+
+                var charCode = window.event.keyCode;
+
+            }
+
+            else if (e) {
+
+                var charCode = e.which;
+
+            }
+
+            else { return true; }
+
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+
+                return true;
+
+            else
+
+                return false;
+
+        }
+
+        catch (err) {
+
+            alert(err.Description);
+
+        }
+
+    }
+
+
+
+</script>
+<script>
+    $('body').on('keyup', '.js-input-mobile', function () {
+        var $input = $(this),
+            value = $input.val(),
+            length = value.length,
+            inputCharacter = parseInt(value.slice(-1));
+
+        if (!((length > 1 && inputCharacter >= 0 && inputCharacter <= 9) || (length === 1 && inputCharacter >= 7 && inputCharacter <= 9))) {
+            $input.val(value.substring(0, length - 1));
+        }
+    });
+</script>
+<script>
+    //$(document).ready(function () {
+    //    $("form").validate({
+    //        submitHandler: function () { alert("Thank you very much! Your details has been successfully submitted!"); }
+    //    });
+    //});
+    $('#registerForm').on('submit', function (e) {
+
+        e.preventDefault();
+        alert("Thank you very much! Your details has been successfully submitted!");
+    })
+</script>
+<script>
+    $(document).ready(function () {
+        $("#togg").click(function () {
+            $("#flip").slideToggle("slow");
+        });
+    })
+    $(document).ready(function () {
+        $("#eligi").click(function () {
+            $("#term1").slideToggle("slow");
+        });
+    })
+    $(document).ready(function () {
+        $("#manda").click(function () {
+            $("#term2").slideToggle("slow");
+        });
+    })
+    $(document).ready(function () {
+        $("#cancel").click(function () {
+            $("#term3").slideToggle("slow");
+        });
+    })
+    $(document).ready(function () {
+        $("#rest").click(function () {
+            $("#term4").slideToggle("slow");
+        });
+    })
+</script>
+<script>
+
+    $("#txtkms").change(function () {
+        $("#lblkms").text($(this).val());
+    })
+</script>
+<script>
+
+    $("#timepicker1").change(function () {
+        $("#lblpickup").text($(this).val());
+    })
+</script>
+<!--========= Scripts ===========-->
+<!------------------------------------------------------------------------>
+@*<script>
+        function myevent(usename, passcode) {
+            $.ajax({
+                url: '/Search/Getcardetails',
+                type: "GET",
+                data: { user: e },
+                success: function (subserv) {
+                    $('#User_ContNumber').html(subserv);
+                    $('#User_Email').html(subserv);
+                    $('#User_UserName').html(subserv);
+                    $('#age').html(subserv);
+                }
+            });
+
+        }
+
+    </script>*@
+<!--------radiobuttonscript--------->
+<script>
+    $('.switch label').on('click', function () {
+        var indicator = $(this).parent('.switch').find('span');
+        if ($(this).hasClass('right')) {
+            $(indicator).addClass('right');
+        } else {
+            $(indicator).removeClass('right');
+        }
+    });
+</script>
+<!--endofradobutton-->
+<!--goolemaps-->
+<script>
+    // This example displays an address form, using the autocomplete feature
+    // of the Google Places API to help users fill in the information.
+
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+    var placeSearch, autocomplete;
+    //var componentForm = {
+    //  street_number: 'short_name',
+    //  route: 'long_name',
+    //  locality: 'long_name',
+    //  administrative_area_level_1: 'short_name',
+    //  country: 'long_name',
+    //  postal_code: 'short_name'
+    //  };
+
+
+
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('txt_DestinationLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('txt_soruceLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+
+    }
+
+
+
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBErlHBCoAszSr4uBzk1JDh_0uSJIE6mVo&libraries=places&callback=initAutocomplete"
+        async defer>
+</script>
+
+<!--endofgoolemaps-->
+
+
+<script>
+    $(document).ready(function () {
+        $("#k1").click(function () {
+            $("#venu2").hide();
+            $("#venu1").show();
+        });
+    });
+
+    $(document).ready(function () {
+        $("#k2").click(function () {
+            $("#venu1").hide();
+            $("#venu2").show();
+        });
+    });
+</script>
+
+<!-------selfdrivingimage hide and show-------->
+<script>
+    $(document).ready(function () {
+        $("#image2").click(function () {
+            $("#middlediv2").show();
+            $("#image2").css("background-color", "#ffff")
+            $("#image1").css("background-color", "transparent")
+            $("#middlediv1").hide();
+        });
+    });
+    $(document).ready(function () {
+        $("#image1").click(function () {
+            $("#middlediv1").show();
+            $("#image1").css("background-color", "#ffff")
+            $("#image2").css("background-color", "transparent")
+            $("#middlediv2").hide();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#image22").click(function () {
+            $("#middlediv22").show();
+            $("#image22").css("background-color", "#ffff")
+            $("#image111").css("background-color", "transparent")
+            $("#middlediv111").hide();
+        });
+    });
+    $(document).ready(function () {
+        $("#image111").click(function () {
+            $("#middlediv111").show();
+            $("#image111").css("background-color", "#ffff")
+            $("#image22").css("background-color", "transparent")
+            $("#middlediv22").hide();
+        });
+    });
+</script>
+<!-------buttons-------->
+<script>
+    $(document).ready(function () {
+        $("#button1111").click(function () {
+            $("#middlediv44").show();
+            $("#middlediv33").hide();
+            $("#image33").css("background-color", "transparent")
+            $("#image44").css("background-color", "#fffff")
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#button111").click(function () {
+            $("#middlediv21").show();
+            $("#middlediv11").hide();
+            $("#image11").css("background-color", "transparent")
+            $("#image21").css("background-color", "#fffff")
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#button11").click(function () {
+            $("#middlediv22").show();
+            $("#middlediv111").hide();
+            $("#image111").css("background-color", "transparent")
+            $("#image22").css("background-color", "#fffff")
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#button1").click(function () {
+            $("#middlediv2").show();
+            $("#middlediv1").hide();
+            $("#image1").css("background-color", "transparent")
+            $("#image2").css("background-color", "#fffff")
+        });
+    });
+</script>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#image21").click(function () {
+            $("#middlediv21").show();
+            $("#image21").css("background-color", "#ffff")
+            $("#image11").css("background-color", "transparent")
+            $("#middlediv11").hide();
+        });
+    });
+    $(document).ready(function () {
+        $("#image11").click(function () {
+            $("#middlediv11").show();
+            $("#image11").css("background-color", "#ffff")
+            $("#image21").css("background-color", "transparent")
+            $("#middlediv21").hide();
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#image33").click(function () {
+            $("#middlediv33").show();
+            $("#image33").css("background-color", "#ffff")
+            $("#image44").css("background-color", "transparent")
+            $("#middlediv44").hide();
+        });
+    });
+    $(document).ready(function () {
+        $("#image44").click(function () {
+            $("#middlediv44").show();
+            $("#image44").css("background-color", "#ffff")
+            $("#image33").css("background-color", "transparent")
+            $("#middlediv33").hide();
+        });
+    });
+</script>
+
+
+
+
+
+<!--------------------------hide and show---------------------------------------------->
+<!----twoway hide and show------>
+<script>
+    $(document).ready(function () {
+        $("#myDiv21").click(function () {
+            $("#book11").show();
+            $("#list4").hide();
+            $("#list44").hide();
+            $("#book111").hide();
+            $("#myDiv22").show();
+            $("#myDiv21").css("border-color", "red");
+            $("#myDiv22").css("border-color", "#D8D8D8");
+
+
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#book11").click(function () {
+            $("#list4").show();
+            $("#myDiv21").show();
+            $("#list44").hide();
+            $("#book111").hide();
+            $("#myDiv22").show();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#book111").click(function () {
+            $("#list44").show();
+            $("#myDiv22").show();
+            $("#list4").hide();
+            $("#book11").hide();
+            $("#myDiv21").show();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#myDiv22").click(function () {
+            $("#book111").show();
+            $("#myDiv21").show();
+            $("#list4").hide();
+            $("#book11").hide();
+            $("#list44").hide();
+            $("#myDiv22").css("border-color", "red");
+            $("#myDiv21").css("border-color", "#D8D8D8");
+        });
+    });
+</script>
+<!-----hide and show  slefdriving----->
+
+<script>
+    $(document).ready(function () {
+        $("#myDiv").click(function () {
+            $("#book1").show();
+            $("#list1").hide();
+            $("#list101").hide();
+            $("#book101").hide();
+            $("#myDiv1").show();
+            $("#myDiv").css("border-color", "red");
+            $("#myDiv1").css("border-color", "#D8D8D8");
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#book1").click(function () {
+            $("#list1").show();
+            $("#myDiv").show();
+            $("#list101").hide();
+            $("#book101").hide();
+            $("#myDiv1").show();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#book101").click(function () {
+            $("#list101").show();
+            $("#myDiv").show();
+            $("#list1").hide();
+            $("#book1").hide();
+            $("#myDiv1").show();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#myDiv1").click(function () {
+            $("#book101").show();
+            $("#myDiv").show();
+            $("#list1").hide();
+            $("#book1").hide();
+            $("#list101").hide();
+            $("#myDiv1").css("border-color", "red");
+            $("#myDiv").css("border-color", "#D8D8D8");
+        });
+    });
+</script>
+
+
+
+

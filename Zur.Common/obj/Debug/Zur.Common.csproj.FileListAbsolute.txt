@@ -1,0 +1,202 @@
+C:\Users\lenovo\source\repos\Zur\Zur.Common\bin\Debug\Zur.Common.dll
+C:\Users\lenovo\source\repos\Zur\Zur.Common\bin\Debug\Zur.Common.pdb
+C:\Users\lenovo\source\repos\Zur\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\Zur\Zur.Common\obj\Debug\Zur.Common.dll
+C:\Users\lenovo\source\repos\Zur\Zur.Common\obj\Debug\Zur.Common.pdb
+C:\Users\lenovo\source\repos\Zur\Zur.Common\obj\Debug\Zur.Common.csprojResolveAssemblyReference.cache
+C:\Mahesh\wwww\Zur\Zur.Common\bin\Debug\Zur.Common.dll
+C:\Mahesh\wwww\Zur\Zur.Common\bin\Debug\Zur.Common.pdb
+C:\Mahesh\wwww\Zur\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+C:\Mahesh\wwww\Zur\Zur.Common\obj\Debug\Zur.Common.dll
+C:\Mahesh\wwww\Zur\Zur.Common\obj\Debug\Zur.Common.pdb
+D:\Mahesh\Zur\Zur.Common\bin\Debug\Zur.Common.dll
+D:\Mahesh\Zur\Zur.Common\bin\Debug\Zur.Common.pdb
+D:\Mahesh\Zur\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+D:\Mahesh\Zur\Zur.Common\obj\Debug\Zur.Common.dll
+D:\Mahesh\Zur\Zur.Common\obj\Debug\Zur.Common.pdb
+D:\Mahesh\Zur\Zur.Common\obj\Debug\Zur.Common.csprojResolveAssemblyReference.cache
+D:\Zur\Zur.Common\bin\Debug\Zur.Common.dll
+D:\Zur\Zur.Common\bin\Debug\Zur.Common.pdb
+D:\Zur\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+D:\Zur\Zur.Common\obj\Debug\Zur.Common.dll
+D:\Zur\Zur.Common\obj\Debug\Zur.Common.pdb
+G:\Zur\Zur.Common\bin\Debug\Zur.Common.dll
+G:\Zur\Zur.Common\bin\Debug\Zur.Common.pdb
+G:\Zur\Zur.Common\obj\Debug\Zur.Common.csprojResolveAssemblyReference.cache
+G:\Zur\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+G:\Zur\Zur.Common\obj\Debug\Zur.Common.dll
+G:\Zur\Zur.Common\obj\Debug\Zur.Common.pdb
+D:\Zur\Zur.Common\obj\Debug\Zur.Common.csprojResolveAssemblyReference.cache
+E:\New folder (4)\Zur\Zur.Common\bin\Debug\Zur.Common.dll
+E:\New folder (4)\Zur\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\New folder (4)\Zur\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\New folder (4)\Zur\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\New folder (4)\Zur\Zur.Common\obj\Debug\Zur.Common.dll
+E:\New folder (4)\Zur\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur\Zur.Common\obj\Debug\Zur.Common.pdb
+C:\Users\lenovo\Desktop\Zur\Zur.Common\bin\Debug\Zur.Common.dll
+C:\Users\lenovo\Desktop\Zur\Zur.Common\bin\Debug\Zur.Common.pdb
+C:\Users\lenovo\Desktop\Zur\Zur.Common\obj\Debug\Zur.Common.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\Zur\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Desktop\Zur\Zur.Common\obj\Debug\Zur.Common.dll
+C:\Users\lenovo\Desktop\Zur\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\zurides\Zur 6-8-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\zurides\Zur 6-8-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\zurides\Zur 6-8-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\zurides\Zur 6-8-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\zurides\Zur 6-8-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\zurides\Zur 6-8-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 6-11-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 6-11-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 6-11-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 6-11-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-11-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 6-11-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 6-12-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 6-12-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 6-12-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 6-12-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-12-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 6-12-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 6-18-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 6-18-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 6-18-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 6-18-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-18-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 6-18-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 6-19-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 6-19-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 6-19-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 6-19-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-19-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 6-19-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 6-22-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 6-22-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 6-22-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 6-22-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-22-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 6-22-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 6-23-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 6-23-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 6-23-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 6-23-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-23-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 6-23-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 6-25-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 6-25-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 6-25-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-25-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 6-25-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 6-25-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 6-28-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 6-28-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 6-28-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 6-28-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 6-28-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 6-28-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 7-4-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 7-4-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 7-4-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 7-4-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 7-4-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 7-4-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 7-9-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 7-9-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 7-9-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 7-9-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 7-9-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 7-9-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 7-13-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 7-13-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 7-13-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 7-13-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 7-13-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 7-13-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 7-19-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 7-19-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 7-19-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 7-19-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 7-19-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 7-19-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 8-2-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 8-2-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 8-2-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 8-2-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 8-2-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 8-2-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 8-7-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 8-7-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 8-7-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 8-7-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 8-7-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 8-7-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 8-9-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 8-9-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 8-9-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 8-9-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 8-9-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 8-9-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 8-11-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 8-11-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 8-11-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 8-11-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 8-11-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 8-11-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 8-16-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 8-16-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 8-16-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 8-16-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 8-16-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 8-16-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 8-28-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 8-28-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 8-28-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 8-28-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 8-28-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 8-28-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 9-3-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 9-3-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 9-3-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 9-3-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 9-3-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 9-3-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 9-17-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 9-17-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 9-17-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 9-17-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 9-17-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 9-17-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 9-19-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 9-19-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 9-19-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 9-19-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 9-19-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 9-19-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 9-21-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 9-21-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 9-21-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 9-21-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 9-21-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 9-21-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 9-25-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 9-25-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 9-25-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 9-25-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 9-25-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 9-25-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 9-29-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 9-29-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 9-29-2018\Zur.Common\obj\Debug\Zur.Common.csprojAssemblyReference.cache
+E:\project\Zur 9-29-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 9-29-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 9-29-2018\Zur.Common\obj\Debug\Zur.Common.pdb
+E:\project\Zur 10-4-2018\Zur.Common\bin\Debug\Zur.Common.dll
+E:\project\Zur 10-4-2018\Zur.Common\bin\Debug\Zur.Common.pdb
+E:\project\Zur 10-4-2018\Zur.Common\obj\Debug\Zur.Common.csproj.CoreCompileInputs.cache
+E:\project\Zur 10-4-2018\Zur.Common\obj\Debug\Zur.Common.dll
+E:\project\Zur 10-4-2018\Zur.Common\obj\Debug\Zur.Common.pdb

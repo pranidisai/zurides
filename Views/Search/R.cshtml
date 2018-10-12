@@ -1,0 +1,213 @@
+﻿@model Zur.VM.UserVM
+@{
+    ViewBag.Title = "R";
+    Layout = "~/Views/Shared/_carLayout.cshtml";
+}
+<div id=" listar-homebannervthree" class=" listar-homebannervfour">
+    <figure><img src="~/car/images/parallax/bgparallax-13.jpg" alt="image description"></figure>
+    </div>
+    <main id="listar-main" class="listar-main listar-haslayout" style="margin-top:10px">
+        <div id="listar-content" class="listar-content">
+            <div class="listar-listing container">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
+                        <div class="listar-listingarea">
+                            <div class="listar-innerpagesearch">
+                                <div class="listar-innersearch">
+                                    <div class="listar-searchstatus"><h1><span>Results For</span> the Search</h1></div>
+                                    <form onsubmit="$('#hero-demo').blur();return false;" class="listar-formtheme listar-formsearchlisting">
+                                        <fieldset>
+                                            <div class="form-group listar-inputwithicon">
+                                                <i class="icon-global"></i>
+                                              
+                                                <input type="text" value="@Model.Search.sourcePlace" id="soruceLocation" class="form-control" placeholder="From City" name="sourcePlace" required>
+                                            </div>
+                                            <div class="form-group listar-inputwithicon">
+                                                <i class="icon-global"></i>
+                                                <div class="listar-selectlocation">
+                                                   
+                                                    <input type="text" value="@Model.Search.Destination" id="DestinationLocation" class="form-control" placeholder="To City" name="Destination" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group listar-inputwithicon">
+                                                <i class="icon-document-add"></i>
+                                                <div class="listar-selectlocation">
+                                                 
+                                                    <input type="date" name="JourneyDate" class="form-control" id="mytarget" placeholder="select date" value="@ViewBag.date">
+                                                </div>
+                                            </div>
+
+                                        </fieldset>
+
+                                        <button type="button" style="float:right;margin-top:20px" class="listar-btn listar-btngreen">Submit Result</button>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                            @foreach (var veh in Model.Vehlist)
+                            {
+                            <div class="listar-themeposts listar-placesposts listar-listview">
+                                <div class="listar-themepost listar-placespost">
+                                    <figure class="listar-featuredimg">
+                                        
+                                        <a href=""><img src="@veh.VechileImages" alt="image description" class="mCS_img_loaded"></a>
+                                        <h5><a href=""></a>@veh.TravelerUserName</h5>
+                                        <div class="listar-reviewcategory">
+                                            <div class="listar-review">
+                                                <span class="listar-stars"><span></span></span>
+
+                                            </div>
+
+
+                                        </div>
+                                    </figure>
+                                    <div class="listar-postcontent">
+
+                                        <div class="listar-description">
+                                            <div class="col-md-12">
+                                                <div class="col-md-4">Travels:@veh.TravelerUserName</div>
+                                                <div class="col-md-4">Seats: @veh.SeatsCount, INR: @veh.VehicleOwnerCont/-</div>
+                                                <div class="col-md-4">Eminities: @veh.Eminities</div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="listar-themepostfoot">
+                                            <div class="col-md-12">
+                                                <div class="listar-location col-md-10">
+                                                    <div class="col-md-3">
+                                                        <i class="icon-icons74"></i>
+
+                                                        <em>Boading Time: @veh.SoruceStartime</em>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <p style="margin-left:5px">
+                                                            <b>Boading Points:</b> <span style="margin-left:10px">
+                                                                @veh.SourceBoardingPoints
+                                                            </span>
+                                                        </p>
+                                                    </div>
+
+
+
+                                                </div>
+                                                <div class="listar-postbtns col-md-2">
+                                                    @if (Session["login_user_Session"] != null)
+                                                    {
+                                                    <a href="@Url.Action("Service", "BookCab", new { @Id = veh.TravelerUserName, @Service = veh.Id })">  <button type="button" style="float:right;margin-top:5px;margin-bottom:5px" class="listar-btn listar-btngreen">book now</button></a>
+                                                    }
+                                                    else
+                                                    {
+                                                        <a id="listar-btnsignin" class="listar-btn listar-btngreen" href="#listar-loginsingup">
+                                                         
+                                                            <span>Book now</span>
+                                                        </a>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+
+                            }
+
+                            @if (Model.Vehlist.Count == 0 || Model.Vehlist == null)
+                            {
+                                <div class="listar-themeposts listar-placesposts listar-listview">
+                                    <div class="listar-themepost listar-placespost">
+                                        
+                                        <div class="listar-postcontent">
+
+                                            <div class="listar-description">
+                                                <div class="col-md-12">
+                                                    <div class="">There is no result please try again</div>
+                                                   
+
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</main>
+ 
+<script>
+    // This example displays an address form, using the autocomplete feature
+    // of the Google Places API to help users fill in the information.
+
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+    var placeSearch, autocomplete;
+    //var componentForm = {
+    //  street_number: 'short_name',
+    //  route: 'long_name',
+    //  locality: 'long_name',
+    //  administrative_area_level_1: 'short_name',
+    //  country: 'long_name',
+    //  postal_code: 'short_name'
+    //  };
+
+
+
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('DestinationLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('soruceLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+
+    }
+
+
+
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBErlHBCoAszSr4uBzk1JDh_0uSJIE6mVo&libraries=places&callback=initAutocomplete"
+        async defer></script>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2afaa19f0a434a0b86ea415a7613120a" Name="Diagram1">
+        <EntityTypeShape EntityType="ZRModel.tbl_Admin" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="ZRModel.tbl_AvalialeVehicles" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_BoardingPoints" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Bookings" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Cities" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Drivers" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Employee" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_kmcharges" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_login" Width="1.5" PointX="6.75" PointY="7.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Ratings" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_RootMaps" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Roots" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Statesinfo" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Travelers" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Users" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_VehiclesInfo" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Color" Width="1.5" PointX="5.375" PointY="11.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_VehicleBrands" Width="1.5" PointX="7.375" PointY="11.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_VehicleType" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Eminities" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Registration" Width="1.5" PointX="13.375" PointY="3.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Orders" Width="1.5" PointX="13.375" PointY="7.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Availabulity" Width="1.5" PointX="3.375" PointY="14.75" />
+        <EntityTypeShape EntityType="ZRModel.tbl_Contact" Width="1.5" PointX="5.375" PointY="14.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ZRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Admin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Admin" Type="nvarchar" MaxLength="500" />
+          <Property Name="Role" Type="nvarchar" MaxLength="500" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
+          <Property Name="pwd" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_AvalialeVehicles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VehicleId" Type="nvarchar" MaxLength="500" />
+          <Property Name="RootId" Type="nvarchar" MaxLength="500" />
+          <Property Name="RootValue" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_BoardingPoints">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="500" />
+          <Property Name="CityId" Type="bigint" />
+          <Property Name="BoardingPoint" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="500" />
+          <Property Name="DestinationPoint" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbl_Bookings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RootNo" Type="bigint" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TravelId" Type="bigint" />
+          <Property Name="VehicleId" Type="bigint" />
+          <Property Name="DriverId" Type="bigint" />
+          <Property Name="Startdate" Type="datetime" />
+          <Property Name="Enddate" Type="datetime" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="50" />
+          <Property Name="Distance" Type="int" />
+          <Property Name="Fair" Type="float" />
+          <Property Name="Offerdiscount" Type="float" />
+          <Property Name="NoOfseats" Type="int" />
+          <Property Name="ConfirmStatus" Type="int" />
+          <Property Name="PaymentMode" Type="nvarchar" MaxLength="500" />
+          <Property Name="PayStatus" Type="int" />
+          <Property Name="TransactionID" Type="nvarchar" MaxLength="500" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+          <Property Name="JouneyStatus" Type="int" />
+          <Property Name="Source" Type="nvarchar" MaxLength="500" />
+          <Property Name="Destination" Type="nvarchar" MaxLength="500" />
+          <Property Name="BoardingPoint" Type="nvarchar" MaxLength="200" />
+          <Property Name="DroppingPoint" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tbl_Cities">
+          <Key>
+            <PropertyRef Name="CityName" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityName" Type="nvarchar" MaxLength="400" Nullable="false" />
+          <Property Name="CityCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" />
+          <Property Name="State" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Stopps" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Color">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Color" Type="nvarchar" MaxLength="500" />
+          <Property Name="ColorCode" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Drivers">
+          <Key>
+            <PropertyRef Name="DriverUserName" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DriverUserName" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="ContactNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="City" Type="nvarchar" MaxLength="500" />
+          <Property Name="State" Type="nvarchar" MaxLength="500" />
+          <Property Name="AdharCard" Type="nvarchar" MaxLength="500" />
+          <Property Name="Photo" Type="nvarchar(max)" />
+          <Property Name="PanNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="VehicleId" Type="bigint" />
+          <Property Name="RootNumber" Type="bigint" />
+          <Property Name="TravelId" Type="bigint" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="500" />
+          <Property Name="DrivingLicensecopy" Type="nvarchar(max)" />
+          <Property Name="License" Type="nvarchar" MaxLength="300" />
+          <Property Name="DriverPic" Type="nvarchar(max)" />
+          <Property Name="Age" Type="bigint" />
+          <Property Name="MaritalStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="BatchNumber" Type="nvarchar" MaxLength="100" />
+          <Property Name="DrivingLicenseExpiredDate" Type="datetime" />
+          <Property Name="LicenseIssuedDate" Type="datetime" />
+          <Property Name="Driversmoke" Type="varchar" MaxLength="50" />
+          <Property Name="DriverDrink" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Eminities">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Eminity" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="400" />
+          <Property Name="Email" Type="nvarchar" MaxLength="400" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="500" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Role" Type="nvarchar" MaxLength="500" />
+          <Property Name="Designation" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tbl_kmcharges">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Chargeperkm" Type="float" />
+          <Property Name="Chargeper100km" Type="float" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Createddate" Type="datetime" />
+          <Property Name="Createdby" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbl_login">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
+          <Property Name="ContNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pwd" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Createddate" Type="datetime" />
+          <Property Name="Role" Type="nvarchar" MaxLength="100" />
+          <Property Name="Image" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tbl_Ratings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VehicleId" Type="bigint" />
+          <Property Name="DriverID" Type="bigint" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Review" Type="nvarchar" MaxLength="500" />
+          <Property Name="Rating" Type="float" />
+        </EntityType>
+        <EntityType Name="tbl_RootMaps">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RootId" Type="bigint" />
+          <Property Name="Via" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Createddate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbl_Roots">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoomNumber" Type="nvarchar" MaxLength="500" />
+          <Property Name="RootSource" Type="nvarchar" MaxLength="500" />
+          <Property Name="RootDEstination" Type="nvarchar" MaxLength="500" />
+          <Property Name="Createdate" Type="datetime" />
+          <Property Name="Status" Type="int" />
+          <Property Name="distance" Type="float" />
+        </EntityType>
+        <EntityType Name="tbl_Statesinfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="500" />
+          <Property Name="StateCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Travelers">
+          <Key>
+            <PropertyRef Name="TravelUserName" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TravelName" Type="nvarchar" MaxLength="500" />
+          <Property Name="TavelEmail" Type="nvarchar" MaxLength="500" />
+          <Property Name="TravelPhone" Type="nvarchar" MaxLength="500" />
+          <Property Name="TravelUserName" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="latitude" Type="nvarchar" MaxLength="100" />
+          <Property Name="Long" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="City" Type="nvarchar" MaxLength="500" />
+          <Property Name="Area" Type="nvarchar" MaxLength="500" />
+          <Property Name="vehiclesCount" Type="int" />
+          <Property Name="Travelartype" Type="nvarchar" MaxLength="500" />
+          <Property Name="CommisionPercentage" Type="float" />
+          <Property Name="Logo" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar" MaxLength="500" />
+          <Property Name="VatNo" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address1" Type="nvarchar(max)" />
+          <Property Name="Address2" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar" MaxLength="200" />
+          <Property Name="Landline1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Landline2" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecondaryContact" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactNumber" Type="nvarchar" MaxLength="500" />
+          <Property Name="CommisionPerUser" Type="float" />
+          <Property Name="ContactPersonName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Designation" Type="nvarchar" MaxLength="200" />
+          <Property Name="ConContactnumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_Users">
+          <Key>
+            <PropertyRef Name="Phone" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="City" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbl_VehicleBrands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbl_VehiclesInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TravelerUserName" Type="nvarchar" MaxLength="500" />
+          <Property Name="travelId" Type="bigint" />
+          <Property Name="VehicleNumber" Type="nvarchar" MaxLength="500" />
+          <Property Name="OwnerName" Type="nvarchar" MaxLength="500" />
+          <Property Name="VehicleOwnerCont" Type="nvarchar" MaxLength="50" />
+          <Property Name="RootNumber" Type="bigint" />
+          <Property Name="Via" Type="nvarchar" MaxLength="500" />
+          <Property Name="DriverId" Type="bigint" />
+          <Property Name="DriverUserName" Type="nvarchar" MaxLength="500" />
+          <Property Name="DriverNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="VehicleModel" Type="nvarchar" MaxLength="500" />
+          <Property Name="BrandName" Type="nvarchar" MaxLength="500" />
+          <Property Name="SeatsCount" Type="int" />
+          <Property Name="ModelYear" Type="int" />
+          <Property Name="Color" Type="nvarchar" MaxLength="500" />
+          <Property Name="VechileImages" Type="nvarchar(max)" />
+          <Property Name="SoruceStartime" Type="nvarchar" MaxLength="500" />
+          <Property Name="Destination" Type="nvarchar" MaxLength="500" />
+          <Property Name="TimeDuration" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="300" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Source" Type="nvarchar" MaxLength="500" />
+          <Property Name="SourceBoardingPoints" Type="nvarchar(max)" />
+          <Property Name="DestinationBoardingPoints" Type="nvarchar(max)" />
+          <Property Name="VehicleType" Type="nvarchar" MaxLength="400" />
+          <Property Name="vehicleName" Type="nvarchar" MaxLength="500" />
+          <Property Name="SeatType" Type="nvarchar" MaxLength="100" />
+          <Property Name="Eminities" Type="nvarchar(max)" />
+          <Property Name="TermsandConditions" Type="nvarchar(max)" />
+          <Property Name="AvailableRootNumber" Type="bigint" />
+          <Property Name="ServiceAvailable" Type="bit" />
+          <Property Name="SingleWayPrice" Type="float" />
+          <Property Name="TwoWayPrice" Type="float" />
+          <Property Name="RentPerday" Type="float" />
+          <Property Name="TaxPercentage" Type="int" />
+          <Property Name="TravelAgencyName" Type="nvarchar" MaxLength="200" />
+          <Property Name="GST" Type="int" />
+          <Property Name="DropTime" Type="nvarchar" MaxLength="500" />
+          <Property Name="totalDistance" Type="int" />
+          <Property Name="Journeytype" Type="varchar" MaxLength="200" />
+          <Property Name="RentPerHour" Type="float" />
+          <Property Name="SelfDriveprice" Type="float" />
+          <Property Name="FuelType" Type="varchar" MaxLength="50" />
+          <Property Name="TransmissionType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_VehicleType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vehicleType" Type="nvarchar" MaxLength="400" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="400" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Seats" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Availabulity">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VehicleId" Type="bigint" />
+          <Property Name="TravelId" Type="bigint" />
+          <Property Name="AvailableDate" Type="datetime" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Month" Type="nvarchar" MaxLength="300" />
+          <Property Name="RootId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="tbl_Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="EmailId" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mobileno" Type="nvarchar" MaxLength="100" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tbl_Orders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VehicleId" Type="bigint" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="300" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="300" />
+          <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="BoardingPoint" Type="nvarchar" MaxLength="400" />
+          <Property Name="JouneyType" Type="nvarchar" MaxLength="50" />
+          <Property Name="SeatsSelected" Type="int" />
+          <Property Name="DropPoint" Type="nvarchar" MaxLength="500" />
+          <Property Name="UnitPrice" Type="float" />
+          <Property Name="Tax" Type="float" />
+          <Property Name="CouponApplied" Type="float" />
+          <Property Name="NetPay" Type="float" />
+          <Property Name="PaymentMode" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentStatus" Type="int" />
+          <Property Name="PaymentStatusinfo" Type="nvarchar" MaxLength="100" />
+          <Property Name="PaymentThrough" Type="nvarchar" MaxLength="400" />
+          <Property Name="CheckSum" Type="nvarchar" MaxLength="300" />
+          <Property Name="Transactionid" Type="nvarchar" MaxLength="200" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserAdhar" Type="nvarchar" MaxLength="100" />
+          <Property Name="OTP" Type="nvarchar" MaxLength="50" />
+          <Property Name="TravelStatus" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_Registration">
+          <Key>
+            <PropertyRef Name="Phone" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="Email" Type="nvarchar" MaxLength="400" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Registerdate" Type="datetime" />
+          <Property Name="CurrentLocation" Type="nvarchar" MaxLength="300" />
+          <Property Name="gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Image" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="ZRModelStoreContainer">
+          <EntitySet Name="tbl_Admin" EntityType="Self.tbl_Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_AvalialeVehicles" EntityType="Self.tbl_AvalialeVehicles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_BoardingPoints" EntityType="Self.tbl_BoardingPoints" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Bookings" EntityType="Self.tbl_Bookings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Cities" EntityType="Self.tbl_Cities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Color" EntityType="Self.tbl_Color" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Drivers" EntityType="Self.tbl_Drivers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Eminities" EntityType="Self.tbl_Eminities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Employee" EntityType="Self.tbl_Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_kmcharges" EntityType="Self.tbl_kmcharges" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_login" EntityType="Self.tbl_login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Ratings" EntityType="Self.tbl_Ratings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_RootMaps" EntityType="Self.tbl_RootMaps" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Roots" EntityType="Self.tbl_Roots" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Statesinfo" EntityType="Self.tbl_Statesinfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Travelers" EntityType="Self.tbl_Travelers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Users" EntityType="Self.tbl_Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_VehicleBrands" EntityType="Self.tbl_VehicleBrands" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_VehiclesInfo" EntityType="Self.tbl_VehiclesInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_VehicleType" EntityType="Self.tbl_VehicleType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Availabulity" EntityType="Self.tbl_Availabulity" Schema="Zur" store:Type="Tables" />
+          <EntitySet Name="tbl_Contact" EntityType="Self.tbl_Contact" Schema="Zur" store:Type="Tables" />
+          <EntitySet Name="tbl_Orders" EntityType="Self.tbl_Orders" Schema="Zur" store:Type="Tables" />
+          <EntitySet Name="tbl_Registration" EntityType="Self.tbl_Registration" Schema="Zur" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ZREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Admin" EntityType="ZRModel.tbl_Admin" />
+          <EntitySet Name="tbl_AvalialeVehicles" EntityType="ZRModel.tbl_AvalialeVehicles" />
+          <EntitySet Name="tbl_BoardingPoints" EntityType="ZRModel.tbl_BoardingPoints" />
+          <EntitySet Name="tbl_Bookings" EntityType="ZRModel.tbl_Bookings" />
+          <EntitySet Name="tbl_Cities" EntityType="ZRModel.tbl_Cities" />
+          <EntitySet Name="tbl_Drivers" EntityType="ZRModel.tbl_Drivers" />
+          <EntitySet Name="tbl_Employee" EntityType="ZRModel.tbl_Employee" />
+          <EntitySet Name="tbl_kmcharges" EntityType="ZRModel.tbl_kmcharges" />
+          <EntitySet Name="tbl_login" EntityType="ZRModel.tbl_login" />
+          <EntitySet Name="tbl_Ratings" EntityType="ZRModel.tbl_Ratings" />
+          <EntitySet Name="tbl_RootMaps" EntityType="ZRModel.tbl_RootMaps" />
+          <EntitySet Name="tbl_Roots" EntityType="ZRModel.tbl_Roots" />
+          <EntitySet Name="tbl_Statesinfo" EntityType="ZRModel.tbl_Statesinfo" />
+          <EntitySet Name="tbl_Travelers" EntityType="ZRModel.tbl_Travelers" />
+          <EntitySet Name="tbl_Users" EntityType="ZRModel.tbl_Users" />
+          <EntitySet Name="tbl_VehiclesInfo" EntityType="ZRModel.tbl_VehiclesInfo" />
+          <EntitySet Name="tbl_Color" EntityType="ZRModel.tbl_Color" />
+          <EntitySet Name="tbl_VehicleBrands" EntityType="ZRModel.tbl_VehicleBrands" />
+          <EntitySet Name="tbl_VehicleType" EntityType="ZRModel.tbl_VehicleType" />
+          <EntitySet Name="tbl_Eminities" EntityType="ZRModel.tbl_Eminities" />
+          <EntitySet Name="tbl_Registration" EntityType="ZRModel.tbl_Registration" />
+          <EntitySet Name="tbl_Orders" EntityType="ZRModel.tbl_Orders" />
+          <EntitySet Name="tbl_Availabulity" EntityType="ZRModel.tbl_Availabulity" />
+          <EntitySet Name="tbl_Contact" EntityType="ZRModel.tbl_Contact" />
+        </EntityContainer>
+        <EntityType Name="tbl_Admin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Admin" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_AvalialeVehicles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleId" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RootId" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RootValue" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_BoardingPoints">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CityId" Type="Int64" />
+          <Property Name="BoardingPoint" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DestinationPoint" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Bookings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RootNo" Type="Int64" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TravelId" Type="Int64" />
+          <Property Name="VehicleId" Type="Int64" />
+          <Property Name="DriverId" Type="Int64" />
+          <Property Name="Startdate" Type="DateTime" Precision="3" />
+          <Property Name="Enddate" Type="DateTime" Precision="3" />
+          <Property Name="Duration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Distance" Type="Int32" />
+          <Property Name="Fair" Type="Double" />
+          <Property Name="Offerdiscount" Type="Double" />
+          <Property Name="NoOfseats" Type="Int32" />
+          <Property Name="ConfirmStatus" Type="Int32" />
+          <Property Name="PaymentMode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PayStatus" Type="Int32" />
+          <Property Name="TransactionID" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="JouneyStatus" Type="Int32" />
+          <Property Name="Source" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Destination" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BoardingPoint" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DroppingPoint" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Cities">
+          <Key>
+            <PropertyRef Name="CityName" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityName" Type="String" Nullable="false" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="CityCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="State" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Stopps" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Drivers">
+          <Key>
+            <PropertyRef Name="DriverUserName" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DriverName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DriverUserName" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AdharCard" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PanNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleId" Type="Int64" />
+          <Property Name="RootNumber" Type="Int64" />
+          <Property Name="TravelId" Type="Int64" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DrivingLicensecopy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="License" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="DriverPic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BatchNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DrivingLicenseExpiredDate" Type="DateTime" Precision="3" />
+          <Property Name="LicenseIssuedDate" Type="DateTime" Precision="3" />
+          <Property Name="Driversmoke" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DriverDrink" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Role" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Designation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_kmcharges">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Chargeperkm" Type="Double" />
+          <Property Name="Chargeper100km" Type="Double" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Createddate" Type="DateTime" Precision="3" />
+          <Property Name="Createdby" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_login">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ContNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pwd" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Createddate" Type="DateTime" Precision="3" />
+          <Property Name="Role" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Ratings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleId" Type="Int64" />
+          <Property Name="DriverID" Type="Int64" />
+          <Property Name="DriverName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Review" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Rating" Type="Double" />
+        </EntityType>
+        <EntityType Name="tbl_RootMaps">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RootId" Type="Int64" />
+          <Property Name="Via" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Createddate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Roots">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoomNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RootSource" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="RootDEstination" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Createdate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="distance" Type="Double" />
+        </EntityType>
+        <EntityType Name="tbl_Statesinfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="State" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StateCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Travelers">
+          <Key>
+            <PropertyRef Name="TravelUserName" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TravelName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TavelEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TravelPhone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TravelUserName" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="latitude" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Long" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Area" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="vehiclesCount" Type="Int32" />
+          <Property Name="Travelartype" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CommisionPercentage" Type="Double" />
+          <Property Name="Logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VatNo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Landline1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Landline2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SecondaryContact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CommisionPerUser" Type="Double" />
+          <Property Name="ContactPersonName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Designation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ConContactnumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Users">
+          <Key>
+            <PropertyRef Name="Phone" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_VehiclesInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TravelerUserName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="travelId" Type="Int64" />
+          <Property Name="VehicleNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleOwnerCont" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RootNumber" Type="Int64" />
+          <Property Name="Via" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DriverId" Type="Int64" />
+          <Property Name="DriverUserName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DriverNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="VehicleModel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="BrandName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SeatsCount" Type="Int32" />
+          <Property Name="ModelYear" Type="Int32" />
+          <Property Name="Color" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VechileImages" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SoruceStartime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Destination" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TimeDuration" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Source" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SourceBoardingPoints" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DestinationBoardingPoints" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleType" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="vehicleName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SeatType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Eminities" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TermsandConditions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AvailableRootNumber" Type="Int64" />
+          <Property Name="ServiceAvailable" Type="Boolean" />
+          <Property Name="SingleWayPrice" Type="Double" />
+          <Property Name="TwoWayPrice" Type="Double" />
+          <Property Name="RentPerday" Type="Double" />
+          <Property Name="TaxPercentage" Type="Int32" />
+          <Property Name="TravelAgencyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="GST" Type="Int32" />
+          <Property Name="DropTime" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="totalDistance" Type="Int32" />
+          <Property Name="Journeytype" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="RentPerHour" Type="Double" />
+          <Property Name="SelfDriveprice" Type="Double" />
+          <Property Name="FuelType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TransmissionType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_Color">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Color" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ColorCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_VehicleBrands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrandName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_VehicleType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vehicleType" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="CreatedBy" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Seats" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Eminities">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Eminity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Registration">
+          <Key>
+            <PropertyRef Name="Phone" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Registerdate" Type="DateTime" Precision="3" />
+          <Property Name="CurrentLocation" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_Orders">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleId" Type="Int64" />
+          <Property Name="UserName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ContactName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BoardingPoint" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="JouneyType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SeatsSelected" Type="Int32" />
+          <Property Name="DropPoint" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UnitPrice" Type="Double" />
+          <Property Name="Tax" Type="Double" />
+          <Property Name="CouponApplied" Type="Double" />
+          <Property Name="NetPay" Type="Double" />
+          <Property Name="PaymentMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentStatus" Type="Int32" />
+          <Property Name="PaymentStatusinfo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentThrough" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="CheckSum" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Transactionid" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserAdhar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OTP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TravelStatus" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_Availabulity">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VehicleId" Type="Int64" />
+          <Property Name="TravelId" Type="Int64" />
+          <Property Name="AvailableDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Month" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="RootId" Type="Int64" />
+        </EntityType>
+        <EntityType Name="tbl_Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="EmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobileno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZRModelStoreContainer" CdmEntityContainer="ZREntities">
+          <EntitySetMapping Name="tbl_Admin">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Admin">
+              <MappingFragment StoreEntitySet="tbl_Admin">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AvalialeVehicles">
+            <EntityTypeMapping TypeName="ZRModel.tbl_AvalialeVehicles">
+              <MappingFragment StoreEntitySet="tbl_AvalialeVehicles">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="RootValue" ColumnName="RootValue" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_BoardingPoints">
+            <EntityTypeMapping TypeName="ZRModel.tbl_BoardingPoints">
+              <MappingFragment StoreEntitySet="tbl_BoardingPoints">
+                <ScalarProperty Name="DestinationPoint" ColumnName="DestinationPoint" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="BoardingPoint" ColumnName="BoardingPoint" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Bookings">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Bookings">
+              <MappingFragment StoreEntitySet="tbl_Bookings">
+                <ScalarProperty Name="DroppingPoint" ColumnName="DroppingPoint" />
+                <ScalarProperty Name="BoardingPoint" ColumnName="BoardingPoint" />
+                <ScalarProperty Name="Destination" ColumnName="Destination" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="JouneyStatus" ColumnName="JouneyStatus" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="PayStatus" ColumnName="PayStatus" />
+                <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+                <ScalarProperty Name="ConfirmStatus" ColumnName="ConfirmStatus" />
+                <ScalarProperty Name="NoOfseats" ColumnName="NoOfseats" />
+                <ScalarProperty Name="Offerdiscount" ColumnName="Offerdiscount" />
+                <ScalarProperty Name="Fair" ColumnName="Fair" />
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+                <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+                <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="TravelId" ColumnName="TravelId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="RootNo" ColumnName="RootNo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Cities">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Cities">
+              <MappingFragment StoreEntitySet="tbl_Cities">
+                <ScalarProperty Name="Stopps" ColumnName="Stopps" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Drivers">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Drivers">
+              <MappingFragment StoreEntitySet="tbl_Drivers">
+                <ScalarProperty Name="DriverDrink" ColumnName="DriverDrink" />
+                <ScalarProperty Name="Driversmoke" ColumnName="Driversmoke" />
+                <ScalarProperty Name="LicenseIssuedDate" ColumnName="LicenseIssuedDate" />
+                <ScalarProperty Name="DrivingLicenseExpiredDate" ColumnName="DrivingLicenseExpiredDate" />
+                <ScalarProperty Name="BatchNumber" ColumnName="BatchNumber" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="DriverPic" ColumnName="DriverPic" />
+                <ScalarProperty Name="License" ColumnName="License" />
+                <ScalarProperty Name="DrivingLicensecopy" ColumnName="DrivingLicensecopy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TravelId" ColumnName="TravelId" />
+                <ScalarProperty Name="RootNumber" ColumnName="RootNumber" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="PanNumber" ColumnName="PanNumber" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="AdharCard" ColumnName="AdharCard" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="DriverUserName" ColumnName="DriverUserName" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Employee">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Employee">
+              <MappingFragment StoreEntitySet="tbl_Employee">
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_kmcharges">
+            <EntityTypeMapping TypeName="ZRModel.tbl_kmcharges">
+              <MappingFragment StoreEntitySet="tbl_kmcharges">
+                <ScalarProperty Name="Createdby" ColumnName="Createdby" />
+                <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Chargeper100km" ColumnName="Chargeper100km" />
+                <ScalarProperty Name="Chargeperkm" ColumnName="Chargeperkm" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_login">
+            <EntityTypeMapping TypeName="ZRModel.tbl_login">
+              <MappingFragment StoreEntitySet="tbl_login">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+                <ScalarProperty Name="ContNumber" ColumnName="ContNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Ratings">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Ratings">
+              <MappingFragment StoreEntitySet="tbl_Ratings">
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="Review" ColumnName="Review" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_RootMaps">
+            <EntityTypeMapping TypeName="ZRModel.tbl_RootMaps">
+              <MappingFragment StoreEntitySet="tbl_RootMaps">
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Createddate" ColumnName="Createddate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Via" ColumnName="Via" />
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Roots">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Roots">
+              <MappingFragment StoreEntitySet="tbl_Roots">
+                <ScalarProperty Name="distance" ColumnName="distance" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Createdate" ColumnName="Createdate" />
+                <ScalarProperty Name="RootDEstination" ColumnName="RootDEstination" />
+                <ScalarProperty Name="RootSource" ColumnName="RootSource" />
+                <ScalarProperty Name="RoomNumber" ColumnName="RoomNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Statesinfo">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Statesinfo">
+              <MappingFragment StoreEntitySet="tbl_Statesinfo">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Travelers">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Travelers">
+              <MappingFragment StoreEntitySet="tbl_Travelers">
+                <ScalarProperty Name="ConContactnumber" ColumnName="ConContactnumber" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="ContactPersonName" ColumnName="ContactPersonName" />
+                <ScalarProperty Name="CommisionPerUser" ColumnName="CommisionPerUser" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="SecondaryContact" ColumnName="SecondaryContact" />
+                <ScalarProperty Name="Landline2" ColumnName="Landline2" />
+                <ScalarProperty Name="Landline1" ColumnName="Landline1" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="VatNo" ColumnName="VatNo" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="CommisionPercentage" ColumnName="CommisionPercentage" />
+                <ScalarProperty Name="Travelartype" ColumnName="Travelartype" />
+                <ScalarProperty Name="vehiclesCount" ColumnName="vehiclesCount" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="TravelUserName" ColumnName="TravelUserName" />
+                <ScalarProperty Name="TravelPhone" ColumnName="TravelPhone" />
+                <ScalarProperty Name="TavelEmail" ColumnName="TavelEmail" />
+                <ScalarProperty Name="TravelName" ColumnName="TravelName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Users">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Users">
+              <MappingFragment StoreEntitySet="tbl_Users">
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_VehiclesInfo">
+            <EntityTypeMapping TypeName="ZRModel.tbl_VehiclesInfo">
+              <MappingFragment StoreEntitySet="tbl_VehiclesInfo">
+                <ScalarProperty Name="TransmissionType" ColumnName="TransmissionType" />
+                <ScalarProperty Name="FuelType" ColumnName="FuelType" />
+                <ScalarProperty Name="SelfDriveprice" ColumnName="SelfDriveprice" />
+                <ScalarProperty Name="RentPerHour" ColumnName="RentPerHour" />
+                <ScalarProperty Name="Journeytype" ColumnName="Journeytype" />
+                <ScalarProperty Name="totalDistance" ColumnName="totalDistance" />
+                <ScalarProperty Name="DropTime" ColumnName="DropTime" />
+                <ScalarProperty Name="GST" ColumnName="GST" />
+                <ScalarProperty Name="TravelAgencyName" ColumnName="TravelAgencyName" />
+                <ScalarProperty Name="TaxPercentage" ColumnName="TaxPercentage" />
+                <ScalarProperty Name="RentPerday" ColumnName="RentPerday" />
+                <ScalarProperty Name="TwoWayPrice" ColumnName="TwoWayPrice" />
+                <ScalarProperty Name="SingleWayPrice" ColumnName="SingleWayPrice" />
+                <ScalarProperty Name="ServiceAvailable" ColumnName="ServiceAvailable" />
+                <ScalarProperty Name="AvailableRootNumber" ColumnName="AvailableRootNumber" />
+                <ScalarProperty Name="TermsandConditions" ColumnName="TermsandConditions" />
+                <ScalarProperty Name="Eminities" ColumnName="Eminities" />
+                <ScalarProperty Name="SeatType" ColumnName="SeatType" />
+                <ScalarProperty Name="vehicleName" ColumnName="vehicleName" />
+                <ScalarProperty Name="VehicleType" ColumnName="VehicleType" />
+                <ScalarProperty Name="DestinationBoardingPoints" ColumnName="DestinationBoardingPoints" />
+                <ScalarProperty Name="SourceBoardingPoints" ColumnName="SourceBoardingPoints" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="TimeDuration" ColumnName="TimeDuration" />
+                <ScalarProperty Name="Destination" ColumnName="Destination" />
+                <ScalarProperty Name="SoruceStartime" ColumnName="SoruceStartime" />
+                <ScalarProperty Name="VechileImages" ColumnName="VechileImages" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="ModelYear" ColumnName="ModelYear" />
+                <ScalarProperty Name="SeatsCount" ColumnName="SeatsCount" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="VehicleModel" ColumnName="VehicleModel" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="DriverNumber" ColumnName="DriverNumber" />
+                <ScalarProperty Name="DriverUserName" ColumnName="DriverUserName" />
+                <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+                <ScalarProperty Name="Via" ColumnName="Via" />
+                <ScalarProperty Name="RootNumber" ColumnName="RootNumber" />
+                <ScalarProperty Name="VehicleOwnerCont" ColumnName="VehicleOwnerCont" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="VehicleNumber" ColumnName="VehicleNumber" />
+                <ScalarProperty Name="travelId" ColumnName="travelId" />
+                <ScalarProperty Name="TravelerUserName" ColumnName="TravelerUserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Color">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Color">
+              <MappingFragment StoreEntitySet="tbl_Color">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_VehicleBrands">
+            <EntityTypeMapping TypeName="ZRModel.tbl_VehicleBrands">
+              <MappingFragment StoreEntitySet="tbl_VehicleBrands">
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_VehicleType">
+            <EntityTypeMapping TypeName="ZRModel.tbl_VehicleType">
+              <MappingFragment StoreEntitySet="tbl_VehicleType">
+                <ScalarProperty Name="Seats" ColumnName="Seats" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="vehicleType" ColumnName="vehicleType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Eminities">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Eminities">
+              <MappingFragment StoreEntitySet="tbl_Eminities">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Eminity" ColumnName="Eminity" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Registration">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Registration">
+              <MappingFragment StoreEntitySet="tbl_Registration">
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+                <ScalarProperty Name="Registerdate" ColumnName="Registerdate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Orders">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Orders">
+              <MappingFragment StoreEntitySet="tbl_Orders">
+                <ScalarProperty Name="TravelStatus" ColumnName="TravelStatus" />
+                <ScalarProperty Name="OTP" ColumnName="OTP" />
+                <ScalarProperty Name="UserAdhar" ColumnName="UserAdhar" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Transactionid" ColumnName="Transactionid" />
+                <ScalarProperty Name="CheckSum" ColumnName="CheckSum" />
+                <ScalarProperty Name="PaymentThrough" ColumnName="PaymentThrough" />
+                <ScalarProperty Name="PaymentStatusinfo" ColumnName="PaymentStatusinfo" />
+                <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+                <ScalarProperty Name="PaymentMode" ColumnName="PaymentMode" />
+                <ScalarProperty Name="NetPay" ColumnName="NetPay" />
+                <ScalarProperty Name="CouponApplied" ColumnName="CouponApplied" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="DropPoint" ColumnName="DropPoint" />
+                <ScalarProperty Name="SeatsSelected" ColumnName="SeatsSelected" />
+                <ScalarProperty Name="JouneyType" ColumnName="JouneyType" />
+                <ScalarProperty Name="BoardingPoint" ColumnName="BoardingPoint" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Availabulity">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Availabulity">
+              <MappingFragment StoreEntitySet="tbl_Availabulity">
+                <ScalarProperty Name="RootId" ColumnName="RootId" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="AvailableDate" ColumnName="AvailableDate" />
+                <ScalarProperty Name="TravelId" ColumnName="TravelId" />
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Contact">
+            <EntityTypeMapping TypeName="ZRModel.tbl_Contact">
+              <MappingFragment StoreEntitySet="tbl_Contact">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

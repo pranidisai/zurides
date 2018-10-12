@@ -1,0 +1,407 @@
+﻿@model Zur.VM.UserVM
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zurides- Search</title>
+    <!--== META TAGS ==-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="~/theme/images/fav.ico">
+    <!-- GOOGLE FONTS -->
+    @*<link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">*@
+    <!-- FONT-AWESOME ICON CSS -->
+    @*<link rel="stylesheet" href="~/theme/css/font-awesome.min.css">*@
+    <!--== ALL CSS FILES ==-->
+    <link rel="stylesheet" href="~/theme/css/style.css">
+    <link rel="stylesheet" href="~/theme/css/materialize.css">
+    <link rel="stylesheet" href="~/theme/css/bootstrap.css">
+    <link rel="stylesheet" href="~/theme/css/mob.css">
+    @*<link rel="stylesheet" href="~/theme/css/animate.css">*@
+
+    <script type="text/javascript" src="~/theme/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="~/theme/js/jquery.leanModal.min.js"></script>    
+    <link type="text/css" rel="stylesheet" href="~/theme/css/popstyle.css" />
+    <style>
+        main-menu li a:hover {
+            color: none;
+            background-color: none;
+        }
+    </style>
+    <style>
+        .drop > li > a {
+            display: block;
+            clear: both;
+            height: 60px;
+            color: #333;
+            white-space: nowrap;
+            text-transform: uppercase;
+            border-bottom: none;
+            font-size: 15px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- MOBILE MENU -->
+
+    <section>
+        <div class="ed-mob-menu">
+            <div class="ed-mob-menu-con">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="@Url.Action("Index","Default")">
+                            <img src="~/theme/images/logo.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-menu">
+                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                        <div class="ed-mm-inn">
+                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                            @*<ul>
+                                    <li><a href="@Url.Action("Index","Default")">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                </ul>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <!-- LOGO AND MENU SECTION -->
+        <div class="top-logo affix" data-spy="affix" data-offset-top="250">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-10 wed-logo">
+                            <a href="@Url.Action("Index","Default")">
+                                <img src="~/theme/images/logo.png" alt="" />
+                            </a>
+                        </div>
+                        @*<div class="col-md-6 main-menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">HOME</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="about.html">ABOUT</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">MOBILEAPP</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">CONTACT US</a>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>*@
+                        @if (Session["User"] == null)
+                        {
+                            <div class="col-md-2 text-right" style="color:black;padding-top: 35px;">
+                                <a id="modal_trigger" href="#modal" style="color:black;">SIGN IN/SIGN UP</a>
+
+                            </div>
+                        }
+
+                        @if (Session["User"] != null)
+                        {
+                            <div class="col-md-2">
+
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:red;background-color:white;border-color: white;">
+                                        <img src="~/theme/images/agent.png" style="height:30px;width:30px;">Hi @Session["User"].ToString()
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu drop">
+                                        <li><a href="@Url.Action("Dashboard", "Login")">My Profile</a></li>
+                                        @*<li><a href="@Url.Action("UserChangePassword", "BookCab")">Change Password</a></li>*@
+                                        <li><a href="@Url.Action("Logout", "Login")">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END HEADER SECTION-->
+    <div id="modal" class="popupContainer" style="display:none;">
+        <header class="popupHeader">
+            <span class="header_title">Login</span>
+            <span class="modal_close"><i class="fa fa-times"></i></span>
+        </header>
+
+        <section class="popupBody">
+            <!-- Social Login -->
+            <div class="social_login">
+                @*<div class="">
+                        <a href="#" class="social_box fb">
+                            <span class="icon"><i class="fa fa-facebook"></i></span>
+                            <span class="icon_title">Connect with Facebook</span>
+
+                        </a>
+
+                        <a href="#" class="social_box google">
+                            <span class="icon"><i class="fa fa-google-plus"></i></span>
+                            <span class="icon_title">Connect with Google</span>
+                        </a>
+                    </div>
+
+                    <div class="centeredText">
+                        <span>Or use your Email address</span>
+                    </div>*@
+
+                <div class="action_btns">
+                    <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+                    <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+                </div>
+            </div>
+
+            <!-- Username & Password Login form -->
+            <div class="user_login">
+
+                @using (Html.BeginForm("Limitedkms", "BookCab", FormMethod.Get, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+                {
+
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            @Html.TextBoxFor(model => model.User.UserName, new { @class = "form-control", placeholder = "Enter Phoneno.", @required = "true" })
+                            @Html.ValidationMessageFor(model => model.User.UserName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            @Html.PasswordFor(model => model.User.Pwd, new { @class = "form-control", placeholder = "Enter Password", @required = "true" })
+                            @Html.ValidationMessageFor(model => model.User.Pwd, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @*<div class="checkbox">
+                            <input id="remember" type="checkbox" />
+                            <label for="remember" style="">Remember me on this computer</label>
+                        </div>*@
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" class="btn back_btn" style="padding:0px 2px;"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                        <div class="one_half last"><button type="submit" class="btn btn_red">Login</button></div>
+                    </div>
+
+                    <a href="#" class="forgot_password">Forgot password?</a>
+                }
+
+            </div>
+
+            <!-- Register Form -->
+            <div class="user_register">
+
+                @using (Html.BeginForm("Limitedkms", "BookCab", FormMethod.Get, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+                {
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(model => model.Userreg.Name, new { @class = "form-control", placeholder = "Enter Full Name", @required = "true" })
+                            @Html.ValidationMessageFor(model => model.Userreg, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(model => model.Userreg.Email, new { @type = "email", @class = "form-control", placeholder = "Enter Email", @required = "true" })
+                            @Html.ValidationMessageFor(model => model.Userreg.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            @Html.PasswordFor(model => model.Userreg.Password, new { @class = "form-control", placeholder = "Enter Password", @required = "true" })
+                            @Html.ValidationMessageFor(model => model.Userreg.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div> <div class="form-group">
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(model => model.Userreg.Phone, new { minlength = "10", maxlength = "10", @type = "tel", @class = "form-control js-input-mobile", @id = "mobile", placeholder = "Enter ContactNo.", @required = "true", @style = "width:260px;" })
+                            @Html.ValidationMessageFor(model => model.Userreg.Phone, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                        <div class="one_half last"><button type="submit" class="btn btn_red" onclick="ValidateNo()">Register</button></div>
+                    </div>
+                }
+            </div>
+        </section>
+    </div>
+    <script>
+        function ValidateNo() {
+            var phoneNo = document.getElementById('mobile');
+
+            if (phoneNo.value == "" || phoneNo.value == null) {
+                alert("Please enter your Mobile No.");
+                return false;
+            }
+            if (phoneNo.value.length < 10 || phoneNo.value.length > 10) {
+                alert("Mobile No. is not valid, Please Enter 10 Digit Mobile No.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    <script type="text/javascript">
+        $("#modal_trigger").leanModal({ top: 140, overlay: 0.6, closeButton: ".modal_close" });
+
+        $(function () {
+            // Calling Login Form
+            $("#login_form").click(function () {
+                $(".social_login").hide();
+                $(".user_login").show();
+                return false;
+            });
+
+            // Calling Register Form
+            $("#register_form").click(function () {
+                $(".social_login").hide();
+                $(".user_register").show();
+                $(".header_title").text('Register');
+                return false;
+            });
+
+            // Going back to Social Forms
+            $(".back_btn").click(function () {
+                $(".user_login").hide();
+                $(".user_register").hide();
+                $(".social_login").show();
+                $(".header_title").text('Login');
+                return false;
+            });
+
+        })
+    </script>
+    <script type="text/javascript">
+        $("#modal_trigger1").leanModal({ top: 140, overlay: 0.6, closeButton: ".modal_close" });
+
+        $(function () {
+            // Calling Login Form
+            $("#login_form").click(function () {
+                $(".social_login").hide();
+                $(".user_login").show();
+                return false;
+            });
+
+            // Calling Register Form
+            $("#register_form").click(function () {
+                $(".social_login").hide();
+                $(".user_register").show();
+                $(".header_title").text('Register');
+                return false;
+            });
+
+            // Going back to Social Forms
+            $(".back_btn").click(function () {
+                $(".user_login").hide();
+                $(".user_register").hide();
+                $(".social_login").show();
+                $(".header_title").text('Login');
+                return false;
+            });
+
+        })
+    </script>
+
+
+    @RenderBody()
+
+    <div class="clearfix"></div>
+    <!--====== FOOTER 1 ==========-->
+    <section></section>
+    <!--====== FOOTER 2 ==========-->
+    <section>
+        <div class="rows">
+            <div class="footer" style="padding-top:20px;">
+                <div class="container">
+                    <div class="foot-sec2">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4>Zurides</h4>
+                                    <p>
+                                        Zurides operators brings all the car owners to a
+                                        common platform providing quality and safe services along with making the owners relish the success
+                                        .
+                                    </p>
+                                </div>
+                                <div class="col-sm-3 foot-spec foot-com">
+                                    <h4><span>Address</span> & Contact Info</h4>
+                                    <p>60 feet road, Madhapur, Hyderabad-500081</p>
+                                    <p> <span class="strong">Phone: </span> <span class="highlighted">+040-48528570</span> </p>
+                                </div>
+                                <div class="col-sm-3 col-md-3 foot-spec foot-com">
+                                    <h4><span>SUPPORT</span> & HELP</h4>
+                                    <ul class="two-columns">
+                                        <li> <a href="@Url.Action("Index","Default")">HOME</a> </li>
+                                        <li> <a href="@Url.Action("Index","About")">ABOUT US</a> </li>
+                                        <li> <a href="@Url.Action("Index","Contactus")">CONTACT US</a> </li>
+                                        <li> <a href="@Url.Action("Cancelpolicy","BookCab")">CANCEL POLICY</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 foot-social foot-spec foot-com">
+                                    <h4><span>Follow</span> with us</h4>
+                                    <p>Join the thousands of other There are many variations of passages </p>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a> </li>
+                                        <li><a href="https://www.twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+                                        <li><a href="https://in.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!--====== FOOTER - COPYRIGHT ==========-->
+    <section>
+        <div class="rows copy" style="background-color:#09b1ff;">
+            <div class="container">
+                <p>Copyrights © 2018 ZuRides. All Rights Reserved</p>
+            </div>
+        </div>
+    </section>
+    <!--========= Scripts ===========-->
+    <script src="~/theme/js/jquery-latest.min.js"></script>
+    @*<script src="~/theme/js/jquery-ui.js"></script>*@
+    <script src="~/theme/js/bootstrap.js"></script>
+    @*<script src="~/theme/js/wow.min.js"></script>*@
+    <script src="~/theme/js/materialize.min.js"></script>
+    <script src="~/theme/js/custom.js"></script>
+
+    <script src="~/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="~/theme/js/jquery-ui-1.10.4.js"></script>
+</body>
+</html>
+

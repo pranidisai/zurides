@@ -1,0 +1,472 @@
+﻿@{
+    ViewBag.Title = "index1";
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+}
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+<!-- FONT-AWESOME ICON CSS -->
+@*<link rel="stylesheet" href="~/theme/css/font-awesome.min.css">*@
+<!--== ALL CSS FILES ==-->
+<link rel="stylesheet" href="~/theme/css/style.css">
+<link rel="stylesheet" href="~/theme/css/materialize.css">
+<link rel="stylesheet" href="~/theme/css/bootstrap.css">
+@*<link rel="stylesheet" href="~/theme/css/mob.css">*@
+
+
+@*<script type="text/javascript" src="~/theme/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="~/theme/js/jquery.leanModal.min.js"></script>*@
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="~/theme/css/popstyle.css" />
+
+<!--carousel Bootstrap -->
+<link href="~/theme/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+@*<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">*@
+
+<link href="~/theme/assets/vendor/frame-carousel/jquery.frame-carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="~/theme/assets/vendor/highlight/styles/default.css">
+<link rel="stylesheet" href="~/theme/assets/css/main.css" />
+<!--wowjs css link-->
+<link href="~/theme/css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script>
+    new WOW().init();
+</script>
+
+<style>
+
+    .switch {
+        background-color: #1bbc9b;
+        width: 40%;
+        display: inline-block;
+        border-radius: 8px;
+        height: 40px;
+        padding:;
+        position: relative;
+        zoom: 1;
+    }
+
+        .switch label {
+            float: left;
+            width: 50%;
+            position: relative;
+            z-index: 2;
+            line-height: 18px;
+            cursor: pointer;
+            color: #117964;
+        }
+
+        .switch input[type="radio"] {
+            display: none;
+        }
+
+            .switch input[type="radio"]:checked + label {
+                color: #141241;
+                font-weight: bold;
+            }
+
+        .switch span {
+            position: relative;
+            z-index: 1;
+            top:;
+            left: 0px;
+            width: 50%;
+            height: 100%;
+            display: block;
+            border-radius: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            transition: all 200ms ease;
+        }
+
+            .switch span.right {
+                left: 2px;
+                top: -24px;
+                width: 50%;
+                border-radius: 5px 5px 5px 5px;
+                transition: all 200ms ease;
+            }
+
+    input[type="text"],
+    select.form-control {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+        input[type="text"]:focus,
+        select.form-control:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+</style>
+
+
+<!--HEADER SECTION-->
+<section>
+    <div class="tourz-search">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="tourz-search-1">
+                    <h1 style="color:white;">BOOK YOUR RIDE</h1><br>
+                    <h5 style="color: white;">Across India</h5>
+
+
+                    <div id="div2">
+                        <form class="v2-search-form" action="@Url.Action("s1","Search")">
+                            <div class="switch">
+                                <input type="radio" name="Rental" value="Rental" id="optionone">
+                                <label for="optionone">Rental</label>
+
+                                <input type="radio" name="SelfDrive" value="SelfDrive" id="optiontwo">
+                                <label for="optiontwo" class="right">Self Drive </label>
+
+                                <span aria-hidden="true"></span>
+                            </div><br /><br />
+                            <div class="col-md-12">
+                                <div class="input-field col-md-3 ">
+                                    <input type="text" id="txt_soruceLocation" class="form-control" placeholder="From City" name="sourcePlace" value="From City" required>
+                                </div>
+                                <!-- <div class="input-field col-md-1 " style="margin-top: 29px;margin-left: -30px;">
+                                <img src="images/reverse-icon.png" id="go" width="25px" height="25px" onclick="swapValues('txt_soruceLocation','txt_DestinationLocation')">
+                                            </div>
+                                           <div class="input-field col-md-2 " style="margin-left: -30px;">
+                                               <input type="text" id="txt_DestinationLocation" class="form-control" placeholder="To City" name="DestinationLocation" value="To City" style="margin-right: 10px;" required>
+                                           </div>-->
+                                <div class="input-field col-md-3">
+                                    <input id="txtdate" type="text" name="Jdate">
+                                    <label for="from"><i class="fa fa-calendar" aria-hidden="true" style="color: #1BBC9B;"></i>&nbsp;&nbsp; <span style="color: white;">Journey Date</span></label>
+                                </div>
+                                <div class="input-field col-md-3">
+                                    <input id="txtdate1" type="text" name="Rdate">
+                                    <label for="from"><i class="fa fa-calendar" aria-hidden="true" style="color: #1BBC9B;"></i>&nbsp;&nbsp;<span style="color: white;">Return Date</span></label>
+                                </div>
+                                <div class="input-field col-md-3">
+                                    <input type="submit" value="Find Cab" style="background-color: #09b1ff;border: 0px;width:200px;color: white;">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="container-fluid">
+
+                        <div class="row row-section row-demo">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="fc-ios"></div>
+                            </div>
+
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="fc-android"></div>
+                            </div>
+
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="fc-mbp"></div>
+                            </div>
+
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="fc-mac"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--datepicker-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script language="javascript">
+    $(document).ready(function () {
+        $("#txtdate").datepicker({
+            minDate: 0
+        });
+
+    });
+</script>
+<script language="javascript">
+    $(document).ready(function () {
+        $("#txtdate1").datepicker({
+            minDate: 0
+        });
+
+    });
+</script>
+
+<!--END HEADER SECTION-->
+<!--Ourservices-->
+<div class="container-fluid" style="background-color: black;padding-top: 250px;">
+    <h2 style="color: white;text-align: center;">OUR SERVICES</h2><br><br>
+    <div class="col-md-12 wow zoomIn wHighlight">
+
+        <div class="col-md-6">
+            <div class="col-md-2"><img src="~/theme/images/rest-stops.png" alt="" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h3 style="color: white;">REST STOPS</h3>
+                <h5>Get information on rest stops along the way.</h5>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-2"><img src="~/theme/images/mc-icon.png" alt="" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h3 style="color: white;">MAXIMUM CHOICE</h3>
+                <h5>We give you the widest number of travel options across the thousands of routes.</h5>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-md-12 wow zoomIn wHighlight" style="margin-top:35px; ">
+
+        <div class="col-md-6">
+            <div class="col-md-2"><img src="~/theme/images/rp-icon.png" alt="" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h3 style="color: white;">RATINGS AND PICTURE REVIEWS</h3>
+                <h5>Rely on ratings and actual photos from fellow travellers to choose your bus!</h5>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-2"><img src="~/theme/images/live-tracking.png" alt="" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h3 style="color: white;">LIVE TRACKING</h3>
+                <h5>
+                    Track your bus with our 'Track My Bus' feature and know the exact location in real-time.
+                    Stay informed and keep your family informed!
+                </h5>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-md-12 wow zoomIn wHighlight" style="padding-top:35px; ">
+
+        <div class="col-md-6">
+            <div class="col-md-2"><img src="~/theme/images/ub-icon.png" alt="" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h3 style="color: white;">UNMATCHED BENEFITS</h3>
+                <h5>We take care of your travel beyond ticketing by providing you with innovative and unique benefits.</h5>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-2"><img src="~/theme/images/lp-icon.png" alt="" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h3 style="color: white;">LOWEST PRICES</h3>
+                <h5>We always give you lowest price with the best partner offers.</h5>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-md-12" style="margin-bottom: 45px;"></div>
+</div>
+
+
+<!--laptop2-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6" style="background-color: yellow;">
+            <label style="background-color: aqua;color: yellow;border:0px;border-radius:20px;margin-top: 80px;width: 100px;height: 80px; margin-left: 80px;"><h5>Coupon code</h5> <h3>ZU100</h3></label>
+            <div style="margin-left: 80px;margin-top: 30px;">
+                <p style="color: aqua;font-size:30px; "><b>PAY USING</b></p>
+                <p style="color: aqua;font-size:30px;"><b>HDFC BANK DEBIT CARD AND</b></p>
+                <p style="color: aqua;font-size:30px;"><b>GET 5% CASH BACK UPTO RS</b></p>
+                <p style="color: aqua;font-size:30px;"><b>250 CREDITED TO YOUR HDFC</b></p>
+                <p style="color: aqua;font-size:30px;"><b>DEBIT CARD</b></p><br>
+                <p>
+                    <a href="#" style="color: aqua;"><i class="fa fa-facebook" aria-hidden="true"></i></a> &nbsp;&nbsp;
+                    <a href="#" style="color: aqua;"><i class="fa fa-google-plus" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                    <a href="#" style="color: aqua;"><i class="fa fa-twitter" aria-hidden="true"></i></a> &nbsp;&nbsp;
+                    <a href="#" style="color: aqua;"><i class="fa fa-linkedin" aria-hidden="true"></i></a> &nbsp;&nbsp;
+                    <a href="#" style="color: aqua;"><i class="fa fa-youtube" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                </p>
+
+            </div>
+        </div>
+        <div class="col-md-6" style="background-color: silver;">
+            <img src="~/theme/images/laptop-2.png" style="margin-top: 134px" class="img-responsive">
+        </div>
+    </div>
+</div><br><br>
+<!--zuridesapp-->
+
+<div class="container-fluid">
+    <div style="text-align: center;">
+        <h4>BOOK</h4>
+        <h2>With <span style="color: orangered;font-size: 35px;">ZURIDES APP</span></h2><br>
+        <label style="font-size: 12px;">offer details offer details offer details offer details offer details offer details offer details offer details<br>offer details offer details offer details offer details offer details offer details offer details offer details</label><br><br>
+    </div>
+    <div class="col-md-12 ">
+
+        <div class="col-md-3">
+            <div class="row ">
+                <div class="col-md-2"><img src="~/theme/images/great-features.png" alt="" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h3><b>GREAT FEATURES</b></h3>
+                    <h6>offer details offer details offer details.</h6>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-2"><img src="~/theme/images/top-offers.png" alt="" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h3><b>TOP OFFERS</b></h3>
+                    <h6>offer details offer details offer details offer details offer details offer details.</h6>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-2"><img src="~/theme/images/easy-to-use.png" alt="" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h3><b>EASY TO USE</b></h3>
+                    <h6>offer details offer details offer details.</h6>
+                </div>
+            </div>
+        </div>
+        <!--phoneimg-->
+        <div class="col-md-3 wow fadeInUp" data-wow-delay=".25s">
+            <img src="~/theme/images/mobile-zurides.png" width="370px" height="420px" class="img-responsive">
+        </div>
+        <div class="col-md-3 wow fadeInDown" data-wow-delay=".25s">
+            <img src="~/theme/images/mobile-driverapp.png" width="370px" height="420px" class="img-responsive">
+        </div>
+        <!--phoneimg-->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-2"><img src="~/theme/images/great-features.png" alt="" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h3><b>GREAT FEATURES</b></h3>
+                    <h6>offer details offer details offer details.</h6>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-2"><img src="~/theme/images/top-offers.png" alt="" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h3><b>TOP OFFERS</b></h3>
+                    <h6>offer details offer details offer details offer details offer details offer details.</h6>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-md-2"><img src="~/theme/images/easy-to-use.png" alt="" /></div>
+                <div class="col-md-4" style="width: 80%;">
+                    <h3><b>EASY TO USE</b></h3>
+                    <h6>offer details offer details offer details.</h6>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+    $('.switch label').on('click', function () {
+        var indicator = $(this).parent('.switch').find('span');
+        if ($(this).hasClass('right')) {
+            $(indicator).addClass('right');
+        } else {
+            $(indicator).removeClass('right');
+        }
+    });
+</script>
+<!--========= Scripts ===========-->
+@*<script src="~/theme/js/jquery-latest.min.js"></script>*@
+@*<script src="~/theme/js/jquery-ui.js"></script>*@
+@*<script src="~/theme/js/bootstrap.js"></script>*@
+<script src="~/theme/js/wow.min.js"></script>
+@*<script src="~/theme/js/materialize.min.js"></script>
+    <script src="~/theme/js/custom.js"></script>*@
+<!--carousel-->
+<!-- Production -->
+<!--
+<script src="assets/vendor/frame-carousel/jquery.frame-carousel.min.js"></script>
+-->
+<!--laptop-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+<script src="~/theme/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- Development -->
+<script src="~/theme/assets/vendor/frame-carousel/jquery.frame-carousel.js"></script>
+
+<script src="~/theme/assets/vendor/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="~/theme/assets/js/main.js"></script>
+
+
+<!--carousel-->
+
+
+
+
+
+<script>
+    // This example displays an address form, using the autocomplete feature
+    // of the Google Places API to help users fill in the information.
+
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+    var placeSearch, autocomplete;
+    //var componentForm = {
+    //  street_number: 'short_name',
+    //  route: 'long_name',
+    //  locality: 'long_name',
+    //  administrative_area_level_1: 'short_name',
+    //  country: 'long_name',
+    //  postal_code: 'short_name'
+    //  };
+
+
+
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('txt_DestinationLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('txt_soruceLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+
+    }
+
+
+
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBErlHBCoAszSr4uBzk1JDh_0uSJIE6mVo&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+

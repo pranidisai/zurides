@@ -1,0 +1,434 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+
+        <!-- Bootstrap -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
+
+        <link href="assets/vendor/frame-carousel/jquery.frame-carousel.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/vendor/highlight/styles/default.css">
+
+        <link rel="stylesheet" href="assets/css/main.css" />
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <style>
+       @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.popup {
+  position: relative;
+  width: 600px;
+  margin: 30px auto 0;
+  height: 320px;
+  background-color: #999ede;
+  top: 50%;
+  margin-top: -160px;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.popup .box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.popup .box:before, .popup .box:after {
+  content: " ";
+  position: absolute;
+  left: 152px;
+  top: 50px;
+  background-color: #9297e0;
+  transform: rotateX(52deg) rotateY(15deg) rotateZ(-38deg);
+  width: 300px;
+  height: 285px;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.popup .box:after {
+  background-color: #a5aae4;
+  top: -10px;
+  left: 80px;
+  width: 320px;
+  height: 180px;
+}
+.popup .popup-forms {
+  position: relative;
+}
+.popup .btn {
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  width: 60px;
+  color: #fff;
+  background-color: #ff73b3;
+  opacity: 1;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.popup .btn:hover {
+  opacity: 0.7;
+}
+.popup .btn, .popup input {
+  padding: 10px 15px;
+}
+.popup input {
+  margin: 0 auto 15px;
+  display: block;
+  width: 220px;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.popup .popup-forms .popup-info {
+  text-align: left;
+  font-size: 0;
+}
+.popup .popup-forms .popup-info .info-item {
+  text-align: center;
+  font-size: 16px;
+  width: 300px;
+  height: 320px;
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  opacity: 1;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.popup .popup-forms .popup-info .info-item p {
+  font-size: 20px;
+  margin: 20px;
+}
+.popup .popup-forms .popup-info .info-item .btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.popup .popup-forms .popup-info .info-item .table-cell {
+  padding-right: 35px;
+}
+.popup .popup-forms .popup-info .info-item:nth-child(2) .table-cell {
+  padding-left: 35px;
+  padding-right: 0;
+}
+.popup .popup-form {
+  overflow: hidden;
+  position: absolute;
+  left: 30px;
+  top: -30px;
+  width: 305px;
+  height: 380px;
+  background-color: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.popup .popup-form:before {
+  content: "✔";
+  position: absolute;
+  left: 160px;
+  top: -50px;
+  color: #5356ad;
+  font-size: 130px;
+  opacity: 0;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.popup .popup-form .btn {
+  position: relative;
+  box-shadow: 0 0 10px 1px #ff73b3;
+  margin-top: 30px;
+}
+.popup .form-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.popup .form-item.sign-up {
+  position: absolute;
+  left: -100%;
+  opacity: 0;
+}
+.popup.log-in .box:before {
+  position: absolute;
+  left: 180px;
+  top: 62px;
+  height: 265px;
+}
+.popup.log-in .box:after {
+  top: 22px;
+  left: 192px;
+  width: 324px;
+  height: 220px;
+}
+.popup.log-in .popup-form {
+  left: 265px;
+}
+.popup.log-in .popup-form .form-item.sign-up {
+  left: 0;
+  opacity: 1;
+}
+.popup.log-in .popup-form .form-item.log-in {
+  left: -100%;
+  opacity: 0;
+}
+.popup.active {
+  width: 260px;
+  height: 140px;
+  margin-top: -70px;
+}
+.popup.active .popup-form {
+  left: 30px;
+  width: 200px;
+  height: 200px;
+}
+.popup.active .popup-form:before {
+  content: "✔";
+  position: absolute;
+  left: 51px;
+  top: 5px;
+  color: #5356ad;
+  font-size: 130px;
+  opacity: 1;
+}
+.popup.active input, .popup.active .btn, .popup.active .info-item {
+  display: none;
+  opacity: 0;
+  padding: 0px;
+  margin: 0 auto;
+  height: 0;
+}
+.popup.active .form-item {
+  height: 100%;
+}
+.popup.active .popup-forms .popup-info .info-item {
+  height: 0%;
+  opacity: 0;
+}
+     
+     
+     </style>
+    </head>
+    <body data-spy="scroll" data-target="#navbar-top">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+       
+
+        <div class="container-fluid">
+
+            
+
+            <div class="row row-section row-demo" id="demo">
+              <div class="col-lg-8 col-lg-offset-2">
+                <div class="fc-ios"></div>
+              </div>
+
+              <div class="col-lg-8 col-lg-offset-2">
+                <div class="fc-android"></div>
+              </div>
+
+              <div class="col-lg-8 col-lg-offset-2">
+                <div class="fc-mbp"></div>
+              </div>
+
+              <div class="col-lg-8 col-lg-offset-2">
+                <div class="fc-mac"></div>
+              </div>
+
+             
+            </div>
+        </div><br><br><br>
+     
+   
+   
+     
+     <!---->
+     
+<div class="container">
+ 
+  <!-- Button to Open the Modal -->
+  <button type="button" id="click" class="btn btn-primary" data-toggle="popup" data-target="#pop" onclick="showpopup()">
+    Open modal
+  </button>
+
+  <!-- The Modal -->
+  <div class="popup" id="pop" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login/Signup</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          
+  <div class="box"></div>
+  <div class="popup-forms">
+    <div class="popup-info">
+      <div class="info-item">
+        <div class="table">
+          <div class="table-cell">
+            <p>
+              Have an account?
+            </p>
+            <div class="btn">
+              Log in
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="table">
+          <div class="table-cell">
+            <p>
+              Don't have an account? 
+            </p>
+            <div class="btn">
+              Sign up
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-form">
+      <div class="form-item log-in">
+        <div class="table">
+          <div class="table-cell">
+            <input name="Username" placeholder="Username" type="text" /><input name="Password" placeholder="Password" type="Password" />
+            <div class="btn">
+              Log in
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-item sign-up">
+        <div class="table">
+          <div class="table-cell">
+            <input name="email" placeholder="Email" type="text" /><input name="fullName" placeholder="Full Name" type="text" /><input name="Username" placeholder="Username" type="text" /><input name="Password" placeholder="Password" type="Password" />
+            <div class="btn">
+              Sign up
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+     
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+     
+     <!--popup script-->
+ <script>
+  $(document).ready(function(){
+ $(".info-item .btn").click(function(){
+  $(".popup").toggleClass("log-in");
+});
+$(".popup-form .btn").click(function(){
+ $ (".popup").addClass("active");
+});
+  })
+ </script>
+     <script>
+  $(document).ready(function(){
+ $("#click").click(function(){
+  $("#pop").show();
+});
+  })
+ </script>
+      <!--popup script-->
+     
+     
+     
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Production -->
+        <!--
+        <script src="assets/vendor/frame-carousel/jquery.frame-carousel.min.js"></script>
+        -->
+
+        <!-- Development -->
+        <script src="assets/vendor/frame-carousel/jquery.frame-carousel.js"></script>
+
+        <script src="assets/vendor/highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <script src="assets/js/main.js"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-61586811-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>

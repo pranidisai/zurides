@@ -1,0 +1,943 @@
+﻿
+@{
+    ViewBag.Title = "s1";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+@model Zur.VM.UserVM
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/theme/css/bootstrap.css">
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+
+<!-- FONT AWESOME CSS -->
+<link rel="stylesheet" href="~/assets/fonts/line-awesome-font-awesome.min.css">
+<!-- OWL CAROSEL CSS -->
+<link rel="stylesheet" href="~/assets/owlcarousel/css/owl.carousel.css">
+<link rel="stylesheet" href="~/assets/owlcarousel/css/owl.theme.css">
+<link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+<!-- MAGNIFIC CSS -->
+<link rel="stylesheet" href="~/assets/css/magnific-popup.css">
+<!-- ANIMATE CSS -->
+<link rel="stylesheet" href="~/assets/css/animate.min.css">
+<!-- MAIN STYLE CSS -->
+<link rel="stylesheet" href="~/assets/css/venobox.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="~/assets/css/style.css">
+<!-- color STYLE CSS -->
+<link rel="stylesheet" href="~/assets/css/color-switcher.css">
+<!-- RESPONSIVE CSS -->
+<link rel="stylesheet" href="~/assets/css/responsive.css">
+
+<style>
+
+    .myboreder {
+        border: 1px solid gray;
+    }
+</style>
+
+<style>
+
+    .switch {
+        background-color: #1bbc9b;
+        width: 100%;
+        display: inline-block;
+        border-radius: 8px;
+        height: 28px;
+        padding:;
+        position: relative;
+        zoom: 1;
+    }
+
+        .switch:before, .switch:after {
+            content: " ";
+            /* 1 */
+            display: table;
+            /* 2 */
+        }
+
+        .switch:after {
+            clear: both;
+        }
+
+        .switch label {
+            float: left;
+            width: 50%;
+            position: relative;
+            z-index: 2;
+            line-height: 31px;
+            cursor: pointer;
+            color: #117964;
+        }
+
+        .switch input[type="radio"] {
+            display: none;
+        }
+
+            .switch input[type="radio"]:checked + label {
+                color: #141241;
+                font-weight: bold;
+            }
+
+        .switch span {
+            position: relative;
+            z-index: 1;
+            top:;
+            left: -2px;
+            width: 50%;
+            height: 100%;
+            display: block;
+            border-radius: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            transition: all 200ms ease;
+        }
+
+            .switch span.right {
+                top: -35px;
+                width: 50%;
+                left: 0;
+                border-radius: 5px 5px 5px 5px;
+                transition: all 200ms ease;
+            }
+</style>
+
+<style>
+    .tooltip1 {
+        position: relative;
+        display: inline-block;
+    }
+
+        .tooltip1 .tooltiptext1 {
+            visibility: hidden;
+            width: 200px;
+            background-color: darkgrey;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 3px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 2;
+            margin-top: 10px;
+        }
+
+        .tooltip1:hover .tooltiptext1 {
+            visibility: visible;
+        }
+</style>
+
+
+
+<style>
+    #myDiv_ {
+        border: 1px solid #D8D8D8;
+    }
+
+    #myDiv1_ {
+        border: 1px solid #D8D8D8;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+</style>
+
+<style>
+    #myDiv2_ {
+        border: 1px solid #D8D8D8;
+    }
+
+    #myDiv3_ {
+        border: 1px solid #D8D8D8;
+    }
+</style>
+<style>
+    .active {
+        background-color: #fff;
+    }
+</style>
+<style>
+    input[name='limited'] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        outline: none;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+        padding: 4px;
+    }
+
+        input[name='limited']:after {
+            font-family: 'FontAwesome';
+            display: inline-block;
+            text-align: center;
+            font-size: 14px;
+            content: attr(data-icon);
+            padding: 3px 9px;
+            border-radius: 6px;
+            height: 41px;
+            /*color: rgba(0, 0, 0, 0.4);*/
+            transition: box-shadow 1s, color 1s;
+        }
+
+        input[name='limited']:checked:after {
+            box-shadow: 1px 1px -16px rgba(0, 0, 0, 0.4);
+            color: red;
+        }
+</style>
+<section>
+    <div class="rows banner_book" id="inner-page-title">
+        <div class="container-fluid">
+            <div class="banner_book_1">
+                <div id="srcdiv" class="col-md-12">
+                    <ul>
+                        <li class="dl1">Travel From : @Model.Search.sourcePlace </li>
+                        <li class="dl2">Journey Date :@Model.Search.JourneyDate.ToString("dd-MM-yyyy")</li>
+                        <li class="dl2">Journey Type :@Model.Search.JourneyType</li>
+
+                        <li class="dl3"><a href="#" id="show"><span style="border:1px solid #fff;padding:0 10px 0 10px; border-radius: 25px;">Modify</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="maindiv" class="container-fluid" style="display:none;">
+                <form action="@Url.Action("s1","Search")">
+
+                    <div class="row" style="margin-bottom:10px;">
+                        <div class="input-field col s2">
+                            <input type="text" id="txt_soruceLocation" placeholder="From City" value="@Model.Search.sourcePlace" name="sourcePlace" style="border:1px solid white;height:30px;">
+                            @*<input type="text" id="txt_soruceLocation" placeholder="From City" name="sourcePlace" style="border:1px solid white;height:30px;">*@
+
+                        </div>
+
+                        <div class="input-field col s2" id="dest" style="display:none;">
+                            <input type="text" id="txt_DestinationLocation" class="form-control" value="@Model.Search.Destination" placeholder="To City" name="Destination" style="border:1px solid white;height:30px;">
+
+                        </div>
+
+
+                        <div class="input-field col s2">
+                            <input type='text' id='txtdate' name="JourneyDate" placeholder="Journey Date" value="@Model.Search.JourneyDate.ToString("MM/dd/yyyy")" style="border:1px solid white;height:30px;" />
+                            <input type="hidden" name="reqfrom" value="search" />
+
+                        </div>
+                        <div class="input-field col s2">
+                            <input type='text' id='txtdate1' name="ReturnDate" placeholder="Return Date" value="@Model.Search.ReturnDate.ToString("MM/dd/yyyy")" style="border:1px solid white;height:30px;" />
+
+                        </div>
+                        <div class="col s2">
+
+                            <div class="switch" style="margin-top:10px;">
+                                <input name="SelfDrive" type="radio" value="SelfDrive" id="optionone" checked>
+                                <label for="optionone" style="text-align: center;font-size:15px;" id="k1">Self drive</label>
+
+                                <input name="Rental" type="radio" value="Rental" id="optiontwo">
+                                <label for="optiontwo" class="right" style="text-align: center;font-size:15px;" id="k2"> Rental</label>
+                                <span aria-hidden="true"></span>
+                            </div>
+
+                        </div>
+                        <div class="col s2 text-left">
+                            <input type="submit" value="Search" onclick="Validate();" style="background:none;color:white; width:80px;height:28px;border:1px solid #fff;padding:5px;margin-top:11px; border-radius: 25px;">
+                            <img src="~/theme/images/close-icon.png" class="cursor" id="imgclose" height="22" width="25"  style="margin-left:30px;"/>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#show").click(function () {
+            $("#maindiv").show();
+            // $("#togg").hide();
+            $("#srcdiv").hide();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
+        $("#imgclose").click(function () {
+            $("#maindiv").hide();
+            //$("#togg").show();
+            $("#srcdiv").show();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#flip").click(function () {
+            $("#panel").slideToggle("slow");
+        });
+    });
+</script>
+@*<script>
+        $(document).ready(function () {
+
+            $("#book").click(function () {
+                $("#list").toggle();
+            });
+        });
+    </script>*@
+<section>
+    <div class="rows banner_book" id="inner-page-title">
+        <div class="container-fluid" style="background-color:#fff;">
+            <div class="banner_book_1">
+                <div id="flip" class="col-md-12">
+                    <div class="col-md-6" style="display:flex;padding:5px;">
+                        <i class="fa fa-filter" style="font-size:25px;margin-top:6px;"></i>&nbsp;&nbsp;
+                        <h5><span>FILTER BY:</span>(Price,Range,Car Category & Car Specifications)</h5>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3" style="width:24%">
+                        <ul class="short">
+                            <li style="color:#000;border:none;" class="font14 hidden-xs">Sort by:</li>
+                            <li style="color:#000;border:none;" class="font14 sorting borderB chkS">Price</li>
+                            <li style="color:#000;border:none;" class="font14 sorting borderB chkS">A - Z</li>
+                            <li style="color:#000;border:none;" class="font14 sorting borderB chkS">Seats</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="panel" style="display:none;-webkit-box-shadow: inset 0px 0px 4px 3px rgba(209,194,209,1);
+            -moz-box-shadow: inset 0px 0px 4px 3px rgba(209,194,209,1);
+            box-shadow: inset 0px 0px 4px 3px rgba(209,194,209,1);">
+        <div class="col-md-12" style="padding:5px;">
+            <div class="col-md-3">
+                <span class="col-md-6" style="border-bottom:1px solid #000;">Price</span>
+                <span class="col-md-5" style="border-bottom:1px solid #000;color:#ff7200;">Reset</span><br /><br />
+                <span for="price-min">Price:</span>
+                <div><input type="range" name="price-min" id="price-min" value="200" min="0" max="1000"></div>
+            </div>
+            <div class="col-md-4 form-check">
+                <span class="col-md-7" style="border-bottom:1px solid #000;">Car Categories</span>
+                <span class="col-md-5" style="border-bottom:1px solid #000;color:#ff7200;">Reset</span><br /><br />
+                <div style="display:flex;">
+                    <div style="margin-left:30px;">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox101">
+                        <label class="form-check-label" for="checkbox101" style="font-size: 14px;color: #000;font-weight:200">&nbsp;&nbsp;Compact-SUV</label><br />
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox102">
+                        <label class="form-check-label" for="checkbox102" style="font-size: 14px;color: #000;font-weight:200">&nbsp;&nbsp;Hatchback</label><br />
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox103">
+                        <label class="form-check-label" for="checkbox103" style="font-size: 14px;color: #000;font-weight:200">&nbsp;&nbsp;Luxury</label><br />
+                    </div>
+                    <div style="margin-left:30px;">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox104">
+                        <label class="form-check-label" for="checkbox104" style="font-size: 15px;color: #000;font-weight:200">&nbsp;&nbsp;MUV</label><br />
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox105">
+                        <label class="form-check-label" for="checkbox105" style="font-size: 15px;color: #000;font-weight:200">&nbsp;&nbsp;Sedan</label><br />
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox106">
+                        <label class="form-check-label" for="checkbox106" style="font-size: 15px;color: #000;font-weight:200">&nbsp;&nbsp;SUV</label><br />
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 form-check">
+                <span class="col-md-5" style="border-bottom:1px solid #000;">Fuel Types</span>
+                <span class="col-md-5" style="border-bottom:1px solid #000;">Seats</span>
+                <span class="col-md-2" style="border-bottom:1px solid #000;color:#ff7200;">Reset</span><br /><br />
+                <div style="display:flex;">
+                    <div style="margin-left:30px;">
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox107">
+                        <label class="form-check-label" for="checkbox107" style="font-size: 14px;color: #000;font-weight:200">&nbsp;&nbsp;Petrol</label><br />
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox108">
+                        <label class="form-check-label" for="checkbox108" style="font-size: 14px;color: #000;font-weight:200">&nbsp;&nbsp;Diesel</label><br /><br />
+                    </div>
+                    <div style="margin-left:70px;">
+                        <input type="checkbox" class="filled-in form-check-input chkNoOfSeats" name="seat" value="4" id="checkbox109">
+                        <label class="form-check-label" for="checkbox109" style="font-size: 15px;color: #000;font-weight:200">&nbsp;&nbsp;4&nbsp;&nbsp;</label>
+                        <input type="checkbox" class="filled-in form-check-input chkNoOfSeats" value="7" name="seat" id="checkbox1010">
+                        <label class="form-check-label" for="checkbox1010" style="font-size: 15px;color: #000;font-weight:200">&nbsp;&nbsp;7&nbsp;&nbsp;</label> <input type="checkbox" class="filled-in form-check-input" id="checkbox1011" name="seat" value="6" onclick="myevent()">
+                        <label class="form-check-label" for="checkbox1011" style="font-size: 15px;color: #000;font-weight:200">&nbsp;&nbsp;6&nbsp;&nbsp;</label>
+                        <input type="checkbox" class="filled-in form-check-input" id="checkbox1012" name="seat" value="7" onclick="myevent()">
+                        <label class="form-check-label" for="checkbox1012" style="font-size: 15px;color: #000;font-weight:200">&nbsp;&nbsp;7</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="col-md-12" style="text-align:center;margin-top:8px;">
+    <span style="color:red;text-align:center;font-size:30px;">@ViewBag.Error</span>
+    <span style="color:red;text-align:center;font-size:30px;">@ViewBag.validationerror</span>
+
+</div>
+<div class="clearfix"></div>
+<div id="self_drive" style=" width: auto; background-color:#fff;font-size:10px;">
+</div>
+<!--====== FOOTER 1 ==========-->
+
+<section id="cars" class="cars-area section-padding">
+    <div class="container">
+        <div class="row">
+            @if (Model.Search.JourneyType == "SelfDrive")
+            {
+                <div class="col-md-12">
+                    @foreach (var cab in Model.ResultList)
+
+                    {
+
+                        <div class="col-md-4" data-target="#demo1_@cab.Id">
+                            <div class="cars-info myboreder">
+                                <img alt="image" src="@cab.VechileImages" style="height: 177px; width:  348px;">
+                                <div class="cars-details" style="height:332px; margin-top: -30px;">
+                                    <h4 style="margin-left:40px;color:gray;margin-top:15px;">Brand Name:@cab.VehicleBrand</h4>
+                                    <div class="col-md-6">
+                                        <img src="http://demo.agasthyaapplabs.com/theme/images/icon4.png" style="width: 20px; height: 20px; opacity: 0.4;"> <span style="font-size: 12px;">Fuel : Diesel</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="http://demo.agasthyaapplabs.com/theme/images/icon1.png" style="width: 20px; height: 20px; opacity: 0.4;"><span style="font-size: 12px;"> Seater :  @cab.NoofSeats</span>
+                                    </div>
+                                    <!--------second  line---------->
+                                    <div class="col-md-6">
+                                        <img src="http://demo.agasthyaapplabs.com/theme/images/icon2.png" style="width: 20px; height: 20px; opacity: 0.4;"> <span style="font-size: 12px;">Manual</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="http://demo.agasthyaapplabs.com/theme/images/icon4.png" style="width: 20px; height: 20px; opacity: 0.4;"> <span style="font-size: 12px;">FullTank</span>
+                                    </div><br /><br /><br />
+
+                                    <div class="col-md-12" style="height: 1px; background-color: gray;"></div>
+                                    <!-------------third line------------>
+                                    @using (Html.BeginForm("Limitedkms", "BookCab", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                                    {
+                                        <div class="col-md-12">
+                                            <div class="col-md-6 tooltip1" style="margin-left:-20px;">
+                                                <input type="radio" required name="limited" value="@cab.kmprice ,240Kms Free" data-icon='₹ @cab.kmprice 240Kms Free' style="width:120px;height:47px;" />
+                                                <span class="tooltiptext1">
+                                                    No. of travel days : @Session["days"]<br />Minimal Billing : @cab.kmprice<br />Additional Price/Km : 10/km<br />
+                                                    Tollway Price : Not included
+                                                </span>
+                                            </div>
+                                            <div class="col-md-6 tooltip1" style="margin-left:20px;">
+                                                <input type="radio" name="limited" value="@cab.selfdriveprice ,Unlimited KMS" data-icon='₹ @cab.selfdriveprice Unlimited Kms' style="width:120px;height:47px;" />
+                                                <span class="tooltiptext1">
+                                                    No. of travel days : @Session["days"]<br /> Price : @cab.selfdriveprice <br />  Tollway Price: Not included
+                                                </span>
+                                            </div>
+                                        </div>
+                                        @*<div class="col-md-6">
+
+                                                <div id="myDiv_@cab.Id" class="cursor" onclick="Function(@cab.Id,@cab.kmprice)" style="margin-left:-10px;width:150px;margin-top:8px; height:40px;text-align:center;border:0.5px solid #c0c6c0;">
+                                                    <i class="fa fa-inr"></i>@cab.kmprice <P style="font-size:11px;line-height:18px;">240Kms Free</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <div id="myDiv1_@cab.Id" class="cursor" onclick="myunlimit(@cab.Id,@cab.selfdriveprice)" style="margin-left:0px; width:150px;margin-top:8px; height:40px;padding:2px;text-align:center;border:1px solid #c0c6c0;">
+                                                    <i class="fa fa-inr"></i>@cab.selfdriveprice<P style="font-size:11px;line-height:18px;">Unlimited KMS</P>
+                                                </div>
+                                            </div>*@
+
+                                        <div class="col-md-12" style="margin-top:8px;">
+                                            <div class="col-md-6" style="text-align:left;">
+                                                <P style="font-size:12px;line-height:0px; margin-left: -10px; margin-top: 8px;">*Additional<i class="fa fa-inr"></i> 10/KM</P>
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p style="font-size:12px;cursor:pointer;" class="tooltip1">
+                                                    Security Deposit<i class="fa fa-info-circle"></i> <span class="tooltiptext1">
+                                                        Refundable Security Deposit :<br />Rs 5000.00<br />or<br />Loss Damage waiver Rs 1,00,000 & No Security Deposit
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <br />
+
+                                        <div class="col-md-12">
+                                            <select required class="form-control" name="dropdown" id="selectlocate_@cab.Id   " style="width: 112%; margin-left: -11px; height: 42px;color:black;">
+                                                <option value="">Choose Nearest Location</option>
+                                                <option value="Madhapur"> Madhapur</option>
+                                                <option value="HitechCity">HitechCity</option>
+                                                <option value="Mytrivanam">Mytrivanam</option>
+                                                <option value="BharathNagar">BharathNagar</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-6 col-md-offset-3" style="margin-left:70px;">
+
+                                            <div hidden>
+                                                <input type="text" name="Id" value="@cab.Id" />
+                                                <input type="text" name="src" value="@Model.Search.sourcePlace" />
+                                                <input type="text" name="Journeydate" value="@Model.Search.JourneyDate" />
+                                                <input type="text" name="Returndate" value="@Model.Search.ReturnDate" />
+                                                <input type="text" name="selfkmprice" id="jounrney_@cab.Id" value="" />
+
+                                            </div>
+
+                                            <button type="submit" onclick="bookfn(@cab.Id)" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;width:150px;" class="book1">BOOK NOW</button>
+
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+
+                </div>
+            }
+
+            else
+            {
+                <div class="col-md-12">
+                    @foreach (var cab in Model.ResultList)
+                    {
+                        <div class="col-md-4">
+                            <div class="cars-info myboreder">
+                                <img alt="image" src="@cab.VechileImages" style="height: 177px; width:348px;">
+
+                                <div class="cars-details" style="height:270px;">
+                                    <h4 style="margin-left:40px;color:gray;">Brand Name:@cab.VehicleBrand</h4>
+                                    <div class="col-md-6">
+                                        <img src="http://demo.agasthyaapplabs.com/theme/images/icon4.png" style="width: 20px; height: 20px; opacity: 0.4;"> <span style="font-size: 12px;">Fuel : Diesel</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="http://demo.agasthyaapplabs.com/theme/images/icon1.png" style="width: 20px; height: 20px; opacity: 0.4;"><span style="font-size: 12px;"> Seater : @cab.NoofSeats</span>
+                                    </div>
+                                    <!--------second  line---------->
+                                    <div class="col-md-6">
+                                        <img src="http://demo.agasthyaapplabs.com/theme/images/icon2.png" style="width: 20px; height: 20px; opacity: 0.4;"> <span style="font-size: 12px;">Manual</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="http://demo.agasthyaapplabs.com/theme/images/icon4.png" style="width: 20px; height: 20px; opacity: 0.4;"> <span style="font-size: 12px;">FullTank</span>
+                                    </div><br /><br /><br />
+                                    <div class="col-md-12" style="height: 1px; background-color: gray;"></div>
+                                    <!-------------third line------------>
+                                    @using (Html.BeginForm("Rental", "BookCab", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                                    {
+                                        <div class="col-md-12">
+                                            <div class="col-md-6 tooltip1" style="margin-left:-20px;cursor:pointer;">
+                                                <input type="radio" class="cursor" required name="limited" value="@cab.kmprice ,Without Diesel" data-icon='₹ @cab.kmprice Without Diesel' style="width:120px;height:47px;" />
+                                                <span class="tooltiptext1">
+                                                    No. of travel days : @Session["days"]<br />No. of kms : @cab.Distance<br />Price Per Km : 10/km<br />
+                                                    Price : @cab.kmprice <br /> Tollway Price : Not included
+                                                </span>
+                                            </div>
+                                            <div class="col-md-6 tooltip1" style="margin-left:20px;">
+                                                <input type="radio" class="cursor" name="limited" value="@cab.RentPerday ,With Diesel" data-icon='₹ @cab.RentPerday With Diesel' style="width:120px;height:47px;" />
+                                                <span class="tooltiptext1">
+                                                    No. of travel days : @Session["days"]<br />No. of kms : @cab.Distance<br />Price Per Km : 10/km<br />
+                                                    Price : @cab.RentPerday <br /> Tollway Price : Not included
+                                                </span>
+                                            </div>
+                                        </div>
+                                        @*<div class="col-md-6">
+
+                                                <div id="myDiv2_@cab.Id" class="cursor" onclick="Rental2(@cab.Id,@cab.kmprice)" style="margin-left:-10px;width:150px;margin-top:18px; height:40px;text-align:center;border:0.5px solid #c0c6c0;">
+                                                    <i class="fa fa-inr"></i>  @cab.kmprice <P style="font-size:11px;line-height:0px;margin-top:5px;"> 240Kms Free</P>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p style="color:;"></p>
+                                                <div id="myDiv3_@cab.Id" class="cursor" onclick="Rental(@cab.Id,@cab.RentPerday)" style="margin-left:0px; width:150px;margin-top:18px; height:40px;padding:2px;text-align:center;border:1px solid #c0c6c0;">
+                                                    <i class="fa fa-inr"></i>  @cab.RentPerday<P style="font-size:11px;line-height:0px;margin-top:5px;">With Diesel</P>
+                                                </div>
+                                            </div>*@
+
+                                        <div class="col-md-12" style="margin-top:8px;">
+                                            <div class="col-md-6" style="text-align:left;">
+                                                <P style="font-size:12px;line-height:0px; margin-left: -10px; margin-top: 8px;">*Price/km -<i class="fa fa-inr"></i> 10/KM</P>
+
+                                            </div>
+                                        </div>
+
+                                        @*<div class="col-md-12" style="margin-top:10px;">
+
+                                                <select required class="form-control" name="dropdowntest" id="location_@cab.Id" style="width: 112%; margin-left: -11px; height: 42px;color:black;">
+                                                    <option value="">Choose Nearest Location</option>
+                                                    <option value="Madhapur">Madhapur</option>
+                                                    <option value="HitechCity">HitechCity</option>
+                                                    <option value="Mytrivanam">Mytrivanam</option>
+                                                    <option value="BharathNagar">BharathNagar</option>
+                                                </select>
+                                            </div>*@
+
+                                        <div class="col-md-6 col-md-offset-3" style="margin-left:70px;margin-top:15px;">
+                                            <div hidden>
+                                                <input type="text" name="id" value="@cab.Id" />
+                                                <input type="text" name="src" value="@Model.Search.sourcePlace" />
+                                                <input type="text" name="dest" value="@Model.Search.Destination" />
+                                                <input type="text" name="Jourdate" value="@Model.Search.JourneyDate" />
+                                                <input type="text" name="Retudate" value="@Model.Search.ReturnDate" />
+                                                <input type="text" name="anyprice" id="jour_@cab.Id" value="" />
+
+                                            </div>
+                                            <button type="submit" onclick="bookcab(@cab.Id)" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;width:150px;" class="book1">BOOK NOW</button>
+
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<script>
+    $(window).on('load', function () {
+        document.getElementById("optionone").checked = true;
+        document.getElementById("optiontwo").checked = false;
+    })
+    function Validate() {
+        if (document.getElementById("optionone").checked == true) {
+
+            $("#txt_soruceLocation").prop('required', true);
+        }
+        if (document.getElementById("optiontwo").checked == true) {
+
+            $("#txt_soruceLocation").prop('required', true);
+            $("#txt_DestinationLocation").prop('required', true);
+        }
+    }</script>
+
+
+<script type="text/javascript">
+    function bookfn(e) {
+        var limit = "book1_" + e;
+        var UserName1 = $('select[id=selectlocate_' + e + ']').val();
+        var limitprice = "myDiv_" + e;
+        var unlmtprice = "myDiv1_" + e;
+        if (document.getElementById(limitprice).style.color != "red" && document.getElementById(unlmtprice).style.color != "red") {
+            alert("Please Select Limit or Unlimited Package");
+        }
+        else if (UserName1 == null || UserName1 == "") {
+
+            e.preventDefault();
+        } else {
+            e.preventDefault.remove();
+        }
+    }
+
+</script>
+<script type="text/javascript">
+    function bookcab(e) {
+        var limit = "book1_" + e;
+        var UserName1 = $('select[id=location_' + e + ']').val();
+        var limitprice = "myDiv2_" + e;
+        var unlmtprice = "myDiv3_" + e;
+        if (document.getElementById(limitprice).style.color != "red" && document.getElementById(unlmtprice).style.color != "red") {
+            alert("Please Select Limit or Unlimited Package");
+        }
+        else if (UserName1 == null || UserName1 == "") {
+
+            e.preventDefault();
+        } else {
+            e.preventDefault.remove();
+        }
+    }
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        function GetQueryParams() {
+            var vars = {}, hash;
+            var q = document.URL.split('?')[1];
+            if (q != undefined) {
+                q = q.split('&');
+                for (var i = 0; i < q.length; i++) {
+                    hash = q[i].split('=');
+                    //vars.push(hash[1]);
+                    vars[hash[0]] = hash[1];
+                }
+            }
+            return vars;
+        }
+
+        $(".chkNoOfSeats").click(function () {
+            var queryparams = GetQueryParams();
+            if ($(this).prop("checked")==true) {
+                //alert("Checked");
+                if (queryparams["noOfSeats"] == null) {
+                    queryparams["noOfSeats"]=$(this).val();
+                } else {
+                    queryparams.noOfSeats = $(this).val();
+                }
+            } else {
+                queryparams["noOfSeats"] = null;
+                //alert("Uncheked");
+            }
+
+            console.log(queryparams);
+            //alert($(this).val());
+            //alert(window.location.href);
+            var currentURL = window.location.href;
+            var newURL = currentURL.split("?")[0] + "?" + $.param(queryparams);
+            //alert(newURL);
+            window.location.href = newURL;
+            //alert(queryparams["sourcePlace"]);
+            //if (queryparams["noOfSeats"] == null) {
+                //queryparams["noOfSeats"] = $(this).val();
+            //} else {
+                //alert("yes");
+            //}
+            //alert(queryparams);
+            //alert($.param(queryparams));
+
+
+
+
+
+        });
+
+        var searchModel = '@Html.Raw(Json.Encode(Model.Search))';
+        console.log(searchModel);
+    });
+
+</script>
+
+
+
+<script type="text/javascript">
+    function myevent() {
+         var favorite = [];
+        $.each($("input[name='seat']:checked"), function () {
+            favorite.push($(this).val());
+        });
+        var Id=favorite.join(", ");
+        //var e = $(':checked').val();
+        //var Id = $("input[name='seat']:checked").val();
+        var jrnydate = "@Model.Search.sourcePlace";
+        var jrnyty = "@Model.Search.JourneyType";
+        var result1 = $("#self_drive");
+        var result = "";
+        $.ajax({
+            type: "GET",
+            url: "/Search/Getcardetails",
+            dataType: "JSON",
+            data: { seat: Id, frmplace: jrnydate, jrnyType: jrnyty },
+            success: function (data) {
+                if (data != null) {
+                    $.each(data, function (i, book) {
+                        // for (i = 0; i < Data.length; i++) {
+
+                        result = result + '<div class="row"><span style="font-size:15px;">' + book.VehicleModel + '</span><br /><br /></div>'
+
+
+
+                    })
+
+                }
+                else {
+
+                }
+                result1.html(result);
+            },
+
+        })
+    }
+
+
+
+
+</script>
+<!--Rental textbox-->
+<script>
+    $(document).ready(function () {
+        $("#k1").click(function () {
+            $("#dest").hide();
+        });
+    });
+
+    $(document).ready(function () {
+        $("#k2").click(function () {
+            $("#dest").show();
+
+        });
+    });
+</script>
+<!--------radiobuttonscript--------->
+<script>
+    $('.switch label').on('click', function () {
+        var indicator = $(this).parent('.switch').find('span');
+        if ($(this).hasClass('right')) {
+            $(indicator).addClass('right');
+        } else {
+            $(indicator).removeClass('right');
+        }
+    });
+</script>
+<!--endofradobutton-->
+<!--goolemaps-->
+<script>
+    // This example displays an address form, using the autocomplete feature
+    // of the Google Places API to help users fill in the information.
+
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+    var placeSearch, autocomplete;
+    //var componentForm = {
+    //  street_number: 'short_name',
+    //  route: 'long_name',
+    //  locality: 'long_name',
+    //  administrative_area_level_1: 'short_name',
+    //  country: 'long_name',
+    //  postal_code: 'short_name'
+    //  };
+
+
+
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('txt_DestinationLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('txt_soruceLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+
+    }
+
+
+
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBErlHBCoAszSr4uBzk1JDh_0uSJIE6mVo&libraries=places&callback=initAutocomplete"
+        async defer>
+</script>
+
+<!--endofgoolemaps-->
+
+
+
+
+
+<script>
+
+    function Function(e, f) {
+        var limit = "myDiv_" + e;
+        var limit1 = "myDiv1_" + e;
+        $(".book1").show();
+        $("#jounrney_" + e).val(f);
+        //$("#list1").hide();
+        //$("#list101").hide();
+        $(".book101").hide();
+        $("#myDiv1_").show();
+        //$("#myDiv_").css("border-color", "red");
+        document.getElementById(limit).style.color = "red";
+        document.getElementById(limit1).style.color = "black";
+        $("#myDiv1").css("border-color", "#D8D8D8");
+
+    }
+
+</script>
+
+<script>
+
+    function myunlimit(e, f) {
+        var limit1 = "myDiv1_" + e;
+        var limit = "myDiv_" + e;
+        $(".book101").show();
+        $("#myDiv_").show();
+        $("#jounrney_" + e).val(f);
+        // $("#list1").hide();
+        $(".book1").show();
+        //$("#list101").hide();
+        // $("#myDiv1_").css("border-color", "red");
+        document.getElementById(limit1).style.color = "red";
+        document.getElementById(limit).style.color = "black";
+        $("#myDiv").css("border-color", "#D8D8D8");
+    }
+
+</script>
+<script>
+
+    function Rental2(e, f) {
+        var limit = "myDiv2_" + e;
+        var limit1 = "myDiv3_" + e;
+        $(".book1").show();
+        $("#jour_" + e).val(f);
+        //$("#list1").hide();
+        //$("#list101").hide();
+        $(".book101").hide();
+        $("#myDiv3_").show();
+        //$("#myDiv_").css("border-color", "red");
+        document.getElementById(limit).style.color = "red";
+        document.getElementById(limit1).style.color = "black";
+        $("#myDiv3_").css("border-color", "#D8D8D8");
+
+    }
+
+</script>
+
+<script>
+
+    function Rental(e, f) {
+        var limit1 = "myDiv3_" + e;
+        var limit = "myDiv2_" + e;
+        $(".book101").show();
+        $("#myDiv2_").show();
+        $("#jour_" + e).val(f);
+        // $("#list1").hide();
+        $(".book1").show();
+        //$("#list101").hide();
+        // $("#myDiv1_").css("border-color", "red");
+        document.getElementById(limit1).style.color = "red";
+        document.getElementById(limit).style.color = "black";
+        $("#myDiv2_").css("border-color", "#D8D8D8");
+    }
+
+</script>
+<script language="javascript">
+    $(document).ready(function () {
+        $("#txtdate").datepicker({
+            minDate: 0
+        });
+
+    });
+</script>
+<script language="javascript">
+    $(document).ready(function () {
+        $("#txtdate1").datepicker({
+            minDate: 0
+        });
+
+    });
+</script>

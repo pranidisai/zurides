@@ -1,0 +1,134 @@
+﻿@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "CreateDriver";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+@*<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.min.js"></script>*@
+<script src="~/v2/plugins/chosen/chosen.jquery.min.js"></script>
+<link href="~/v2/plugins/chosen/chosen.min.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(function () {
+        $('.listbox').multiselect({
+            includeSelectAllOption: true
+        });
+    });
+</script>
+
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("CreateDriver", "Admin", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            
+
+            <div class="row">
+                
+                <div class="col-lg-12">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <span style=" color:red;font-weight:bold;text-align:center; margin-right:100px;">@ViewBag.Error</span>
+                                </div>
+                                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Vehicle Driver Info</p>
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Driver Name </label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.DriverName, new { @class = "form-control", placeholder = "Enter Name", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.DriverName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Driver UserName</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.DriverUserName, new { @class = "form-control", placeholder = "Enter UserName", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.DriverUserName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Email </label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.Email, new {@type="email", @class = "form-control", placeholder = "Enter Email", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Contact Number</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.ContactNumber, new {@type="tel",minlength="10",maxlength="10", @class = "form-control", placeholder = "Enter Contact No.", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.ContactNumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Address</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextAreaFor(model => model.DriversInfo.Address, new { @class = "form-control", placeholder = "Enter Address", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.Address, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Driving License Number</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.License, new {@type="text", @id = "txtLicense", onblur = "LicenseValidate();", @class = "form-control", placeholder = "Enter valid Driving License No.", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.License, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">DL Copy </label>
+                                    <div class="col-lg-7">
+                                        @*<input type="file" class="form-control" name="DLCopy" id="DLCopy" required="true" />*@
+                                        @Html.TextBoxFor(model => model.DriversInfo.DrivingLicensecopy, new {@type="file",name= "DLCopy", @class = "form-control", placeholder = "Upload Driving License copy", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.DrivingLicensecopy, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+
+                                <div class="row">
+                                    <div class="col-sm-7 col-sm-offset-3">
+                                        <button class="btn btn-mint" type="submit">Save Info</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
+<script type="text/javascript">
+    function LicenseValidate() {
+        var aadhar = document.getElementById("txtLicense").value;
+
+        var adharSixteenDigit = /[a-zA-Z]{2}[0-9]{14}$/;
+        if (aadhar != '') {
+            if (aadhar.match(adharSixteenDigit)) {
+                return true;
+            }
+
+            else {
+                alert("Enter valid License Number");
+                return false;
+
+            }
+        }
+    }
+</script>
+

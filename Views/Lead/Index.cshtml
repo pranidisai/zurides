@@ -1,0 +1,250 @@
+﻿@model Zur.Common.TravelersMOdel
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_AgentLayout.cshtml";
+    Layout = null;
+}
+<!doctype html>
+<html lang="zxx">
+<head>
+    <!-- All Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- page title -->
+    <title>Agent Registration</title>
+    <!-- Favicon -->
+   
+    <!--All Css here -->
+    <!--Bootstrap v3.3.7 css-->
+    <link rel="stylesheet" href="~/theme1/assets/bootstrap/css/bootstrap.min.css">
+    <!-- Fontawesome css -->
+    <link rel="stylesheet" href="~/theme1/assets/css/font-awesome.min.css">
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="~/theme1/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/theme1/assets/css/owl.theme.default.min.css">
+    <!-- monthly css -->
+    <link rel="stylesheet" href="~/theme1/assets/css/monthly.css">
+    <!-- normalize css -->
+    <link rel="stylesheet" href="~/theme1/assets/css/normalize.css">
+    <!--main style css-->
+    <link rel="stylesheet" href="~/theme1/assets/css/main.css">
+    <!--Responsive css-->
+    <link rel="stylesheet" href="~/theme1/assets/css/responsive.css">
+    <!-- modernizr js -->
+    <script src="~/theme1/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Start Preloader Area-->
+    <div class="preloader-area">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div><!-- End Preloader Area-->
+    <!-- Start header area -->
+    <header id="header-area">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Index","Home")">
+                    <img src="~/theme/images/logo.png" width="150px" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynavbar">
+                    <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="page-scroll nav-link" href="@Url.Action("Index","Home")">Home</a></li>
+                        <li class="nav-item"><a class="page-scroll nav-link" href="#car">Cars</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><!--End header area -->
+    <!-- Start banner section -->
+    <section class="banner2" id="home">
+        <div class="carspace-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-area text-left">
+                        <div class="hero-text">
+                            <h2>Update your details <br>Get rented ontime</h2>
+                            <p>Few steps to fallow and get benifits to your cabs/ vehicles thorugh zurides.</p>
+                        </div>
+                        <div class="welcome-btn">
+                            <a href="#car" class="carspace-btn page-scroll">Back</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="pickup-form">
+                        <form action="@Url.Action("Index","Search")">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="ex1"><strong>Agency Name</strong></label>
+                                        @Html.TextBoxFor(model => model.TravelName, new { @class = "form-control", placeholder = "Enter Agency Name", @required = "true" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="ex1"><strong>Login UserName</strong></label>
+                                        @Html.TextBoxFor(model => model.TravelUserName, new { @class = "form-control", placeholder = "Login User Name", @required = "true" })
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="ex1"><strong>Email </strong></label>
+                                        @Html.TextBoxFor(model => model.TavelEmail, new { @class = "form-control", placeholder = "Enter Email", @required = "true" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="ex1"><strong>Contact number</strong></label>
+                                        @Html.TextBoxFor(model => model.ContactNumber, new { @class = "form-control", placeholder = "Enter Contact Number", @required = "true" })
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="ex1"><strong>Alternative Number</strong></label>
+                                        @Html.TextBoxFor(model => model.SecondaryContact, new { @class = "form-control", placeholder = "Enter Secondary Number", @required = "true" })
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="ex1"><strong>Number of Vehicles</strong></label>
+                                        @Html.TextBoxFor(model => model.vehiclesCount, new { @class = "form-control", placeholder = "Enter No of Vehicles", @required = "true" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="ex1"><strong>Address</strong></label>
+                                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control", placeholder = "Enter Address", @required = "true" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="ex1"><strong>City</strong></label>
+                                        @Html.TextBoxFor(model => model.City, new { @class = "form-control", placeholder = "Enter City", @required = "true" })
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="picking-btn text-center">
+                                        <button type="submit" class="carspace-btn">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End banner section -->
+    <!--Start what-we-offer section -->
+    <section class="what-we-offer section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="offer-area">
+                        <div class="single-offer">
+                            <img src="~/theme1/assets/img/we-1.jpg" class="img-fluid" alt="">
+                            <div class="single-offer-text">
+                                <div class="title">
+                                    <h4>One Way Hire Car</h4>
+                                    <h5>All Usa</h5>
+                                </div>
+                                <p>fill details and get rented your vehicle by single step</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="offer-area">
+                        <div class="single-offer">
+                            <img src="~/theme1/assets/img/we-2.jpg" class="img-fluid" alt="">
+                            <div class="single-offer-text">
+                                <div class="title">
+                                    <h4>Airport transfers</h4>
+                                    <h5>All times</h5>
+                                </div>
+                                <p>Travel any where by single click of booking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="offer-area">
+                        <div class="single-offer">
+                            <img src="~/theme1/assets/img/we-3.jpg" class="img-fluid" alt="">
+                            <div class="single-offer-text">
+                                <div class="title">
+                                    <h4>long-term car hire</h4>
+                                    <h5>All India</h5>
+                                </div>
+                                <p>Get Car by rent at any time, based on event etc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--End what-we-offer section -->
+    <!--Start car-area section -->
+    <!-- Start Footer area -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <div class="footer-text">
+                        <p>&copy; Copy Rights 2018 All Rights Reserved Zurides.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-social-link">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- End Footer area -->
+    <!--Scroll-up-->
+    <a id="scroll-up"><i class="fa fa-angle-up"></i></a>
+    <!-- jequery  -->
+    <script src="~/theme1/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap min.js  -->
+    <script src="~/theme1/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/theme1/assets/bootstrap/js/popper.min.js"></script>
+    <!-- Owl carousel js  -->
+    <script src="~/theme1/assets/js/owl.carousel.min.js"></script>
+    <!-- counterup js-->
+    <script src="~/theme1/assets/js/jquery.counterup.min.js"></script>
+    <script src="~/theme1/assets/js/waypoints.min.js"></script>
+    <!-- wow js -->
+    <script src="~/theme1/assets/js/monthly.js"></script>
+    <!-- gmaps js -->
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBOQMDDOsJA0uHTqXTDHUogDJfaTST7hNQ&amp;callback"></script>
+    <!--main js-->
+    <script src="~/theme1/assets/js/main.js"></script>
+</body>
+
+</html>
+
+  

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Edituserprofile";
+    Layout = "~/Views/Shared/_HLayout.cshtml";
+}
+
+@model Zur.Common.RegistrationModel
+
+<div class="container-fluid">
+    <div class="panel">
+        @using (Html.BeginForm("Edituserprofile", "BookCab", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+
+                <div class="col-md-12">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                <div style="text-align:center;">
+                                    <p class="bord-btm pad-ver text-main text-bold"><h3 style="color:orange;"><b>Profile Editing</b></h3></p>
+                                </div><br />
+                                <div style="text-align:center;">
+                                    <span style=" color:red;font-weight:bold;">@ViewBag.Error</span>
+                                </div><br />
+
+
+
+                                <div class="form-group">
+                                    <label class="col-md-3 text-right"><h5>User Name</h5> </label>
+                                    <div class="col-md-5">
+                                        @Html.TextBoxFor(model => Session["User_contno"], new { value = @Session["User_contno"].ToString(), @class = "form-control", placeholder = "Enter UserName", @readonly = "readonly" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 text-right"><h5>Name</h5></label>
+                                    <div class="col-md-5">
+                                        @Html.TextBoxFor(model => Model.Name, new { @class = "form-control", placeholder = "Enter Name", @required = "true" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 text-right"><h5>Email</h5></label>
+                                    <div class="col-md-5">
+                                        @Html.TextBoxFor(model => Model.Email, new { @class = "form-control", placeholder = "Enter New Email", @required = "true" })
+                                        @*@Html.ValidationMessageFor(model => model.DriversInfo.DriverUserName, "", new { @class = "text-danger" })*@
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 text-right"><h5>Age</h5></label>
+                                    <div class="col-md-5">
+                                        @Html.TextBoxFor(model => Model.Age, new { @class = "form-control", placeholder = "Age", @required = "true" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 text-right"><h5>Gender</h5></label>
+                                    <div class="col-md-5">
+                                        @Html.TextBoxFor(model => Model.gender, new { @class = "form-control", placeholder = "Gender", @required = "true" })
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <button class="btn btn-info" type="submit">Save Info</button>
+                                        <a href="@Url.Action("Limitedkms","BookCab")"><label class="btn btn-danger">Back</label></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+           
+        }
+    </div>
+
+</div>
+
+

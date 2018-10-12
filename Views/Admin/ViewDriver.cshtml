@@ -1,0 +1,158 @@
+﻿
+@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "ViewDriver";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("ViewDriver", "Admin", FormMethod.Post, new { @class = "demo-bvd-notempty", enctype = "multipart/form-data" }))
+        {
+            <div class="row" style="text-align:center;padding-top:20px;">
+                <span style="color:red;font-weight:bold; margin-top:10px; ">@ViewBag.Error</span>
+            </div>
+            <div class="row">
+                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Update Driver Info&nbsp;&nbsp;&nbsp;&nbsp;
+                <a style="color:red" href="@Url.Action("DriversList","Admin")"> Go Back</a></p>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body" style="padding-right:0px;padding-left:0px;">
+
+
+
+                                <div class="form-group" hidden>
+                                    <label class="col-lg-3 control-label">ID</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.Id, new { @class = "form-control", placeholder = "Enter Name", @required = "true" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Driver Name</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.DriverName, new { @class = "form-control", placeholder = "Driver Name", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.DriverName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Contact Number </label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.ContactNumber, new { @class = "form-control", placeholder = "Enter Conatct No.", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.ContactNumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Email</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.Email, new {@type="email", @class = "form-control", placeholder = "Enter Email", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Address</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.Address, new { @class = "form-control", placeholder = "Enter Address", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.Address, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">License No.</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.License, new {@type="text", @id = "txtLicense", onblur = "LicenseValidate();", @class = "form-control", placeholder = "Enter License No.", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.License, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Batch Number</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.BatchNumber, new { @class = "form-control", placeholder = "Batch Number", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.BatchNumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">License Issued Date</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.LicenseIssuedDate, new { @class = "form-control", placeholder = "License Issued Date", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.LicenseIssuedDate, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                               
+                              
+                                @*<div class="form-group">
+            <label class="col-lg-3 control-label">Driver Image </label>
+            <div class="col-lg-7">
+                <input type="file" class="form-control" name="ImageData" id="ImageData" required="true" />
+            </div>
+        </div>*@
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">License Expired Date</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.DrivingLicenseExpiredDate, new { @class = "form-control", placeholder = "Lincense expired Date", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.DrivingLicenseExpiredDate, "", new { @class = "text-danger" })
+                                    </div>
+                                </div><br /><br />
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Status of Driver</label>
+                                    <div class="col-lg-4">
+                                        @Html.CheckBoxFor(model => model.DriversInfo.DriverStatus, new { @class = "form-control", placeholder = "", })
+                                    </div>
+                                </div>
+                                @*<div class="form-group">
+            <label class="col-lg-3 control-label">Adhar no.</label>
+            <div class="col-lg-7">
+                @Html.TextBoxFor(model => model.DriversInfo.AdharCard, new { @class = "form-control", placeholder = "Enter Adhar No.", @required = "true" })
+
+            </div>
+        </div>*@
+
+                            </div>
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-sm-7 col-sm-offset-3">
+                                        <button class="btn btn-mint" type="submit">Save Info</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>
+<script type="text/javascript">
+    function LicenseValidate() {
+        var aadhar = document.getElementById("txtLicense").value;
+
+        var adharSixteenDigit = /[a-zA-Z]{2}[0-9]{14}$/;
+        if (aadhar != '') {
+            if (aadhar.match(adharSixteenDigit)) {
+                return true;
+            }
+
+            else {
+                alert("Enter valid License Number");
+                return false;
+
+            }
+        }
+    }
+</script>

@@ -1,0 +1,382 @@
+﻿
+@{
+    ViewBag.Title = "ViewCabwithDriver";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model Zur.VM.AdminVM
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/v2/plugins/chosen/chosen.jquery.min.js"></script>
+<link href="~/v2/plugins/chosen/chosen.min.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(function () {
+        $('.listbox').multiselect({
+            includeSelectAllOption: true
+        });
+    });
+</script>
+
+
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("ViewCabwithDriver", "Admin", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <span style=" color:red;font-weight:bold;text-align:center; margin-left:100px;">@ViewBag.Error</span>
+            </div>
+            <div class="row">
+                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">
+                    Update Cab Details &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color:red" href="@Url.Action("CabsList","Admin")"> Go Back</a>
+                </p>
+                <div class="col-lg-6">
+                    <div class="panel">
+                        <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Agency Info</p>
+                        <fieldset>
+                            <div class="panel-body">
+
+                                <div class="form-group" hidden>
+                                    <label class="col-lg-3 control-label">ID</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Vehicle.Id, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Agent Name</label>
+                                    <div class="col-lg-7">
+                                        @*@Html.DropDownListFor(model => model.Vehicle.TravelerUserName, new SelectList(Model.AgentsDDL, "Key", "Value"), "--- Select Agent ---", new { @class = "form-control" })*@
+                                        @Html.TextBoxFor(model => model.Vehicle.TravelerUserName, new { @class = "form-control" , @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.TravelerUserName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Owner Name</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Vehicle.OwnerName, new { @class = "form-control", placeholder = "Enter Owner Name", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.OwnerName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Vehicle Owner Contact</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Vehicle.VehicleOwnerCont, new { @class = "form-control", placeholder = "Vehicle Owner Contact", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.VehicleOwnerCont, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Vehicle Type</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.Vehicle.VehicleType, new SelectList(Model.VehicleTypeDDL, "Key", "Value"), "--- Select Vehicle Type ---", new { @onchange = "FillService()", @class = "form-control", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.VehicleType, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Eminities</label>
+                                    <div class="col-lg-7">
+
+                                        @Html.TextBoxFor(model => model.Vehicle.Eminities, new { @class = "form-control", placeholder = "Eminities", @required = "true" })
+
+                                        @Html.ValidationMessageFor(model => model.Vehicle.Eminities, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Terms and Condtions</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextAreaFor(model => model.Vehicle.TermsandConditions, new { @class = "form-control", placeholder = "Vehicle Owner Contact", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.TermsandConditions, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Rent per Day</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Vehicle.RentPerday, new { @class = "form-control", placeholder = "Enter Rent Perday", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.RentPerday, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Rent Per Hour</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Vehicle.RentPerHour, new { @class = "form-control", placeholder = "Rent Per Hr", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.RentPerHour, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Vehicle  Info</p>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">SelfDrive Price</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Vehicle.SelfDriveprice, new { @class = "form-control", placeholder = "SelfDrive Price", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.SelfDriveprice, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Brand Name </label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.Vehicle.BrandName, new SelectList(Model.BrandsDLL, "Key", "Value"), "--- Select Vehicle Brand ---", new { @onchange = "FillService()", @class = "form-control", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.BrandName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Color</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.Vehicle.Color, new SelectList(Model.ColorDLL, "Key", "Value"), "--- Select Vehicle Color ---", new { @onchange = "FillService()", @class = "form-control", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.Color, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Model Year</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Vehicle.ModelYear, new { @class = "form-control", placeholder = "Enter Model Year", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.ModelYear, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Seats Count</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Vehicle.SeatsCount, new { @class = "form-control", placeholder = "Enter Seats Count", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.SeatsCount, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Vehicle Image </label>
+                                    <div class="col-lg-7">
+                                        <input type="file" class="form-control" name="ImageData" id="ImageData" required="true" />
+                                    </div>
+                                </div>
+                                @{
+                                    List<SelectListItem> listItems1 = new List<SelectListItem>
+                                            ();
+                                    listItems1.Add(new SelectListItem
+                                    {
+                                        Text = "Select Type",
+                                        Value = "0",
+                                        Selected = true
+                                    });
+                                    listItems1.Add(new SelectListItem
+                                    {
+                                        Text = "Rental",
+                                        Value = "Rental"
+                                    });
+                                    listItems1.Add(new SelectListItem
+                                    {
+                                        Text = "SelfDrive",
+                                        Value = "SelfDrive"
+                                    });
+
+
+                                }
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Journey Type</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.Vehicle.Journeytype, listItems1, new { @class = "form-control", placeholder = "Select Journey Type", @required = "true" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Select Source</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.Vehicle.Source, new SelectList(Model.CityDDL, "Key", "Value"), "--- Select Source ---", new { @class = "form-control", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Vehicle.Source, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Status of Vehicle</label>
+                                    <div class="col-lg-7">
+                                        @Html.CheckBoxFor(model => model.Vehicle.TravelStatus, new { @class = "form-control", placeholder = "select status" })
+
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                @*<div class="col-lg-6">
+                        <div class="panel">
+
+                            <fieldset>
+                                <div class="panel-body">
+                                    @*<p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Vehicle Root Info</p>
+
+
+
+
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>*@
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Vehicle Driver Info</p>
+
+                                <div class="form-group" hidden>
+                                    <label class="col-lg-3 control-label">ID</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.Id, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Driver Name </label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.DriverName, new { @class = "form-control", placeholder = "Enter DriverName", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.DriverName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Driver UserName</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.DriverUserName, new { @class = "form-control", placeholder = "Enter DriverUseName", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.DriverUserName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Email </label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.Email, new { @class = "form-control", placeholder = "Enter EmailName", @required = "true",@type="email" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Contact Number</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.ContactNumber, new { @class = "form-control", placeholder = "Enter contactNumber", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.ContactNumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Address</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextAreaFor(model => model.DriversInfo.Address, new { @class = "form-control", placeholder = "Enter Address", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.Address, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                @* <div class="form-group">
+            <label class="col-lg-3 control-label">Status of Driver</label>
+            <div class="col-lg-7">
+                @Html.CheckBoxFor(model => model.DriversInfo.DriverStatus, new { @class = "form-control", placeholder = "", })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-7 col-sm-offset-3">
+                    <button class="btn btn-mint" type="submit">Update Info</button>
+                </div>
+            </div>
+        </div>*@
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Status of Driver</label>
+                                    <div class="col-lg-7">
+                                        @Html.CheckBoxFor(model => model.DriversInfo.DriverStatus, new { @class = "form-control", placeholder = "select status" })
+
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" style="margin-top:20px;">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                <p class="pad-ver text-main text-bold" style="margin-left:50px"></p>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Driving License Number</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.License, new { @type = "text", @id = "txtLicense", onblur = "LicenseValidate();", @class = "form-control", placeholder = "Enter DrivingLicense Number", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.License, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">DL Copy </label>
+                                    <div class="col-lg-7">
+                                        <input type="file" class="form-control" name="DLCopy" id="DLCopy" required="true" />
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Batch Number</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.BatchNumber, new { @class = "form-control", placeholder = "Batch Number", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.BatchNumber, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Lisence Isseud Date</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.LicenseIssuedDate, new { @class = "form-control", placeholder = "Lisence Isseud Date", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.LicenseIssuedDate, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Lisence Expired Date</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.DriversInfo.DrivingLicenseExpiredDate, new { @class = "form-control", placeholder = "License Expired Date", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.DriversInfo.DrivingLicenseExpiredDate, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-7 col-sm-offset-5" style="padding-bottom:20px;">
+                        <button class="btn btn-mint" type="submit">Update Info</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<script type="text/javascript">
+    function LicenseValidate() {
+        var aadhar = document.getElementById("txtLicense").value;
+
+        var adharSixteenDigit = /[a-zA-Z]{2}[0-9]{14}$/;
+        if (aadhar != '') {
+            if (aadhar.match(adharSixteenDigit)) {
+                return true;
+            }
+
+            else {
+                alert("Enter valid License Number");
+                return false;
+
+            }
+        }
+    }
+</script>

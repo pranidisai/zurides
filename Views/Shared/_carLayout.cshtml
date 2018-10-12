@@ -1,0 +1,377 @@
+﻿<!doctype html>
+@{
+    var headclass = "";
+}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zurides</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="~/theme/images/fav1 (2).ico">    
+    <link rel="stylesheet" href="~/car/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/car/css/bootstrap-slider.css">
+    <link rel="stylesheet" href="~/car/css/normalize.css">
+    <link rel="stylesheet" href="~/car/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/car/css/icomoon.css">
+    <link rel="stylesheet" href="~/car/css/chosen.css">
+    <link rel="stylesheet" href="~/car/css/prettyPhoto.css">
+    <link rel="stylesheet" href="~/car/css/scrollbar.css">
+    <link rel="stylesheet" href="~/car/css/morris.css">
+    <link rel="stylesheet" href="~/car/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/car/css/YouTubePopUp.css">
+    <link rel="stylesheet" href="~/car/css/auto-complete.css">
+    <link rel="stylesheet" href="~/car/css/jquery.navhideshow.css">
+    <link rel="stylesheet" href="~/car/css/transitions.css">
+    <link rel="stylesheet" href="~/car/style.css">
+    <link rel="stylesheet" href="~/car/css/colorv4.css">
+    <link rel="stylesheet" href="~/car/css/responsive.css">
+    <script src="~/car/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+
+
+</head>
+<body class="listar-home listar-hometwo" style="line-height:0.4;">
+
+    <div class="preloader-outer">
+        <div class="pin"></div>
+        <div class="pulse"></div>
+    </div>
+    <!--************************************
+            Preloader End
+    *************************************-->
+    <!--************************************
+            Wrapper Start
+    *************************************-->
+    <div id="listar-wrapper" class="listar-wrapper listar-haslayout">
+        <!--************************************
+                Header Start
+        *************************************-->
+        @*@if (ViewBag.status == "home")
+            {*@
+        <section>
+            <div class="ed-mob-menu">
+                <div class="ed-mob-menu-con">
+                    <div class="ed-mm-left">
+                        <div class="wed-logo">
+                            <a href="main.html">
+                                <img src="~/theme/images/logo.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ed-mm-right">
+                        <div class="ed-mm-menu">
+                            <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                            <div class="ed-mm-inn">
+                                <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                                <h4>Home </h4>
+
+                                <h4>Package</h4>
+
+                                <h4>About</h4>
+
+                                <h4>User Dashboard</h4>
+
+                                <h4>Other pages:1</h4>
+
+                                <h4>Contact us</h4>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- LOGO AND MENU SECTION -->
+        <div class="top-logo affix" data-spy="affix" data-offset-top="250" style="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-3 wed-logo">
+                            <a href="main.html">
+                                <img src="~/theme/images/logo.png" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-md-6 main-menu" style="">
+                            <ul>
+                                <li>
+                                    <a href="main.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="main.html">Package</a>
+                                </li>
+                                <li>
+                                    <a href="events.html">About</a>
+                                </li>
+
+                                <li>
+                                    <a href="contact.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 text-right" style="color:black;padding-top: 35px;">
+                            <a id="modal_trigger" href="#modal" style="color:black;">SIGN IN/SIGN UP</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br /><br />
+
+        <!--************************************
+                Header End
+        *************************************-->
+        <!--************************************
+                Home Slider Start
+        *************************************-->
+        @RenderBody()
+
+
+
+        <div id="modal" class="popupContainer" style="display:none;">
+            <header class="popupHeader">
+                <span class="header_title">Login</span>
+                <span class="modal_close"><i class="fa fa-times"></i></span>
+            </header>
+
+            <section class="popupBody">
+                <!-- Social Login -->
+                <div class="social_login">
+                    <div class="">
+                        <a href="#" class="social_box fb">
+                            <span class="icon"><i class="fa fa-facebook"></i></span>
+                            <span class="icon_title">Connect with Facebook</span>
+
+                        </a>
+
+                        <a href="#" class="social_box google">
+                            <span class="icon"><i class="fa fa-google-plus"></i></span>
+                            <span class="icon_title">Connect with Google</span>
+                        </a>
+                    </div>
+
+                    <div class="centeredText">
+                        <span>Or use your Email address</span>
+                    </div>
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+                        <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+                    </div>
+                </div>
+
+                <!-- Username & Password Login form -->
+                <div class="user_login">
+                    <form>
+
+                        <input type="text" placeholder="Email / Username" />
+                        <br />
+
+
+                        <input type="password" placeholder="Password" />
+                        <br />
+
+                        <div class="checkbox">
+                            <input id="remember" type="checkbox" />
+                            <label for="remember">Remember me on this computer</label>
+                        </div>
+
+                        <div class="action_btns">
+                            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                            <div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+                        </div>
+                    </form>
+
+                    <a href="#" class="forgot_password">Forgot password?</a>
+                </div>
+
+                <!-- Register Form -->
+                <div class="user_register">
+                    <form>
+
+                        <input type="text" placeholder="Full Name" />
+                        <br />
+
+                        <label></label>
+                        <input type="email" placeholder="Email Address" />
+                        <br />
+
+
+                        <input type="password" placeholder="Password" />
+                        <br />
+
+                        <div class="checkbox">
+                            <input id="send_updates" type="checkbox" />
+                            <label for="send_updates">Send me occasional email updates</label>
+                        </div>
+
+                        <div class="action_btns">
+                            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                            <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <script type="text/javascript">
+            $("#modal_trigger").leanModal({ top: 140, overlay: 0.6, closeButton: ".modal_close" });
+
+            $(function () {
+                // Calling Login Form
+                $("#login_form").click(function () {
+                    $(".social_login").hide();
+                    $(".user_login").show();
+                    return false;
+                });
+
+                // Calling Register Form
+                $("#register_form").click(function () {
+                    $(".social_login").hide();
+                    $(".user_register").show();
+                    $(".header_title").text('Register');
+                    return false;
+                });
+
+                // Going back to Social Forms
+                $(".back_btn").click(function () {
+                    $(".user_login").hide();
+                    $(".user_register").hide();
+                    $(".social_login").show();
+                    $(".header_title").text('Login');
+                    return false;
+                });
+
+            })
+        </script>
+        <script type="text/javascript">
+            $("#modal_trigger1").leanModal({ top: 140, overlay: 0.6, closeButton: ".modal_close" });
+
+            $(function () {
+                // Calling Login Form
+                $("#login_form").click(function () {
+                    $(".social_login").hide();
+                    $(".user_login").show();
+                    return false;
+                });
+
+                // Calling Register Form
+                $("#register_form").click(function () {
+                    $(".social_login").hide();
+                    $(".user_register").show();
+                    $(".header_title").text('Register');
+                    return false;
+                });
+
+                // Going back to Social Forms
+                $(".back_btn").click(function () {
+                    $(".user_login").hide();
+                    $(".user_register").hide();
+                    $(".social_login").show();
+                    $(".header_title").text('Login');
+                    return false;
+                });
+
+            })
+        </script>
+
+
+        <!--====== FOOTER 2 ==========-->
+
+        <div class="">
+            <div class="footer" style="padding-top:20px;padding-bottom: 0px;">
+                <div class="container">
+                    <div class="foot-sec2">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-4 wow bounceInLeft foot-spec foot-com">
+                                    <h4>RECENTLY BOOKED</h4>
+                                    <p>HYDERABAD-VISHAKAPATNAM</p>
+                                    <p>HYDERABAD-CHENNAI</p>
+                                    <p>CHENNAI-BANGALORE</p>
+                                    <p>LUCKNOW-DELHI</p>
+                                    <p>MADHURAI-CHENNAI</p>
+                                </div>
+
+                                <div class="col-sm-4 wow fadeInDown foot-social foot-spec foot-com">
+                                    <h4><span>HOME</span> &nbsp;&nbsp;<span>SERVICES</span> &nbsp;&nbsp;<span>OFFERS</span> &nbsp;&nbsp;<span>APP</span></h4>
+                                    <i class="fa fa-envelope-o" style="width:10px;height: 7px; color: orange;margin-left: 15px;">Info@zurides.com</i><br><br>
+                                    <a href="#" style="margin-left: 15px;"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                                    <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a> &nbsp;&nbsp;
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;
+                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>&nbsp;&nbsp;
+
+
+                                </div>
+                                <div class="col-sm-4 wow bounceInRight foot-spec foot-com text-right">
+                                    <h4>POPULAR ROUTES</h4>
+                                    <p>HYDERABAD-BANGALORE</p>
+                                    <p>PUNE-SHIRDI</p>
+                                    <p>CHENNAI-COIMBATORE</p>
+                                    <p>HYDERABAD-VISHAKAPATNAM</p>
+                                    <p>BANGALORE-HYDERABAD</p>
+                                    <p>HYDERABAD-VIJAYAWADA</p>
+                                    <p>HYDERABAD-CHENNAI</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--====== FOOTER - COPYRIGHT ==========-->
+        <section>
+            <div class="rows copy " style="background-color: dodgerblue;">
+                <div class="container">
+                    <p>All contents © 2018 ZuRides. All Rights Reserved</p>
+                </div>
+            </div>
+        </section>
+
+        <!--************************************
+                Footer End
+        *************************************-->
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+    
+    <script src="~/car/js/vendor/jquery-library.js"></script>
+    <script src="~/car/js/vendor/bootstrap.min.js"></script>
+    <script src="~/car/js/mapclustering/data.json"></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
+    <script src="~/car/js/tinymce/tinymce.min4bb5.js?apiKey=4cuu2crphif3fuls3yb1pe4qrun9pkq99vltezv2lv6sogci"></script>
+    <script src="~/car/js/mapclustering/markerclusterer.min.js"></script>
+    <script src="~/car/js/mapclustering/infobox.js"></script>
+    <script src="~/car/js/mapclustering/map.js"></script>
+    <script src="~/car/js/ResizeSensor.js.js"></script>
+    <script src="~/car/js/jquery.sticky-sidebar.js"></script>
+    <script src="~/car/js/YouTubePopUp.jquery.js"></script>
+    <script src="~/car/js/jquery.navhideshow.js"></script>
+    <script src="~/car/js/backgroundstretch.js"></script>
+    <script src="~/car/js/jquery.sticky-kit.js"></script>
+    <script src="~/car/js/bootstrap-slider.js"></script>
+    <script src="~/car/js/owl.carousel.min.js"></script>
+    <script src="~/car/js/jquery.vide.min.js"></script>
+    <script src="~/car/js/auto-complete.html"></script>
+    <script src="~/car/js/chosen.jquery.js"></script>
+    <script src="~/car/js/scrollbar.min.js"></script>
+    <script src="~/car/js/isotope.pkgd.js"></script>
+    <script src="~/car/js/jquery.steps.js"></script>
+    <script src="~/car/js/prettyPhoto.js"></script>
+    <script src="~/car/js/raphael-min.js"></script>
+    <script src="~/car/js/parallax.js"></script>
+    <script src="~/car/js/sortable.js"></script>
+    <script src="~/car/js/countTo.js"></script>
+    <script src="~/car/js/appear.js"></script>
+    <script src="~/car/js/gmap3.js"></script>
+    <script src="~/car/js/dev_themefunction.js"></script>
+</body>
+</html>

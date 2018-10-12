@@ -1,0 +1,522 @@
+﻿
+@{
+    ViewBag.Title = "S";
+    Layout = "~/Views/Shared/_HLayout.cshtml";
+}
+@model Zur.VM.UserVM
+<script src="~/theme/js/indexinc.js"></script>
+<style>
+    /*  bhoechie tab */
+    div.bhoechie-tab-container {
+        z-index: 10;
+        background-color: #ffffff;
+        padding: 0 !important;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        /* border: 1px solid #ddd; */
+        margin-top-: 20px;
+        /* margin-left: 50px; */
+        /* -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+        /* box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+        -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        background-clip: padding-box;
+        opacity: 0.97;
+        filter: alpha(opacity=97);
+    }
+
+    div.bhoechie-tab-menu {
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+
+        div.bhoechie-tab-menu div.list-group {
+            margin-bottom: 0;
+        }
+
+            div.bhoechie-tab-menu div.list-group > a {
+                margin-bottom: 0;
+            }
+
+                div.bhoechie-tab-menu div.list-group > a .glyphicon,
+                div.bhoechie-tab-menu div.list-group > a .fa {
+                    color: #5A55A3;
+                }
+
+                div.bhoechie-tab-menu div.list-group > a:first-child {
+                    border-top-right-radius: 0;
+                    -moz-border-top-right-radius: 0;
+                }
+
+                div.bhoechie-tab-menu div.list-group > a:last-child {
+                    border-bottom-right-radius: 0;
+                    -moz-border-bottom-right-radius: 0;
+                }
+
+                div.bhoechie-tab-menu div.list-group > a.active,
+                div.bhoechie-tab-menu div.list-group > a.active .glyphicon,
+                div.bhoechie-tab-menu div.list-group > a.active .fa {
+                    background-color: #5A55A3;
+                    background-image: #5A55A3;
+                    color: #ffffff;
+                }
+
+                    div.bhoechie-tab-menu div.list-group > a.active:after {
+                        content: '';
+                        position: absolute;
+                        left: 100%;
+                        top: 50%;
+                        margin-top: -13px;
+                        border-left: 0;
+                        border-bottom: 13px solid transparent;
+                        border-top: 13px solid transparent;
+                        border-left: 10px solid #5A55A3;
+                    }
+
+    div.bhoechie-tab-content {
+        background-color: #ffffff;
+        /* border: 1px solid #eeeeee; */
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    div.bhoechie-tab div.bhoechie-tab-content:not(.active) {
+        display: none;
+    }
+</style>
+<script>
+    $('.accordian-body').on('show.bs.collapse', function () {
+        $(this).closest("table")
+            .find(".collapse.in")
+            .not(this)
+            .collapse('toggle')
+    })
+</script>
+<style>
+    table {
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        cursor: pointer;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 16px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    .table tr {
+        cursor: pointer;
+    }
+
+    .hiddenRow {
+        padding: 0 4px !important;
+        background-color: #eeeeee;
+        font-size: 13px;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+
+        $("#show").click(function () {
+            $("#modify").toggle();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
+        $("#book").click(function () {
+            $("#list").toggle();
+        });
+    });
+</script>
+
+@{
+    List<SelectListItem> listItems1 = new List<SelectListItem>
+            ();
+    listItems1.Add(new SelectListItem
+    {
+        Text = "Select Booking Type",
+        Value = "0",
+        Selected = true
+    });
+    listItems1.Add(new SelectListItem
+    {
+        Text = "One Way",
+        Value = "One Way"
+    });
+    listItems1.Add(new SelectListItem
+    {
+        Text = "Two Way",
+        Value = "Two Way"
+    });
+    listItems1.Add(new SelectListItem
+    {
+        Text = "Hire",
+        Value = "Hire"
+    });
+
+}
+<section>
+    <div class="rows banner_book" id="inner-page-title">
+        <div class="container1">
+            <div class="banner_book_1">
+                <ul>
+                    <li class="dl1">@Model.Search.sourcePlace -> @Model.Search.Destination</li>
+                    <li class="dl2">@ViewBag.date</li>
+
+                    <li class="dl3"><a href="#" id="show"><span style="border:1px solid #fff;padding:0 10px 0 10px; border-radius: 25px;">Modify</span></a></li>
+                    <li class="dl5"><input type="radio" name="radio">One Way |&#160;<input type="radio" name="radio"> Round Trip |&#160;<input type="radio" name="radio">Pooling |&#160;<input type="radio" name="radio">Rent  </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section id="modify" style="display:none;">
+    <div class="rows banner_book_m" id="inner-page-title">
+        <div class="container wow fadeInLeft animated">
+            <div class="banner_book_1">
+                <form action="@Url.Action("S","Search")" class="v2-search-form_m">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <input type="text" id="soruceLocation" class="form-control" placeholder="From City" name="sourcePlace" required>
+                            <label for="select-city">Pick up location</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="text" id="DestinationLocation" class="form-control" placeholder="To City" name="Destination" required>
+                            <label for="select-city">Dropping off location</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="text" id="from" name="from">
+                            <label for="from">Pick up date</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input type="submit" value="search" class="waves-effect waves-light tourz-sear-btn v2-ser-btn">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--Start what-we-offer section -->
+<section class="about-us section-padding" id="about">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="carspace-header text-center">
+                    <h3>Search  <span>Results</span></h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+                <table class="table table-condensed" style="border-collapse:collapse;">
+                    <thead>
+                        <tr>
+                            <th style="margin-left:-20px;">Car Infomation</th>
+                            <th>Timings</th>
+                            <th>Avilable Seats</th>
+                            <th>Price Per Seat</th>
+                            <th>Rating</th>
+                            <th>Book</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cab in Model.ResultList)
+                        {
+
+                            <tr data-toggle="collapse" data-target="#demo1_@cab.Id" class="accordion-toggle">
+
+                                <td><span class="col-md-3"><img src="~/theme/images/car3.png" width="100px" alt=""></span><span class="col-md-5">
+                                    <a href="#" class="events-title" style="margin-left:0px;font-size:17px;margin-top:10px;">@cab.VehicleBrand<br>
+                                    <p>Model:@cab.VehicleModel</p></a><span></td>
+
+                                <td class="e_h1"><b>@cab.StartTime</b></td>
+                                <td class="e_h1"><span style="color:#ff7200;font-size:18px;margin-left:50px;"><b>@cab.NoofSeats</b></span></td>
+                                <td class="e_h1">
+                                    <span>Rs:</span><span id="fair_@cab.Id" style="color:#ff7200;font-size:18px;margin-left:30px;">@cab.SingleWayPrice</span>
+
+                                    <input type="hidden" id="twowayfair_@cab.Id" value="@cab.TwoWayPrice" />
+                                    <input type="hidden" id="RentFair_@cab.Id" value="@cab.RentPerday" />
+                                </td>
+                                <td class="e_h1"><span style="color:#ff7200;font-size:18px;"><b>4.5/5</b></span></td>
+                                <td><a href="#" id="book" class="link-btn_b ">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="hiddenRow">
+                                    <div class="accordian-body collapse" id="demo1_@cab.Id">
+
+
+                                        <table>
+                                            <tr style="background-color:#fff">
+                                                <td style="margin-top:20px; border-right:2px solid #ccc;">
+                                                    <div>
+                                                        <img src="@cab.VechileImages" width="220px;" />
+                                                        <p>
+                                                            Driver Details:@cab.Drivername<br>
+                                                            Age:@cab.DriverAge<br>
+                                                            Gvt Id:Verified
+                                                        </p>
+                                                        <p><b>Safty mesures:</b> </p>
+                                                        <p>1. Air Bags<br>2.Trust Driving</p>
+                                                        <p><b>Rating: 3.7/5</b> </p>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2" style="margin-top:20px; border-right:2px solid #ccc; ">
+                                                    <div class="col-md-12">
+                                                        @{
+                                                            var formid = "post" + cab.Id;
+                                                            var formidv = "post1" + cab.Id;
+
+                                                        }
+                                                        @using (Html.BeginForm("ConfirmBooking", "Search", FormMethod.Post, new { enctype = "multipart/form-data", @id = @formid, @class = "form-horizontal" }))
+                                                        {
+                                                            <div class="col-md-6">
+                                                                <h4><b>Booking infromation</b></h4>
+
+                                                                <label>Select No of Seats</label>
+                                                                <div class="input-group">
+
+                                                                    <span class="input-group-btn">
+
+
+                                                                        <button type="button" field="Qty_@cab.Id" cartid="@cab.Id" class="quantity-left-minus btn btn-primary btn-number" id="decrease" onclick="decreaseValue(@cab.Id)" value="Decrease Value" data-type="minus" data-field="">
+                                                                            <span><i class="fa fa-minus"></i></span>
+                                                                        </button>
+                                                                    </span>
+
+                                                                    <input type="text" id="Qty_@cab.Id" field="Qty_@cab.Id" name="Qtyseat" class="form-control input-number" value="@cab.SelectedSeats" min="1" max="100" style="width:40px" readonly="readonly">
+                                                                    <input type="hidden" id="Limit_@cab.Id" name="Limit_@cab.Id" class="form-control input-number" value="@cab.NoofSeats" min="1" max="100" style="width:40px" readonly="readonly">
+                                                                    <span class="input-group-btn" style="float: left;">
+                                                                        <button type="button" field="Qty_@cab.Id" cartid="@cab.Id" class="quantity-right-plus btn btn-primary btn-number" id="increase" onclick="increaseValue(@cab.Id)" value="Increase Value" data-type="plus" data-field="" style="margin-left:-10px">
+                                                                            <span><i class="fa fa-plus"></i></span>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+
+                                                                <input type="hidden" value="@cab.Id" id="cabid" name="cabid" />
+                                                                <input type="hidden" value="@ViewBag.date" id="Jdate" name="Jdate" />
+
+                                                                <p style="margin-top:20px;">
+                                                                    <select id="mySelect_@cab.Id" onchange="selectvaluechnage(@cab.Id)">
+                                                                        <option value="0">Select Journey type
+                                                                        <option value="1">One Way
+                                                                        <option value="2">Two Way
+                                                                        <option value="3">Rent
+                                                                        <option value="3">Sharing
+                                                                    </select>
+                                                                </p>
+                                                                <p style="margin-top:20px;">Total Distance : @cab.Distance</p>
+                                                                @*<div class="row" style="margin-top:30px;">
+                <div class="input-field col s6">
+                  @Html.DropDownListFor(model => model.CabBooking.Boardingpoint, new SelectList(Model.SourceBoardingPoints, "Key", "Value"), "--- Select Pickup Location ---", new { @required = "true" })
+
+                </div>
+                <div class="input-field col s6">
+                 @Html.DropDownListFor(model => model.CabBooking.DropPoint, new SelectList(Model.DestinationBoardingPoints, "Key", "Value"), "--- Select Drop Location ---", new { @required = "true" })
+
+                  </div>
+                 <div class="clearfix"></div>
+                  </div>*@
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <h4><b>Price Summary</b></h4>
+                                                                <p>Basic Fair: <span id="BasicFair_@cab.Id"></span></p>
+                                                                <p>Services Tax: <span id="Svtx_@cab.Id"></span></p>
+                                                                <p>GST : <span id="GST_@cab.Id"></span></p>
+                                                                <p>Net Pay : <span id="Netpay_@cab.Id"></span></p>
+                                                                <div hidden>
+                                                                    @Html.TextBoxFor(model => model.CabBooking.Source, new { @required = "true" })
+                                                                    @Html.TextBoxFor(model => model.CabBooking.Destination, new { @required = "true" })
+                                                                    <input type="text" id="TBasicFair_@cab.Id" name="Basicfair" class="form-control input-number" value="">
+
+                                                                    <input type="text" id="TSvtx_@cab.Id" name="Tax" class="form-control input-number" value="">
+                                                                    <input type="text" id="TGST_@cab.Id" name="GST" class="form-control input-number" value="">
+                                                                    <input type="text" id="TNetpay_@cab.Id" name="NetPay" class="form-control input-number" value="">
+
+                                                                </div>
+                                                                <p><button href="#" id="book" onclick="ConfirmBooking(@cab.Id)" class="btn btn-primary">Proceed and Confirm</button></p>
+                                                            </div>
+                                                        }
+
+                                 </div>
+
+
+                                                </td>
+                                                <td>
+                                                    <h4><b>Travel Via</b></h4>
+                                                    <p>Hyderabad</p>
+                                                    <p>Suryapet</p>
+                                                    <p>Vijayawada</p>
+                                                    <p>Tenali</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</section>
+<!-- End counter section -->
+<!--Start faq section -->
+<!-- gmaps js -->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyBOQMDDOsJA0uHTqXTDHUogDJfaTST7hNQ&amp;callback"></script>
+<!--main js-->
+
+
+
+<script>
+    function sortTable(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("MyTableFilter");
+        switching = true;
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+            //start by saying: no switching is done:
+            switching = false;
+            rows = table.getElementsByTagName("TR");
+            /*Loop through all table rows (except the
+            first, which contains table headers):*/
+            for (i = 1; i < (rows.length - 1); i++) {
+                //start by saying there should be no switching:
+                shouldSwitch = false;
+                /*Get the two elements you want to compare,
+                one from current row and one from the next:*/
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                /*check if the two rows should switch place,
+                based on the direction, asc or desc:*/
+                if (dir == "asc") {
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                /*If a switch has been marked, make the switch
+                and mark that a switch has been done:*/
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                //Each time a switch is done, increase this count by 1:
+                switchcount++;
+            } else {
+                /*If no switching has been done AND the direction is "asc",
+                set the direction to "desc" and run the while loop again.*/
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+<script>
+    // This example displays an address form, using the autocomplete feature
+    // of the Google Places API to help users fill in the information.
+
+    // This example requires the Places library. Include the libraries=places
+    // parameter when you first load the API. For example:
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+    var placeSearch, autocomplete;
+    //var componentForm = {
+    //  street_number: 'short_name',
+    //  route: 'long_name',
+    //  locality: 'long_name',
+    //  administrative_area_level_1: 'short_name',
+    //  country: 'long_name',
+    //  postal_code: 'short_name'
+    //  };
+
+
+
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('DestinationLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('soruceLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+
+    }
+
+
+
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBErlHBCoAszSr4uBzk1JDh_0uSJIE6mVo&libraries=places&callback=initAutocomplete"
+        async defer></script>

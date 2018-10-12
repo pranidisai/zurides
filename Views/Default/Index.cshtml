@@ -1,0 +1,749 @@
+﻿@model Zur.VM.UserVM
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_IndexLayout.cshtml";
+}
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+<!-- FONT-AWESOME ICON CSS -->
+@*<link rel="stylesheet" href="~/theme/css/font-awesome.min.css">*@
+<!--== ALL CSS FILES ==-->
+@*<link rel="stylesheet" href="~/theme/css/swc.css">*@
+<link rel="stylesheet" href="~/theme/css/style.css">
+<link rel="stylesheet" href="~/theme/css/style1.css">
+<link rel="stylesheet" href="~/theme/css/materialize.css">
+<link rel="stylesheet" href="~/theme/css/bootstrap.css">
+@*<link rel="stylesheet" href="~/theme/css/mob.css">*@
+
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="~/theme/css/popstyle.css" />
+
+<!--carousel Bootstrap -->
+<link href="~/theme/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+@*<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">*@
+
+<link href="~/theme/assets/vendor/frame-carousel/jquery.frame-carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="~/theme/assets/vendor/highlight/styles/default.css">
+<link rel="stylesheet" href="~/theme/assets/css/main.css" />
+<!--wowjs css link-->
+<link href="~/theme/css/animate.css" rel="stylesheet" type="text/css" media="all">
+<link href="~/timepicker/css/timepicki.css" rel="stylesheet">
+@*<script>
+        new WOW().init();
+    </script>*@
+
+
+
+<style>
+    .switch {
+        background-color: #1bbc9b;
+        width: 100%;
+        display: inline-block;
+        border-radius: 8px;
+        height: 40px;
+        padding: 1px;
+        position: relative;
+        zoom: 1;
+    }
+
+        .switch:before, .switch:after {
+            content: " ";
+            /* 1 */
+            display: table;
+            /* 2 */
+        }
+
+        .switch:after {
+            clear: both;
+        }
+
+        .switch label {
+            float: left;
+            width: 50%;
+            position: relative;
+            z-index: 2;
+            line-height: 40px;
+            cursor: pointer;
+            color: #117964;
+        }
+
+        .switch input[type="radio"] {
+            display: none;
+        }
+
+            .switch input[type="radio"]:checked + label {
+                color: #141241;
+                font-weight: bold;
+            }
+
+        .switch span {
+            position: relative;
+            z-index: 1;
+            top:;
+            left: 0px;
+            width: 50%;
+            height: 100%;
+            display: block;
+            border-radius: 5px 5px 5px 5px;
+            background-color: #ffffff;
+            transition: all 200ms ease;
+        }
+
+            .switch span.right {
+                top: -45px;
+                width: 50%;
+                left: 0%;
+                border-radius: 5px 5px 5px 5px;
+                transition: all 200ms ease;
+            }
+</style>
+
+<style>
+    input[type="text"],
+    select.form-control {
+        border: 1px solid grey;
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+        input[type="text"]:focus,
+        select.form-control:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+</style>
+<style>
+
+    .hvr-glow {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: box-shadow;
+        transition-property: box-shadow;
+    }
+
+        .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+            box-shadow: background:#fff;
+            -webkit-box-shadow: 1px 0px 3px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);
+            box-shadow: 1px 0px 10px 0px rgba(0,0,0,0.75);
+        }
+</style>
+
+<!--HEADER SECTION-->
+
+<section>
+
+    <div class="tourz-search" style="height: 702px;">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="col-md-3" style="margin-top: 90px;">
+                    <img src="~/theme/images/10coupon.png" class="img-responsive" style="">
+                </div>
+                <div class="col-md-8 col-md-offset-1" style="margin-top: 100px;">
+                    <img src="~/theme/images/logo.png" class="img-responsive" style="height: 90px;width: 300px;"><br /><br />
+                    <div class="row" id="viewerr">
+                        <span style="color:red;text-align:center;margin-bottom:8px;margin-left:15px;">@ViewBag.Error</span>
+                    </div>
+                    <div id="div1">
+                        @*<form action="@Url.Action("s1","Search")">*@
+                        @using (Html.BeginForm("s1", "Search", FormMethod.Get, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                        {
+                            <div class="switch" style="width:66%;left:1px;">
+                                <input name="SelfDrive" type="radio" value="SelfDrive" id="optionone" checked>
+                                <label for="optionone" style="text-align: center;left:0px;" id="k1">Self drive</label>
+
+                                <input name="Rental" type="radio" value="Rental" id="optiontwo">
+                                <label for="optiontwo" class="right" style="text-align: center;" id="k2"> Rental</label>
+                                <span aria-hidden="true"></span>
+                            </div><br />
+
+                            <div class="row">
+                                <div class="input-field col-md-8">
+                                    <input type="text" id="txt_soruceLocation" class="form-control" placeholder="From City" name="sourcePlace" required>
+                                </div>
+                            </div>
+                            <div class="row" id="dest" style="display:none;margin-top:5px;">
+                                <div class="input-field col-md-8">
+                                    <input type="text" id="txt_DestinationLocation" class="form-control" placeholder="To City" name="Destination" style="width:460px;">
+
+                                </div>
+                            </div>
+                            <style>
+                                .datepicker {
+                                    top: 300px;
+                                }
+                            </style>
+                            <div class="row" style="margin-left:2px;margin-top:15px;">
+                                <div class='col-md-4'>
+                                    <div class="form-group">
+                                        <div class='input-group date'>
+                                            @*@Html.TextBoxFor(model => model.Search.JourneyDate, new { id = "txtdate", @class = "form-control", placeholder = "Journey date", @required = "true", @style = "border-right:none;top:0px;position:relative;z-index: 1000;" })
+                                            @Html.ValidationMessageFor(model => model.Search.JourneyDate, "", new { @class = "text-danger" })*@
+
+                                            <input type='text' class="form-control" id='txtdate' name="JourneyDate" placeholder="Journey date" style="border-right:none;top:0px;position:relative;z-index: 1000;" required />
+                                            <span class="input-group-addon" style="background-color:white;border:1px solid #808080; border-left: none;">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="site-wrapper">
+                                        <div>
+                                            <div class="inner indexpicker">
+                                                <input id="timepicker1" type="text" placeholder="Pickup time" name="pickuptime" class="form-control" required />
+                                                @*@Html.TextBoxFor(model => model.Search.pickuptime, new { id = "timepicker1", name = "pickuptime", @class = "form-control", placeholder = "Pickup time", @required = "true" })
+                                                @Html.ValidationMessageFor(model => model.Search.pickuptime, "", new { @class = "text-danger" })*@
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row" style="margin-left:2px;">
+                                <div class='col-md-4'>
+                                    <div class="form-group">
+                                        <div class='input-group date'>
+                                            <input type='text' class="form-control" id='txtdate1' name="ReturnDate" placeholder="Return Date" style="border-right:none;top:0px;position:relative;z-index: 1000;" required />
+                                            @*@Html.TextBoxFor(model => model.Search.ReturnDate, new { id = "txtdate1", @class = "form-control", placeholder = "Drop time", @required = "true", @style = "border-right:none;top:0px;position:relative;z-index: 1000;" })
+                                            @Html.ValidationMessageFor(model => model.Search.ReturnDate, "", new { @class = "text-danger" })*@
+
+                                            <span class="input-group-addon" style="background-color:white; border:1px solid #808080; border-left: none;">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <div class="site-wrapper">
+                                        <div>
+                                            <div class="inner indexpicker">
+
+                                                <input id="timepicker2" type="text" name="droptime" placeholder="Drop time" class="form-control" required />
+                                                @*@Html.TextBoxFor(model => model.Search.droptime, new { id = "timepicker2", name = "droptime", @class = "form-control", placeholder = "Drop time", @required = "true" })
+                                                @Html.ValidationMessageFor(model => model.Search.droptime, "", new { @class = "text-danger" })*@
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br />
+
+                            <div class="col-md-offset-2">
+                                <input type="submit" onclick="Validate(); comparetime();" value="Find Cab" class="btn btn-info" style="width:190px;">
+                                @*<input type="submit" value="Find Cab" class="btn btn-info" style="width:190px;">*@
+                            </div>
+                        }
+
+                    </div>
+
+
+                    <div class="" style="margin-left:650px;margin-top:-395px;">
+                        <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="~/theme/images/instagram.png" class="img-responsive"></a>
+                        <a href="https://www.facebook.com/" target="_blank"><img src="~/theme/images/fb.png" class="img-responsive"></a>
+                        <a href="https://twitter.com/" target="_blank"><img src="~/theme/images/twitteer.png" class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><br /><br />
+
+<script language="javascript">
+    $(document).ready(function () {
+        $("#txtdate").datepicker({
+            minDate: 0,
+            onClose: function (selectedDate) {
+                var myDate = $(this).datepicker('getDate');
+                myDate.setDate(myDate.getDate() + 1);
+                $('#departure').datepicker('setDate', myDate);
+            }
+        });
+        $("#txtdate1").datepicker({
+            minDate: 0
+        });
+        $("#txtdate").datepicker("setDate", "0");
+        $("#txtdate1").datepicker("setDate", "1");
+    });
+</script>
+
+
+<!--END HEADER SECTION-->
+<!--laptop-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--selfdrive-->
+@*<div class="container-fluid">
+
+    @if (Model.Search != null)
+    {
+    <div>
+        <h3 style="color:deepskyblue;text-align:center;">Self Drive Cars from your Location.</h3>
+        @foreach (var cab in Model.ResultList)
+        {
+
+            if (@cab.TypeOfJourney == "SelfDrive")
+            {
+              using (Html.BeginForm("selfhome", "BookCab", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                {
+                    <div class="col-md-3 hvr-glow" style="">
+                        <img src="@cab.VechileImages" width="320" height="250" />
+                        <h4>Location : @cab.Location</h4>
+                        <h5>Journey Type : SelfDrive</h5>
+                        <h5>Brand Name : @cab.VehicleBrand</h5>
+                        <h5>Journey City : @cab.Location</h5>
+                        <h5>Price : @cab.selfdriveprice</h5>
+                        <div class="col-md-6 col-md-offset-3" style="margin-left:70px;">
+
+                            <div hidden>
+                                <input type="text" name="Id" value="@cab.Id" />
+                                <input type="text" name="brand" value="@cab.VehicleBrand" />
+                                <input type="text" name="selfdrv" value="@cab.selfdriveprice" />
+
+
+                            </div>
+
+                            <button type="submit" style="background-color: deepskyblue;color:#fff;border:1px solid deepskyblue;border-radius: 15px;height:30px;width:150px;" class="book1">BOOK NOW</button>
+
+                        </div>
+                    </div>
+                    }
+                }
+            }
+        </div>
+
+        <div>
+            <div style="margin-top:20px;">
+                <h3 style="color:deepskyblue;text-align:center;">Rental Cars from your Location.</h3>
+            </div>
+            @foreach (var cab in Model.ResultList)
+            {
+                if (@cab.TypeOfJourney == "Rental")
+                {
+            <div class="col-md-3 hvr-glow" style="">
+                <img src="@cab.VechileImages" width="320" height="250" />
+                <h4>Location : @cab.Location</h4>
+                <h5>Journey Type : Rental</h5>
+                <h5>Brand Name : @cab.VehicleBrand</h5>
+                <h5>Journey City : @cab.Location</h5>
+                <h5>Price : @cab.RentPerday</h5>
+                <div style="text-align:center;">
+                    <a href="@Url.Action("Rental","BookCab",FormMethod.Post)"><input type="button" value="Book Now" class="btn btn-info" style="width:120px;"></a>
+                    </div>
+                </div>
+                }
+                }
+            </div>
+    }
+
+</div>*@<br />
+
+<!--Ourservices-->
+<div class="container-fluid" style="background-color: #fff;">
+    <h3 style="color: #000;text-align: center;">OUR SERVICES</h3><br>
+
+    <div class="col-md-11 col-md-offset-1 wow zoomIn wHighlight">
+        <div class="col-md-5">
+            <div class="col-md-2"><img src="~/theme/images/lp-icon.png" class="img-responsive" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h5><b>LOWEST PRICES</b></h5>
+                <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">We always give you lowest price with the best partner offers.</h6>
+                <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;"></h6>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-2"><img src="~/theme/images/mc-icon.png" class="img-responsive" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h5><b>MAXIMUM CHOICE</b></h5>
+                <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">We give you the widest number of travel options across the</h6>
+                <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">thousands of routes.</h6>
+            </div>
+        </div>
+    </div><br /><br /><br /><br /><br />
+    <div class="col-md-11 col-md-offset-1 wow zoomIn wHighlight" style=" ">
+
+        <div class="col-md-5">
+            <div class="col-md-2"><img src="~/theme/images/rp-icon.png" class="img-responsive" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h5><b>RATINGS AND PICTURE REVIEWS</b></h5>
+                <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">Rely on ratings and actual photos from fellow </h6>
+                <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">travellers to choose your bus!</h6>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-2"><img src="~/theme/images/live-tracking.png" class="img-responsive" /></div>
+            <div class="col-md-4" style="width: 80%;">
+                <h5><b>LIVE TRACKING</b></h5>
+                <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">
+                    Track your bus with our 'Track My Bus' feature and know the
+                </h6>
+                <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">
+                    exact location in real-time.Stay informed and keep your
+                </h6>
+                <h6 style="font-family: 'Poppins', sans-serif;font-size:13.5px;">
+                    family informed!
+                </h6>
+            </div>
+
+        </div>
+    </div><br /><br />
+
+</div><br /><br>
+
+<!--kalyan--->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <img src="/theme/images/2.png" class="img-responsive" style="margin-left:-30px;">
+            </div>
+            <div class="col-md-4">
+
+
+                <label style="text-align: center;border: 1px solid black;margin-left: 50px;margin-top: 60px; background-color: #eee;color: black;">
+                    <p style="padding-left: 20px;padding-right: 20px;padding-top: 15px;">550 Off On Spends Of RS.2500(FIRST RIDE)</p>
+                    <p>USE CODE:<span style="background-color: white;">  ZURIDES550&nbsp;&nbsp;</span></p>
+                    <p style="font-size: 12px;">*T&C Apply</p>
+                </label>
+
+
+                <label style="text-align: center;border: 1px solid black;margin-left: 50px;margin-top: 40px; background-color: #eee;color: black;">
+                    <p style="padding-left: 20px;padding-right: 36px;padding-top: 15px;">550 Off On Spends Of RS.2500 & Above</p>
+                    <p>USE CODE:<span style="background-color: white;">  ZURIDES550&nbsp;&nbsp;</span></p>
+                    <p style="font-size: 12px;">*T&C Apply</p>
+                </label>
+
+            </div>
+            <div class="col-md-4">
+                <img src="/theme/images/3.png" class="img-responsive" style="margin-left: 43px;">
+            </div>
+        </div>
+    </div>
+</div><br>
+
+<div class="container-fluid" style="background-color:lavender;padding:30px;">
+    <div class="col-md-12">
+        <div class="stats row grid-space-10">
+            <div class="col-md-3 col-sm-6">
+                <div class="box-style-1" style="text-align: center;">
+                    <i class="fa fa-briefcase" style="font-size: 50px;"></i>
+                    <br><br>
+                    <span class="stat-num" data-to="2000" data-speed="3000" style="font-size: 40px;color:#09b1ff;">0</span><span style="font-size: 30px;color:#09b1ff;">+</span>
+                    <h4 class="title">Total Cars</h4>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="box-style-1" style="text-align: center">
+                    <i class="fa fa-users" style="font-size: 50px;"></i><br><br>
+
+                    <span class="stat-num" data-to="2000000" data-speed="4000" style="font-size: 40px;color:#09b1ff;">0</span><span style="font-size: 30px;color:#09b1ff;">+</span>
+
+                    <h4 class="title">Happy Customers</h4>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="box-style-1" style="text-align: center">
+                    <i class="fa fa-cloud-download" style="font-size: 50px;"></i>
+                    <br><br>
+                    <span class="stat-num" data-to="200000000" data-speed="5000" style="font-size: 40px;color:#09b1ff;">0</span><span style="font-size: 30px;color:#09b1ff;">+</span>
+                    <h4 class="title">Agents Across India</h4>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="box-style-1" style="text-align: center">
+                    <i class="fa fa-thumbs-o-up" style="font-size: 50px;"></i>
+                    <br><br>
+                    <span class="stat-num" data-to="2200" data-speed="3000" style="font-size: 40px;color:#09b1ff;">0</span><span style="font-size: 30px;color:#09b1ff;">+</span>
+                    <h4 class="title">Cars Per City</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div id="boxes">
+    <div style="top: 50%; left: 50%; display: none;background-color:aliceblue;" id="dialog" class="window">
+        @using (Html.BeginForm("Index", "Default", FormMethod.Get, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            <div id="san">
+                <a href="#" class="close agree"><img src="~/theme/images/close-icon.png" width="25" style="margin-right: 0px; margin-top: 0px;"></a>
+                <div><h3 style="color:gray;">Choose Location</h3></div>
+
+                <br /> <br />
+
+                <div class="col-md-8">
+                    <input type="text" name="src_location" class="form-control" placeholder="From City">
+
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-info" style="width:100px;margin-left:15px;">Search</button>
+                </div>
+
+            </div>
+        }
+    </div>
+    <div style="width: 2478px; font-size: 32pt; color:white; height: 1202px; display: none; opacity: 0.4;" id="mask"></div>
+</div>*@
+
+
+
+<script>
+    function comparetime() {
+        var time1 = document.getElementById('timepicker1').value;
+        var time2 = document.getElementById('timepicker2').value;
+        var d = new Date(),
+            h = d.getHours() + 2;
+        m = d.getMinutes();
+        var addhrs = h + ':' + m;
+        if (time1 < addhrs || time2 < addhrs) {
+            //alert("You can book at least 2 hours before pickup time.");
+            document.getElementById('viewerr').innerHTML = "You can book at least 2 hours before pickup time.";
+            var x = document.URL;
+            //window.location.reload(x);
+            window.location.href = x;
+            //window.location.reload();
+
+            return false;
+        }
+
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //var d = new Date(),
+        //    h = d.getHours(),
+        //    m = d.getMinutes();
+        //if (h < 10) h = '0' + h;
+        //if (m < 10) m = '0' + m;
+        //$('input[type="time"][value="now"]').each(function () {
+        //    $(this).attr({ 'value': h + ':' + m });
+        //});
+
+        var d = new Date(),
+            h = d.getHours() + 2;
+        m = d.getMinutes();
+        document.getElementById('timepicker1').value = h + ':' + m;
+        document.getElementById('timepicker2').value = h + ':' + m;
+    })
+</script>
+<script>
+    $(window).on('load', function () {
+        document.getElementById("optionone").checked = true;
+        document.getElementById("optiontwo").checked = false;
+    })
+
+    function Validate() {
+        if (document.getElementById("optionone").checked == true) {
+
+            $("#txt_soruceLocation").prop('required', true);
+        }
+        if (document.getElementById("optiontwo").checked == true) {
+
+            $("#txt_soruceLocation").prop('required', true);
+            $("#txt_DestinationLocation").prop('required', true);
+        }
+    }
+
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        var sourcecity = document.getElementById('City');
+        $("#City").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/Default/AutoCompleteCountry",
+                    type: "GET",
+                    dataType: "json",
+                    data: { term: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.City, value: item.City };
+                        }))
+                    }
+                })
+            },
+            messages: {
+                noResults: "", results: ""
+            }
+        });
+    })
+
+</script>
+<script>
+    $('.switch label').on('click', function () {
+        var indicator = $(this).parent('.switch').find('span');
+        if ($(this).hasClass('right')) {
+            $(indicator).addClass('right');
+        } else {
+            $(indicator).removeClass('right');
+        }
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#k1").click(function () {
+            $("#dest").hide();
+        });
+    });
+
+    $(document).ready(function () {
+        $("#k2").click(function () {
+            $("#dest").show();
+
+        });
+    });
+</script>
+
+<!--========= Scripts ===========-->
+@*<script src="js/jquery-latest.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>*@
+<script type="text/javascript" src="~/theme/js/jquery.min.js"></script>
+<script type="text/javascript" src="~/theme/js/modernizr.js"></script>
+<script type="text/javascript" src="~/theme/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="~/theme/js/template.js"></script>
+<script type="text/javascript" src="~/theme/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="~/theme/js/jquery-ui-1.10.4.js"></script>
+@*<script type="text/javascript" src="~/theme/js/swc.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>*@
+
+
+<script>
+
+    var placeSearch, autocomplete;
+    //var componentForm = {
+    //  street_number: 'short_name',
+    //  route: 'long_name',
+    //  locality: 'long_name',
+    //  administrative_area_level_1: 'short_name',
+    //  country: 'long_name',
+    //  postal_code: 'short_name'
+    //  };
+
+
+
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('txt_DestinationLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('txt_soruceLocation')),
+            { types: ['geocode'] });
+
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+
+        //distance
+        var service = new google.maps.DistanceMatrixService();
+
+        source = document.getElementById("txt_soruceLocation").value;
+        destination = document.getElementById("txt_DestinationLocation").value;
+        service.getDistanceMatrix({
+            origins: [source],
+            destinations: [destination],
+            travelMode: google.maps.TravelMode.DRIVING,
+            unitSystem: google.maps.UnitSystem.METRIC,
+            avoidHighways: false,
+            avoidTolls: false
+        }, function (response, status) {
+            if (status == google.maps.DistanceMatrixStatus.OK && response.rows[0].elements[0].status != "ZERO_RESULTS") {
+                var distance = response.rows[0].elements[0].distance.text;
+                var duration = response.rows[0].elements[0].duration.text;
+                var dvDistance = document.getElementById("dvDistance");
+                dvDistance.innerHTML = "";
+                dvDistance.innerHTML += "Distance: " + distance + "<br />";
+                dvDistance.innerHTML += "Duration:" + duration;
+
+            } else {
+                alert("Unable to find the distance via road.");
+            }
+        });
+
+    }
+
+
+
+    // Bias the autocomplete object to the user's geographical location,
+    // as supplied by the browser's 'navigator.geolocation' object.
+    function geolocate() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var geolocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+                var circle = new google.maps.Circle({
+                    center: geolocation,
+                    radius: position.coords.accuracy
+                });
+                autocomplete.setBounds(circle.getBounds());
+            });
+        }
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBErlHBCoAszSr4uBzk1JDh_0uSJIE6mVo&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+@*<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script type="text/javascript">
+        var source, destination;
+        var directionsDisplay;
+        var directionsService = new google.maps.DirectionsService();
+        google.maps.event.addDomListener(window, 'load', function () {
+            new google.maps.places.SearchBox(document.getElementById('txtSource'));
+            new google.maps.places.SearchBox(document.getElementById('txtDestination'));
+            directionsDisplay = new google.maps.DirectionsRenderer({ 'draggable': true });
+        });
+        </script>*@
+<script src="~/timepicker/js/timepicki.js"></script>
+<script type='text/javascript'>
+    $('#timepicker1').timepicki({
+        show_meridian: false,
+        min_hour_value: 0,
+        max_hour_value: 23,
+        step_size_minutes: 1,
+        overflow_minutes: true,
+        increase_direction: 'up',
+        disable_keyboard_mobile: true
+    });
+</script>
+<script type='text/javascript'>
+    $('#timepicker2').timepicki({
+        show_meridian: false,
+        min_hour_value: 0,
+        max_hour_value: 23,
+        step_size_minutes: 1,
+        overflow_minutes: true,
+        increase_direction: 'up',
+        disable_keyboard_mobile: true
+    });
+</script>

@@ -1,0 +1,82 @@
+﻿@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "CreateRout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.min.js"></script>
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("CreateRout", "Admin", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <span style=" color:red;font-weight:bold;text-align:center; margin-right:100px;">@ViewBag.Error</span>
+            </div>
+            <div class="row">
+                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">Create Route Details</p>
+
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+
+
+
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Select Source</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.Root.RootSource, new SelectList(Model.CityDDL, "Key", "Value"), "--- Select City ---", new { @onchange = "FillService()", @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Root.RootSource, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Enter Distance</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.Root.distance, new { @class = "form-control", placeholder = "Enter Distance", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.Root.distance, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Select Destination</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.Root.RootDEstination, new SelectList(Model.CityDDL, "Key", "Value"), "--- Select City ---", new { @onchange = "FillService()", @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Root.RootDEstination, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-sm-7 col-sm-offset-3">
+                                        <button class="btn btn-mint" type="submit">Add Route</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>

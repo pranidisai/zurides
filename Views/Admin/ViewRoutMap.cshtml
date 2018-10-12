@@ -1,0 +1,86 @@
+﻿@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "ViewRoutMap";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div id="page-content">
+    <div class="panel">
+        @using (Html.BeginForm("ViewRoutMap", "Admin", FormMethod.Post, new { @id = "demo-bvd-notempty", @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            <div class="row">
+                <span style=" color:red;font-weight:bold;text-align:center; margin-right:100px;">@ViewBag.Error</span>
+            </div>
+            <div class="row">
+                <p class="bord-btm pad-ver text-main text-bold" style="margin-left:50px">
+                    Update Route Details&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color:red" href="@Url.Action("RoutMapsList","Admin")"> Go Back</a>
+                </p>  
+
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+
+                                <div class="form-group" hidden>
+                                    <label class="col-lg-3 control-label">Id</label>
+                                    <div class="col-lg-7">
+                                        @Html.TextBoxFor(model => model.RootMap.ID, new { @class = "form-control", placeholder = "Enter ID", @required = "true" })
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Selecte Rout</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.RootMap.RootId, new SelectList(Model.RoutListDDL, "Key", "Value"), "--- Select Route ---", new { @onchange = "FillService()", @class = "form-control", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.RootMap.RootId, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Select Status</label>
+                                    <div class="col-lg-7">
+                                        @Html.CheckBoxFor(model => model.RootMap.RoutStatus, new { @class = "form-control", placeholder = "Select Status"})
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel">
+
+                        <fieldset>
+                            <div class="panel-body">
+
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Enter Stop</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(model => model.RootMap.Via, new SelectList(Model.CityDDL, "Key", "Value"), "--- Select City Stop ---", new { @onchange = "FillService()", @class = "form-control", @required = "true" })
+                                        @Html.ValidationMessageFor(model => model.RootMap.Via, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-sm-7 col-sm-offset-3">
+                                        <button class="btn btn-mint" type="submit">Update Route Stops</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>

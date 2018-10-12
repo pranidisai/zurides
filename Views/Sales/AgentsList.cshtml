@@ -1,0 +1,61 @@
+﻿@model Zur.VM.AdminVM
+@{
+    ViewBag.Title = "AgentsList";
+    Layout = "~/Views/Shared/_SalesLayout.cshtml";
+}
+
+ 
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">Agents List</h3>
+    </div>
+    <div class="panel-body">
+        <table id="demo-dt-selection" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Agent Id</th>
+                    <th>Name</th>
+
+                    <th class="min-tablet">Owner Type</th>
+                    <th class="min-tablet">Email</th>
+                    <th class="min-desktop">Contact Number</th>
+                    <th class="min-desktop">Status</th>
+                    <th class="min-desktop">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.AgentsList)
+                {
+                <tr>
+                    <td>@user.ID</td>
+                    <td>@user.TravelUserName</td>
+                    <td>@user.Travelartype</td>
+                    <td>@user.TavelEmail</td>
+                    <td>@user.TravelPhone</td>
+
+                    <td>
+                        @if (user.Status == 1)
+        {
+                <span style="color:green;font:bold">
+                    Active
+                </span>
+}
+else
+{
+                <span style="color:red;font-weight:bold">
+                    In Active
+                </span>
+}
+
+                    </td>
+                    <td>@Html.ActionLink("Edit / View", "ViewAgent", new { @id = user.ID })</td>
+                </tr>
+                }
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
